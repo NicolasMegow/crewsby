@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
             <p>
-                Created by {data.site.siteMetadata.author} :) © 2019
+                Teamgefühl.com © 2020
             </p>
             <Link className={footerStyles.linkItem} to="/impressum">Impressum</Link>
             <Link className={footerStyles.linkItem} to="/datenschutz">Datenschutz</Link>

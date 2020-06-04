@@ -1,12 +1,29 @@
 ---
-title: "Ziele setzen"
-date: "2020-04-10"
+title: "Ziele festlegen"
+type: "Teamplayer"
+date: "2020-06-04"
+version: "1.0"
 ---
 
-In this Uebung you'll learn nothing...
+In dieser Übung lernen Sie Ziele als Kernelement der OKRs kennen.
 
-## Topic covered
+## Input
+* Ziele fokussieren und helfen dabei kleine Entscheidungen zu treffen.
+* Ziele motivieren, wenn die Erreichung der Ziele positive Konsequenzen hat.
+* Ziele sind Zustände, z.B. “Wir sind live” oder “Der Support-Prozess funktioniert”.
+* Ziele werden über Ergebnisse messbar.
 
-1. Nothing
-2. Still less
-3. See above
+___
+
+## Übung
+1. Überlegen Sie sich sechs unterschiedliche Ziele, die Sie mit Ihrem Team anstreben könnten.
+2. Markieren Sie nun die zwei Ziele mit dem höchsten Erfolgsbeitrag.
+3. Markieren Sie als Nächstes zwei Ziele, die in 6 Monaten grade so erreichbar sind.
+4. Markieren Sie abschließend die beiden Ziele, die Ihr Team am meisten motivieren würden.
+
+___
+
+## Reflexion
+* Was fällt Ihnen bei den sechs Markierungen auf?
+* Wann macht es Sinn von einem einmal gesteckten Ziel bewusst abzuweichen?
+* TED-Talk: John Doerr on OKRs

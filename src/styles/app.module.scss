@@ -1,3 +1,8 @@
+$maincolor:#1c1e21;
+$highlightcolor: #0f62cc;
+$darkback: #677b8c;
+$lightback: #F5F5F5;
+
 .posts {
     list-style-type: none;
     margin: 0;
@@ -6,14 +11,15 @@
 .post {
     margin: 1rem 0;
     a {
-        color: #ffffff;
-        background: #120136;
+        color: $maincolor;
+        background: $lightback;
         padding: 1rem;
         text-decoration: none;
         display: block;
     }
     a:hover{
-        background: #035aa6;
+        color: #ffffff;
+        background: $highlightcolor;
     }
     h2 {
         margin-bottom: 0;

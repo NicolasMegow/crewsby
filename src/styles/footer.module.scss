@@ -1,15 +1,20 @@
+$maincolor:#1c1e21;
+$highlightcolor: #0f62cc;
+$darkback: #677b8c;
+$lightback: #F5F5F5;
+
 .footer {
     margin-top: 3rem;
 }
 
 .link-item {
-    color: #035aa6;
+    color: $maincolor;
     font-size: .9rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-right: 1.3rem;
     text-decoration: none;
 }
 
 .link-item:hover {
-    color: #120136;
+    color: $highlightcolor;
 }

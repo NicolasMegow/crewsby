@@ -3,9 +3,9 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import blogStyles from "../styles/blog.module.scss"
+import appStyles from "../styles/app.module.scss"
 
-const TeamleitungPage = () => {
+const AppPage = () => {
     const data = useStaticQuery(graphql`
     query {
         allMarkdownRemark {edges{node{frontmatter{title date} timeToRead fields{slug}}}}
@@ -14,14 +14,15 @@ const TeamleitungPage = () => {
 
     return (
         <Layout>
-            <Head title="Teamleitung"/>
-            <h1>List of Uebungen</h1>
-            <ol className={blogStyles.posts}>
+            <Head title="App"/>
+            <h1>Liste der Übungen</h1>
+            <p>Jede Übung dauert nur 30 Minuten.</p>
+            <ol className={appStyles.posts}>
                 {data.allMarkdownRemark.edges.map((edge) => {
                     return (
-                        <li className={blogStyles.post}>
-                            <Link to={`/blog/${edge.node.fields.slug}`}><h2>{edge.node.frontmatter.title}</h2>
-                            <p>Read time {edge.node.timeToRead} Min.</p></Link>
+                        <li className={appStyles.post}>
+                            <Link to={`/app/${edge.node.fields.slug}`}><h2>{edge.node.frontmatter.title}</h2>
+                            <p></p></Link>
                         </li>
                     )
                 })}
@@ -30,4 +31,4 @@ const TeamleitungPage = () => {
     )
 }
 
-export default TeamleitungPage
+export default AppPage

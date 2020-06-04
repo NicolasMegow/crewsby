@@ -25,10 +25,16 @@ const Header = () => {
                         <Link className={headerStyles.navItem} to="/">Überblick</Link>
                     </li>
                     <li>
-                        <Link className={headerStyles.navItem} to="/teamleitung">Teamleitung</Link>
+                        <Link className={headerStyles.navItem} to="/uebungen">Übungen</Link>
                     </li>
                     <li>
-                        <Link className={headerStyles.navItem} to="/teambuilding">Teambuilding</Link>
+                        <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
+                    </li>
+                    <li>
+                        <Link className={headerStyles.navItem} to="/preise">Preise</Link>
+                    </li>
+                    <li>
+                        <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
                     </li>
                 </ul>
             </nav>

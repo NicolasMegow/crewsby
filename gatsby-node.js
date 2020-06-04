@@ -30,8 +30,8 @@ module.exports.createPages = async function ({ actions, graphql }) {
       res.data.allMarkdownRemark.edges.forEach(edge => {
         const slug = edge.node.fields.slug
         actions.createPage({
-          path: `/blog/${slug}`,
-          component: require.resolve(`./src/templates/blog.js`),
+          path: `/app/${slug}`,
+          component: require.resolve(`./src/templates/uebung.js`),
           context: { slug },
         })
       })
