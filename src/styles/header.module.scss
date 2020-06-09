@@ -3,21 +3,22 @@ $highlightcolor: #0f62cc;
 $darkback: #677b8c;
 $lightback: #F5F5F5;
 
-.header {
-    padding: 1rem 0 3rem;
+.navbar {
+    background: #ffffff;
+}
+
+.container {
+    max-width: 900px !important;
 }
 
 .title {
     color: $highlightcolor;
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
 }
-
-.nav-list {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
+.title:hover {
+    text-decoration: none;
 }
 
 .nav-item {
@@ -30,4 +31,5 @@ $lightback: #F5F5F5;
 
 .nav-item:hover {
     color: $highlightcolor;
+    text-decoration: none;
 }

@@ -7,6 +7,12 @@ $lightback: #F5F5F5;
     margin-top: 3rem;
 }
 
+.cta {
+    padding: 4%;
+    margin-bottom:4%;
+    background: $lightback;
+}
+
 .link-item {
     color: $maincolor;
     font-size: .9rem;
@@ -17,4 +23,5 @@ $lightback: #F5F5F5;
 
 .link-item:hover {
     color: $highlightcolor;
+    text-decoration: none;
 }

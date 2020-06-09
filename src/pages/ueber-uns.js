@@ -1,5 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/pro-solid-svg-icons'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -8,7 +11,7 @@ const UeberUnsPage = () => {
     return (
     <Layout>
         <Head title="Über uns"/> 
-        <h1>Wir lieben Teams.</h1>
+        <h1>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#D64045"/> Teams.</h1>
         <h2>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens. Und das Leben ist zu kurz für Probleme im Team.</h2>
         <p>Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung. Gelegentliche Events reichen selten aus, um das Teamgefühl nachhaltig zu verbessern. Wir wissen, dass ein gutes Teamgefühl Zeit und Aufmerksamkeit braucht. Da beides häufig knapp ist, entwickeln wir Debugger als Ergänzung zu traditionellem Teambuilding.</p>
         <h3>Wir sind professionelle Business Coaches und haben bereits hunderte Teams gecoached. </h3>

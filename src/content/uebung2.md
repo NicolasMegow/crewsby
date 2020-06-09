@@ -1,6 +1,6 @@
 ---
 title: "Wertschätzung kommunizieren I"
-type: "Teamplayer"
+type: "Ind"
 date: "2020-06-04"
 version: "1.0"
 ---

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
 
@@ -15,29 +16,31 @@ const Header = () => {
     `)
 
     return (
-        <header className={headerStyles.header}>
-            <h1>
-                <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
-            </h1>
-            <nav>
-                <ul className={headerStyles.navList}>
-                    <li>
-                        <Link className={headerStyles.navItem} to="/">Überblick</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} to="/uebungen">Übungen</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} to="/preise">Preise</Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
-                    </li>
-                </ul>
-            </nav>
+        <header>
+            <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>  
+                <Container className={headerStyles.container}>
+                    <Navbar.Brand>
+                        <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav as="ul" className="ml-auto">
+                            <Nav.Item as="li">
+                                <Link className={headerStyles.navItem} to="/uebungen">Übungen</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link className={headerStyles.navItem} to="/preise">Preise</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </header>
     )
 }

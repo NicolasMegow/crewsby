@@ -9,6 +9,12 @@ $lightback: #F5F5F5;
 // Font Variables
 $open-sans: 'Open Sans', sans-serif;
 
+@import "~bootstrap/scss/bootstrap";
+
+.row {
+  margin-bottom: 2rem;
+}
+
 html {
   font-family: $open-sans;
   -ms-text-size-adjust: 100%;
@@ -233,7 +239,7 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 2rem;
   color: inherit;
   font-family: $open-sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -267,14 +273,14 @@ h3 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   color: inherit;
   font-family: $open-sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.2rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 h4 {
   margin-left: 0;
@@ -514,7 +520,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  
 }
 ol li {
   padding-left: 0;
