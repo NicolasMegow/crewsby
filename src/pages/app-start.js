@@ -1,21 +1,13 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { Container, Row, Col, Nav, Tab } from 'react-bootstrap'
+import { Link } from "gatsby"
+import { Container, Nav, Tab } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fas } from '@fortawesome/pro-solid-svg-icons'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
 const AppPage = () => {
-    const data = useStaticQuery(graphql`
-    query {
-        allMarkdownRemark
-        {edges{node{frontmatter{title date type} timeToRead fields{slug}}}}
-      }
-    `)
-
     return (
         <Layout>
             <Head title="App" />
@@ -26,18 +18,18 @@ const AppPage = () => {
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Nav variant="pills">
                         <Nav.Item>
-                            <Nav.Link eventKey="first"><FontAwesomeIcon icon={['fas', 'user']} fixedWidth/>  Individuell</Nav.Link>
+                            <Nav.Link eventKey="first"><FontAwesomeIcon icon={['fal', 'user']} fixedWidth/>  Individuell</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="second"><FontAwesomeIcon icon={['fas', 'users']} fixedWidth/>  Im Team</Nav.Link>
+                            <Nav.Link eventKey="second"><FontAwesomeIcon icon={['fal', 'users']} fixedWidth/>  Im Team</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>
                         <Tab.Pane eventKey="first" className={appStyles.tab}>
                             <h2>Beziehungen stärken</h2>
                             <ol className={appStyles.posts}>
-                                <li className={appStyles.post}><Link to={`/app/`}><h3>Stärken</h3></Link></li>
-                                <li className={appStyles.post}><Link to={`/app/`}><h3>Schwächen</h3></Link></li>
+                                <li className={appStyles.post}><Link to={`/app/`}><h3>Aufmerksamkeit</h3></Link></li>
+                                <li className={appStyles.post}><Link to={`/app/`}><h3>Beitrag</h3></Link></li>
                                 <li className={appStyles.post}><Link to={`/app/`}><h3>Erwartungen</h3></Link></li>
                                 <li className={appStyles.post}><Link to={`/app/`}><h3>Wertschätzung</h3></Link></li>
                                 <li className={appStyles.post}><Link to={`/app/`}><h3>Verletzlichkeit</h3></Link></li>

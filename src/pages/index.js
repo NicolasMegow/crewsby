@@ -2,83 +2,102 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/pro-solid-svg-icons'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-
-
-library.add(fas)
+import CTA from "../components/cta"
 
 const IndexPage = () => {
   return (
-      <Layout>
-        <Head title="Home"/>
-        <Container>
-          <Row>
-            <FontAwesomeIcon icon={['fas', 'laptop']} fixedWidth size="6x" color="#0f62cc"/>
-          </Row>
-          <Row>
-            <h1>Digitales Training für <br></br>professionelle Teamarbeit</h1>
-          </Row>
-          <Row>
-            <h2>Ein gutes Teamgefühl schweißt zusammen und steigert die gemeinsame Leistung. 
-              Doch Fehler schleichen sich schnell ein. Wir automatisieren die Pflege deines Teamgefühls.
-            </h2>
-            <Col md><h3><FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDCA40"/> Einfach</h3></Col>
-            <Col md><h3><FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDCA40"/> Passgenau</h3></Col>
-            <Col md><h3><FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDCA40"/> Ohne Coach</h3></Col>
-          </Row>
-          <Row>
-            <h2>Spitzenleistung durch starke Teamarbeit.</h2>
-            <p>Die Stärke von Teams liegt in der Unterschiedlichkeit der Teammitglieder. 
-              Aber Unterschiede sorgen auch für Spannungen und Missverständnisse. 
-              Lasst ihr euch davon herunterziehen oder beflügeln?ber Teamgefühl lernen</p>
-          </Row>
-          <Row>
-            <Col sm>
-              <h3>Verbindung stärken</h3>
-              <p>Starke Beziehungen erhöhen den Spaß an der Arbeit und ermöglichen produktive Diskussionen.</p>
-            </Col>
-            <Col sm>
-              <h3>Voneinander lernen</h3>
-              <p>Niemand ist alleine perfekt. Zusammen könnt ihr Stärken bündeln und Schwächen ausgleichen.</p>
-            </Col>
-          </Row>
-          <Row>
-            <h2>Ein gutes Teamgefühl ist besonders gefragt in Teams, die…</h2>
-          </Row>
-          <Row>
-            <h3>Schnell wachsen</h3><h3>Scrum einführen</h3><h3>Remote arbeiten</h3><h3>Kanban einführen</h3><h3>Selbstführung leben</h3><h3>Retros meistern</h3>
-          </Row>
-          <Row>
-            <h2>Einfach das Teamgefühl verbessern.</h2>
-            <p>Beziehungen zwischen Menschen sind komplex. Die Arbeit zusammen muss es nicht sein. 
-              Wir verpacken den Stand der Team-Forschung in kleine Aufgaben, mit denen du und dein Team euer Teamgefühl Stück für Stück verbessert.
+    <Layout>
+      <Head title="Startseite" />
+      <Container>
+        <Row>
+          <Col>
+            <span className="fa-layers fa-fw" style={{ marginBottom: "6rem" }}>
+              <FontAwesomeIcon icon={['fal', 'laptop']} fixedWidth size="6x" />
+              <FontAwesomeIcon icon={['fal', 'dumbbell']} fixedWidth size="3x" color="#0f62cc" transform="right-10 up-2" />
+            </span>
+            <h1>Spitzensportler trainieren täglich.<br></br>Und du?</h1>
+            <h2>Mit Teamgefühl kannst du dich persönlich und gemeinsam mit deinem Team weiterentwickeln.</h2>
+          </Col>
+        </Row>
+        <Row style={{marginTop:"3rem"}}>
+          <Col sm>
+            <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+            <h3>Führungskompetenz entwickeln</h3>
+            <p>Jeder hat das Potenzial die Führung zu übernehmen. Mit gezieltem Training kannst du die notwendigen Fähigkeiten aufzubauen und Verantwortung übernehmen.
+              </p>
+          </Col>
+          <Col sm>
+            <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+            <h3>Teamarbeit verbessern</h3>
+            <p>Spiztzenleistung ensteht immer aus Teamarbeit. Als Team könnt ihr voneinander lernen, miteinander eure Leistung steigern und gemeinsam Erfolge feiern.</p>
+          </Col>
+        </Row>
+        <Row style={{marginTop:"8rem"}}>
+          <Col sm>
+            <h2>Mechanismen verstehen</h2>
+            <p>Lerne, wie gute Teamarbeit funktioniert. 
+              Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
+              Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine, die beliebig rekombinierbar sind.</p>
+          </Col>
+          <Col sm>
+            <p>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Radical Candor<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Psychological Safety<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}OKRs<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Kanban<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Lean Management<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Scrum<br></br>
+            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Design Thinking<br></br>
+            </p> 
+          </Col>
+        </Row>
+        <Row style={{marginTop:"8rem"}}>
+          <Col sm>
+            <h2>Weltklasse Training</h2>
+            <p>Hör auf Ratschläge zu konsumieren.
+              Erst die Anwendung der Mechanismen führt zu besserer Teamarbeit und Leistungssteigerung. 
+              Teamgefühl liefert dir unzählige Tutorials, um alleine oder im Team die Anwendung zu trainieren.
             </p>
-          </Row>
-          <Row>
-            <Col sm>
-              <h3>100% digital</h3>
-              <p>Alles genau da, wo du es braucht, wenn du es braucht. Einloggen und loslegen.</p>
-            </Col>
-            <Col sm>
-              <h3>100% einfach</h3>
-              <p>Entwickelt für echte Menschen im Arbeitsalltag. Verstehen und machen.</p>
-            </Col>
-          </Row>
-          <Row>
-            <h2>Debugging ergänzt traditionelle Maßnahmen.</h2>
-            <p>Teams sind einfach da. Gute Zusammenarbeit ist leider kein Selbstläufer. Wir helfen dir dabei, ein gutes Teamgefühl aufzubauen und zu pflegen.</p>
-            <h3>Tutorials für Teamleiter</h3>
-            <p>Die Teamleitung beeinflusst das Teamgefühl — so oder so. Über 90 Tutorials zum Aufbau eines guten Teamgefühls.</p>
-            <h3>Aufgaben zum Teambuilding</h3>
-            <p>Regelmäßig ein wenig Zeit zur Pflege des Teamgefühls. Kleine Aufgaben, die dazu einladen die Teamarbeit neu zu gestalten.</p>
-          </Row>
-        </Container>
-      </Layout>
-    )
+          </Col>
+          <Col sm style={{display: "flex", alignItems: "center"}}>
+            <p>
+              <FontAwesomeIcon icon={['fal', 'info']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+              <FontAwesomeIcon icon={['fal', 'arrow-right']} size="4x" color="#0f62cc" transform="shrink-10" style={{marginBottom:"1rem"}}/>
+              <FontAwesomeIcon icon={['fal', 'stopwatch']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+              <FontAwesomeIcon icon={['fal', 'arrow-right']} size="4x" color="#0f62cc" transform="shrink-10" style={{marginBottom:"1rem"}}/>
+              <FontAwesomeIcon icon={['fal', 'question']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+              </p>
+          </Col>
+        </Row>
+        <Row style={{marginTop:"8rem"}}>
+          <Col>
+            <h2>12 Monate Teamgefühl kosten so viel, wie 1 Tag traditionelles Training.</h2>
+            <p>Teamgefühl bietet digitales Training. 
+              Durch die digitale Distribution unserer Trainingsinhalte haben wir ein radikal besseres Kosten-Nutzen-Verhältnis als traditionelles Training.
+            </p>
+          </Col>
+        </Row>
+        <Row style={{marginTop:"3rem"}}>
+          <Col sm>
+            <FontAwesomeIcon icon={['fal', 'phone-laptop']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+            <h3>On Demand 24/7</h3>
+            <p>Trainiere wann du willst, wo du willst und was du willst. Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
+            <Link to={`/training`}>Mehr erfahren</Link>
+          </Col>
+          <Col sm>
+            <FontAwesomeIcon icon={['fal', 'leaf-heart']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+            <h3>Klimaneutral</h3>
+            <p>Digitales Training hat eine hervorragende Klimabilanz. Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.</p>
+            <Link to={`/ueber-uns`}>Mehr erfahren</Link>
+          </Col>
+        </Row>
+      </Container>
+      <CTA />
+    </Layout>
+  )
 }
 
 export default IndexPage

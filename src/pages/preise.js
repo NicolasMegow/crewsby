@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -12,25 +13,41 @@ const PreisePage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h1>Profis investieren in die Teamarbeit.</h1>
+                        <FontAwesomeIcon icon={['fal', 'chart-line']} size="6x" color="#0f62cc" />
+                        <h1>Profis investieren in ihre Teamarbeit.</h1>
                     </Col>
                 </Row>
-                <Row>
-                    <Col md><h2>Team</h2>
-                        <p>Zugang zu allen Übungen<br></br>
-                        für professionelle Teamplayer und Teams.<br></br>
-                        Wir empfehlen nicht mehr als 8-10 Mitglieder pro Team.</p>
-                        <p>49€ pro Team/Monat</p>
+                <Row style={{marginTop:"6rem"}}>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'users']} size="4x" style={{marginBottom:"1rem"}}/> 
+                        <h2>Team</h2>
+                        <p><FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Über 40 Stunden Trainings<br></br>
+                        <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}On Demand<br></br>
+                        <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Einzeln & im Team</p>
+                        <p>Zugang zu allen Tutorials<br></br>
+                        für alle Mitglieder eines Teams<br></br>
+                        Beschränkt auf 8 Mitglieder pro Team<br></br>
+                        Tutorials in 2 Sprachen verfügbar</p>
+                        <p><h2>99€</h2> pro Team/Monat</p>
                         <Link to="/app-start"><Button>Jetzt buchen</Button></Link>
                     </Col>
-                    <Col md><h2>Team of Teams</h2>
-                        <p>Zugang zu allen Übungen<br></br>
-                        für alle Mitarbeiter des Unternehmens.<br></br>
-                        Intraneteinbindung mit Single-Sign-On(SSO).<br></br>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'industry-alt']} size="4x" style={{marginBottom:"1rem"}}/> 
+                        <h2>Team of Teams</h2>
+                        <p><FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Trainings-Flatrate<br></br>
+                        <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Einheitliches Fundament<br></br>
+                        <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Questmaster-Community</p>
+                        <p>Zugang zu allen Tutorials<br></br>
+                        für alle Mitgleider einer Einheit<br></br>
+                        Einheiten sind Abteilungen & Unternehmen<br></br>
+                        Tutorials in 9 Sprachen verfügbar<br></br>
+                        <br></br>
+                        Intraneteinbindung mit Single-Sign-On(SSO)<br></br>
                         Zugang zur Questmaster-Community<br></br>
-                        mit Tutorials, Templates und Checklisten zur Durchführung unternehmensinterner Quests.</p>
-                        <p>29€ pro Mitarbeiter/Jahr</p>
-                        <p><Link to="/app-start">Mehr erfahren</Link></p>
+                        inklusive Trainings-Dashboard<br></br>
+                        und ERFA-Gruppen</p>
+                        <p><h2>99€</h2> pro Mitarbeiter/Jahr</p>
+                        <p><Link to="/team-of-teams">Mehr erfahren</Link></p>
                     </Col>
                 </Row>
             </Container>

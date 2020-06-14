@@ -26,7 +26,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav as="ul" className="ml-auto">
                             <Nav.Item as="li">
-                                <Link className={headerStyles.navItem} to="/uebungen">Übungen</Link>
+                                <Link className={headerStyles.navItem} to="/training">Training</Link>
                             </Nav.Item>
                             <Nav.Item as="li">
                                 <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
