@@ -1,0 +1,44 @@
+content:
+  - page: Beziehungen stärken  
+    subfolderitems:
+      - page: Aufmerksamkeit
+        url: coming-soon
+      - page: Beitrag
+        url: coming-soon
+      - page: Erwartungen
+        url: coming-soon
+      - page: Wertschätzung
+        url: coming-soon
+      - page: Verletzlichkeit
+        url: coming-soon
+
+  - page: Prozesse optimieren
+    subfolderitems:
+      - page: Ziele
+        url: coming-soon
+      - page: Backlogs
+        url: coming-soon
+      - page: Rollen
+        url: coming-soon
+      - page: Meetings
+        url: coming-soon
+      - page: Retrospektiven
+        url: coming-soon
+      - page: Standards
+        url: coming-soon
+      - page: Work in Progress
+        url: coming-soon
+  - page: Fähigkeiten entwickeln
+    subfolderitems:
+      - page: Leistung
+        url: coming-soon
+      - page: Fragen
+        url: coming-soon
+      - page: Feedback
+        url: coming-soon
+      - page: Innovation
+        url: coming-soon
+      - page: Prototyping
+        url: coming-soon
+      - page: Dokumentation
+        url: coming-soon

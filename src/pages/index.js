@@ -14,9 +14,9 @@ const IndexPage = () => {
       <Container>
         <Row>
           <Col>
-            <span className="fa-layers fa-fw" style={{ marginBottom: "6rem" }}>
-              <FontAwesomeIcon icon={['fal', 'laptop']} fixedWidth size="6x" />
-              <FontAwesomeIcon icon={['fal', 'dumbbell']} fixedWidth size="3x" color="#0f62cc" transform="right-10 up-2" />
+            <span className="fa-stack fa-4x" style={{ marginBottom: "3rem" }}>
+              <FontAwesomeIcon icon={['fal', 'laptop']} fixedWidth class="fa-stack-2x"/>
+              <FontAwesomeIcon icon={['fal', 'dumbbell']} fixedWidth color="#0f62cc" transform="shrink-10 up-1" class="fa-stack-1x"/>
             </span>
             <h1>Spitzensportler trainieren täglich.<br></br>Und du?</h1>
             <h2>Mit Teamgefühl kannst du dich persönlich und gemeinsam mit deinem Team weiterentwickeln.</h2>
@@ -32,17 +32,17 @@ const IndexPage = () => {
           <Col sm>
             <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
             <h3>Teamarbeit verbessern</h3>
-            <p>Spiztzenleistung ensteht immer aus Teamarbeit. Als Team könnt ihr voneinander lernen, miteinander eure Leistung steigern und gemeinsam Erfolge feiern.</p>
+            <p>Spitzenleistung ensteht immer aus Teamarbeit. Als Team könnt ihr voneinander lernen, miteinander eure Leistung steigern und gemeinsam Erfolge feiern.</p>
           </Col>
         </Row>
         <Row style={{marginTop:"8rem"}}>
-          <Col sm>
-            <h2>Mechanismen verstehen</h2>
+          <Col sm={6} lg={8}>
+            <h2>Neue Methoden anwenden</h2>
             <p>Lerne, wie gute Teamarbeit funktioniert. 
               Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
               Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine, die beliebig rekombinierbar sind.</p>
           </Col>
-          <Col sm>
+          <Col sm={6} lg={4} style={{display: "flex", alignItems: "center"}}>
             <p>
             <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Radical Candor<br></br>
             <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Psychological Safety<br></br>
@@ -55,21 +55,20 @@ const IndexPage = () => {
           </Col>
         </Row>
         <Row style={{marginTop:"8rem"}}>
-          <Col sm>
-            <h2>Weltklasse Training</h2>
+          <Col sm={6} lg={8}>
+            <h2>Echte Fähigkeiten entwickeln</h2>
             <p>Hör auf Ratschläge zu konsumieren.
               Erst die Anwendung der Mechanismen führt zu besserer Teamarbeit und Leistungssteigerung. 
               Teamgefühl liefert dir unzählige Tutorials, um alleine oder im Team die Anwendung zu trainieren.
             </p>
           </Col>
-          <Col sm style={{display: "flex", alignItems: "center"}}>
-            <p>
-              <FontAwesomeIcon icon={['fal', 'info']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
-              <FontAwesomeIcon icon={['fal', 'arrow-right']} size="4x" color="#0f62cc" transform="shrink-10" style={{marginBottom:"1rem"}}/>
-              <FontAwesomeIcon icon={['fal', 'stopwatch']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
-              <FontAwesomeIcon icon={['fal', 'arrow-right']} size="4x" color="#0f62cc" transform="shrink-10" style={{marginBottom:"1rem"}}/>
-              <FontAwesomeIcon icon={['fal', 'question']} mask={['fas', 'square']} fixedWidth size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
-              </p>
+          <Col sm={6} lg={4} style={{display: "flex", alignItems: "center"}}>
+            <p style={{ marginBottom: "1rem", marginLeft: "auto", marginRight: "auto" }}>
+              <span className="fa-stack fa-3x">
+                <FontAwesomeIcon icon={['fal', 'burger-soda']} fixedWidth class="fa-stack-1x" transform="shrink-4 up-3"/>
+                <FontAwesomeIcon icon={['fal', 'ban']} fixedWidth color="#D64045" class="fa-stack-2x"/>
+              </span>
+            </p>
           </Col>
         </Row>
         <Row style={{marginTop:"8rem"}}>

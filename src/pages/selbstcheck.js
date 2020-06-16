@@ -21,10 +21,10 @@ const SelbstcheckPage = () => {
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Nav variant="pills">
                         <Nav.Item>
-                            <Nav.Link eventKey="first"><FontAwesomeIcon icon={['fal', 'user']} fixedWidth/>  mich</Nav.Link>
+    <Nav.Link eventKey="first"><FontAwesomeIcon icon={['fal', 'user']} fixedWidth/>{'   '}MICH</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="second"><FontAwesomeIcon icon={['fal', 'users']} fixedWidth/>  uns</Nav.Link>
+                            <Nav.Link eventKey="second"><FontAwesomeIcon icon={['fal', 'users']} fixedWidth/>{'   '}UNS</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>

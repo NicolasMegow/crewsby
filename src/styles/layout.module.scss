@@ -1,3 +1,8 @@
+$maincolor:#1c1e21;
+$highlightcolor: #0f62cc;
+$darkback: #677b8c;
+$lightback: #F5F5F5;
+
 .container {
     margin: 0 auto;
     max-width: 900px;
@@ -9,5 +14,34 @@
 
 .content {
     flex-grow:1;
-    margin-top: 20%;
+    margin-top: 8rem;
+}
+
+.sidebar {
+    margin-top: 8rem;
+    padding-left: 1rem;
+    max-width: 30rem;
+  }
+
+.sidebar-subitem {
+  color: $maincolor;
+  font-size: .8rem;
+  font-weight: 400;
+  text-decoration: none;
+  }
+
+.sidebar-subitem:hover {
+    color: $highlightcolor;
+    text-decoration: none;
+}
+
+.sidebar-tab {
+  margin-top:5%;
+}
+
+.container-app {
+  margin: 0 10%;
+  max-width: 900px;
+  padding: 1rem;
+  min-height: 100vh;
 }

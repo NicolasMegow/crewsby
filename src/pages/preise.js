@@ -19,7 +19,6 @@ const PreisePage = () => {
                 </Row>
                 <Row style={{marginTop:"6rem"}}>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'users']} size="4x" style={{marginBottom:"1rem"}}/> 
                         <h2>Team</h2>
                         <p><FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Über 40 Stunden Trainings<br></br>
                         <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}On Demand<br></br>
@@ -28,11 +27,10 @@ const PreisePage = () => {
                         für alle Mitglieder eines Teams<br></br>
                         Beschränkt auf 8 Mitglieder pro Team<br></br>
                         Tutorials in 2 Sprachen verfügbar</p>
-                        <p><h2>99€</h2> pro Team/Monat</p>
-                        <Link to="/app-start"><Button>Jetzt buchen</Button></Link>
+                        <p><h2>99 €</h2> pro Team/Monat</p>
+                        <Link to="/tutorials"><Button>Jetzt buchen</Button></Link>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'industry-alt']} size="4x" style={{marginBottom:"1rem"}}/> 
                         <h2>Team of Teams</h2>
                         <p><FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Trainings-Flatrate<br></br>
                         <FontAwesomeIcon icon={['fal', 'check']} color="#0f62cc" />{' '}Einheitliches Fundament<br></br>
@@ -46,7 +44,7 @@ const PreisePage = () => {
                         Zugang zur Questmaster-Community<br></br>
                         inklusive Trainings-Dashboard<br></br>
                         und ERFA-Gruppen</p>
-                        <p><h2>99€</h2> pro Mitarbeiter/Jahr</p>
+                        <p><h2>99 €</h2> pro Mitarbeiter/Jahr</p>
                         <p><Link to="/team-of-teams">Mehr erfahren</Link></p>
                     </Col>
                 </Row>

@@ -1,0 +1,27 @@
+content:
+  - page: Beziehungen stärken 
+    subfolderitems:
+      - page: Vertrauen
+        url: coming-soon
+      - page: Konflikte
+        url: coming-soon
+      - page: Rituale  
+        url: coming-soon
+  - page: Prozesse optimieren
+    subfolderitems:
+      - page: Koordination
+        url: coming-soon
+      - page: Einsatz
+        url: coming-soon
+      - page: Verantwortung
+        url: coming-soon
+      - page: Ergebnisorientierung
+        url: coming-soon
+      - page: Müllabfuhr
+        url: coming-soon
+  - page: Fähigkeiten entwickeln
+    subfolderitems:
+      - page: Peer-Coaching
+        url: uebung1
+      - page: Skill-Sprints
+        url: coming-soon

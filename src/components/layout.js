@@ -3,6 +3,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import "../styles/index.scss"
 import layoutStyles from "../styles/layout.module.scss"
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
