@@ -1,6 +1,6 @@
 ---
 title: "Ziele festlegen"
-type: "Ind"
+type: "ind"
 date: "2020-06-04"
 version: "1.0"
 ---
@@ -26,4 +26,4 @@ ___
 ## Reflexion
 * Was fällt Ihnen bei den sechs Markierungen auf?
 * Wann macht es Sinn von einem einmal gesteckten Ziel bewusst abzuweichen?
-* TED-Talk: John Doerr on OKRs
+* <a href="https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals?language=de" target="_blank">TED-Talk: John Doerr on OKRs</a>

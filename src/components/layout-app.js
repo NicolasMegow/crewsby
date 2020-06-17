@@ -17,7 +17,7 @@ const LayoutApp = (props) => {
     <Container fluid>
       <Header />
       <Row>
-        <Col xs={2} id="sidebar-wrapper" className={layoutStyles.sidebar}>
+        <Col md lg={3} id="sidebar-wrapper" className={layoutStyles.sidebar}>
           <Tab.Container id="left-tabs-example" defaultActiveKey="ind">
             <Nav variant="pills">
               <Nav.Item>
@@ -37,7 +37,7 @@ const LayoutApp = (props) => {
             </Tab.Content>
           </Tab.Container>
         </Col>
-        <Col xs={10} id="page-content-wrapper">
+        <Col md lg={9} id="page-content-wrapper">
           <div className={layoutStyles.containerApp}>
             <div className={layoutStyles.content}>
               {props.children}

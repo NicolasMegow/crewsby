@@ -8,14 +8,14 @@ content:
       - page: Erwartungen
         url: coming-soon
       - page: Wertschätzung
-        url: coming-soon
+        url: wertschaetzung-1
       - page: Verletzlichkeit
         url: coming-soon
 
   - page: Prozesse optimieren
     subfolderitems:
       - page: Ziele
-        url: coming-soon
+        url: ziele-1
       - page: Backlogs
         url: coming-soon
       - page: Rollen

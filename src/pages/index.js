@@ -12,13 +12,13 @@ const IndexPage = () => {
     <Layout>
       <Head title="Startseite" />
       <Container>
-        <Row>
+        <Row style={{marginTop:"3rem"}}>
           <Col>
-            <span className="fa-stack fa-4x" style={{ marginBottom: "3rem" }}>
-              <FontAwesomeIcon icon={['fal', 'laptop']} fixedWidth class="fa-stack-2x"/>
-              <FontAwesomeIcon icon={['fal', 'dumbbell']} fixedWidth color="#0f62cc" transform="shrink-10 up-1" class="fa-stack-1x"/>
-            </span>
-            <h1>Spitzensportler trainieren täglich.<br></br>Und du?</h1>
+            <p><FontAwesomeIcon icon={['fal', 'user-astronaut']} fixedWidth size="4x"/> {'  '}  
+              <FontAwesomeIcon icon={['fal', 'user-md']} fixedWidth size="4x"/> {'  '}    
+              <FontAwesomeIcon icon={['fal', 'user-tie']} fixedWidth size="4x" color="#0f62cc" /></p>
+            <h1 style={{marginBottom:"0"}}>Profis trainieren regelmäßig.</h1>
+            <h1 style={{marginTop:"0", color:"#0f62cc"}}>Und du?</h1>
             <h2>Mit Teamgefühl kannst du dich persönlich und gemeinsam mit deinem Team weiterentwickeln.</h2>
           </Col>
         </Row>
@@ -26,13 +26,24 @@ const IndexPage = () => {
           <Col sm>
             <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
             <h3>Führungskompetenz entwickeln</h3>
-            <p>Jeder hat das Potenzial die Führung zu übernehmen. Mit gezieltem Training kannst du die notwendigen Fähigkeiten aufzubauen und Verantwortung übernehmen.
+            <p>Jeder hat das Potenzial die Führung zu übernehmen. 
+              Grundlage dafür ist die Fähigkeit hervorragend im Team zu arbeiten.<br></br>
+              <br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Tägliche Verbesserung<br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Gezielte Trainingsblöcke<br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Spontane Auffrischung<br></br>
               </p>
           </Col>
           <Col sm>
             <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
             <h3>Teamarbeit verbessern</h3>
-            <p>Spitzenleistung ensteht immer aus Teamarbeit. Als Team könnt ihr voneinander lernen, miteinander eure Leistung steigern und gemeinsam Erfolge feiern.</p>
+            <p>Spitzenleistung ensteht immer aus Teamarbeit. 
+              Im Team lernt ihr voneinander und feiert gemeinsame Erfolge.<br></br>
+              <br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Gute Projekt-Kickoffs<br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Interessante Retrospektiven<br></br>
+              <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Einfache Team-Sprints<br></br>
+              </p>
           </Col>
         </Row>
         <Row style={{marginTop:"8rem"}}>
@@ -40,17 +51,18 @@ const IndexPage = () => {
             <h2>Neue Methoden anwenden</h2>
             <p>Lerne, wie gute Teamarbeit funktioniert. 
               Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
-              Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine, die beliebig rekombinierbar sind.</p>
+              Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine, 
+              die beliebig rekombinierbar sind.</p>
           </Col>
           <Col sm={6} lg={4} style={{display: "flex", alignItems: "center"}}>
             <p>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Radical Candor<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Psychological Safety<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}OKRs<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Kanban<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Lean Management<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Scrum<br></br>
-            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Design Thinking<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Radical Candor<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Psychological Safety<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}OKRs<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Kanban<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Lean Management<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Scrum<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Design Thinking<br></br>
             </p> 
           </Col>
         </Row>
@@ -75,7 +87,7 @@ const IndexPage = () => {
           <Col>
             <h2>12 Monate Teamgefühl kosten so viel, wie 1 Tag traditionelles Training.</h2>
             <p>Teamgefühl bietet digitales Training. 
-              Durch die digitale Distribution unserer Trainingsinhalte haben wir ein radikal besseres Kosten-Nutzen-Verhältnis als traditionelles Training.
+              Dadurch bieten wir ein radikal besseres Kosten-Nutzen-Verhältnis als traditionelles Training.
             </p>
           </Col>
         </Row>
@@ -83,13 +95,15 @@ const IndexPage = () => {
           <Col sm>
             <FontAwesomeIcon icon={['fal', 'phone-laptop']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
             <h3>On Demand 24/7</h3>
-            <p>Trainiere wann du willst, wo du willst und was du willst. Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
+            <p>Trainiere wann du willst, wo du willst und was du willst. 
+              Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
             <Link to={`/training`}>Mehr erfahren</Link>
           </Col>
           <Col sm>
             <FontAwesomeIcon icon={['fal', 'leaf-heart']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
             <h3>Klimaneutral</h3>
-            <p>Digitales Training hat eine hervorragende Klimabilanz. Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.</p>
+            <p>Digitales Training hat eine hervorragende Klimabilanz. 
+              Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.</p>
             <Link to={`/ueber-uns`}>Mehr erfahren</Link>
           </Col>
         </Row>

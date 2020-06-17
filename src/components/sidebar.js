@@ -14,7 +14,14 @@ function SidebarItem({ page, subfolderitems, ...rest }) {
                 <ul style={{ listStyleType: "none" }}>
                     {subfolderitems.map((subItem) => {
                         return (
-                            <li><Link to={`/tutorials/${subItem.url}`} className={layoutStyles.sidebarSubitem}>{subItem.page}</Link></li>
+                            <li>
+                                <Link 
+                                    to={`/tutorials/${subItem.url}`} 
+                                    className={layoutStyles.sidebarSubitem} 
+                                    activeStyle={{ color: "#0f62cc", fontWeight:"bold" }}>
+                                    {subItem.page}
+                                </Link>
+                            </li>
                         )
                     })}
                 </ul>

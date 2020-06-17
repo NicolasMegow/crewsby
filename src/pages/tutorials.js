@@ -8,7 +8,7 @@ import Head from "../components/head"
 const AppPage = () => {
     return (
         <LayoutApp>
-            <Head title="App" />
+            <Head title="Trainingscenter" />
             <Container>
                 <Row>
                     <Col>
@@ -16,11 +16,14 @@ const AppPage = () => {
                         <h2 style={{marginTop:"4rem"}}>
                             Du entscheidest, was du trainieren willst.<br></br>
                             Wir liefern die passenden Tutorials.</h2>
-                        <p>Die Tutorials sind so gestaltet, dass du echte Fähigkeiten aufbaust:</p>
+                        <p>Hier eine kleine Gebrauchsanweisung ;)<br></br>
+                            Die Tutorials sind so gestaltet, dass du echte Fähigkeiten aufbaust:</p>
                         <ul>
                             <li>
                                 <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Kein Tutorial braucht Vorbereitung.</p>
-                                <p>Such dir ein Thema aus, was dich interessiert, und leg los.</p>
+                                <p>Such dir ein Thema aus, was dich interessiert, und leg los.<br></br>
+                                    Unser Alogrithmus wählt die passenden Tutorials für dich aus.
+                                </p>
                             </li>
                             <li style={{marginTop: "1rem"}}>
                                 <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Jedes Tutorial dauert nur 30 Minuten.</p>
@@ -30,10 +33,16 @@ const AppPage = () => {
                                 </p>
                             </li>
                             <li style={{marginTop: "1rem"}}>
-                                <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Jedes Tutorial besteht aus 3 Teilen.</p>
-                                <p>Die Tutorials starten mit einem kurzen Infoblock.<br></br> 
-                                    Den Kern bildet eine Übung zur Anwendung.<br></br> 
-                                    Abschließend gibt es ein paar Fragen zur Reflexion.</p>
+                                <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Jedes Tutorial baut Fähigkeiten auf.</p>
+                                <p>Durch wiederholte Anwendung wachsen Fähigkeiten.<br></br>
+                                    Den Kern eines Tutorials bildet die Übung.<br></br> 
+                                    Abgerundet werden die Tutorials durch Beispiele und Reflexionsfragen.</p>
+                            </li>
+                            <li style={{marginTop: "1rem"}}>
+                                <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Wir empfehlen mit den Beziehungen zu starten.</p>
+                                <p>Häufig werden die Beziehungen unterschätzt.<br></br>
+                                    Doch starke Beziehungen sind das Fundament guter Teamarbeit.<br></br>
+                                    Prozesse und danach die Fähigkeiten bauen darauf auf.</p>
                             </li>
                             <li style={{marginTop: "1rem"}}>
                                 <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Du kannst alleine oder mit deinem Team trainieren:</p>

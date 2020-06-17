@@ -1,6 +1,6 @@
 ---
 title: "Wertschätzung kommunizieren II"
-type: "Team"
+type: "ind"
 date: "2020-06-04"
 version: "1.0"
 ---

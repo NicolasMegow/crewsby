@@ -1,11 +1,9 @@
 ---
 title: "Wertschätzung kommunizieren I"
-type: "Ind"
+type: "ind"
 date: "2020-06-04"
 version: "1.0"
 ---
-
-In this Uebung you'll learn even lesse...
 
 ## Input
 * Wertschätzung belohnt Mitarbeiter für Leistung und setzt Anreize vollen Einsatz zu leisten.
@@ -24,4 +22,5 @@ ___
 ## Reflexion
 * Fällt es Ihnen bei allen Mitarbeitern gleich leicht? Was sagt das über Ihre aktuelle Beziehung aus?
 * Präferieren Sie es allen Mitarbeitern die gleiche Wertschätzung zu zeigen oder berücksichtigen Sie die individuellen Bedarfe nach Wertschätzung?
-* Max dePree “The millwright died”
+* <a href="https://www.tomcuthbert.com/blog/the-millwright-died-39717" target="_blank">Max dePree “The millwright died”</a>
+

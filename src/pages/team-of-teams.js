@@ -12,42 +12,76 @@ const TeamofteamsPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <FontAwesomeIcon icon={['fal', 'industry-alt']} size="6x" color="#0f62cc" />
-                        <h1>Digitalisierung der Personalentwicklung</h1>
-                        <p>Wir bieten dir und deinem Team die Werkzeuge, um ein wirklich hervorragendes Teamgefühl zu schaffen und zu pflegen.</p>
-                    </Col>
-                </Row>
-                <Row style={{marginTop:"6rem"}}>
-                    <Col>
-                        <h2>Professionelle Teamarbeit entfesselt Potenziale</h2>
-                        <p>Teamarbeit läuft häufig nebenher — ganz natürlich durch den Alltag im Büro.
-                        Wie gut oder schlecht diese Teamarbeit ist, liegt ganz in deiner Hand.
+                        <FontAwesomeIcon icon={['fal', 'people-carry']} size="6x" color="#0f62cc" />
+                        <h1>Selbstgesteuerte Personalentwicklung</h1>
+                        <p>Teamarbeit läuft häufig unterschiedlich.
+                            Jeder Standort hat so seine Besonderheiten.
+                            Mit Teamgefühl schaffen Sie ein gemeinsames Fundament.
                         </p>
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{marginTop:"1rem"}}>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'analytics']} fixedWidth size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <FontAwesomeIcon icon={['fal', 'globe-europe']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <h3>Weltweit einheitlich</h3>
+                        <p>Alle Trainings sind in 9 Sprachen verfügbar. So profitiert jeder Mitarbeiter weltweit.</p>
+                    </Col>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'analytics']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
                         <h3>Trainings-Dashboard</h3>
                         <p>Die unternehmensweite Personalentwicklung auf einen Blick.</p>
                     </Col>
-                    <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'flag-checkered']} fixedWidth size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
-                        <h3>Questmaster-Community</h3>
-                        <p>Materialien zur Durchführung unternehmensinterner Challenges.</p>
-                    </Col>
-                    <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'coffee-pot']} fixedWidth size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
-                        <h3>ERFA-Gruppen</h3>
-                        <p>Zugang zu einer Community unternehmensübergreifender ERFA-Gruppen.</p>
+                </Row>
+                <Row style={{marginTop:"8rem"}}>
+                    <Col>
+                        <h2>Bringen Sie Ihr Unternehmen in Bewegung.</h2>
+                        <p>Die Tutorials sind nur die Basis. 
+                            Darauf aufbauend gestalten wir Personalentwicklung neu.
+                        </p>
                     </Col>
                 </Row>
-                <Row style={{marginTop:"6rem"}}>
+                <Row style={{marginTop:"1rem"}}>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'flag-checkered']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <h3>Questmaster-Ressourcen</h3>
+                        <p>Unternehmensinterne Sprints zu brennenden Themen aus dem Tagesgeschäft.
+                            Wir stellen umfassende Materialien, mit denen Sie selbst diese Sprints organisieren und druchführen.
+                        </p>
+                    </Col>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'coffee-pot']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <h3>Peer-Supervision</h3>
+                        <p>Jeder Mitarbeiter kann sich zu Supervisionsgruppen anmelden — frei nach Bedarf. 
+                            Wir stellen spannende Gruppen zusammen und gestalten den Prozess. 
+                        </p>
+                    </Col>
+                </Row>
+                <Row style={{marginTop:"8rem"}}>
                     <Col>
-                        <h2>Teamgefühl integriert sich perfekt ins Intranet</h2>
-                        <p>Wir unterstützen gerne kostenlos bei der Integration in bestehende Intranets.
-                            So hat jeder Mitarbeiter direkt Zugriff auf alle Tutorials und braucht keinen zusätzlichen Account anzulegen.</p>
-                        <Button variant="primary" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
+                        <h2>Teamgefühl knüpft an bestehende Systeme an.</h2>
+                        <p>Wir erfinden das Rad nicht neu.
+                            Gerne integrieren wir uns in Systeme, die bei Ihnen bereits etabliert sind.
+                        </p>
+                    </Col>
+                </Row>
+
+                <Row style={{marginTop:"1rem"}}>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'door-open']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <h3>Intranet mit SSO</h3>
+                        <p>Kostenlose Unterstütztung bei der Integration in bestehende Intranets.</p>
+                    </Col>
+                    <Col sm>
+                        <FontAwesomeIcon icon={['fal', 'magic']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
+                        <h3>Zusätzliche Trainings</h3>
+                        <p>Gegen Aufpreis erstellen wir Trainings speziell für Ihr Unternehmen und nur für Sie.</p>
+                    </Col>
+                </Row>
+                <Row style={{marginTop:"4rem"}}>
+                    <Col>
+                        <h2>Wie hoch ist der Return-on-Teamarbeit bei Ihnen?</h2>
+                        <p><Button variant="primary" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
+                            {'  '} oder einfach anrufen: (+49) 176 / 8526 3478.</p>
                     </Col>
                 </Row>
             </Container>
