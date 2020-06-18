@@ -7,7 +7,7 @@ version: "1.0"
 
 In this Uebung you'll unlearn everything...
 
-## Input
+## Info
 * Wertschätzung stellt eine Verbindung zwischen Mensch und Leistung her.
 * Dafür müssen drei Dinge klar kommuniziert werden:
   1. Welche konkrete Leistung wurde erbracht?

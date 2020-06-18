@@ -1,9 +1,25 @@
 ---
-title: "Ziele festlegen"
+title: "Verletzlichkeit"
 type: "team"
 date: "2020-06-04"
 version: "1.0"
 ---
 
-Was gehört wem?
-Jeder Teilnehmer schmeißt einen persönlichen Gegenstand in ein Säckchen. Danach werden die Gegenstände gezogen und zu einem Team zusammengefügt. Die Besitzer der Gegenstände geben sich zu erkennen und bilden so die jeweiligen Teams.
+## Info
+
+![Vertrauen](../../img/Vertrauen.png "Vertrauen ist eine Gleichung")
+
+
+___
+
+## Übung
+
+Verletzlichkeit -> Schwächen-Memory -> Vorschläge
+
+___
+
+## Reflexion
+
+Nächste: 
+Ideal Teamplayer-Übung Lencioni
+Abwandlung des Schwächen-Memory: drei Eigenschaften ranken -> Tipps zur schwächsten

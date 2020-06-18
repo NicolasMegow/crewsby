@@ -7,7 +7,7 @@ version: "1.0"
 
 In dieser Übung lernen Sie Ziele als Kernelement der OKRs kennen.
 
-## Input
+## Info
 * Ziele fokussieren und helfen dabei kleine Entscheidungen zu treffen.
 * Ziele motivieren, wenn die Erreichung der Ziele positive Konsequenzen hat.
 * Ziele sind Zustände, z.B. “Wir sind live” oder “Der Support-Prozess funktioniert”.

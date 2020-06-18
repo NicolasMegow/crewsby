@@ -22,7 +22,8 @@ const AppPage = () => {
                             <li>
                                 <p style={{fontWeight: "bold", marginBottom: "0rem"}}>Kein Tutorial braucht Vorbereitung.</p>
                                 <p>Such dir ein Thema aus, was dich interessiert, und leg los.<br></br>
-                                    Unser Alogrithmus wählt die passenden Tutorials für dich aus.
+                                    Unser Algorithmus wählt die passenden Tutorials für dich aus.<br></br>
+                                    An Material braucht ihr nur Stift und Papier. Smartphones schaden nicht.
                                 </p>
                             </li>
                             <li style={{marginTop: "1rem"}}>

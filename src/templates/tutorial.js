@@ -62,7 +62,7 @@ const Tutorial = (props) => {
                             <p><Link to="/tutorials">Zurück</Link></p>
                             <h1>{props.data.markdownRemark.frontmatter.title}</h1>
                             <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
-                            <p><Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}>Weiter trainieren</Link></p>
+                            <p style={{marginTop:"2rem"}}><Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`} >Weiter trainieren</Link></p>
                             <p style={{fontSize:".6rem"}}>{props.data.markdownRemark.frontmatter.version} | {props.data.markdownRemark.frontmatter.date}</p>
                         </div>
                     </div>
