@@ -1,44 +1,53 @@
 content:
-  - page: Beziehungen stärken  
-    subfolderitems:
-      - page: Aufmerksamkeit
-        url: coming-soon
-      - page: Beitrag
-        url: coming-soon
-      - page: Erwartungen
-        url: coming-soon
-      - page: Wertschätzung
-        url: wertschaetzung-1
-      - page: Verletzlichkeit
-        url: coming-soon
+  - category: Beziehungen stärken
+    key: rel  
+    icon: ['fal', 'heartbeat']
+    icon2: ['fal', 'heart']
+    themen:
+      - thema: Wertschätzung
+        urlstart: wertschaetzung-1a
+      - thema: Aufmerksamkeit
+        urlstart: coming-soon
+      - thema: Beitrag
+        urlstart: coming-soon
+      - thema: Erwartungen
+        urlstart: coming-soon
+      - thema: Verletzlichkeit
+        urlstart: coming-soon
 
-  - page: Prozesse optimieren
-    subfolderitems:
-      - page: Ziele
-        url: ziele-1
-      - page: Backlogs
-        url: coming-soon
-      - page: Rollen
-        url: coming-soon
-      - page: Meetings
-        url: coming-soon
-      - page: Retrospektiven
-        url: coming-soon
-      - page: Standards
-        url: coming-soon
-      - page: Work in Progress
-        url: coming-soon
-  - page: Fähigkeiten entwickeln
-    subfolderitems:
-      - page: Leistung
-        url: coming-soon
-      - page: Fragen
-        url: coming-soon
-      - page: Feedback
-        url: coming-soon
-      - page: Innovation
-        url: coming-soon
-      - page: Prototyping
-        url: coming-soon
-      - page: Dokumentation
-        url: coming-soon
+  - category: Prozesse optimieren
+    key: col
+    icon: ['fal', 'handshake']
+    icon2: ['fal', 'thumbs-up']
+    themen:
+      - thema: Ziele
+        urlstart: coming-soon
+      - thema: Backlogs
+        urlstart: coming-soon
+      - thema: Rollen
+        urlstart: coming-soon
+      - thema: Meetings
+        urlstart: coming-soon
+      - thema: Retrospektiven
+        urlstart: coming-soon
+      - thema: Standards
+        urlstart: coming-soon
+      - thema: Work in Progress
+        urlstart: coming-soon
+  - category: Fähigkeiten entwickeln
+    key: ski
+    icon: ['fal', 'mind-share']
+    icon2: ['fal', 'brain']
+    themen:
+      - thema: Leistung
+        urlstart: coming-soon
+      - thema: Fragen
+        urlstart: coming-soon
+      - thema: Feedback
+        urlstart: coming-soon
+      - thema: Innovation
+        urlstart: coming-soon
+      - thema: Prototyping
+        urlstart: coming-soon
+      - thema: Dokumentation
+        urlstart: coming-soon

@@ -1,27 +1,37 @@
 content:
-  - page: Beziehungen stärken 
-    subfolderitems:
-      - page: Vertrauen
-        url: vertrauen-1
-      - page: Konflikte
-        url: konflikte-1
-      - page: Rituale  
-        url: rituale-1
-  - page: Prozesse optimieren
-    subfolderitems:
-      - page: Koordination
-        url: koordination-1
-      - page: Einsatz
-        url: coming-soon
-      - page: Verantwortung
-        url: coming-soon
-      - page: Ergebnisorientierung
-        url: coming-soon
-      - page: Müllabfuhr
-        url: coming-soon
-  - page: Fähigkeiten entwickeln
-    subfolderitems:
-      - page: Peer-Supervision
-        url: peer-supervision-1
-      - page: Skill-Sprints
-        url: coming-soon
+  - category: Beziehungen stärken 
+    key: rel  
+    icon: ['fal', 'heartbeat']
+    icon2: ['fal', 'heart']
+    themen:
+      - thema: Vertrauen
+        urlstart: vertrauen-1a
+      - thema: Konflikte
+        urlstart: konflikte-1a
+      - thema: Rituale  
+        urlstart: rituale-1a
+  - category: Prozesse optimieren
+    key: col
+    icon: ['fal', 'handshake']
+    icon2: ['fal', 'thumbs-up']
+    state: disabled
+    themen:
+      - thema: Koordination
+        urlstart: koordination-1a
+      - thema: Einsatz
+        urlstart: coming-soon
+      - thema: Verantwortung
+        urlstart: coming-soon
+      - thema: Ergebnisorientierung
+        urlstart: coming-soon
+      - thema: Müllabfuhr
+        urlstart: coming-soon
+  - category: Fähigkeiten entwickeln
+    key: ski
+    icon: ['fal', 'mind-share']
+    icon2: ['fal', 'brain']
+    themen:
+      - thema: Peer-Supervision
+        urlstart: peer-supervision-1a
+      - thema: Skill-Sprints
+        urlstart: coming-soon

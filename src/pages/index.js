@@ -24,7 +24,7 @@ const IndexPage = () => {
         </Row>
         <Row style={{marginTop:"3rem"}}>
           <Col sm>
-            <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+            <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
             <h3>Führungskompetenz entwickeln</h3>
             <p>Jeder hat das Potenzial die Führung zu übernehmen. 
               Grundlage dafür ist die Fähigkeit hervorragend im Team zu arbeiten.<br></br>
@@ -35,7 +35,7 @@ const IndexPage = () => {
               </p>
           </Col>
           <Col sm>
-            <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+            <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
             <h3>Teamarbeit verbessern</h3>
             <p>Spitzenleistung ensteht immer aus Teamarbeit. 
               Im Team lernt ihr voneinander und feiert gemeinsame Erfolge.<br></br>
@@ -76,9 +76,9 @@ const IndexPage = () => {
           </Col>
           <Col sm={6} lg={4} style={{display: "flex", alignItems: "center"}}>
             <p style={{ marginBottom: "1rem", marginLeft: "auto", marginRight: "auto" }}>
-              <span className="fa-stack fa-3x">
-                <FontAwesomeIcon icon={['fal', 'burger-soda']} fixedWidth class="fa-stack-1x" transform="shrink-4 up-3"/>
-                <FontAwesomeIcon icon={['fal', 'ban']} fixedWidth color="#D64045" class="fa-stack-2x"/>
+              <span className="fa-layers fa-fw fa-6x">
+                <FontAwesomeIcon icon={['fal', 'burger-soda']} transform="shrink-4"/>
+                <FontAwesomeIcon icon={['fal', 'ban']} color="#D64045"/>
               </span>
             </p>
           </Col>

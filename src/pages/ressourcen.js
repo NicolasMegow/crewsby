@@ -33,14 +33,8 @@ const RessourcenPage = () => {
                             </li>
                             <li className={appStyles.post}>
                                 <Link to="/coming-soon">
-                                    <h3>Tipps zum Kickoff</h3>
-                                    <p>Checkliste für den gelungenen Start ins Teambuilding</p>
-                                </Link>
-                            </li>
-                            <li className={appStyles.post}>
-                                <Link to="/coming-soon">
-                                    <h3>Workshop zum Projektstart</h3>
-                                    <p>Template für einen Kick-off Workshop</p>
+                                    <h3>Rezepte für Workshops</h3>
+                                    <p>Kombinationen der Tutorials zur Teamentwicklung</p>
                                 </Link>
                             </li>
                             <li className={appStyles.post}>
@@ -52,7 +46,7 @@ const RessourcenPage = () => {
                             <li className={appStyles.post}>
                                 <Link to="/coming-soon">
                                     <h3>Spielesammlung</h3>
-                                    <p>Ausgewählte Spiele für ein entspanntes Teambuilding</p>
+                                    <p>Ausgewählte Brettspiele für ein entspanntes Teambuilding</p>
                                 </Link>
                             </li>
                         </ol>

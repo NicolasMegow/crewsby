@@ -1,0 +1,23 @@
+---
+title: "Vertrauen im Team"
+type: "team"
+part: "Info"
+date: "2020-06-04"
+version: "1.0"
+next: "vertrauen-1b"
+---
+
+Vertrauen entsteht in der Beziehung zwischen zwei Menschen.
+Wie stark das Vertrauen wird, hängt von vier Faktoren ab:
+
+![Vertrauen](../../img/Vertrauen.png "Vertrauen ist eine Gleichung")
+
+Die Vertraulichkeit ist der Faktor mit dem stärksten Einfluss.
+Deshalb starten wir mit der Vertraulichkeit, um das Vertrauen im Team zu stärken.
+
+Vertraulichkeit entsteht, wenn wir uns als Menschen begegnen.
+Das ist riskant. Wir verlassen die schützende Hülle der Rollen und öffnen uns dem anderen Menschen.
+Bis auf extreme Ausnahmen, wird die entstehende Intimität mit Herzlichkeit belohnt.
+
+Hinweis: Brecht bitte hier ab, wenn ihr ernsthafte Bedenken an den guten Absichten eines Teammitglieds habt.
+In solchen Fällen hilft nur eine professionelle Mediation. Daran schließend kann wieder Vertrauen aufgebaut werden.

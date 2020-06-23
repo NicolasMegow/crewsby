@@ -30,6 +30,30 @@ $lightback: #F5F5F5;
     margin-top:5%;
 }
 
+.tile {
+    margin: 1rem 0;
+    a {
+        color: $maincolor;
+        border-color: $darkback;
+        border-style: solid;
+        border-width: 1px;
+        padding: 1rem;
+        min-height: 6rem;
+        text-decoration: none;
+        display: block;
+    }
+    a:hover{
+        color: #ffffff;
+        background: $highlightcolor;
+    }
+    h3 {
+        margin-bottom: 0;
+    }
+    .disabled-link {
+        pointer-events: none;
+      }
+}
+
 .section {
     margin-bottom:5%;
 }

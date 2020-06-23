@@ -14,9 +14,9 @@ const CTA = () => {
                     <Link to="/preise"><Button variant="light">Tutorials starten</Button></Link>
                 </Col>
                 <Col style={{ display: "flex", alignItems: "center", marginLeft: "30%", marginRight: "auto" }}>
-                    <span className="fa-stack fa-4x">
-                        <FontAwesomeIcon icon={['fal', 'laptop']} fixedWidth color="#ffffff" class="fa-stack-2x" />
-                        <FontAwesomeIcon icon={['fal', 'dumbbell']} fixedWidth color="#ffffff" transform="shrink-10 up-1" class="fa-stack-1x" />
+                    <span className="fa-layers fa-fw fa-6x">
+                        <FontAwesomeIcon icon={['fal', 'laptop']} color="#ffffff" />
+                        <FontAwesomeIcon icon={['fal', 'dumbbell']} color="#ffffff" transform="shrink-10 up-1" />
                     </span>
                 </Col>
             </Row>

@@ -24,11 +24,11 @@ const TeamofteamsPage = () => {
                     <Col sm>
                         <FontAwesomeIcon icon={['fal', 'globe-europe']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
                         <h3>Weltweit einheitlich</h3>
-                        <p>Alle Trainings sind in 9 Sprachen verfügbar. So profitiert jeder Mitarbeiter weltweit.</p>
+                        <p>Alle Tutorials sind in 9 Sprachen verfügbar. So profitiert jeder Mitarbeiter weltweit.</p>
                     </Col>
                     <Col sm>
                         <FontAwesomeIcon icon={['fal', 'analytics']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
-                        <h3>Trainings-Dashboard</h3>
+                        <h3>Tutorial-Dashboard</h3>
                         <p>Die unternehmensweite Personalentwicklung auf einen Blick.</p>
                     </Col>
                 </Row>
@@ -73,8 +73,8 @@ const TeamofteamsPage = () => {
                     </Col>
                     <Col sm>
                         <FontAwesomeIcon icon={['fal', 'magic']} size="2x" color="#0f62cc" style={{marginBottom:"1rem"}}/>
-                        <h3>Zusätzliche Trainings</h3>
-                        <p>Gegen Aufpreis erstellen wir Trainings speziell für Ihr Unternehmen und nur für Sie.</p>
+                        <h3>Zusätzliche Tutorials</h3>
+                        <p>Gegen Aufpreis erstellen wir Tutorials speziell für Ihr Unternehmen und nur für Sie.</p>
                     </Col>
                 </Row>
                 <Row style={{marginTop:"4rem"}}>

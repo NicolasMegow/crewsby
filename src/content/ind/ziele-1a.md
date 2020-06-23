@@ -1,8 +1,10 @@
 ---
 title: "Ziele festlegen"
 type: "ind"
+part: "Info"
 date: "2020-06-04"
 version: "1.0"
+next: "erfolg"
 ---
 
 In dieser Übung lernen Sie Ziele als Kernelement der OKRs kennen.

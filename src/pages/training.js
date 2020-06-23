@@ -23,14 +23,14 @@ const TrainingPage = () => {
                 </Row>
                 <Row style={{marginTop:"3rem"}}>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+                        <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
                         <h3>Für dich</h3>
                         <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Führungskompetenz entwickeln<br></br>
                             <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Echte Beiträge leisten<br></br>
                             <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Verantwortung übernehmen</p>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'circle']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
+                        <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{marginBottom:"1rem"}}/>
                         <h3>Für dein Team</h3>
                         <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Konflikte produktiv lösen<br></br>
                             <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Spaß bei der Arbeit<br></br>

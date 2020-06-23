@@ -1,17 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Header from "../components/header"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 import Head from "../components/head"
-import Sidebar from '../components/sidebar'
-import { Container, Row, Col, Tab, Nav } from 'react-bootstrap'
 
-import "../styles/index.scss"
-import layoutStyles from "../styles/layout.module.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import TeamNavData from "../content/team-nav.yaml"
-import IndNavData from "../content/ind-nav.yaml"
+import { Container, Row, Col, Button } from 'react-bootstrap'
 
 
 
@@ -21,6 +14,7 @@ export const query = graphql`
             frontmatter {
                 title
                 type
+                part
                 date
                 version
                 next
@@ -32,44 +26,40 @@ export const query = graphql`
 
 const Tutorial = (props) => {
     return (
-        <Container fluid>
+        <Layout>
             <Head title={props.data.markdownRemark.frontmatter.title} />
-            <Header />
-            <Row>
-                <Col md lg={3} id="sidebar-wrapper" className={layoutStyles.sidebar}>
-                    <Tab.Container id="left-tabs-example" defaultActiveKey={props.data.markdownRemark.frontmatter.type}>
-                        <Nav variant="pills">
-                            <Nav.Item>
-                                <Nav.Link eventKey="ind"><FontAwesomeIcon icon={['fal', 'user']} fixedWidth /></Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Nav.Link eventKey="team"><FontAwesomeIcon icon={['fal', 'users']} fixedWidth /></Nav.Link>
-                            </Nav.Item>
-                        </Nav>
-                        <Tab.Content>
-                            <Tab.Pane eventKey="ind" className={layoutStyles.sidebarTab}>
-                                <Sidebar items={IndNavData.content} />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="team" className={layoutStyles.sidebarTab}>
-                                <Sidebar items={TeamNavData.content} />
-                            </Tab.Pane>
-                        </Tab.Content>
-                    </Tab.Container>
-                </Col>
-                <Col md lg={9} id="page-content-wrapper">
-                    <div className={layoutStyles.containerApp}>
-                        <div className={layoutStyles.content}>
-                            <p><Link to="/tutorials">Zurück</Link></p>
-                            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-                            <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
-                            <p style={{marginTop:"2rem"}}><Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`} >Weiter trainieren</Link></p>
-                            <p style={{fontSize:".6rem"}}>{props.data.markdownRemark.frontmatter.version} | {props.data.markdownRemark.frontmatter.date}</p>
-                        </div>
-                    </div>
-                    <Footer />
-                </Col>
-            </Row>
-        </Container>
+            <Container>
+                <Row>
+                    <Col>
+                        <Link to="/tutorials">Übersicht</Link>
+                        <p style={{float:"right"}}>{props.data.markdownRemark.frontmatter.part}</p>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
+                        <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <p style={{ marginTop: "2rem" }}>
+                            {props.data.markdownRemark.frontmatter.part === "Reflexion" &&
+                                <Link to={`/erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
+                            }
+                            {props.data.markdownRemark.frontmatter.part === "Info" &&
+                                <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Aufgabe starten</Button></Link>
+                            }
+                            {props.data.markdownRemark.frontmatter.part === "Aufgabe" &&
+                                <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Reflexion starten</Button></Link>
+                            }
+                        </p>
+                        <hr></hr>
+                        <p style={{ fontSize: ".5rem" }}>{props.data.markdownRemark.frontmatter.version} | {props.data.markdownRemark.frontmatter.date}</p>
+                    </Col>
+                </Row>
+            </Container>
+        </Layout>
     )
 }
 

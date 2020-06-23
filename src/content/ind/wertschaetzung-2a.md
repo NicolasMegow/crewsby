@@ -1,8 +1,10 @@
 ---
 title: "Wertschätzung kommunizieren II"
 type: "ind"
+part: "Info"
 date: "2020-06-04"
 version: "1.0"
+next: "erfolg"
 ---
 
 In this Uebung you'll unlearn everything...

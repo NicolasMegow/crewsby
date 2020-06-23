@@ -1,0 +1,14 @@
+---
+title: "Vertrauen im Team"
+type: "team"
+part: "Reflexion"
+date: "2020-06-04"
+version: "1.0"
+next: "erfolg"
+---
+
+Tauscht euch nach mindestens 3 Runden reihum zu folgenden Fragen aus:
+* Wie hat sich das angefühlt?
+* Was hat das mit euch gemacht jemandem direkt in die Augen zu schauen?
+* Wie habt ihr die Mimik empfunden?
+* Und wie habt ihr die Distanz zu eurem Partner / eurer Partnerin wahrgenommen?

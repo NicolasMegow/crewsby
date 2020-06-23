@@ -1,8 +1,10 @@
 ---
 title: "Danke sagen"
 type: "team"
+part: "Info"
 date: "2020-06-04"
 version: "1.0"
+next: "erfolg"
 ---
 
 Für welche Eigenschaft möchte ich mich bei dem Kollegen*In bedanken?

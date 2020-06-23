@@ -1,6 +1,7 @@
 ---
 title: "Intimität"
 type: "team"
+part: "Info"
 date: "2020-06-04"
 version: "1.0"
 next: "vertrauen-3"
