@@ -1,0 +1,13 @@
+---
+title: "Intimität"
+type: "team"
+part: "Reflexion"
+date: "2020-06-04"
+version: "1.0"
+next: "vertrauen-3"
+---
+
+Tauscht euch nachdem jeder dran war zu folgenden Fragen aus:
+* Was fandet ihr besonders interessant?
+* Womit hättet ihr nie gerechnet?
+* Welche neuen Gemeinsamkeiten habt ihr dadurch entdeckt?

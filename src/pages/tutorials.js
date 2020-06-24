@@ -18,27 +18,34 @@ const TutorialsPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Tab.Container id="left-tabs-example" defaultActiveKey="ind">
+                        <Tab.Container id="mode" defaultActiveKey="ind">
+                            <p style={{marginBottom:"0.5rem"}}>Lernmodus:</p>
                             <Nav variant="pills">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="ind"><FontAwesomeIcon icon={['fal', 'user']} fixedWidth />{' '} SOLO</Nav.Link>
+                                    <Nav.Link eventKey="ind" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'user']} fixedWidth />{' '} SOLO</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="team"><FontAwesomeIcon icon={['fal', 'users']} fixedWidth />{' '} TEAM</Nav.Link>
+                                    <Nav.Link eventKey="team" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'users']} fixedWidth />{' '} TEAM</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item style={{ marginLeft: "auto" }}>
-                                    <Nav.Link>
-                                        <Link to="../hinweise" style={{ textDecoration: "none" }}>So funktioniert's</Link>
-                                    </Nav.Link>
+                                    <p style={{marginBottom:"0", fontSize:"0.8rem"}}>
+                                        SOLO: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
+                                    | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}  
+                                    | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '} </p>
+                                    <p style={{marginBottom:"0", fontSize:"0.8rem"}}>
+                                        TEAM: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
+                                    | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}  
+                                    | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '} </p>
                                 </Nav.Item>
                             </Nav>
                             <Tab.Content>
                                 <Tab.Pane eventKey="ind" className={appStyles.tab}>
-                                    <Tab.Container id="left-tabs-example" defaultActiveKey="rel">
+                                    <Tab.Container id="goal-solo" defaultActiveKey="rel">
+                                    <p style={{marginBottom:"0.5rem"}}>Ziel:</p>
                                         <Nav variant="pills">
                                             {IndNavData.content.map((item) => (
                                                 <Nav.Item>
-                                                    <Nav.Link eventKey={item.key}><FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}</Nav.Link>
+                                                    <Nav.Link eventKey={item.key} className={appStyles.pill}><FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}</Nav.Link>
                                                 </Nav.Item>
                                             ))}
                                         </Nav>
@@ -46,6 +53,9 @@ const TutorialsPage = () => {
                                             {IndNavData.content.map((item) => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
+                                                        <Row><Col>
+                                                        <p style={{marginBottom:"0.5rem"}}>Thema:</p>
+                                                        </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
                                                                 if (subItem.urlstart === 'coming-soon') {
@@ -74,11 +84,12 @@ const TutorialsPage = () => {
                                     </Tab.Container>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="team" className={appStyles.tab}>
-                                    <Tab.Container id="left-tabs-example" defaultActiveKey="rel">
+                                    <Tab.Container id="goal-team" defaultActiveKey="rel">
+                                    <p style={{marginBottom:"0.5rem"}}>Ziel:</p>
                                         <Nav variant="pills">
                                             {TeamNavData.content.map((item) => (
                                                 <Nav.Item>
-                                                    <Nav.Link eventKey={item.key}><FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}</Nav.Link>
+                                                    <Nav.Link eventKey={item.key} className={appStyles.pill}><FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}</Nav.Link>
                                                 </Nav.Item>
                                             ))}
                                         </Nav>
@@ -86,6 +97,9 @@ const TutorialsPage = () => {
                                             {TeamNavData.content.map((item) => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
+                                                        <Row><Col>
+                                                            <p style={{marginBottom:"0.5rem"}}>Thema:</p>
+                                                        </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
                                                                 if (subItem.urlstart === 'coming-soon') {

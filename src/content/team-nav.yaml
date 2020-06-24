@@ -35,3 +35,5 @@ content:
         urlstart: peer-supervision-1a
       - thema: Skill-Sprints
         urlstart: coming-soon
+      - thema: Fehler-Analyse
+        urlstart: coming-soon

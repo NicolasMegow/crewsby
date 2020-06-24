@@ -9,11 +9,11 @@ const CTA = () => {
     return (
         <Container className={footerStyles.footer}>
             <Row className={footerStyles.cta}>
-                <Col>
+                <Col xs={8}>
                     <h2>Jetzt Teamprofi werden</h2>
                     <Link to="/preise"><Button variant="light">Tutorials starten</Button></Link>
                 </Col>
-                <Col style={{ display: "flex", alignItems: "center", marginLeft: "30%", marginRight: "auto" }}>
+                <Col xs={4}>
                     <span className="fa-layers fa-fw fa-6x">
                         <FontAwesomeIcon icon={['fal', 'laptop']} color="#ffffff" />
                         <FontAwesomeIcon icon={['fal', 'dumbbell']} color="#ffffff" transform="shrink-10 up-1" />

@@ -1,7 +1,6 @@
-$maincolor:#1c1e21;
-$highlightcolor: #0f62cc;
-$darkback: #677b8c;
-$lightback: #F5F5F5;
+// Set the Theme-Colors
+@import "colors";
+
 
 .posts {
     list-style-type: none;
@@ -48,11 +47,20 @@ $lightback: #F5F5F5;
     }
     h3 {
         margin-bottom: 0;
+        font-size: 1.2rem;
     }
     .disabled-link {
         pointer-events: none;
       }
 }
+
+// Style Bootstrap
+.pill {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $highlightcolor;
+    margin-right: 1rem;
+  }
 
 .section {
     margin-bottom:5%;
