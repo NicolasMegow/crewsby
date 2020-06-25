@@ -13,7 +13,9 @@ const UeberUnsPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h1>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#D64045" /> Teams.</h1>
+                        <h1 style={{marginBottom:"0rem"}}>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#D64045" /> Teams.*</h1>
+                        <p style={{marginBottom:"4rem"}}>* Nicht MS Teams ;) <br></br>
+                        Sondern die wundersamen Zusammenschlüsse von Menschen, die gemeinsam arbeiten.</p>
                         <h2>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens. 
                             Und das Leben ist zu kurz für Probleme im Team.</h2>
                         <p>Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung. 

@@ -56,13 +56,13 @@ const IndexPage = () => {
           </Col>
           <Col sm={6} lg={4} style={{display: "flex", alignItems: "center"}}>
             <p>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Radical Candor<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Psychological Safety<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}OKRs<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Kanban<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Lean Management<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Scrum<br></br>
-            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#F4D35E" />{' '}Design Thinking<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Radical Candor<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Psychological Safety<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}OKRs<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Kanban<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Lean Management<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Scrum<br></br>
+            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Design Thinking<br></br>
             </p> 
           </Col>
         </Row>

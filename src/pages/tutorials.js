@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -7,19 +7,25 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
+import { isLoggedIn } from "../services/auth"
+
 import TeamNavData from "../content/team-nav.yaml"
 import IndNavData from "../content/ind-nav.yaml"
 
 
-const TutorialsPage = () => {
+const TutorialPage = () => {
+    if (!isLoggedIn()) {
+        navigate("/app/")
+        return null
+      }
     return (
-        <Layout>
+            <Layout>
             <Head title="Trainingscenter" />
             <Container>
                 <Row>
                     <Col>
                         <Tab.Container id="mode" defaultActiveKey="ind">
-                            <p style={{marginBottom:"0.5rem"}}>Lernmodus:</p>
+                            <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Lernmodus:</p>
                             <Nav variant="pills">
                                 <Nav.Item>
                                     <Nav.Link eventKey="ind" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'user']} fixedWidth />{' '} SOLO</Nav.Link>
@@ -41,7 +47,7 @@ const TutorialsPage = () => {
                             <Tab.Content>
                                 <Tab.Pane eventKey="ind" className={appStyles.tab}>
                                     <Tab.Container id="goal-solo" defaultActiveKey="rel">
-                                    <p style={{marginBottom:"0.5rem"}}>Ziel:</p>
+                                    <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Ziel:</p>
                                         <Nav variant="pills">
                                             {IndNavData.content.map((item) => (
                                                 <Nav.Item>
@@ -54,7 +60,7 @@ const TutorialsPage = () => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
                                                         <Row><Col>
-                                                        <p style={{marginBottom:"0.5rem"}}>Thema:</p>
+                                                        <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Thema:</p>
                                                         </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
@@ -85,7 +91,7 @@ const TutorialsPage = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="team" className={appStyles.tab}>
                                     <Tab.Container id="goal-team" defaultActiveKey="rel">
-                                    <p style={{marginBottom:"0.5rem"}}>Ziel:</p>
+                                    <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Ziel:</p>
                                         <Nav variant="pills">
                                             {TeamNavData.content.map((item) => (
                                                 <Nav.Item>
@@ -98,7 +104,7 @@ const TutorialsPage = () => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
                                                         <Row><Col>
-                                                            <p style={{marginBottom:"0.5rem"}}>Thema:</p>
+                                                            <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Thema:</p>
                                                         </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
@@ -133,8 +139,8 @@ const TutorialsPage = () => {
                     </Col>
                 </Row>
             </Container>
-        </Layout>
+            </Layout>
     )
 }
 
-export default TutorialsPage
+export default TutorialPage

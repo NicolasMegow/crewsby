@@ -25,7 +25,7 @@ const PreisePage = () => {
                         <p>Für 1-8 Teamriesen<br></br>
                         Der Standard für schnelle Teams</p>
                         <p><h2>89 €</h2> pro Team/Monat</p>
-                        <Link to="/tutorials"><Button>Jetzt buchen</Button></Link>
+                        <Link to="/beta"><Button>Jetzt buchen</Button></Link>
                     </Col>
                     <Col sm>
                         <h2>Enterprise-Flatrate</h2>

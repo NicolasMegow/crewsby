@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Teamgefühl.com',
+    title: 'Teamgefühl',
     author: "Nicolas Megow"
   },
   plugins: [
@@ -35,7 +35,11 @@ module.exports = {
         }
       ]
     },
-  }
+  },
+  {
+    resolve: `gatsby-plugin-create-client-paths`,
+    options: { prefixes: [`/app/*`] },
+  },
 
 ]  
 }

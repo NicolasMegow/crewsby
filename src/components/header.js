@@ -1,11 +1,12 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Link, graphql, useStaticQuery, navigate } from "gatsby"
+import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
+import { isLoggedIn, logout } from "../services/auth"
 
 const Header = () => {
-    const data = useStaticQuery(graphql `
+    const data = useStaticQuery(graphql`
     query {
         site {
             siteMetadata {
@@ -17,7 +18,7 @@ const Header = () => {
 
     return (
         <header>
-            <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>  
+            <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
                 <Container className={headerStyles.container}>
                     <Navbar.Brand>
                         <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
@@ -36,6 +37,20 @@ const Header = () => {
                             </Nav.Item>
                             <Nav.Item as="li">
                                 <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
+                            </Nav.Item>
+                            <Nav.Item as="li">
+                                {isLoggedIn() ? (
+                                    <Link
+                                        to="/"
+                                        className={headerStyles.navButton}
+                                        onClick={event => {
+                                            event.preventDefault()
+                                            logout(() => navigate(`/`))
+                                        }}
+                                    >
+                                        Sign out
+                                    </Link>
+                                ) : <Link to="/app/" className={headerStyles.navButton}>Sign in</Link>}
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>

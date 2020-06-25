@@ -1,11 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, navigate } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 
 import { Container, Row, Col, Button } from 'react-bootstrap'
-
+import { isLoggedIn } from "../services/auth"
 
 
 export const query = graphql`
@@ -25,6 +25,10 @@ export const query = graphql`
 `
 
 const Tutorial = (props) => {
+    if (!isLoggedIn()) {
+        navigate("/app/")
+        return null
+      }
     return (
         <Layout>
             <Head title={props.data.markdownRemark.frontmatter.title} />

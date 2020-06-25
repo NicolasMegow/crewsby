@@ -3,9 +3,10 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import TutPart from "../components/tut-part"
+import TutPart from "../components/tutPart"
 
-
+import { Link } from "gatsby"
+import { getUser, isLoggedIn } from "../services/auth"
 
 
 const data = [
@@ -43,6 +44,47 @@ const TestingPage = () => {
         <Layout>
           <Container>
             <Row>
+            <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+      <p>
+        {isLoggedIn() ? (
+          <>
+            You are logged in, so check your{" "}
+            <Link to="/app/profile">profile</Link>
+          </>
+        ) : (
+          <>
+            You should <Link to="/app/login">log in</Link> to see restricted
+            content
+          </>
+        )}
+      </p>
+      </Row>
+{/*
+<Row style={{ marginTop: "3rem" }}>
+                <Col>
+                
+                    <p><FontAwesomeIcon icon={['fal', 'user-astronaut']} fixedWidth size="4x" /> {'  '}
+                        <FontAwesomeIcon icon={['fal', 'user-md']} fixedWidth size="4x" /> {'  '}
+                        <FontAwesomeIcon icon={['fal', 'user-tie']} fixedWidth size="4x" color="#0f62cc" /></p>
+                    <h1 style={{ marginBottom: "0" }}>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    {isLoggedIn() ? (
+                        <h2 style={{ marginTop: "0", color: "#0f62cc" }}>
+                            You are logged in, so check your{" "}
+                            <Link to="/app/profile">profile</Link>
+                        </h2>
+                    ) : (
+                            <h2 style={{ marginTop: "0", color: "#0f62cc" }}>
+                                You should <Link to="/app/login">log in</Link> to see restricted content
+                            </h2>
+                        )}
+                </Col>
+            </Row>
+                    */}
+      <Row>
             <Checkbox />
             <Item />
             <TutPart />
