@@ -1,7 +1,7 @@
 ---
 title: "Ziele festlegen"
 type: "team"
-part: "Info"
+part: "Reflexion"
 date: "2020-06-04"
 version: "1.0"
 next: "erfolg"

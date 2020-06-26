@@ -1,11 +1,11 @@
 import React from "react"
-import { Link, graphql, navigate } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import { isLoggedIn } from "../services/auth"
+import { login, isAuthenticated, getProfile } from "../utils/auth"
 
 
 export const query = graphql`
@@ -25,10 +25,11 @@ export const query = graphql`
 `
 
 const Tutorial = (props) => {
-    if (!isLoggedIn()) {
-        navigate("/app/")
-        return null
+    if (!isAuthenticated()) {
+        login()
+        return <p>Redirecting to login...</p>
       }
+    
     return (
         <Layout>
             <Head title={props.data.markdownRemark.frontmatter.title} />
@@ -49,7 +50,7 @@ const Tutorial = (props) => {
                     <Col>
                         <p style={{ marginTop: "2rem" }}>
                             {props.data.markdownRemark.frontmatter.part === "Reflexion" &&
-                                <Link to={`/erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
+                                <Link to={`../erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
                             }
                             {props.data.markdownRemark.frontmatter.part === "Info" &&
                                 <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Aufgabe starten</Button></Link>

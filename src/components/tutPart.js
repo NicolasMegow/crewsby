@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import { Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

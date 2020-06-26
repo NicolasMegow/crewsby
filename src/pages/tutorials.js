@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 import { Container, Row, Col, Tab, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -7,23 +7,37 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
-import { isLoggedIn } from "../services/auth"
+import { login, isAuthenticated, getProfile } from "../utils/auth"
 
 import TeamNavData from "../content/team-nav.yaml"
 import IndNavData from "../content/ind-nav.yaml"
 
 
 const TutorialPage = () => {
-    if (!isLoggedIn()) {
-        navigate("/app/")
-        return null
+    if (!isAuthenticated()) {
+        login()
+        return (
+            <Layout>
+            <Head title="Trainingscenter" />
+            <Container>
+                <Row>
+                    <Col>
+                    <h1>Redirecting to Login...</h1>
+                    </Col>
+                </Row>
+            </Container>
+            </Layout>
+        )
       }
+    
+    const user = getProfile()
     return (
             <Layout>
             <Head title="Trainingscenter" />
             <Container>
                 <Row>
                     <Col>
+                    <p>Hi, {user.name ? user.name : "friend"} :)</p>
                         <Tab.Container id="mode" defaultActiveKey="ind">
                             <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Lernmodus:</p>
                             <Nav variant="pills">
@@ -48,7 +62,7 @@ const TutorialPage = () => {
                                 <Tab.Pane eventKey="ind" className={appStyles.tab}>
                                     <Tab.Container id="goal-solo" defaultActiveKey="rel">
                                     <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Ziel:</p>
-                                        <Nav variant="pills">
+                                        <Nav variant="pills" justify="true">
                                             {IndNavData.content.map((item) => (
                                                 <Nav.Item>
                                                     <Nav.Link eventKey={item.key} className={appStyles.pill}><FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}</Nav.Link>
