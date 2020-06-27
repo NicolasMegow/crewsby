@@ -4,6 +4,7 @@ import { Container, Row, Col, Tab, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from "../components/layout"
+import LayoutApp from "../components/layout_app"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
@@ -32,7 +33,7 @@ const TutorialPage = () => {
     
     const user = getProfile()
     return (
-            <Layout>
+            <LayoutApp>
             <Head title="Trainingscenter" />
             <Container>
                 <Row>
@@ -153,7 +154,7 @@ const TutorialPage = () => {
                     </Col>
                 </Row>
             </Container>
-            </Layout>
+            </LayoutApp>
     )
 }
 

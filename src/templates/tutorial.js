@@ -1,8 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import LayoutApp from "../components/layout_app"
 import Head from "../components/head"
+import TutNav from "../components/tutnav"
 
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { login, isAuthenticated, getProfile } from "../utils/auth"
@@ -31,13 +32,12 @@ const Tutorial = (props) => {
       }
     
     return (
-        <Layout>
+        <LayoutApp>
             <Head title={props.data.markdownRemark.frontmatter.title} />
-            <Container>
+            <Container style={{maxWidth: "700px"}}>
                 <Row>
                     <Col>
-                        <Link to="/tutorials">Übersicht</Link>
-                        <p style={{float:"right"}}>{props.data.markdownRemark.frontmatter.part}</p>
+                        <TutNav key={props.data.markdownRemark.frontmatter.part}/>
                     </Col>
                 </Row>
                 <Row>
@@ -48,6 +48,7 @@ const Tutorial = (props) => {
                 </Row>
                 <Row>
                     <Col>
+                    <hr></hr>                    
                         <p style={{ marginTop: "2rem" }}>
                             {props.data.markdownRemark.frontmatter.part === "Reflexion" &&
                                 <Link to={`../erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
@@ -59,12 +60,10 @@ const Tutorial = (props) => {
                                 <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Reflexion starten</Button></Link>
                             }
                         </p>
-                        <hr></hr>
-                        <p style={{ fontSize: ".5rem" }}>{props.data.markdownRemark.frontmatter.version} | {props.data.markdownRemark.frontmatter.date}</p>
                     </Col>
                 </Row>
             </Container>
-        </Layout>
+        </LayoutApp>
     )
 }
 
