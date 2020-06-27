@@ -3,11 +3,30 @@ import { Link, graphql } from "gatsby"
 
 import LayoutApp from "../components/layout_app"
 import Head from "../components/head"
-import TutNav from "../components/tutnav"
 
-import { Container, Row, Col, Button } from 'react-bootstrap'
-import { login, isAuthenticated, getProfile } from "../utils/auth"
+import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { login, isAuthenticated } from "../utils/auth"
 
+var styles = {
+    tutnav : {
+        color: '#677b8c',
+        paddingLeft: '0.5rem',
+        paddingRight: '0.5rem',
+    },
+    tutnavActive : {
+        color: '#0f62cc',
+        paddingLeft: '0.5rem',
+        paddingRight: '0.5rem',
+    },
+}
+
+const isActive = ( key1, key2 ) => {
+    if (key1 === key2 ) {
+        return styles.tutnavActive
+    }
+    return styles.tutnav
+}
 
 export const query = graphql`
     query($slug: String!) {
@@ -25,19 +44,39 @@ export const query = graphql`
     }
 `
 
+
 const Tutorial = (props) => {
     if (!isAuthenticated()) {
         login()
         return <p>Redirecting to login...</p>
-      }
-    
+    }
+
+    const type = props.data.markdownRemark.frontmatter.part
+    const next = props.data.markdownRemark.frontmatter.next
+
     return (
         <LayoutApp>
             <Head title={props.data.markdownRemark.frontmatter.title} />
-            <Container style={{maxWidth: "700px"}}>
+            <Container style={{ maxWidth: "700px" }}>
                 <Row>
                     <Col>
-                        <TutNav key={props.data.markdownRemark.frontmatter.part}/>
+                        <Nav as="ul" style={{ float: "right" }}>
+                            <Nav.Item>
+                                <Nav.Link as="li" style={isActive("Info", type)}>
+                                    <FontAwesomeIcon icon={['fal', 'info-circle']} />
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link as="li" style={isActive("Aufgabe", type)}>
+                                    <FontAwesomeIcon icon={['fal', 'stopwatch']} />
+                                </Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link as="li" style={isActive("Reflexion", type)}>
+                                    <FontAwesomeIcon icon={['fal', 'question-circle']} />
+                                </Nav.Link>
+                            </Nav.Item>
+                        </Nav>
                     </Col>
                 </Row>
                 <Row>
@@ -48,16 +87,16 @@ const Tutorial = (props) => {
                 </Row>
                 <Row>
                     <Col>
-                    <hr></hr>                    
+                        <hr></hr>
                         <p style={{ marginTop: "2rem" }}>
-                            {props.data.markdownRemark.frontmatter.part === "Reflexion" &&
+                            {type === "Reflexion" &&
                                 <Link to={`../erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
                             }
-                            {props.data.markdownRemark.frontmatter.part === "Info" &&
-                                <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Aufgabe starten</Button></Link>
+                            {type === "Info" &&
+                                <Link to={`/tutorials/${next}`}><Button variant="primary">Aufgabe starten</Button></Link>
                             }
-                            {props.data.markdownRemark.frontmatter.part === "Aufgabe" &&
-                                <Link to={`/tutorials/${props.data.markdownRemark.frontmatter.next}`}><Button variant="primary">Reflexion starten</Button></Link>
+                            {type === "Aufgabe" &&
+                                <Link to={`/tutorials/${next}`}><Button variant="primary">Reflexion starten</Button></Link>
                             }
                         </p>
                     </Col>

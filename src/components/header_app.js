@@ -23,8 +23,8 @@ const Header = () => {
                     <Navbar.Brand>
                         <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Toggle aria-controls="navbar-app"/>
+                    <Navbar.Collapse id="navbar-app">
                         <Nav as="ul" className="ml-auto">
                             <Nav.Item as="li">
                                 <Link className={headerStyles.navItem} to="/tutorials">Tutorials</Link>

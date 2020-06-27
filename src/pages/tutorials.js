@@ -13,6 +13,18 @@ import { login, isAuthenticated, getProfile } from "../utils/auth"
 import TeamNavData from "../content/team-nav.yaml"
 import IndNavData from "../content/ind-nav.yaml"
 
+var styles = {
+    info1 : {
+        marginBottom:"0", 
+        fontSize:"0.8rem",
+        fontWeight:"bold",
+    },
+    info2 : {
+        marginTop:"0",
+        marginBottom:"0.5rem", 
+        fontSize:"0.8rem",
+    },
+}
 
 const TutorialPage = () => {
     if (!isAuthenticated()) {
@@ -40,7 +52,8 @@ const TutorialPage = () => {
                     <Col>
                     <p>Hi, {user.name ? user.name : "friend"} :)</p>
                         <Tab.Container id="mode" defaultActiveKey="ind">
-                            <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Lernmodus:</p>
+                            <p style={styles.info1}>MODUS:</p>
+                            <p style={styles.info2}>Lernst du alleine oder mit deinem Team?</p>
                             <Nav variant="pills">
                                 <Nav.Item>
                                     <Nav.Link eventKey="ind" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'user']} fixedWidth />{' '} SOLO</Nav.Link>
@@ -62,7 +75,8 @@ const TutorialPage = () => {
                             <Tab.Content>
                                 <Tab.Pane eventKey="ind" className={appStyles.tab}>
                                     <Tab.Container id="goal-solo" defaultActiveKey="rel">
-                                    <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Ziel:</p>
+                                    <p style={styles.info1}>ZIEL:</p>
+                            <p style={styles.info2}>Welchen Beitrag möchtest du leisten?</p>
                                         <Nav variant="pills" justify="true">
                                             {IndNavData.content.map((item) => (
                                                 <Nav.Item>
@@ -75,7 +89,8 @@ const TutorialPage = () => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
                                                         <Row><Col>
-                                                        <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Thema:</p>
+                                                        <p style={styles.info1}>THEMA:</p>
+                            <p style={styles.info2}>Was interessiert dich genau?</p>
                                                         </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
@@ -106,7 +121,8 @@ const TutorialPage = () => {
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="team" className={appStyles.tab}>
                                     <Tab.Container id="goal-team" defaultActiveKey="rel">
-                                    <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Ziel:</p>
+                                    <p style={styles.info1}>ZIEL:</p>
+                            <p style={styles.info2}>Woran wollt ihr arbeiten?</p>
                                         <Nav variant="pills">
                                             {TeamNavData.content.map((item) => (
                                                 <Nav.Item>
@@ -119,7 +135,8 @@ const TutorialPage = () => {
                                                 return (
                                                     <Tab.Pane eventKey={item.key} className={appStyles.tab}>
                                                         <Row><Col>
-                                                            <p style={{marginBottom:"0.5rem", fontSize:"0.8rem"}}>Thema:</p>
+                                                        <p style={styles.info1}>THEMA:</p>
+                            <p style={styles.info2}>Woran genau?</p>
                                                         </Col></Row>
                                                         <Row>
                                                             {item.themen.map((subItem) => {
