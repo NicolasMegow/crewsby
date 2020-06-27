@@ -49,6 +49,12 @@ const RessourcenPage = () => {
                                     <p>Ausgewählte Brettspiele für ein entspanntes Teambuilding</p>
                                 </Link>
                             </li>
+                            <li className={appStyles.post}>
+                                <Link to="/coming-soon">
+                                    <h3>Und jetzt</h3>
+                                    <p>Ausgewählte Brettspiele für ein entspanntes Teambuilding</p>
+                                </Link>
+                            </li>
                         </ol>
                     </Col>
                 </Row>
