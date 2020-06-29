@@ -1,14 +1,20 @@
 content:
-  - category: Beziehungen stärken 
+  - category: Beziehungen stärken
     key: rel  
     icon: ['fal', 'heartbeat']
     icon2: ['fal', 'heart']
     themen:
       - thema: Vertrauen
+        inhalt: TBD
+        icon: ['fal', 'key']
         urlstart: vertrauen-1a
       - thema: Konflikte
+        inhalt: TBD
+        icon: ['fal', 'boxing-glove']
         urlstart: konflikte-1a
       - thema: Rituale  
+        inhalt: TBD
+        icon: ['fal', 'camera-polaroid']
         urlstart: rituale-1a
   - category: Prozesse optimieren
     key: col
@@ -17,23 +23,39 @@ content:
     state: disabled
     themen:
       - thema: Koordination
+        inhalt: TBD
+        icon: ['fal', 'ball-pile']
         urlstart: koordination-1a
       - thema: Einsatz
+        inhalt: TBD
+        icon: ['fal', 'truck-plow']
         urlstart: coming-soon
       - thema: Verantwortung
+        inhalt: TBD
+        icon: ['fal', 'raygun']
         urlstart: coming-soon
       - thema: Ergebnisorientierung
+        inhalt: TBD
+        icon: ['fal', 'analytics']
         urlstart: coming-soon
       - thema: Müllabfuhr
+        inhalt: TBD
+        icon: ['fal', 'trash']
         urlstart: coming-soon
   - category: Fähigkeiten entwickeln
     key: ski
     icon: ['fal', 'mind-share']
     icon2: ['fal', 'brain']
     themen:
-      - thema: Peer-Supervision
-        urlstart: peer-supervision-1a
+      - thema: Supervision
+        inhalt: TBD
+        icon: ['fal', 'toolbox']
+        urlstart: supervision-1a
       - thema: Skill-Sprints
+        inhalt: TBD
+        icon: ['fal', 'shipping-fast']
         urlstart: coming-soon
       - thema: Fehler-Analyse
+        inhalt: TBD
+        icon: ['fal', 'poo']
         urlstart: coming-soon

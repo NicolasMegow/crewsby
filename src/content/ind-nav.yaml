@@ -5,34 +5,49 @@ content:
     icon2: ['fal', 'heart']
     themen:
       - thema: Wertschätzung
+        inhalt: Kleine Gesten & passende Worte
+        icon: ['fal', 'gift']
         urlstart: wertschaetzung-1a
-      - thema: Aufmerksamkeit
-        urlstart: coming-soon
       - thema: Beitrag
+        inhalt: TBD
+        icon: ['fal', 'backpack']
         urlstart: coming-soon
       - thema: Erwartungen
+        inhalt: TBD
+        icon: ['fal', 'telescope']
         urlstart: coming-soon
       - thema: Verletzlichkeit
+        inhalt: TBD
+        icon: ['fal', 'box-tissue']
         urlstart: coming-soon
-
   - category: Prozesse optimieren
     key: col
     icon: ['fal', 'handshake']
     icon2: ['fal', 'thumbs-up']
     themen:
       - thema: Ziele
+        inhalt: TBD
+        icon: ['fal', 'map-marker-check']
         urlstart: coming-soon
       - thema: Backlogs
+        inhalt: TBD
+        icon: ['fal', 'list-ol']
         urlstart: coming-soon
       - thema: Rollen
+        inhalt: TBD
+        icon: ['fal', 'hat-chef']
         urlstart: coming-soon
       - thema: Meetings
-        urlstart: coming-soon
-      - thema: Retrospektiven
+        inhalt: Information, Entscheidung & Reflexion
+        icon: ['fal', 'sticky-note']
         urlstart: coming-soon
       - thema: Standards
+        inhalt: TBD
+        icon: ['fal', 'clipboard-check']
         urlstart: coming-soon
       - thema: Work in Progress
+        inhalt: TBD
+        icon: ['fal', 'conveyor-belt']
         urlstart: coming-soon
   - category: Fähigkeiten entwickeln
     key: ski
@@ -40,14 +55,26 @@ content:
     icon2: ['fal', 'brain']
     themen:
       - thema: Leistung
+        inhalt: TBD
+        icon: ['fal', 'road']
         urlstart: coming-soon
       - thema: Fragen
+        inhalt: TBD
+        icon: ['fal', 'question']
         urlstart: coming-soon
       - thema: Feedback
+        inhalt: TBD
+        icon: ['fal', 'comment-edit']
         urlstart: coming-soon
       - thema: Innovation
+        inhalt: TBD
+        icon: ['fal', 'rocket-launch']
         urlstart: coming-soon
       - thema: Prototyping
+        inhalt: TBD
+        icon: ['fal', 'tools']
         urlstart: coming-soon
       - thema: Dokumentation
+        inhalt: TBD
+        icon: ['fal', 'book']
         urlstart: coming-soon

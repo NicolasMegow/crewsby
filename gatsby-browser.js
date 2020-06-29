@@ -20,7 +20,7 @@ class SessionCheck extends React.Component {
   render() {
     return (
       this.state.loading === false && (
-        <React.Fragment>{this.props.children}</React.Fragment>
+        <div>{this.props.children}</div>
       )
     )
   }
