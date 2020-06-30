@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
-{/*import { login } from "../utils/auth"*/}
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 
 const Header = () => {
@@ -16,7 +16,7 @@ const Header = () => {
         }
     }
     `)
-
+    const { isAuthenticated, logout, loginWithPopup } = useAuth0()
     return (
         <header>
             <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
@@ -24,40 +24,40 @@ const Header = () => {
                     <Navbar.Brand>
                         <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-site"/>
+                    <Navbar.Toggle aria-controls="basic-navbar-site" />
                     <Navbar.Collapse id="basic-navbar-site">
-                        <Nav as="ul" className="ml-auto">
-                            <Nav.Item as="li">
-                                <Nav.Link>
+                        <Nav className="ml-auto">
+                            <Nav.Item>
+                                <Link className={headerStyles.navItem} to="/teamarbeit">Teamarbeit</Link>
+                            </Nav.Item>
+                            <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/training">Training</Link>
-                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
-                            <Nav.Link>
-                                <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
-                                </Nav.Link>
-                            </Nav.Item>
-                            <Nav.Item as="li">
-                            <Nav.Link>
+                            <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/preise">Preise</Link>
-                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
-                            <Nav.Link>
-                                <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
-                                </Nav.Link>
-                            </Nav.Item>
-{/*                            <Nav.Item as="li">
-                             <Nav.Link>
-                                <Link to='/' className={headerStyles.navButton}
-                                    onClick={event => {
+                            {isAuthenticated ? (
+                            <>
+                                <Nav.Item>
+                                    <Link className={headerStyles.navButton} to="/tutorials">Tutorials</Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
                                         event.preventDefault()
-                                        login()
-                                    }}>
-                                    Einloggen
+                                        logout()
+                                    }}>Ausloggen
                                 </Link>
-                                </Nav.Link>
-                            </Nav.Item>*/}
+                                </Nav.Item>
+                            </>
+                                    ) : (
+                                    <Nav.Item>
+                                        <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
+                                            event.preventDefault()
+                                            loginWithPopup()
+                                        }}>Einloggen
+                                </Link>
+                                    </Nav.Item>
+                                )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

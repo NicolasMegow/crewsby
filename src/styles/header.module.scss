@@ -7,7 +7,7 @@
 }
 
 .container {
-    max-width: 900px !important;
+    max-width: 1024px !important;
 }
 
 .title {
@@ -34,19 +34,21 @@
 }
 
 .nav-button {
-    color: $maincolor;
+    color: $highlightcolor;
+    background-color:#ffffff;
+    border: 1px solid $highlightcolor;
     font-size: .9rem;
     font-weight: 400;
     margin-right: 1.3rem;
     text-decoration: none;
     padding: .3rem .6rem;
-    border: 2px solid $maincolor;
     border-radius: 6px;
 }
 
 .nav-button:hover {
-    color: $highlightcolor;
-    border-color: $highlightcolor;
+    color: #ffffff;
+    background-color: $highlightcolor;
+    border: 1px solid $highlightcolor;
     text-decoration: none;
 }
 

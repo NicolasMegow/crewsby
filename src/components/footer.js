@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Nav } from 'react-bootstrap'
 
 import footerStyles from "../styles/footer.module.scss"
 
@@ -9,12 +9,16 @@ const Footer = () => {
         <footer className={footerStyles.footer}>
             <Container>
                 <Row>
-                    <Col sm>
+                    <Col md={4}>
                         <p>Teamgefühl.com © 2020</p>
                     </Col>
-                    <Col sm>
-                        <Link className={footerStyles.linkItem} to="/datenschutz">Datenschutz</Link>
-                        <Link className={footerStyles.linkItem} to="/impressum">Impressum</Link>    
+                    <Col md={8} style={{ display: "flex", justifyContent: "flex-end"}}>
+                        <Nav>
+                            <Nav.Item><Link className={footerStyles.linkItem} to="/faq">FAQ</Link></Nav.Item>
+                            <Nav.Item><Link className={footerStyles.linkItem} to="/ueber-uns">Über uns</Link></Nav.Item>
+                            <Nav.Item><Link className={footerStyles.linkItem} to="/impressum">Impressum</Link></Nav.Item>
+                            <Nav.Item><Link className={footerStyles.linkItem} to="/datenschutz">Datenschutz</Link></Nav.Item>
+                        </Nav>
                     </Col>
                 </Row>
             </Container>

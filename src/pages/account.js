@@ -1,41 +1,46 @@
 import React from "react"
 import { Router } from "@reach/router"
 import { Link } from "gatsby"
+import { Container, Row, Col, Nav } from 'react-bootstrap'
 
 import Layout from "../components/layout"
-{/*import { login, logout, isAuthenticated, getProfile } from "../utils/auth"*/}
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+
 
 
 const Home = () => {
-  return <p>Hi !</p>
+  const { isAuthenticated, user} = useAuth0()
+  return <>
+    <p>Hi !</p>
+    <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre>
+    </>
 }
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
 const Account = () => {
-{/*  if (!isAuthenticated()) {
-    login()
-    return <p>Redirecting to login...</p>
+  const { isAuthenticated, loading} = useAuth0()
+  if (loading) {
+    return <p>Loading...</p>
   }
-
-  const user = getProfile()*/}
 
   return (
     <Layout>
-      <nav>
+      {isAuthenticated ? (
+      <Nav>
         <Link to="/account/">Home</Link>{" "}
         <Link to="/account/settings/">Settings</Link>{" "}
         <Link to="/account/billing/">Billing</Link>{" "}
-{/*        <a
-          href="#logout"
-          onClick={e => {
-            logout()
-            e.preventDefault()
-          }}
-        >
-          Log Out
-        </a>*/}
-      </nav>
+      </Nav>
+      ) : (
+        <Container>
+            <Row>
+                <Col>
+                    <h1>Hi, try logging in:</h1>
+            </Col>
+          </Row>
+        </Container>
+      )}
       <Router>
         <Home path="/account/"/>
         <Settings path="/account/settings" />

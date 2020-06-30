@@ -28,7 +28,7 @@ content:
       - thema: Ziele
         inhalt: TBD
         icon: ['fal', 'map-marker-check']
-        urlstart: coming-soon
+        urlstart: ziele-1a
       - thema: Backlogs
         inhalt: TBD
         icon: ['fal', 'list-ol']

@@ -8,10 +8,12 @@ import layoutStyles from "../styles/layout.module.scss"
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
+import { fad } from '@fortawesome/pro-duotone-svg-icons'
 
 config.autoAddCss = false;
 library.add(fal)
 library.add(fas)
+library.add(fad)
 
 const Layout = (props) => {
     return (

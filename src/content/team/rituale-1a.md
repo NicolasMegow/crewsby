@@ -12,3 +12,5 @@ Wertschätzungs-Postkarten -> 20 Min aufschreiben und individuell zuschicken
 
 Hier lernst du im Team über die Institutionalisierung von Werten, wie z.B. Achtsamkeit oder Empathie.
 Rituale gibt es typischerweise zu bestimmten Anlässen, wie dem Onboarding, dem Offboarding oder anderen Feieranlässen.
+
+Show two icon rows of morning rituals --> meaning!

@@ -2,31 +2,13 @@
 @import "colors";
 
 
-.posts {
-    list-style-type: none;
-    margin: 0;
-}
-
-.post {
-    margin: 1rem 0;
-    a {
-        color: $maincolor;
-        background: $lightback;
-        padding: 1rem;
-        text-decoration: none;
-        display: block;
-    }
-    a:hover{
-        color: #ffffff;
-        background: $highlightcolor;
-    }
-    h3 {
-        margin-bottom: 0;
-    }
-}
-
 .tab {
     margin-top:5%;
+}
+
+.row {
+    border: 1px solid $lightback;
+    padding: 1rem 0;
 }
 
 .tile {
@@ -47,11 +29,29 @@
     }
     h3 {
         margin-bottom: 0;
-        font-size: 1.2rem;
     }
     .disabled-link {
+        color: $maincolor;
+        border-color: $darkback;
+        border-style: solid;
+        border-width: 1px;
+        padding: 1rem;
+        min-height: 7rem;
+        text-decoration: none;
+        display: block;
         pointer-events: none;
       }
+}
+
+.info1 {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.info2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
 }
 
 // Style Bootstrap
