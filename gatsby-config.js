@@ -40,6 +40,13 @@ module.exports = {
     resolve: `gatsby-plugin-create-client-paths`,
     options: { prefixes: [`/app/*`] },
   },
+  {
+    resolve: "gatsby-plugin-auth0",
+    options: {
+      domain: "dev-82xnrm8r.eu.auth0.com",
+      clientId: "e3FeHnXfDQd1zyL3CCyL2BDlkZbYT8RQ",
+    },
+  },
 
 ]  
 }

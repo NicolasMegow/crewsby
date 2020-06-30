@@ -6,7 +6,7 @@ import Head from "../components/head"
 
 import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { login, isAuthenticated } from "../utils/auth"
+{/*import { login, isAuthenticated } from "../utils/auth"*/}
 
 var styles = {
     tutnav : {
@@ -46,10 +46,10 @@ export const query = graphql`
 
 
 const Tutorial = (props) => {
-    if (!isAuthenticated()) {
+{/*    if (!isAuthenticated()) {
         login()
         return <p>Redirecting to login...</p>
-    }
+    }*/}
 
     const type = props.data.markdownRemark.frontmatter.part
     const next = props.data.markdownRemark.frontmatter.next

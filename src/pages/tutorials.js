@@ -8,8 +8,6 @@ import LayoutApp from "../components/layout_app"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
-import { login, isAuthenticated, getProfile } from "../utils/auth"
-
 import TeamNavData from "../content/team-nav.yaml"
 import IndNavData from "../content/ind-nav.yaml"
 
@@ -27,30 +25,12 @@ var styles = {
 }
 
 const TutorialPage = () => {
-    if (!isAuthenticated()) {
-        login()
-        return (
-            <Layout>
-                <Head title="Trainingscenter" />
-                <Container>
-                    <Row>
-                        <Col>
-                            <h1>Redirecting to Login...</h1>
-                        </Col>
-                    </Row>
-                </Container>
-            </Layout>
-        )
-    }
-
-    const user = getProfile()
     return (
         <LayoutApp>
             <Head title="Trainingscenter" />
             <Container>
                 <Row>
                     <Col>
-                        <p>Hi, {user.name ? user.name : "friend"} :)</p>
                         <Tab.Container id="mode" defaultActiveKey="team">
                             <p style={styles.info1}>MODUS:</p>
                             <p style={styles.info2}>Lernst du alleine oder mit deinem Team?</p>

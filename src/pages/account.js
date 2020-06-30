@@ -3,22 +3,22 @@ import { Router } from "@reach/router"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import { login, logout, isAuthenticated, getProfile } from "../utils/auth"
+{/*import { login, logout, isAuthenticated, getProfile } from "../utils/auth"*/}
 
 
-const Home = ({ user }) => {
-  return <p>Hi, {user.name ? user.name : "friend"}!</p>
+const Home = () => {
+  return <p>Hi !</p>
 }
 const Settings = () => <p>Settings</p>
 const Billing = () => <p>Billing</p>
 
 const Account = () => {
-  if (!isAuthenticated()) {
+{/*  if (!isAuthenticated()) {
     login()
     return <p>Redirecting to login...</p>
   }
 
-  const user = getProfile()
+  const user = getProfile()*/}
 
   return (
     <Layout>
@@ -26,7 +26,7 @@ const Account = () => {
         <Link to="/account/">Home</Link>{" "}
         <Link to="/account/settings/">Settings</Link>{" "}
         <Link to="/account/billing/">Billing</Link>{" "}
-        <a
+{/*        <a
           href="#logout"
           onClick={e => {
             logout()
@@ -34,10 +34,10 @@ const Account = () => {
           }}
         >
           Log Out
-        </a>
+        </a>*/}
       </nav>
       <Router>
-        <Home path="/account/" user={user} />
+        <Home path="/account/"/>
         <Settings path="/account/settings" />
         <Billing path="/account/billing" />
       </Router>

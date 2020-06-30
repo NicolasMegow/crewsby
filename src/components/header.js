@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
-import { login } from "../utils/auth"
+{/*import { login } from "../utils/auth"*/}
 
 
 const Header = () => {
@@ -28,18 +28,27 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav as="ul" className="ml-auto">
                             <Nav.Item as="li">
+                                <Nav.Link>
                                 <Link className={headerStyles.navItem} to="/training">Training</Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
+                            <Nav.Link>
                                 <Link className={headerStyles.navItem} to="/ressourcen">Ressourcen</Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
+                            <Nav.Link>
                                 <Link className={headerStyles.navItem} to="/preise">Preise</Link>
+                                </Nav.Link>
                             </Nav.Item>
                             <Nav.Item as="li">
+                            <Nav.Link>
                                 <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
+                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
+{/*                            <Nav.Item as="li">
+                             <Nav.Link>
                                 <Link to='/' className={headerStyles.navButton}
                                     onClick={event => {
                                         event.preventDefault()
@@ -47,7 +56,8 @@ const Header = () => {
                                     }}>
                                     Einloggen
                                 </Link>
-                            </Nav.Item>
+                                </Nav.Link>
+                            </Nav.Item>*/}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

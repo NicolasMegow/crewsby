@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
-import { logout } from "../utils/auth"
+{/*import { logout } from "../../plugins/gatsby-plugin-auth0/auth"*/}
 
 const Header = () => {
     const data = useStaticQuery(graphql`
@@ -27,9 +27,12 @@ const Header = () => {
                     <Navbar.Collapse id="navbar-app">
                         <Nav as="ul" className="ml-auto">
                             <Nav.Item as="li">
+                                <Nav.Link>
                                 <Link className={headerStyles.navItem} to="/tutorials">Tutorials</Link>
+                                </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item as="li">
+{/*                            <Nav.Item as="li">
+                            <Nav.Link>
                                 <Link to='/' className={headerStyles.navButton}
                                     onClick={event => {
                                         event.preventDefault()
@@ -37,7 +40,8 @@ const Header = () => {
                                     }}>
                                     Ausloggen
                                 </Link>
-                            </Nav.Item>
+                                </Nav.Link>
+                            </Nav.Item>*/}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
