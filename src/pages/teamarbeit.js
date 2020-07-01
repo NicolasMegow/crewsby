@@ -7,6 +7,9 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
+import Riese from "../img/crewsby_mitt.png"
+import Zwerg from "../img/Idea-Pitch.png"
+
 const stormStyle = {
     "--fa-secondary-color": "#FDE74C",
     "--fa-secondary-opacity": .8
@@ -33,7 +36,7 @@ const TeamarbeitPage = () => {
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fal', 'people-carry']} size="2x" color="#0f62cc"/>
+                        <FontAwesomeIcon icon={['fas', 'people-carry']} size="2x" color="#0f62cc"/>
                         <p className="mintitle">Teamarbeit</p>
                         <h2>Menschen arbeiten zusammen.</h2>
                         <p>Lerne, wie gute Teamarbeit funktioniert.
@@ -54,7 +57,7 @@ const TeamarbeitPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fal', 'people-arrows']} size="2x" color="#0f62cc"/>
+                        <FontAwesomeIcon icon={['fas', 'people-arrows']} size="2x" color="#0f62cc"/>
                         <p className="mintitle">Teamentwicklung</p>
                         <h2>Selbstläufer mit Hindernissen.</h2>
                         <p>Lerne, wie gute Teamarbeit funktioniert.
@@ -75,18 +78,21 @@ const TeamarbeitPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fal', 'theater-masks']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fas', 'street-view']} size="2x" color="#0f62cc"/>
+                        <p className="mintitle">Persönlicher Beitrag</p>
                         <h2>Von Riesen & Zwergen...</h2>
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{ marginTop: "2rem" }}>
                     <Col md={6} style={{marginBottom:"4rem"}}>
+                        <img src={Riese} alt="Riesen" style={{maxHeight:"80px"}}></img>
                         <h3>Teamriesen</h3>
                         <p>Fangen gerne unscheinbare Ideen und helfen anderen diese umzusetzen.</p>
                         <p>Giver & Matcher</p>
                         <Link to="/selbstcheck">Selbstcheck</Link>
                     </Col>
                     <Col md={6}>
+                        <img src={Zwerg} alt="Zwerge" style={{maxHeight:"80px"}}></img>
                         <h3>Teamzwerge</h3>
                         <p>Pitchen gerne glänzende Konzepte und achten auf ihre Reputation.</p>
                         <p>Taker</p>

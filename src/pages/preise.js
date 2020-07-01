@@ -38,7 +38,7 @@ const PreisePage = () => {
                         <br></br></p>
                         <h2 style={{marginBottom:"0"}}>89 €</h2> 
                         <p>pro Team/Monat</p>
-                        <Link to="/beta"><Button>Jetzt buchen</Button></Link>
+                        <Link to="/beta"><Button variant="secondary" style={{letterSpacing:"0.1rem", fontWeight:"bold"}}>Jetzt buchen</Button></Link>
                     </Col>
                     <Col md>
                         <h2>Enterprise-Paket</h2>
@@ -54,7 +54,7 @@ const PreisePage = () => {
                         </p>
                         <h2 style={{marginBottom:"0"}}>89 €</h2> 
                         <p>pro Mitarbeiter/Jahr</p>
-                        <Button variant="primary" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
+                        <Button variant="secondary" style={{letterSpacing:"0.1rem", fontWeight:"bold"}} href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
                         <p style={{fontSize:"0.8rem"}}>oder einfach anrufen: (+49) 176 / 8526 3478.</p>
                     </Col>
                 </Row>

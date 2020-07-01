@@ -37,6 +37,14 @@ module.exports = {
     },
   },
   {
+    resolve: "gatsby-plugin-react-svg",
+    options: {
+      rule: {
+        include: /svg/ // See below to configure properly
+      }
+    }
+  },
+  {
     resolve: `gatsby-plugin-create-client-paths`,
     options: { prefixes: [`/app/*`] },
   },

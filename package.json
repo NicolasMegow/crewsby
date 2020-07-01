@@ -26,6 +26,7 @@
     "gatsby": "^2.23.0",
     "gatsby-plugin-create-client-paths": "^2.3.6",
     "gatsby-plugin-react-helmet": "^3.3.3",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.3",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-remark-images": "^3.3.9",

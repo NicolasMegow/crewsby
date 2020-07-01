@@ -11,7 +11,7 @@ const CTA = () => {
                 <Col md={8}>
                     <h2>12 Monate Teamgefühl <br></br>statt 1 Tag traditionelles Training?</h2>
                     <p>Teamgefühl liefert bessere Ergebnisse für weniger Kosten.    </p>
-                    <Link to="/preise"><Button variant="light">Trainings-Flatrate buchen</Button></Link>
+                    <Link to="/preise"><Button variant="secondary" style={{letterSpacing:"0.1rem", fontWeight:"bold"}}>TRAININGS-FLATRATE BUCHEN</Button></Link>
                 </Col>
                 <Col md={4} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
                     <span className="fa-layers fa-fw fa-6x">
