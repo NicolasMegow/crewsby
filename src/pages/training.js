@@ -71,9 +71,9 @@ const TrainingPage = () => {
                         Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine,
                         die beliebig rekombinierbar sind.</p>
                     </Col>
-                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
+                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <FontAwesomeIcon icon={['fad', 'chalkboard-teacher']} fixedWidth size="5x" />
-                        <b>vs.</b>
+                        <b style={{margin:"0 1.6rem"}}>vs.</b>
                         <FontAwesomeIcon icon={['fad', 'phone-laptop']} fixedWidth size="5x" style={sunStyle} />
                     </Col>
                 </Row>
@@ -91,9 +91,10 @@ const TrainingPage = () => {
                 </Row>
                 <Row>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'stopwatch']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
-                        <h3>30 Minuten</h3>
-                        <p>Maximales Training durch mehrere Tutorials mit jeweils nur 30 Minuten.</p>
+                    <span className="fa-layers fa-8x">
+                <FontAwesomeIcon icon={['fal', 'mobile']} color="#67A4F4"/>
+                <span className="fa-layers-text" style={{fontSize:"1rem"}}>MOBILE<br></br>PHONE</span>
+                </span>
                     </Col>
                     <Col sm>
                         <FontAwesomeIcon icon={['fal', 'cloud-download']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />

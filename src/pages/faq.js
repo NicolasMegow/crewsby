@@ -15,7 +15,7 @@ const FAQPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <p style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+                        <p style={{ display: "flex", justifyContent: "flex-start", alignItems: "flex-end" }}>
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x"/>
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={90} />
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={180} />

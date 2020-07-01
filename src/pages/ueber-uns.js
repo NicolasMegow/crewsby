@@ -34,10 +34,10 @@ const UeberUnsPage = () => {
                         Wir stellen spannende Gruppen zusammen und gestalten den Prozess.
                         </p>
                     </Col>
-                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "space-around"}}>
-                            <FontAwesomeIcon icon={['fal', 'books']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8"/>
-                            <FontAwesomeIcon icon={['fal', 'cube']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8"/>
-                            <FontAwesomeIcon icon={['fal', 'cubes']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#0f62cc" transform="shrink-8"/>
+                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <FontAwesomeIcon icon={['fal', 'books']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'cube']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'cubes']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#0f62cc" transform="shrink-8" />
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
@@ -48,10 +48,10 @@ const UeberUnsPage = () => {
                         Digitales Training hat eine hervorragende Klimabilanz. Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.
                         </p>
                     </Col>
-                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "space-around"}}>
-                            <FontAwesomeIcon icon={['fal', 'seedling']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8"/>
-                            <FontAwesomeIcon icon={['fal', 'flower-tulip']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8"/>
-                            <FontAwesomeIcon icon={['fal', 'tree-alt']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#0f62cc" transform="shrink-8"/>
+                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <FontAwesomeIcon icon={['fal', 'seedling']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'flower-tulip']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'tree-alt']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#0f62cc" transform="shrink-8" />
                     </Col>
                 </Row>
             </Container>

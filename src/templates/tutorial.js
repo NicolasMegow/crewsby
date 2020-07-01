@@ -67,7 +67,7 @@ const Tutorial = (props) => {
         <Layout>
             <Head title={props.data.markdownRemark.frontmatter.title} />
             {isAuthenticated ? (
-                <Container style={{ maxWidth: "700px" }}>
+                <Container style={{ maxWidth: "700px", marginLeft:"0" }}>
                     <Row>
                         <Col>
                             <Nav style={{ float: "right" }}>

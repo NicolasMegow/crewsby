@@ -21,12 +21,12 @@ const Header = () => {
         <header>
             <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
                 <Container className={headerStyles.container}>
-                    <Navbar.Brand>
+                    <Navbar.Brand style={{marginRight:"2rem", paddingLeft:"15px"}}>
                         <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-site" />
                     <Navbar.Collapse id="basic-navbar-site">
-                        <Nav className="ml-auto">
+                        <Nav>
                             <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/teamarbeit">Teamarbeit</Link>
                             </Nav.Item>
@@ -36,6 +36,8 @@ const Header = () => {
                             <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/preise">Preise</Link>
                             </Nav.Item>
+                        </Nav>
+                        <Nav className="ml-auto">
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>

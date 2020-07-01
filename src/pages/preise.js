@@ -18,17 +18,15 @@ const PreisePage = () => {
                         <h1 style={{ marginTop: "0", color: "#0f62cc" }}>Return-on-Teamarbeit?</h1>
                         <p>Bessere Teamarbeit steigert die Produktivität und Kreativität. 
                             Auch die Identifikation mit dem Unternehmen wächst.</p>
-                        <h3>Die Flatrate beinhaltet:</h3>
+                        <h3>Die Trainings-Flatrate beinhaltet:</h3>
+                        <p><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}alle Tutorials<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}für alle Teammitglieder<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}in 9 Sprachen*</p>
                     </Col>
-                </Row>
-                <Row>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}alle Tutorials</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}für alle Teammitglieder</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}in 9 Sprachen*</Col>
                 </Row>
                 <Row style={{marginTop:"4rem"}}>
                     <Col md style={{marginBottom:"4rem"}}>
-                        <h2>Team-Flatrate</h2>
+                        <h2>Team-Paket</h2>
                         <p>Für 1-8 Mitarbeiter<br></br>
                         Der Standard für starke Teams</p>
                         <p>
@@ -43,7 +41,7 @@ const PreisePage = () => {
                         <Link to="/beta"><Button>Jetzt buchen</Button></Link>
                     </Col>
                     <Col md>
-                        <h2>Enterprise-Flatrate</h2>
+                        <h2>Enterprise-Paket</h2>
                         <p>Für 9-100.000 Mitarbeiter<br></br>
                         Ideal für Abteilungen & Unternehmen</p>
                         <p>

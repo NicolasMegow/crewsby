@@ -17,7 +17,7 @@ const ErfolgPage = () => {
         <Layout>
             <Head title="Erfolg" />
             {isAuthenticated ? (
-                <Container>
+                <Container style={{ maxWidth: "700px", marginLeft:"0"}}>
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
                             <FontAwesomeIcon icon={['fal', 'glass-cheers']} size="6x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
@@ -26,7 +26,6 @@ const ErfolgPage = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
                             <Alert variant='success'>
                                 <h2>Verbesserung entsteht in vielen kleinen Schritten.</h2>
                                 <h3>Vertraut dem Prozess.</h3>
@@ -46,8 +45,9 @@ const ErfolgPage = () => {
                                     <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-8" /> {'  '}
                                 </p>
                             </Alert>
+                            <Col>
                             <Link to="/tutorials"><Button variant="primary">Nächstes Tutorial auswählen</Button></Link>
-                        </Col>
+                            </Col>
                     </Row>
                 </Container>
             ) : (

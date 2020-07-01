@@ -97,7 +97,7 @@ const TutorialPage = () => {
                                                                                     <h3>{subItem.thema}</h3>
                                                                                     <Row>
                                                                                         <Col xs={7}>
-                                                                                            <p style={{ fontStyle: "italic", fontSize: ".8rem" }}>coming soon</p>
+                                                                                            <p style={{fontSize: ".8rem" }}>coming soon</p>
                                                                                         </Col>
                                                                                         <Col xs={5}>
                                                                                             <FontAwesomeIcon icon={subItem.icon} size="3x" style={{ float: "right" }} color="#C8CBD0" />
@@ -112,7 +112,7 @@ const TutorialPage = () => {
                                                                                     <h3>{subItem.thema}</h3>
                                                                                     <Row>
                                                                                         <Col xs={7}>
-                                                                                            <p style={{ fontStyle: "italic", fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
+                                                                                            <p style={{fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
                                                                                             <FontAwesomeIcon icon={item.icon2} fixedWidth />
                                                                                         </Col>
                                                                                         <Col xs={5}>
@@ -166,7 +166,7 @@ const TutorialPage = () => {
                                                                                     <h3>{subItem.thema}</h3>
                                                                                     <Row>
                                                                                         <Col xs={7}>
-                                                                                            <p style={{ fontStyle: "italic", fontSize: ".8rem" }}>coming soon</p>
+                                                                                            <p style={{fontSize: ".8rem" }}>coming soon</p>
                                                                                         </Col>
                                                                                         <Col xs={5}>
                                                                                             <FontAwesomeIcon icon={subItem.icon} size="3x" style={{ float: "right" }} color="#C8CBD0" />
@@ -181,7 +181,7 @@ const TutorialPage = () => {
                                                                                     <h3>{subItem.thema}</h3>
                                                                                     <Row>
                                                                                         <Col xs={7}>
-                                                                                            <p style={{ fontStyle: "italic", fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
+                                                                                            <p style={{fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
                                                                                             <FontAwesomeIcon icon={item.icon2} fixedWidth />
                                                                                         </Col>
                                                                                         <Col xs={5}>

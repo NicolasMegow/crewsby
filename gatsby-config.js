@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Teamgefühl',
+    title: 'CREWSBY',
     author: "Nicolas Megow"
   },
   plugins: [
