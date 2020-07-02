@@ -5,12 +5,18 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import Hint from "../components/hint"
+
 import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+const shortcodes = { Hint }
+
 var styles = {
     tutnav: {
-        color: '#677b8c',
+        color: '#C8CBD0',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
@@ -30,7 +36,7 @@ const isActive = (key1, key2) => {
 
 export const query = graphql`
     query($slug: String!) {
-        markdownRemark (fields: { slug: { eq: $slug } }) {
+        mdx (fields: { slug: { eq: $slug } }) {
             frontmatter {
                 title
                 type
@@ -39,7 +45,7 @@ export const query = graphql`
                 version
                 next
             }
-            html
+            body
         }
     }
 `
@@ -60,12 +66,14 @@ const Tutorial = (props) => {
         </Layout>
     }
 
-    const type = props.data.markdownRemark.frontmatter.part
-    const next = props.data.markdownRemark.frontmatter.next
+    const title = props.data.mdx.frontmatter.title
+    const type = props.data.mdx.frontmatter.part
+    const next = props.data.mdx.frontmatter.next
 
     return (
+        <MDXProvider components={shortcodes}>
         <Layout>
-            <Head title={props.data.markdownRemark.frontmatter.title} />
+            <Head title={title} />
             {isAuthenticated ? (
                 <Container style={{ maxWidth: "700px", marginLeft:"0" }}>
                     <Row>
@@ -73,17 +81,17 @@ const Tutorial = (props) => {
                             <Nav style={{ float: "right" }}>
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Info", type)}>
-                                        <FontAwesomeIcon icon={['fal', 'info-circle']} />
+                                        <FontAwesomeIcon icon={['fas', 'lightbulb']} />
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Aufgabe", type)}>
-                                        <FontAwesomeIcon icon={['fal', 'stopwatch']} />
+                                        <FontAwesomeIcon icon={['fas', 'stopwatch']} />
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Reflexion", type)}>
-                                        <FontAwesomeIcon icon={['fal', 'question-circle']} />
+                                        <FontAwesomeIcon icon={['fas', 'question']} />
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>
@@ -91,8 +99,8 @@ const Tutorial = (props) => {
                     </Row>
                     <Row>
                         <Col>
-                            <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-                            <div dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}></div>
+                            <h1>{title}</h1>
+                            <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>
                     <Row>
@@ -122,6 +130,7 @@ const Tutorial = (props) => {
                     </Container>
                 )}
         </Layout>
+        </MDXProvider>
     )
 }
 

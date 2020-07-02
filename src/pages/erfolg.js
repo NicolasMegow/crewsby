@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col, Button, Alert } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Hint from "../components/hint"
 
 const ErfolgPage = () => {
     const { isAuthenticated, loading, user } = useAuth0()
@@ -17,7 +18,7 @@ const ErfolgPage = () => {
         <Layout>
             <Head title="Erfolg" />
             {isAuthenticated ? (
-                <Container style={{ maxWidth: "700px", marginLeft:"0"}}>
+                <Container style={{ maxWidth: "700px", marginLeft: "0" }}>
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
                             <FontAwesomeIcon icon={['fal', 'glass-cheers']} size="6x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
@@ -26,28 +27,15 @@ const ErfolgPage = () => {
                         </Col>
                     </Row>
                     <Row>
-                            <Alert variant='success'>
-                                <h2>Verbesserung entsteht in vielen kleinen Schritten.</h2>
-                                <h3>Vertraut dem Prozess.</h3>
-                                <p style={{textAlign:"right"}}>
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="down-4" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="down-2" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="down-3" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="down-1" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-2" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-4" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-2" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="down-1" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-4" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-6" /> {'  '}
-                                    <FontAwesomeIcon icon={['fas', 'shoe-prints']} fixedWidth transform="up-8" /> {'  '}
-                                </p>
-                            </Alert>
-                            <Col>
+                        <Hint variant='info'
+                            heading="Vertraut dem Prozess."
+                            text="Verbesserung entsteht in vielen kleinen Schritten."
+                        />
+                    </Row>
+                    <Row>
+                        <Col>
                             <Link to="/tutorials"><Button variant="primary">Nächstes Tutorial auswählen</Button></Link>
-                            </Col>
+                        </Col>
                     </Row>
                 </Container>
             ) : (

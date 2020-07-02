@@ -1,8 +1,7 @@
 content:
   - category: Beziehungen stärken
     key: rel  
-    icon: ['fal', 'heartbeat']
-    icon2: ['fal', 'heart']
+    icon: ['fas', 'heart']
     themen:
       - thema: Vertrauen
         inhalt: TBD
@@ -18,8 +17,7 @@ content:
         urlstart: rituale-1a
   - category: Prozesse optimieren
     key: col
-    icon: ['fal', 'handshake']
-    icon2: ['fal', 'thumbs-up']
+    icon: ['fas', 'thumbs-up']
     state: disabled
     themen:
       - thema: Koordination
@@ -44,8 +42,7 @@ content:
         urlstart: coming-soon
   - category: Fähigkeiten entwickeln
     key: ski
-    icon: ['fal', 'mind-share']
-    icon2: ['fal', 'brain']
+    icon: ['fas', 'brain']
     themen:
       - thema: Supervision
         inhalt: TBD

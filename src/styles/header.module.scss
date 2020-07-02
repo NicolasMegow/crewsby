@@ -4,6 +4,7 @@
 
 .navbar {
     background: #ffffff;
+    padding-top: 1rem !important;
 }
 
 .container {
@@ -11,7 +12,7 @@
 }
 
 .title {
-    color: $highlightcolor;
+    color: $primary;
     font-size: 2rem;
     font-weight: 600;
     text-decoration: none;
@@ -29,14 +30,14 @@
 }
 
 .nav-item:hover {
-    color: $highlightcolor;
+    color: $primary;
     text-decoration: none;
 }
 
 .nav-button {
-    color: $highlightcolor;
+    color: $primary;
     background-color:#ffffff;
-    border: 1px solid $highlightcolor;
+    border: 1px solid $primary;
     font-weight: 500;
     line-height: 2.4;
     margin-right: 1.3rem;
@@ -47,8 +48,8 @@
 
 .nav-button:hover {
     color: #ffffff;
-    background-color: $highlightcolor;
-    border: 1px solid $highlightcolor;
+    background-color: $primary;
+    border: 1px solid $primary;
     text-decoration: none;
 }
 

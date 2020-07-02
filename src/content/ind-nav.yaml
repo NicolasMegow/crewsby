@@ -1,8 +1,7 @@
 content:
   - category: Beziehungen stärken
     key: rel  
-    icon: ['fal', 'heartbeat']
-    icon2: ['fal', 'heart']
+    icon: ['fas', 'heart']
     themen:
       - thema: Wertschätzung
         inhalt: Kleine Gesten & passende Worte
@@ -22,8 +21,7 @@ content:
         urlstart: coming-soon
   - category: Prozesse optimieren
     key: col
-    icon: ['fal', 'handshake']
-    icon2: ['fal', 'thumbs-up']
+    icon: ['fas', 'thumbs-up']
     themen:
       - thema: Ziele
         inhalt: TBD
@@ -51,8 +49,7 @@ content:
         urlstart: coming-soon
   - category: Fähigkeiten entwickeln
     key: ski
-    icon: ['fal', 'mind-share']
-    icon2: ['fal', 'brain']
+    icon: ['fas', 'brain']
     themen:
       - thema: Leistung
         inhalt: TBD

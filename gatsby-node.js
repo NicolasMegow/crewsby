@@ -3,8 +3,8 @@ const path = require('path')
 module.exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions
 
-    if (node.internal.type == "MarkdownRemark") {
-        const slug = path.basename(node.fileAbsolutePath, '.md')
+    if (node.internal.type == "Mdx") {
+        const slug = path.basename(node.fileAbsolutePath, '.mdx')
         createNodeField({
             node, 
             name: 'slug',
@@ -16,7 +16,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async function ({ actions, graphql }) {
     await graphql(`
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -27,7 +27,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
         }
       }
     `).then(res => {
-      res.data.allMarkdownRemark.edges.forEach(edge => {
+      res.data.allMdx.edges.forEach(edge => {
         const slug = edge.node.fields.slug
         actions.createPage({
           path: `/tutorials/${slug}`,

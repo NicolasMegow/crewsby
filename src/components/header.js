@@ -37,11 +37,15 @@ const Header = () => {
                                 <Link className={headerStyles.navItem} to="/preise">Preise</Link>
                             </Nav.Item>
                         </Nav>
+                        <hr></hr>
                         <Nav className="ml-auto">
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navButton} to="/tutorials">Tutorials</Link>
+                                    <Link className={headerStyles.navItem} to="/tutorials">Tutorials</Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Link className={headerStyles.navItem} to="/account">Account</Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
