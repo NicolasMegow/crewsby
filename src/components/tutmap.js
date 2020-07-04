@@ -21,30 +21,30 @@ class TutMap extends React.Component {
                                 {item.themen.map((subItem) => {
                                     if (subItem.urlstart === 'coming-soon') {
                                         return (
-                                            <Col sm={6} md={4} className={appStyles.tile} key={subItem.thema}>
+                                            <Col sm={6} lg={4} className={appStyles.tile} key={subItem.thema}>
                                                 <div className={appStyles.disabledLink}>
                                                     <h4>{subItem.thema}</h4>
                                                     <Row>
-                                                        <Col xs={7}>
-                                                            <p style={{ fontSize: ".8rem" }}>coming soon</p>
+                                                        <Col xs={8}>
+                                                            <p style={{ fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
                                                         </Col>
-                                                        <Col xs={5}>
-                                                            <FontAwesomeIcon icon={subItem.icon} size="3x" style={{ float: "right" }} color="#C8CBD0" />
+                                                        <Col xs={4}>
+                                                            <FontAwesomeIcon icon={subItem.icon} size="2x" style={{ float: "right" }} color="#9197A1" />
                                                         </Col>
                                                     </Row>
                                                 </div>
                                             </Col>)
                                     } else {
                                         return (
-                                            <Col sm={6} md={4} className={appStyles.tile} key={subItem.thema}>
+                                            <Col sm={6} lg={4} className={appStyles.tile} key={subItem.thema}>
                                                 <Link to={`/tutorials/${subItem.urlstart}`}>
                                                     <h4>{subItem.thema}</h4>
                                                     <Row>
-                                                        <Col xs={7}>
+                                                        <Col xs={8}>
                                                             <p style={{ fontSize: ".8rem", marginBottom: "0" }}>{subItem.inhalt}</p>
                                                         </Col>
-                                                        <Col xs={5}>
-                                                            <FontAwesomeIcon icon={subItem.icon} size="3x" style={{ float: "right" }} />
+                                                        <Col xs={4}>
+                                                            <FontAwesomeIcon icon={subItem.icon} size="2x" style={{ float: "right" }} />
                                                         </Col>
                                                     </Row>
                                                 </Link>

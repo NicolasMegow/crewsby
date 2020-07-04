@@ -35,19 +35,6 @@ const TutorialPage = () => {
                     <Row>
                         <Col>
                             <h1>Tutorial-Navigator</h1>
-                            <h3>Deine Punkte bisher:</h3>
-                            <p style={{ marginBottom: "0" }}>
-                                <FontAwesomeIcon icon={['fas', 'arrow-circle-right']} fixedWidth />{' '}
-                                SOLO: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
-                                | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}
-                                | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '}
-                            </p>
-                            <p>
-                                <FontAwesomeIcon icon={['fas', 'arrow-circle-right']} fixedWidth />{' '}
-                                TEAM: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
-                                | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}
-                                | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '}
-                            </p>
                         </Col>
                     </Row>
                     <Tab.Container id="mode" defaultActiveKey="team">
@@ -58,13 +45,13 @@ const TutorialPage = () => {
                                         <p className={appStyles.info1}>MODUS:</p>
                                         <p className={appStyles.info2}>Trainierst du alleine oder mit deinem Team?</p>
                                     </Col>
-                                    <Hint variant='info'
-                                        text="Für die Team-Tutorials sollten alle Teammitglieder da sein ;)
-                                            <br></br>Aktuell sind die Team-Tutorials auf physische Präsenz ausgelegt."
+                                    <Hint variant='info' icon={['fas','info-circle']}
+                                        line1="Für die Team-Tutorials sollten alle Teammitglieder da sein."
+                                        line2="Aktuell sind die Team-Tutorials auf physische Präsenz ausgelegt."
                                     /></Row>
                                 <Nav variant="pills">
                                     <Nav.Item>
-                                        <Nav.Link eventKey="ind" className={appStyles.pill}>SOLO</Nav.Link>
+                                        <Nav.Link eventKey="solo" className={appStyles.pill}>SOLO</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
                                         <Nav.Link eventKey="team" className={appStyles.pill}>TEAM</Nav.Link>
@@ -73,20 +60,28 @@ const TutorialPage = () => {
                             </Col>
                         </Row>
                         <Tab.Content>
-                            <Tab.Pane eventKey="ind" className={appStyles.tab}>
+                            <Tab.Pane eventKey="solo" className={appStyles.tab}>
                                 <Tab.Container id="goal-solo" defaultActiveKey="rel">
                                     <Row className={appStyles.row}>
                                         <Col>
                                             <Row>
-                                                <Col>
+                                                <Col sm>
                                                     <p className={appStyles.info1}>ZIEL:</p>
                                                     <p className={appStyles.info2}>Welchen Beitrag möchtest du leisten?</p>
                                                 </Col>
-                                                <Hint variant='info'
-                                                    text="Du brauchst nur Stift und Block für die Tutorials.
-                                                        <br></br>Wähle das interessanteste Thema aus, oder arbeite dich von links nach rechts durch."
+                                                <Col sm>
+                                                    <p>
+                                                        <FontAwesomeIcon icon={['fas', 'arrow-circle-right']} fixedWidth />{' '}
+                                                        Solo-Punkte: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '}
+                                                    </p>
+                                                </Col>
+                                                <Hint variant='info' icon={['fas','info-circle']}
+                                                    line1="Du brauchst nur Stift und Block für die Tutorials."
+                                                    line2="Wähle das interessanteste Thema aus oder arbeite dich von links nach rechts durch."
                                                 /></Row>
-                                            <Nav variant="pills" justify="true">
+                                            <Nav variant="pills">
                                                 {IndNavData.content.map((item) => (
                                                     <Nav.Item key={item.key}>
                                                         <Nav.Link eventKey={item.key} className={appStyles.pill}>
@@ -107,16 +102,24 @@ const TutorialPage = () => {
                                     <Row className={appStyles.row}>
                                         <Col>
                                             <Row>
-                                                <Col>
+                                                <Col sm>
                                                     <p className={appStyles.info1}>ZIEL:</p>
                                                     <p className={appStyles.info2}>Woran wollt ihr arbeiten?</p>
                                                 </Col>
-                                                <Hint variant='info'
-                                                    text="Ihr braucht nur Stift und Block für die Tutorials.
-                                            <br></br>Wählt das interessanteste Thema aus, oder arbeitet  euch von links nach rechts durch."
+                                                <Col sm>
+                                                    <p>
+                                                        <FontAwesomeIcon icon={['fas', 'arrow-circle-right']} fixedWidth />{' '}
+                                                        Team-Punkte: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '}
+                                                    </p>
+                                                </Col>
+                                                <Hint variant='info' icon={['fas','info-circle']}
+                                                    line1="Ihr braucht nur Stift und Block für die Tutorials."
+                                                    line2="Wählt das interessanteste Thema aus oder arbeitet  euch von links nach rechts durch."
                                                 />
                                             </Row>
-                                            <Nav variant="pills" justify="true">
+                                            <Nav variant="pills">
                                                 {TeamNavData.content.map((item) => (
                                                     <Nav.Item key={item.key}>
                                                         <Nav.Link eventKey={item.key} className={appStyles.pill}>
@@ -139,7 +142,7 @@ const TutorialPage = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Bitte erst einloggen ;)</h1>
+                                <h1>Bitte erst einloggen.</h1>
                             </Col>
                         </Row>
                     </Container>

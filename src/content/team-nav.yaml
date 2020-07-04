@@ -4,55 +4,55 @@ content:
     icon: ['fas', 'heart']
     themen:
       - thema: Vertrauen
-        inhalt: TBD
+        inhalt: Menschen begegnen & Türen öffnen
         icon: ['fal', 'key']
         urlstart: vertrauen-1a
       - thema: Konflikte
-        inhalt: TBD
+        inhalt: Unterschiede nutzbar machen
         icon: ['fal', 'boxing-glove']
         urlstart: konflikte-1a
       - thema: Rituale  
-        inhalt: TBD
+        inhalt: Feste feiern, wie sie fallen
         icon: ['fal', 'camera-polaroid']
         urlstart: rituale-1a
   - category: Prozesse optimieren
-    key: col
+    key: pro
     icon: ['fas', 'thumbs-up']
     state: disabled
     themen:
       - thema: Koordination
-        inhalt: TBD
+        inhalt: Abstimmung zwischen Menschen
         icon: ['fal', 'ball-pile']
         urlstart: koordination-1a
       - thema: Einsatz
-        inhalt: TBD
+        inhalt: Leistung planen & dosieren
         icon: ['fal', 'truck-plow']
         urlstart: coming-soon
       - thema: Verantwortung
-        inhalt: TBD
+        inhalt: Aufgaben verteilen & Konsequenzen tragen
         icon: ['fal', 'raygun']
         urlstart: coming-soon
-      - thema: Ergebnisorientierung
-        inhalt: TBD
+      - thema: Kennzahlen
+        inhalt: Zahlen auswählen & interpretieren
         icon: ['fal', 'analytics']
         urlstart: coming-soon
       - thema: Müllabfuhr
-        inhalt: TBD
-        icon: ['fal', 'trash']
+        inhalt: Arbeit regelmäßig entschlacken
+        icon: ['fal', 'trash-alt']
         urlstart: coming-soon
-  - category: Fähigkeiten entwickeln
-    key: ski
+  - category: Potenziale entwickeln
+    key: pot
     icon: ['fas', 'brain']
     themen:
       - thema: Supervision
-        inhalt: TBD
+        inhalt: Voneinander & miteinander lernen
         icon: ['fal', 'toolbox']
         urlstart: coming-soon
-      - thema: Skill-Sprints
-        inhalt: TBD
-        icon: ['fal', 'shipping-fast']
-        urlstart: coming-soon
       - thema: Fehler-Analyse
-        inhalt: TBD
+        inhalt: Ursachen von Fehlern erkunden
         icon: ['fal', 'poo']
+        urlstart: coming-soon
+      - thema: Sprints
+        inhalt: Grenzen überwinden auf Kurzstrecke
+        icon: ['fal', 'shipping-fast']
         urlstart: coming-soon

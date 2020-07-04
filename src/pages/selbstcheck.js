@@ -12,7 +12,7 @@ const SelbstcheckPage = () => {
             <Head title="Selbstcheck" />
             <Container>
                 <Row>
-                    <FontAwesomeIcon icon={['fal', 'tachometer-fast']} size="6x" color="#0f62cc" />
+                    <FontAwesomeIcon icon={['fal', 'tachometer-fast']} size="6x" color="#4285F4" />
                 </Row>
                 <Row>
                     <h1>Selbstcheck für professionelle Teamarbeit</h1>

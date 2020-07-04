@@ -8,70 +8,70 @@ content:
         icon: ['fal', 'gift']
         urlstart: wertschaetzung-1a
       - thema: Beitrag
-        inhalt: TBD
+        inhalt: Persönliche Stärken einbringen
         icon: ['fal', 'backpack']
         urlstart: coming-soon
       - thema: Erwartungen
-        inhalt: TBD
-        icon: ['fal', 'telescope']
+        inhalt: Gedankliche Landkarten entdecken
+        icon: ['fal', 'map']
         urlstart: coming-soon
       - thema: Verletzlichkeit
-        inhalt: TBD
+        inhalt: Unvollkommenheit zulassen & zeigen
         icon: ['fal', 'box-tissue']
         urlstart: coming-soon
   - category: Prozesse optimieren
-    key: col
+    key: pro
     icon: ['fas', 'thumbs-up']
     themen:
       - thema: Ziele
-        inhalt: TBD
+        inhalt: Richtung festlegen & Fortschritt messen
         icon: ['fal', 'map-marker-check']
         urlstart: ziele-1a
       - thema: Backlogs
-        inhalt: TBD
+        inhalt: Arbeit stückeln & prioriseren
         icon: ['fal', 'list-ol']
         urlstart: coming-soon
       - thema: Rollen
-        inhalt: TBD
+        inhalt: Funktionen in Gruppen
         icon: ['fal', 'hat-chef']
         urlstart: coming-soon
       - thema: Meetings
-        inhalt: Information, Entscheidung & Reflexion
+        inhalt: Effektiv in Echtzeit kommunizieren
         icon: ['fal', 'sticky-note']
         urlstart: coming-soon
       - thema: Standards
-        inhalt: TBD
+        inhalt: Übergaben reibungslos gestalten
         icon: ['fal', 'clipboard-check']
         urlstart: coming-soon
       - thema: Work in Progress
-        inhalt: TBD
+        inhalt: Arbeitsfluss herstellen
         icon: ['fal', 'conveyor-belt']
         urlstart: coming-soon
-  - category: Fähigkeiten entwickeln
-    key: ski
+  - category: Potenziale entwickeln
+    key: pot
     icon: ['fas', 'brain']
     themen:
       - thema: Leistung
-        inhalt: TBD
+        inhalt: Input & Output optimieren
         icon: ['fal', 'road']
         urlstart: coming-soon
       - thema: Fragen
-        inhalt: TBD
+        inhalt: Denkprozesse strukturieren
         icon: ['fal', 'question']
         urlstart: coming-soon
       - thema: Feedback
-        inhalt: TBD
+        inhalt: Gedanken teilen & umsetzen
         icon: ['fal', 'comment-edit']
         urlstart: coming-soon
       - thema: Innovation
-        inhalt: TBD
+        inhalt: Wirklich neue Wege gehen
         icon: ['fal', 'rocket-launch']
         urlstart: coming-soon
       - thema: Prototyping
-        inhalt: TBD
+        inhalt: Schnell & günstig ausprobieren
         icon: ['fal', 'tools']
         urlstart: coming-soon
       - thema: Dokumentation
-        inhalt: TBD
+        inhalt: Denkprozesse erkennen & anpassen
         icon: ['fal', 'book']
         urlstart: coming-soon

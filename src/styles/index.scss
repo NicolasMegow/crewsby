@@ -22,3 +22,11 @@ h1 {
 .info-icon:hover {
   color: $primary;
 }
+
+.btn-secondary {
+  letter-spacing: 0.1rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  min-width: 14rem;
+}

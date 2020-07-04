@@ -7,7 +7,7 @@ import Head from "../components/head"
 import CTA from "../components/cta"
 
 const sunStyle = {
-    "--fa-primary-color": "#0f62cc",
+    "--fa-primary-color": "#4285F4",
     "--fa-secondary-color": "#67A4F4",
     "--fa-secondary-opacity": .8
 };
@@ -19,7 +19,7 @@ const TrainingPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <FontAwesomeIcon icon={['fal', 'map-signs']} size="6x" color="#0f62cc" />
+                        <FontAwesomeIcon icon={['fal', 'map-signs']} size="6x" color="#4285F4" />
                         <h1>Gute Teamarbeit ist eine Entscheidung.</h1>
                         <p>Teamarbeit läuft häufig nebenher — ganz natürlich durch den Alltag im Büro.
                         Wie gut oder schlecht diese Teamarbeit ist, liegt in deiner Hand.
@@ -29,18 +29,18 @@ const TrainingPage = () => {
                 </Row>
                 <Row style={{ marginTop: "3rem" }}>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'user']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
                         <h3>Für dich</h3>
-                        <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Führungskompetenz entwickeln<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Echte Beiträge leisten<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Verantwortung übernehmen</p>
+                        <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Führungskompetenz entwickeln<br></br>
+                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Echte Beiträge leisten<br></br>
+                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Verantwortung übernehmen</p>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'square']} size="4x" color="#0f62cc" transform="shrink-8" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'users']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
                         <h3>Für dein Team</h3>
-                        <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Konflikte produktiv lösen<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Spaß bei der Arbeit<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#0f62cc" />{' '}Kreativität entfesseln</p>
+                        <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Konflikte produktiv lösen<br></br>
+                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Spaß bei der Arbeit<br></br>
+                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Kreativität entfesseln</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
@@ -53,13 +53,13 @@ const TrainingPage = () => {
                     </Col>
                     <Col sm={6} lg={4} style={{ display: "flex", alignItems: "center" }}>
                         <p>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Radical Candor<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Psychological Safety<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}OKRs<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Kanban<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Lean Management<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Scrum<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FDE74C" />{' '}Design Thinking<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Radical Candor<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Psychological Safety<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}OKRs<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Kanban<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Lean Management<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Scrum<br></br>
+                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Design Thinking<br></br>
                         </p>
                     </Col>
                 </Row>
@@ -78,9 +78,9 @@ const TrainingPage = () => {
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Machen, statt zuhören</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Viele kleine Trainings</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Nach persönlichem Bedarf</Col>
+                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Machen, statt zuhören</Col>
+                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Viele kleine Trainings</Col>
+                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Nach persönlichem Bedarf</Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col>
@@ -97,11 +97,11 @@ const TrainingPage = () => {
                 </span>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'cloud-download']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'cloud-download']} size="2x" color="#4285F4" style={{ marginBottom: "1rem" }} />
                         <h3>On Demand</h3>
                         <p>Training komplett auf dich zugeschnitten: Was, wann und wo du möchtest.</p></Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'phone-laptop']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'phone-laptop']} size="2x" color="#4285F4" style={{ marginBottom: "1rem" }} />
                         <h3>Ohne Coach</h3>
                         <p>Unsere Tutorials bauen Fähigkeiten auf — genau wie ein menschlicher Trainer.</p>
                     </Col>
@@ -114,17 +114,17 @@ const TrainingPage = () => {
                 </Row>
                 <Row style={{ marginTop: "3rem" }}>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'heartbeat']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'heartbeat']} size="2x" color="#4285F4" style={{ marginBottom: "1rem" }} />
                         <h3>Beziehungen stärken</h3>
                         <p>Starke persönliche Beziehungen bilden das Fundament guter Teamarbeit.</p>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'handshake']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'handshake']} size="2x" color="#4285F4" style={{ marginBottom: "1rem" }} />
                         <h3>Prozesse optimmieren</h3>
                         <p>Flow durch bewusst und individuell gestaltete Zusammenarbeit.</p>
                     </Col>
                     <Col sm>
-                        <FontAwesomeIcon icon={['fal', 'mind-share']} size="2x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
+                        <FontAwesomeIcon icon={['fal', 'mind-share']} size="2x" color="#4285F4" style={{ marginBottom: "1rem" }} />
                         <h3>Fähigkeiten entwickeln</h3>
                         <p>Im Team voneinander lernen und stetig besser zu werden.</p>
                     </Col>

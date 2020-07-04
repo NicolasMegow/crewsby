@@ -20,8 +20,8 @@ const FAQPage = () => {
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={90} />
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={180} />
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={270} /> {'  '}
-                            <FontAwesomeIcon icon={['fal', 'info-circle']} fixedWidth size="4x" color="#0f62cc" /></p>
-                        <h1>Deine Fragen, <p style={{color:"#0f62cc"}}>unsere Antworten ;)</p></h1>
+                            <FontAwesomeIcon icon={['fal', 'info-circle']} fixedWidth size="4x" color="#4285F4" /></p>
+                        <h1>Deine Fragen, <p style={{color:"#4285F4"}}>unsere Antworten.</p></h1>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>

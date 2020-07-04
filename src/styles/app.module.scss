@@ -15,9 +15,10 @@
     margin: 1rem 0;
     a {
         color: $maincolor;
-        border-color: $darkback;
+        border-color: $primary;
         border-style: solid;
         border-width: 1px;
+        border-radius: 6px;
         padding: 1rem;
         min-height: 7rem;
         text-decoration: none;
@@ -31,10 +32,11 @@
         margin-bottom: 0;
     }
     .disabled-link {
-        color: $maincolor;
-        border-color: $darkback;
+        color: #9197A1;
+        border-color: $lightback;
         border-style: solid;
         border-width: 1px;
+        border-radius: 6px;
         padding: 1rem;
         min-height: 7rem;
         text-decoration: none;
@@ -45,13 +47,13 @@
 
 .info1 {
     margin-bottom: 0;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 .info2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 // Style Bootstrap
@@ -60,8 +62,10 @@
     border-width: 1px;
     border-color: $primary;
     margin-right: 1rem;
-    min-width: 6rem;
+    margin-bottom: 1rem;
+    min-width: 13.2rem;
     text-align: center;
+    padding: 1rem;
   }
 
 .section {

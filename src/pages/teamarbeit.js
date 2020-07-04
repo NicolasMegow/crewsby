@@ -9,6 +9,7 @@ import CTA from "../components/cta"
 
 import Riese from "../img/crewsby_mitt.png"
 import Zwerg from "../img/Idea-Pitch.png"
+import Teambuilding from "../img/svg/Teambuilding_bunt.svg"
 
 const stormStyle = {
     "--fa-secondary-color": "#FDE74C",
@@ -26,17 +27,17 @@ const TeamarbeitPage = () => {
         <Layout>
             <Head title="Teamarbeit" />
             <Container>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row>
                     <Col>
-                        <FontAwesomeIcon icon={['fal', 'map-signs']} size="6x" color="#0f62cc" />
+                        <Teambuilding width="100%" height={400}/>
                         <h1 style={{ marginBottom: "0"}}>Gute Teamarbeit</h1>
-                        <h1 style={{ marginTop: "0", color: "#0f62cc"}}>ist eine Entscheidung.</h1>
+                        <h1 style={{ marginTop: "0", color: "#4285F4"}}>ist eine Entscheidung.</h1>
                         <p>Einführung in die gruppendynamischen Prozesse der Teamentwicklung.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'people-carry']} size="2x" color="#0f62cc"/>
+                        <FontAwesomeIcon icon={['fas', 'people-carry']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Teamarbeit</p>
                         <h2>Menschen arbeiten zusammen.</h2>
                         <p>Lerne, wie gute Teamarbeit funktioniert.
@@ -47,17 +48,17 @@ const TeamarbeitPage = () => {
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <FontAwesomeIcon icon={['fal', 'heart']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
                         <FontAwesomeIcon icon={['fal', 'thumbs-up']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'brain']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#0f62cc" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'brain']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Starke Beziehungen</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Individuelle Prozesse</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#0f62cc" />{' '}Kombinierte Stärken</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Starke Beziehungen</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Individuelle Prozesse</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Kombinierte Stärken</Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'people-arrows']} size="2x" color="#0f62cc"/>
+                        <FontAwesomeIcon icon={['fas', 'people-arrows']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Teamentwicklung</p>
                         <h2>Selbstläufer mit Hindernissen.</h2>
                         <p>Lerne, wie gute Teamarbeit funktioniert.
@@ -72,13 +73,13 @@ const TeamarbeitPage = () => {
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#D64045" />{' '}Schwelende Konflikte</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#D64045" />{' '}Nervtötende Meetings</Col>
-                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#D64045" />{' '}Isolierte Arbeitspakete</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#DB4437" />{' '}Schwelende Konflikte</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#DB4437" />{' '}Nervtötende Meetings</Col>
+                    <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#DB4437" />{' '}Isolierte Arbeitspakete</Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'street-view']} size="2x" color="#0f62cc"/>
+                        <FontAwesomeIcon icon={['fas', 'street-view']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Persönlicher Beitrag</p>
                         <h2>Von Riesen & Zwergen...</h2>
                     </Col>

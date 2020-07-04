@@ -36,6 +36,9 @@ const Header = () => {
                             <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/preise">Preise</Link>
                             </Nav.Item>
+                            <Nav.Item>
+                                <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
+                            </Nav.Item>
                         </Nav>
                         <hr></hr>
                         <Nav className="ml-auto">

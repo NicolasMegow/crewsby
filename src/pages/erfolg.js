@@ -21,15 +21,15 @@ const ErfolgPage = () => {
                 <Container style={{ maxWidth: "700px", marginLeft: "0" }}>
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
-                            <FontAwesomeIcon icon={['fal', 'glass-cheers']} size="6x" color="#0f62cc" style={{ marginBottom: "1rem" }} />
-                            <h1>Super, {user.name} :)</h1>
+                            <FontAwesomeIcon icon={['fal', 'glass-cheers']} size="6x" color="#4285F4" style={{ marginBottom: "1rem" }} />
+                            <h1>Super, {user.name}</h1>
                             <h3>Weiter so!</h3>
                         </Col>
                     </Row>
                     <Row>
-                        <Hint variant='info'
-                            heading="Vertraut dem Prozess."
-                            text="Verbesserung entsteht in vielen kleinen Schritten."
+                        <Hint variant='success' icon={['fas','shoe-prints']}
+                            line1="Das war der erste Schritt. Verbesserung entsteht in vielen kleinen Schritten." 
+                            line2="Vertraut dem Prozess."
                         />
                     </Row>
                     <Row>
@@ -42,7 +42,7 @@ const ErfolgPage = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <h1>Bitte erst einloggen ;)</h1>
+                                <h1>Bitte erst einloggen.</h1>
                             </Col>
                         </Row>
                     </Container>

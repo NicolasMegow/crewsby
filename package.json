@@ -25,6 +25,7 @@
     "bootstrap": "^4.5.0",
     "chokidar": "^3.4.0",
     "core-js": "^3.6.5",
+    "faunadb": "^2.14.2",
     "gatsby": "^2.23.0",
     "gatsby-plugin-create-client-paths": "^2.3.6",
     "gatsby-plugin-mdx": "^1.2.21",

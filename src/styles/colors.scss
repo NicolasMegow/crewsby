@@ -1,15 +1,16 @@
 /* Theme-colors */
 $maincolor:#1c1e21;
-$highlightcolor: #67A4F4;
-$primary: #0f62cc;
-$darkback: #677b8c;
-$lightback: #C8CBD0;
+$highlightcolor: #78A9f7;
+$primary: #4285F4;
+$darkback: #383C42;
+$lightback: #717884;
 
 /* make the customizations */
 $theme-colors: (
-    "info": #67A4F4,
+    "info": $primary,
     "primary": $primary,
-    "success": #0E9594,
-    "secondary": #F2542D,
-    "warning": #D64045,
+    "success": #0F9D58,
+    "secondary": #FFD970,
+    "warning": #F4B400,
+    "danger": #DB4437,
 );

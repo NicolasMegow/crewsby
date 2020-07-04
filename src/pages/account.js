@@ -9,6 +9,7 @@ import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
 
+
 const Profil = () => {
   const { isAuthenticated, user } = useAuth0()
   return <Row>

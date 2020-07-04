@@ -16,8 +16,9 @@ class Hint extends React.Component {
         return (
             <>
             <Alert variant={this.props.variant} style={{width:"100%"}} show={this.state.show} onClose={() => this.setState({show: false})} dismissible>
-            <Alert.Heading>{this.props.heading}</Alert.Heading>
-            <p dangerouslySetInnerHTML={{ __html: this.props.text }}></p>
+            <FontAwesomeIcon icon={this.props.icon} fixedWidth/>
+            <p style={{marginBottom:"0"}}>{this.props.line1}</p>
+            <p style={{marginBottom:"0"}}>{this.props.line2}</p>
             </Alert>
             {!this.state.show && <p style={{marginLeft: "auto"}}>
                 <FontAwesomeIcon icon={['fas', 'info-circle']} fixedWidth size="2x" onClick={() => this.setState({show: true})} className="info-icon"/>

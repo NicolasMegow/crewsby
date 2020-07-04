@@ -16,12 +16,12 @@ const shortcodes = { Hint }
 
 var styles = {
     tutnav: {
-        color: '#C8CBD0',
+        color: '#717884',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
     tutnavActive: {
-        color: '#0f62cc',
+        color: '#4285F4',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
