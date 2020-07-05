@@ -59,14 +59,15 @@ export const Auth0Provider = ({
     setPopupOpen(true)
     try {
       await auth0Client.loginWithPopup(params)
+      const user = await auth0Client.getUser()
+      setUser(user)
+      setIsAuthenticated(true)
     } catch (error) {
-      console.error(error)
-    } finally {
       setPopupOpen(false)
+      console.error(`Error loginWithPopup: ${error}`)
+    } finally {
+      setPopupOpen(false);
     }
-    const user = await auth0Client.getUser()
-    setUser(user)
-    setIsAuthenticated(true)
   }
 
   const handleRedirectCallback = async () => {
