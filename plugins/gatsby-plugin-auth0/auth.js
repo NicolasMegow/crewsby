@@ -63,9 +63,10 @@ export const Auth0Provider = ({
       setUser(user)
       setIsAuthenticated(true)
     } catch (error) {
-      console.error(`loginWithPopup: ${error}`)
-    } finally {
       setPopupOpen(false)
+      console.error(`Error loginWithPopup: ${error}`)
+    } finally {
+      setPopupOpen(false);
     }
   }
 
