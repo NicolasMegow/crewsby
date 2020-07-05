@@ -7,8 +7,8 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
-import Teambuilding from "../img/svg/Teambuilding_bunt.svg"
-import ProzessVertrauen from "../img/svg/VertrauenProzess_bunt.svg"
+import Teamboat from "../img/svg/EinBoot.svg"
+import Flexibel from "../img/svg/Flexibel.svg"
 
 const IndexPage = () => {
   return (
@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Container>
         <Row>
           <Col>
-            <Teambuilding width="100%" height={400}/>
+            <Teamboat width="100%" height={400}/>
             <h1 style={{ marginBottom: "0", color: "#4285F4" }}>Seite an Seite</h1>
             <h1 style={{ marginTop: "0" }}>durch Dick & Dünn.</h1>
             <h2>Teamgefühl ist deine Trainings-App für großartige Teamarbeit.</h2>
@@ -50,7 +50,7 @@ const IndexPage = () => {
               <Link to={`/training`} style={{ marginTop: "1.4rem" }}>Mehr erfahren</Link>
           </Col>
           <Col md={6} style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-            <ProzessVertrauen width="100%" height="260"/>
+            <Flexibel width="100%" height="260"/>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
@@ -60,21 +60,21 @@ const IndexPage = () => {
         </Row>
         <Row>
           <Col md={6}>
-            <FontAwesomeIcon icon={['fal', 'battery-bolt']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
+            <FontAwesomeIcon icon={['fal', 'graduation-cap']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
             <h3>Führungskompetenz entwickeln</h3>
             <p>Jeder hat das Potenzial die Führung zu übernehmen.
                         Grundlage dafür ist die Fähigkeit hervorragend im Team zu arbeiten. ZERTIFIKAT<br></br>
             </p>
           </Col>
           <Col md={6}>
-            <FontAwesomeIcon icon={['fal', 'sync']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
+            <FontAwesomeIcon icon={['fal', 'battery-bolt']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
             <h3>Fähigkeiten auffrischen</h3>
             <p>Jeder hat das Potenzial die Führung zu übernehmen.
                         Grundlage dafür ist die Fähigkeit hervorragend im Team zu arbeiten.<br></br>
             </p>
           </Col>
           <Col md={6}>
-            <FontAwesomeIcon icon={['fal', 'link']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
+            <FontAwesomeIcon icon={['fal', 'map-signs']} mask={['fas', 'square']} size="4x" color="#4285F4" transform="shrink-8" style={{ marginBottom: "1rem" }} />
             <h3>Teamentwicklung gestalten</h3>
             <p>FÜR TL. Spitzenleistung ensteht immer aus Teamarbeit.
                         Im Team lernt ihr voneinander und feiert gemeinsame Erfolge.<br></br>

@@ -35,9 +35,9 @@ const UeberUnsPage = () => {
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fal', 'books']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'cube']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'cubes']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'chart-network']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'books']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'microscope']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Row, Col, Button } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import footerStyles from "../styles/footer.module.scss"
+import NameCTA from "../img/svg/CTA.svg"
 
 const CTA = () => {
     return (
@@ -14,10 +14,7 @@ const CTA = () => {
                     <Link to="/preise"><Button variant="secondary" style={{letterSpacing:"0.1rem", fontWeight:"bold"}}>TRAININGS-FLATRATE BUCHEN</Button></Link>
                 </Col>
                 <Col md={4} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
-                    <span className="fa-layers fa-fw fa-6x">
-                        <FontAwesomeIcon icon={['fal', 'laptop']} color="#ffffff" />
-                        <FontAwesomeIcon icon={['fal', 'dumbbell']} color="#ffffff" transform="shrink-10 up-1" />
-                    </span>
+                    <NameCTA width="80%" height={180}/>
                 </Col>
             </Row>
     )

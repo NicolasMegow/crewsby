@@ -6,14 +6,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
 import Head from "../components/head"
 
+import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
+
 const PreisePage = () => {
     return (
         <Layout>
             <Head title="Preise" />
             <Container>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row>
                     <Col>
-                    <FontAwesomeIcon icon={['fal', 'balance-scale-left']} size="6x" color="#4285F4" />
+                    <ReturnOnTeam width="100%" height={400}/>
                         <h1 style={{ marginBottom: "0" }}>Wie hoch ist Dein</h1>
                         <h1 style={{ marginTop: "0", color: "#4285F4" }}>Return-on-Teamarbeit?</h1>
                         <p>Bessere Teamarbeit steigert die Produktivität und Kreativität. 

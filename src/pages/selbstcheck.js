@@ -6,15 +6,15 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import appStyles from "../styles/app.module.scss"
 
+import Selbstcheck from "../img/svg/Selbstcheck.svg"
+
 const SelbstcheckPage = () => {
     return (
         <Layout>
             <Head title="Selbstcheck" />
             <Container>
                 <Row>
-                    <FontAwesomeIcon icon={['fal', 'tachometer-fast']} size="6x" color="#4285F4" />
-                </Row>
-                <Row>
+                    <Selbstcheck width="100%" height={400}/>
                     <h1>Selbstcheck für professionelle Teamarbeit</h1>
                     <p>Möchtest du dich oder dein Team einschätzen?</p>
                 </Row>

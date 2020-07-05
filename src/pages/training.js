@@ -6,11 +6,9 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
-const sunStyle = {
-    "--fa-primary-color": "#4285F4",
-    "--fa-secondary-color": "#67A4F4",
-    "--fa-secondary-opacity": .8
-};
+import TeamTraining from "../img/svg/TeamTraining.svg"
+import DigiTraining from "../img/svg/DigiTraining.svg"
+
 
 const TrainingPage = () => {
     return (
@@ -19,7 +17,7 @@ const TrainingPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <FontAwesomeIcon icon={['fal', 'map-signs']} size="6x" color="#4285F4" />
+                        <TeamTraining width="100%" height={400}/>
                         <h1>Gute Teamarbeit ist eine Entscheidung.</h1>
                         <p>Teamarbeit läuft häufig nebenher — ganz natürlich durch den Alltag im Büro.
                         Wie gut oder schlecht diese Teamarbeit ist, liegt in deiner Hand.
@@ -72,9 +70,7 @@ const TrainingPage = () => {
                         die beliebig rekombinierbar sind.</p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fad', 'chalkboard-teacher']} fixedWidth size="5x" />
-                        <b style={{margin:"0 1.6rem"}}>vs.</b>
-                        <FontAwesomeIcon icon={['fad', 'phone-laptop']} fixedWidth size="5x" style={sunStyle} />
+                        <DigiTraining width="100%" height="260"/>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>

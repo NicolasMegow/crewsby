@@ -9,18 +9,10 @@ import CTA from "../components/cta"
 
 import Riese from "../img/crewsby_mitt.png"
 import Zwerg from "../img/Idea-Pitch.png"
-import Teambuilding from "../img/svg/Teambuilding_bunt.svg"
+import Teambuilding from "../img/svg/Teambuilding.svg"
+import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
+import Diversität from "../img/svg/Diversität.svg"
 
-const stormStyle = {
-    "--fa-secondary-color": "#FDE74C",
-    "--fa-secondary-opacity": .8
-};
-
-const sunStyle = {
-    "--fa-primary-color": "#67A4F4",
-    "--fa-secondary-color": "#FDE74C",
-    "--fa-secondary-opacity": .8
-};
 
 const TeamarbeitPage = () => {
     return (
@@ -46,9 +38,7 @@ const TeamarbeitPage = () => {
                         die beliebig rekombinierbar sind.</p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fal', 'heart']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'thumbs-up']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'brain']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
+                        <Zusammenhalt width="100%" height="260"/>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>
@@ -67,9 +57,7 @@ const TeamarbeitPage = () => {
                         die beliebig rekombinierbar sind.</p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fad', 'thunderstorm']} fixedWidth size="5x" style={stormStyle} />
-                        <b style={{margin:"0 1.6rem"}}>vs.</b>
-                        <FontAwesomeIcon icon={['fad', 'sun-cloud']} fixedWidth size="5x" style={sunStyle} />
+                        <Diversität width="100%" height="260"/>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "1.4rem" }}>
