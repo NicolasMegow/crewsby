@@ -34,27 +34,30 @@ const TutorialPage = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1>Tutorial-Navigator</h1>
+                            <h1 style={{fontSize: "2rem"}}>Tutorial-Navigator</h1>
                         </Col>
                     </Row>
-                    <Tab.Container id="mode" defaultActiveKey="team">
+                    <Tab.Container id="mode" defaultActiveKey="team-vorort">
                         <Row className={appStyles.row}>
                             <Col>
                                 <Row>
                                     <Col>
                                         <p className={appStyles.info1}>MODUS:</p>
-                                        <p className={appStyles.info2}>Trainierst du alleine oder mit deinem Team?</p>
+                                        <p className={appStyles.info2}>Trainierst du alleine, mit deinem Team vor Ort oder remote?</p>
                                     </Col>
                                     <Hint variant='info' icon={['fas','info-circle']}
                                         line1="Für die Team-Tutorials sollten alle Teammitglieder da sein."
-                                        line2="Aktuell sind die Team-Tutorials auf physische Präsenz ausgelegt."
+                                        line2="Vor Ort- & Remote-Tutorials sind auf die jeweiligen Interaktionsmöglichkeiten optimiert."
                                     /></Row>
                                 <Nav variant="pills">
                                     <Nav.Item>
                                         <Nav.Link eventKey="solo" className={appStyles.pill}>SOLO</Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Nav.Link eventKey="team" className={appStyles.pill}>TEAM</Nav.Link>
+                                        <Nav.Link eventKey="team-vorort" className={appStyles.pill}>TEAM - VOR ORT</Nav.Link>
+                                    </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="team-remote" className={appStyles.pill}>TEAM - REMOTE</Nav.Link>
                                     </Nav.Item>
                                 </Nav>
                             </Col>
@@ -97,8 +100,46 @@ const TutorialPage = () => {
                                     </Tab.Content>
                                 </Tab.Container>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="team" className={appStyles.tab}>
-                                <Tab.Container id="goal-team" defaultActiveKey="rel">
+                            <Tab.Pane eventKey="team-vorort" className={appStyles.tab}>
+                                <Tab.Container id="goal-team-vorort" defaultActiveKey="rel">
+                                    <Row className={appStyles.row}>
+                                        <Col>
+                                            <Row>
+                                                <Col sm>
+                                                    <p className={appStyles.info1}>ZIEL:</p>
+                                                    <p className={appStyles.info2}>Woran wollt ihr arbeiten?</p>
+                                                </Col>
+                                                <Col sm>
+                                                    <p>
+                                                        <FontAwesomeIcon icon={['fas', 'arrow-circle-right']} fixedWidth />{' '}
+                                                        Team-Punkte: 0 <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'thumbs-up']} fixedWidth />{' '}
+                                                        | 0 <FontAwesomeIcon icon={['fas', 'brain']} fixedWidth />{' '}
+                                                    </p>
+                                                </Col>
+                                                <Hint variant='info' icon={['fas','info-circle']}
+                                                    line1="Ihr braucht nur Stift und Block für die Tutorials."
+                                                    line2="Wählt das interessanteste Thema aus oder arbeitet  euch von links nach rechts durch."
+                                                />
+                                            </Row>
+                                            <Nav variant="pills">
+                                                {TeamNavData.content.map((item) => (
+                                                    <Nav.Item key={item.key}>
+                                                        <Nav.Link eventKey={item.key} className={appStyles.pill}>
+                                                            <FontAwesomeIcon icon={item.icon} fixedWidth />{'  '} {item.category}
+                                                        </Nav.Link>
+                                                    </Nav.Item>
+                                                ))}
+                                            </Nav>
+                                        </Col>
+                                    </Row>
+                                    <Tab.Content>
+                                        <TutMap data={TeamNavData.content} />
+                                    </Tab.Content>
+                                </Tab.Container>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="team-remote" className={appStyles.tab}>
+                                <Tab.Container id="goal-team-remote" defaultActiveKey="rel">
                                     <Row className={appStyles.row}>
                                         <Col>
                                             <Row>

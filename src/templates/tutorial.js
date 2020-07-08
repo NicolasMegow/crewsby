@@ -7,12 +7,15 @@ import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import "katex/dist/katex.min.css"
 import Hint from "../components/hint"
+import WSpace from "../components/wspace"
 
 import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const shortcodes = { Hint }
+
+const shortcodes = { Hint, WSpace }
 
 var styles = {
     tutnav: {
@@ -99,7 +102,7 @@ const Tutorial = (props) => {
                     </Row>
                     <Row>
                         <Col>
-                            <h1>{title}</h1>
+                            <h1 style={{fontSize: "2rem"}}>{title}</h1>
                             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>

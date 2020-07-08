@@ -25,7 +25,7 @@ const UeberUnsPage = () => {
                             Deshalb arbeiten wir unermüdlich daran euch einfachen und günstigen Zugang zu genau den richtigen Impulsen zu geben.</p>
                     </Col>
                 </Row>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
                         <FontAwesomeIcon icon={['fal', 'atom']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Perspektive</p>
@@ -40,7 +40,7 @@ const UeberUnsPage = () => {
                         <FontAwesomeIcon icon={['fal', 'microscope']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
                     </Col>
                 </Row>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
                         <FontAwesomeIcon icon={['fal', 'leaf-heart']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Anspruch</p>

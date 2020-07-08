@@ -4,18 +4,22 @@ content:
     icon: ['fas', 'heart']
     themen:
       - thema: Wertschätzung
+        key: WEG
         inhalt: Kleine Gesten & passende Worte
         icon: ['fal', 'gift']
         urlstart: wertschaetzung-1a
       - thema: Beitrag
+        key: BEG
         inhalt: Persönliche Stärken einbringen
         icon: ['fal', 'backpack']
         urlstart: coming-soon
       - thema: Erwartungen
+        key: ERN
         inhalt: Gedankliche Landkarten entdecken
         icon: ['fal', 'map']
         urlstart: coming-soon
       - thema: Verletzlichkeit
+        key: VET
         inhalt: Unvollkommenheit zulassen & zeigen
         icon: ['fal', 'box-tissue']
         urlstart: coming-soon
@@ -24,26 +28,32 @@ content:
     icon: ['fas', 'thumbs-up']
     themen:
       - thema: Ziele
+        key: ZIE
         inhalt: Richtung festlegen & Fortschritt messen
         icon: ['fal', 'map-marker-check']
         urlstart: ziele-1a
       - thema: Backlogs
+        key: BAS
         inhalt: Arbeit stückeln & prioriseren
         icon: ['fal', 'list-ol']
         urlstart: coming-soon
       - thema: Rollen
+        key: RON
         inhalt: Funktionen in Gruppen
         icon: ['fal', 'hat-chef']
         urlstart: coming-soon
       - thema: Meetings
+        key: MES
         inhalt: Effektiv in Echtzeit kommunizieren
         icon: ['fal', 'sticky-note']
         urlstart: coming-soon
       - thema: Standards
+        key: STS
         inhalt: Übergaben reibungslos gestalten
         icon: ['fal', 'clipboard-check']
         urlstart: coming-soon
       - thema: Work in Progress
+        key: WES
         inhalt: Arbeitsfluss herstellen
         icon: ['fal', 'conveyor-belt']
         urlstart: coming-soon
@@ -52,26 +62,32 @@ content:
     icon: ['fas', 'brain']
     themen:
       - thema: Leistung
+        key: LEG
         inhalt: Input & Output optimieren
         icon: ['fal', 'road']
         urlstart: coming-soon
       - thema: Fragen
+        key: FRN
         inhalt: Denkprozesse strukturieren
         icon: ['fal', 'question']
         urlstart: coming-soon
       - thema: Feedback
+        key: FEK
         inhalt: Gedanken teilen & umsetzen
         icon: ['fal', 'comment-edit']
         urlstart: coming-soon
       - thema: Innovation
+        key: INN
         inhalt: Wirklich neue Wege gehen
         icon: ['fal', 'rocket-launch']
         urlstart: coming-soon
       - thema: Prototyping
+        key: PRG
         inhalt: Schnell & günstig ausprobieren
         icon: ['fal', 'tools']
         urlstart: coming-soon
       - thema: Dokumentation
+        key: DON
         inhalt: Denkprozesse erkennen & anpassen
         icon: ['fal', 'book']
         urlstart: coming-soon

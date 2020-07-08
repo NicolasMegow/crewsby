@@ -4,23 +4,40 @@ import { Link } from "gatsby"
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 
 import Layout from "../components/layout"
+import Head from "../components/head"
 import headerStyles from "../styles/header.module.scss"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
-import Teambuilding from "../img/svg/Teambuilding.svg"
-
 
 const Profil = () => {
-  const { isAuthenticated, user } = useAuth0()
-  return <Row>
+  const { user } = useAuth0()
+  return (
+    <Row style={{marginTop:"4rem"}}>
           <Col>
-            <p>Moin {user.name}!</p>
-      <pre>{isAuthenticated && JSON.stringify(user, null, 2)}</pre>
+            <h1 style={{fontSize: "2rem", marginBottom:"2rem"}}>Moin moin.</h1>
+            <p><strong>Profil:</strong> {user.nickname}</p>
+            <p><strong>E-Mail:</strong> {user.email}</p>
+            <p><strong>Unternehmen:</strong> {user["https://user_profile"]}</p>
     </Col>
-  </Row>
+  </Row>)
 }
-const Einstellungen = () => <p>TBD</p>
-const Abrechnung = () => <p>TBD...</p>
+const Einstellungen = () => {
+  return (
+    <Row style={{marginTop:"4rem"}}>
+          <Col>
+            <h1 style={{fontSize: "2rem", marginBottom:"2rem"}}>Hier siehst du bald deine Einstellungen.</h1>
+    </Col>
+  </Row>)
+}
+const Team = () => {
+  return (
+    <Row style={{marginTop:"4rem"}}>
+          <Col>
+            <h1 style={{fontSize: "2rem", marginBottom:"2rem"}}>Hier siehst du bald deine Teamgefährten.</h1>
+    </Col>
+  </Row>)
+}
+
 
 const Account = () => {
   const { isAuthenticated, loading } = useAuth0()
@@ -30,6 +47,7 @@ const Account = () => {
 
   return (
     <Layout>
+      <Head title="Account" />
       {isAuthenticated ? (
         <Container>
           <Row>
@@ -39,18 +57,17 @@ const Account = () => {
                 <Link to="/account/" className={headerStyles.navItem}>Profil</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
+                <Link to="/account/team/" className={headerStyles.navItem}>Team</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/account/abrechnung/" className={headerStyles.navItem}>Abrechnung</Link>{'   '}
+                <Link to="/account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
                 </Nav.Item>
               </Nav>
               <Router>
                 <Profil path="/account/" />
                 <Einstellungen path="/account/einstellungen" />
-                <Abrechnung path="/account/abrechnung" />
+                <Team path="/account/team" />
               </Router>
-              <Teambuilding style={{maxWidth:"800px", maxHeight:"400px"}}/>
             </Col>
           </Row>
         </Container>

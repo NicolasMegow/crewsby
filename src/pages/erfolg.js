@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 import Hint from "../components/hint"
+import Erfolg from "../img/svg/Erfolg.svg"
+
 
 const ErfolgPage = () => {
     const { isAuthenticated, loading, user } = useAuth0()
@@ -21,8 +22,8 @@ const ErfolgPage = () => {
                 <Container style={{ maxWidth: "700px", marginLeft: "0" }}>
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
-                            <FontAwesomeIcon icon={['fal', 'glass-cheers']} size="6x" color="#4285F4" style={{ marginBottom: "1rem" }} />
-                            <h1>Super, {user.name}</h1>
+                            <Erfolg width="100%" height={400}/>
+                            <h1 style={{fontSize: "2rem"}}>Super, {user.nickname}</h1>
                             <h3>Weiter so!</h3>
                         </Col>
                     </Row>

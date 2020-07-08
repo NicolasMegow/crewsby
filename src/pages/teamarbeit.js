@@ -7,8 +7,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
-import Riese from "../img/crewsby_mitt.png"
-import Zwerg from "../img/Idea-Pitch.png"
 import Teambuilding from "../img/svg/Teambuilding.svg"
 import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
 import Diversität from "../img/svg/Diversität.svg"
@@ -24,10 +22,10 @@ const TeamarbeitPage = () => {
                         <Teambuilding width="100%" height={400}/>
                         <h1 style={{ marginBottom: "0"}}>Gute Teamarbeit</h1>
                         <h1 style={{ marginTop: "0", color: "#4285F4"}}>ist eine Entscheidung.</h1>
-                        <p>Einführung in die gruppendynamischen Prozesse der Teamentwicklung.</p>
+                        <h2>Einführung in die gruppendynamischen Prozesse der Teamentwicklung.</h2>
                     </Col>
                 </Row>
-                <Row style={{ marginTop: "4rem" }}>
+                <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
                         <FontAwesomeIcon icon={['fas', 'people-carry']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Teamarbeit</p>
@@ -66,23 +64,21 @@ const TeamarbeitPage = () => {
                     <Col md={4}><FontAwesomeIcon icon={['fas', 'times']} fixedWidth color="#DB4437" />{' '}Isolierte Arbeitspakete</Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
-                    <Col md={6}>
+                    <Col>
                         <FontAwesomeIcon icon={['fas', 'street-view']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Persönlicher Beitrag</p>
-                        <h2>Von Riesen & Zwergen...</h2>
+                        <h2>Dein Verhalten macht den Unterschied.</h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "2rem" }}>
-                    <Col md={6} style={{marginBottom:"4rem"}}>
-                        <img src={Riese} alt="Riesen" style={{maxHeight:"80px"}}></img>
-                        <h3>Teamriesen</h3>
+                    <Col md={6} style={{marginBottom:"2rem"}}>
+                        <h3>Teamriesen / Geber</h3>
                         <p>Fangen gerne unscheinbare Ideen und helfen anderen diese umzusetzen.</p>
                         <p>Giver & Matcher</p>
                         <Link to="/selbstcheck">Selbstcheck</Link>
                     </Col>
                     <Col md={6}>
-                        <img src={Zwerg} alt="Zwerge" style={{maxHeight:"80px"}}></img>
-                        <h3>Teamzwerge</h3>
+                        <h3>Teamzewerge / Nehmer</h3>
                         <p>Pitchen gerne glänzende Konzepte und achten auf ihre Reputation.</p>
                         <p>Taker</p>
                     </Col>

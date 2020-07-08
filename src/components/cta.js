@@ -9,8 +9,9 @@ const CTA = () => {
     return (
             <Row className={footerStyles.cta}>
                 <Col md={8}>
-                    <h2>12 Monate Teamgefühl <br></br>statt 1 Tag traditionelles Training?</h2>
-                    <p>Teamgefühl liefert bessere Ergebnisse für weniger Kosten.    </p>
+                    <h2>12 Monate Training mit Crewsby <br></br>
+                        oder 1 Tag traditionelles Training?</h2>
+                    <p>Regelmäßige Trainings mit Crewsby liefern bessere Ergebnisse für weniger Kosten.</p>
                     <Link to="/preise"><Button variant="secondary" style={{letterSpacing:"0.1rem", fontWeight:"bold"}}>TRAININGS-FLATRATE BUCHEN</Button></Link>
                 </Col>
                 <Col md={4} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
