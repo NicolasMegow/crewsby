@@ -18,13 +18,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const shortcodes = { Hint, WSpace }
 
 var styles = {
+    divided: {
+        display: 'flex',
+        alignItems: 'center',
+        maxWidth: '10rem',
+      },
+    divider: {
+        flexGrow: '1',
+        borderBottom: '1px dashed #717884',
+        margin: '5px',
+      },
     tutnav: {
         color: '#717884',
+        border: '1px solid #717884',
+        borderRadius: '6px',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
     tutnavActive: {
         color: '#4285F4',
+        border: '1px solid #4285F4',
+        borderRadius: '6px',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
@@ -81,23 +95,26 @@ const Tutorial = (props) => {
                 <Container style={{ maxWidth: "700px", marginLeft:"0" }}>
                     <Row>
                         <Col>
-                            <Nav style={{ float: "right" }}>
+                            <Nav style={styles.divided}>
                                 <Nav.Item>
-                                    <Nav.Link style={isActive("Info", type)}>
-                                        <FontAwesomeIcon icon={['fas', 'lightbulb']} />
+                                    <Nav.Link style={isActive("Info", type)} as="div">
+                                        <FontAwesomeIcon icon={['fas', 'lightbulb']} fixedWidth />
                                     </Nav.Link>
                                 </Nav.Item>
+                                <span style={styles.divider}></span>
                                 <Nav.Item>
-                                    <Nav.Link style={isActive("Aufgabe", type)}>
-                                        <FontAwesomeIcon icon={['fas', 'stopwatch']} />
+                                    <Nav.Link style={isActive("Aufgabe", type)} as="div">
+                                        <FontAwesomeIcon icon={['fas', 'stopwatch']} fixedWidth />
                                     </Nav.Link>
                                 </Nav.Item>
+                                <span style={styles.divider}></span>
                                 <Nav.Item>
-                                    <Nav.Link style={isActive("Reflexion", type)}>
-                                        <FontAwesomeIcon icon={['fas', 'question']} />
+                                    <Nav.Link style={isActive("Reflexion", type)} as="div">
+                                        <FontAwesomeIcon icon={['fas', 'question']} fixedWidth />
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>
+                            <p className="mintitle" style={{marginTop:"2rem"}}>{type}</p>
                         </Col>
                     </Row>
                     <Row>

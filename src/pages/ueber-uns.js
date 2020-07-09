@@ -13,21 +13,27 @@ const UeberUnsPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h1 style={{ marginBottom: "0rem" }}>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#DB4437" /> Teams.*</h1>
-                        <p style={{ marginBottom: "4rem" }}>* Nicht MS Teams, sondern Menschen, die zusammenarbeiten.</p>
-                        <h2>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens.
-                            Und das Leben ist zu kurz für Probleme im Team.</h2>
-                        <p>Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
-                        Gelegentliche Events reichen selten aus, um das Teamgefühl nachhaltig zu verbessern.
-                        Wir wissen, dass ein gutes Teamgefühl Zeit und Aufmerksamkeit braucht.
-                        Da beides häufig knapp ist, entwickeln wir Tutorials als Ergänzung zu traditionellem Teambuilding.
-                        Wir glauben, dass jedes Team ein gutes Teamgefühl verdient.
+                        <h1 style={{color: "#4285F4"}}>CREWSBY.</h1>
+                        <h2>Wie Gatsby.</h2>
+                        <h2>Crewsby ist der Hinweis, dass sich starke Teams durch ihre Crew selbst erschaffen.</h2>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <h1 style={{  marginTop: "8rem", marginBottom: "0rem" }}>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#DB4437" /> Teams.*</h1>
+                        <p>* Nicht MS Teams, sondern Menschen, die zusammenarbeiten.</p>
+                        <p>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens.
+                            Und das Leben ist zu kurz für Probleme im Team.Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
+                            Gelegentliche Events reichen selten aus, um das Teamgefühl nachhaltig zu verbessern.
+                            Wir wissen, dass ein gutes Teamgefühl Zeit und Aufmerksamkeit braucht.
+                            Da beides häufig knapp ist, entwickeln wir Tutorials als Ergänzung zu traditionellem Teambuilding.
+                            Wir glauben, dass jedes Team ein gutes Teamgefühl verdient.
                             Deshalb arbeiten wir unermüdlich daran euch einfachen und günstigen Zugang zu genau den richtigen Impulsen zu geben.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fal', 'atom']} size="2x" color="#4285F4"/>
+                        <FontAwesomeIcon icon={['fas', 'atom']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Perspektive</p>
                         <h3>Wissenschaftlich unaufgeregt</h3>
                         <p>Jeder Mitarbeiter kann sich zu Supervisionsgruppen anmelden — frei nach Bedarf.
@@ -42,7 +48,7 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fal', 'leaf-heart']} size="2x" color="#4285F4"/>
+                        <FontAwesomeIcon icon={['fas', 'leaf-heart']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Anspruch</p>
                         <h3>Durch & durch nachhaltig</h3>
                         <p>Echte Fähigkeiten aufbauen + CO2-neutral.

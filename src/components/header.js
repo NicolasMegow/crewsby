@@ -28,7 +28,7 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/teamarbeit">Teamarbeit</Link>
+                                <Link className={headerStyles.navItem} to="/teambuilding">Teambuilding</Link>
                             </Nav.Item>
                             <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/training">Training</Link>

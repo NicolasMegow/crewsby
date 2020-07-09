@@ -78,7 +78,7 @@ const TeamarbeitPage = () => {
                         <Link to="/selbstcheck">Selbstcheck</Link>
                     </Col>
                     <Col md={6}>
-                        <h3>Teamzewerge / Nehmer</h3>
+                        <h3>Teamzwerge / Nehmer</h3>
                         <p>Pitchen gerne glänzende Konzepte und achten auf ihre Reputation.</p>
                         <p>Taker</p>
                     </Col>

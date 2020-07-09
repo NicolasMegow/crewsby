@@ -1,0 +1,107 @@
+{
+  "TM": [
+    {
+      "name":"Beziehungen stärken",
+      "mode":"Team - Remote",
+      "part":"TMBE",
+      "tuts": [
+        {
+          "thema": "Vertrauen",
+          "key": "VEN",
+          "inhalt": "Menschen begegnen & Türen öffnen",
+          "icon": ["fal", "key"],
+          "disabled":"false",
+          "url": "vertrauen-1a"
+        },
+        {
+          "thema": "Konflikte",
+          "key": "KOE",
+          "inhalt": "Unterschiede nutzbar machen",
+          "icon": ["fal", "boxing-glove"],
+          "disabled":"false",
+          "url": "konflikte-1a"
+        },
+        {
+          "thema": "Rituale",
+          "key": "RIE",
+          "inhalt": "Feste feiern, wie sie fallen",
+          "icon": ["fal", "camera-polaroid"],
+          "disabled":"false",
+          "url": "rituale-1a"
+        }
+      ]
+    },
+    {
+      "name":"Prozesse optimieren",
+      "mode":"Team - Remote",
+      "part":"TMPR",
+      "tuts": [
+        {
+          "thema": "Koordination",
+          "key": "KON",
+          "inhalt": "Abstimmung zwischen Menschen",
+          "icon": ["fal", "ball-pile"],
+          "disabled":"false",
+          "url": "koordination-1a"
+        },
+        {
+          "thema": "Einsatz",
+          "key": "EIZ",
+          "inhalt": "Leistung planen & dosieren",
+          "icon": ["fal", "truck-plow"],
+          "disabled":"true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Verantwortung",
+          "key": "VEG",
+          "inhalt": "Aufgaben verteilen & Konsequenzen tragen",
+          "icon": ["fal", "raygun"],
+          "disabled":"true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Kennzahlen",
+          "key": "KEZ",
+          "inhalt": "Zahlen auswählen & interpretieren",
+          "icon": ["fal", "analytics"],
+          "disabled":"true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Müllabfuhr",
+          "key": "MUR",
+          "inhalt": "Arbeit regelmäßig entschlacken",
+          "icon": ["fal", "trash-alt"],
+          "disabled":"true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name":"Potenziale entwickeln",
+      "mode":"Team - Remote",
+      "part":"TMPO",
+      "tuts": [
+        {"thema": "Supervision",
+        "key": "SUN",
+        "inhalt": "Voneinander & miteinander lernen",
+        "icon": ["fal", "toolbox"],
+        "disabled":"true",
+        "url": "coming-soon"},
+      {"thema": "Fehler-Analyse",
+        "key": "FEE",
+        "inhalt": "Ursachen von Fehlern erkunden",
+        "icon": ["fal", "poo"],
+        "disabled":"true",
+        "url": "coming-soon"},
+      {"thema": "Sprints",
+        "key": "SPS",
+        "inhalt": "Grenzen überwinden auf Kurzstrecke",
+        "icon": ["fal", "shipping-fast"],
+        "disabled":"true",
+        "url": "coming-soon"}
+      ]
+    }
+  ]
+}

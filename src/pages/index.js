@@ -20,17 +20,17 @@ const IndexPage = () => {
             <Teamboat width="100%" height={400}/>
             <h1 style={{ marginBottom: "0"}}>Seite an Seite</h1>
             <h1 style={{ marginTop: "0", color: "#4285F4"}}>durch Dick & Dünn.</h1>
-            <h2>Teamgefühl ist deine Trainings-App für großartige Teamarbeit.</h2>
+            <h2>Crewsby ist Deine Trainings-App für starke Teamarbeit.</h2>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>
             <FontAwesomeIcon icon={['fas', 'dumbbell']} size="2x" color="#4285F4" />
             <p className="mintitle">Wirkungsvolles Training</p>
-            <h2>Verbessere deine Fähigkeiten.</h2>
+            <h2>Verbessere Deine Fähigkeiten.</h2>
             <p>Hör auf Ratschläge zu konsumieren.
             Erst die Anwendung der Mechanismen führt zu besserer Teamarbeit und Leistungssteigerung.
-            Teamgefühl liefert dir unzählige Tutorials, um alleine oder im Team die Anwendung zu trainieren.
+            Crewsby liefert Dir unzählige Tutorials, um alleine oder im Team die Anwendung zu trainieren.
             </p>
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
@@ -44,8 +44,8 @@ const IndexPage = () => {
           <Col lg={6}>
             <FontAwesomeIcon icon={['fas', 'phone-laptop']} size="2x" color="#4285F4" />
             <p className="mintitle">100% Flexibel</p>
-            <h2>Trainiere so, wie du möchtest.</h2>
-            <p>Trainiere wann du willst, wo du willst und was du willst.
+            <h2>Trainiere so, wie Du möchtest.</h2>
+            <p>Trainiere wann Du willst, wo Du willst und was Du willst.
               Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
               <Link to={`/training`} style={{ marginTop: "1.4rem" }}>Mehr erfahren</Link>
           </Col>

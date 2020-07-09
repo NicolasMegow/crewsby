@@ -10,7 +10,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col md={4}>
-                        <p>Teamgefühl.com © 2020</p>
+                        <p>Crewsby © 2020</p>
                     </Col>
                     <Col md={8} style={{ display: "flex", justifyContent: "flex-end"}}>
                         <Nav>

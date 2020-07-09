@@ -21,7 +21,6 @@ content:
   - category: Prozesse optimieren
     key: pro
     icon: ['fas', 'thumbs-up']
-    state: disabled
     themen:
       - thema: Koordination
         key: KON

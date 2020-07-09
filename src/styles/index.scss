@@ -4,22 +4,14 @@
 // Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
-.mintitle {
-  font-weight: 500;
-  color: $primary;
-  text-transform: uppercase;
+// Re-Style Bootstrap
+p, li {
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
 
 h1 {
   font-size: 4rem;
-}
-
-.info-icon {
-  color: $lightback;
-}
-
-.info-icon:hover {
-  color: $primary;
 }
 
 .btn-secondary {
@@ -29,16 +21,35 @@ h1 {
   padding: 1rem;
   min-width: 14rem;
 }
-
-.katex { 
-  margin: 3rem 0;
-}  
-.katex .mathdefault { 
-  font-family: $font-family-base !important;
-  font-style: normal !important;
+.badge {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
+// Create Custom Styles
+.info-icon {
+  color: $lightback;
+}
 
+.info-icon:hover {
+  color: $primary;
+}
+
+.mintitle {
+  font-weight: 500;
+  color: $primary;
+  text-transform: uppercase;
+}
+
+// Re-Style KaTex
+.katex { 
+  margin: 3rem 0;
+  font-family: $font-family-base !important;
+  font-weight: 500 !important;
+}  
+
+
+// Mobilize
 @media(max-width:800px){
   h1 {
     font-size: 2.8rem;
