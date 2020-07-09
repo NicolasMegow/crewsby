@@ -99,9 +99,6 @@ class TutRow extends React.Component {
     const { selected } = this.state
     // Create menu from items
     const menu = this.menuItems
-    {
-      /*         const data = this.props.data*/
-    }
     return (
       <div>
         <ScrollMenu

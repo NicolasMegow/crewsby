@@ -1,16 +1,16 @@
 {
-  "TM": [
+  "TUTS": [
     {
-      "name":"Beziehungen stärken",
-      "mode":"Team - Remote",
-      "part":"TMBE",
+      "name": "Beziehungen stärken",
+      "mode": "Team - Remote",
+      "part": "TMBE-R",
       "tuts": [
         {
           "thema": "Vertrauen",
           "key": "VEN",
           "inhalt": "Menschen begegnen & Türen öffnen",
           "icon": ["fal", "key"],
-          "disabled":"false",
+          "disabled": "false",
           "url": "vertrauen-1a"
         },
         {
@@ -18,7 +18,7 @@
           "key": "KOE",
           "inhalt": "Unterschiede nutzbar machen",
           "icon": ["fal", "boxing-glove"],
-          "disabled":"false",
+          "disabled": "false",
           "url": "konflikte-1a"
         },
         {
@@ -26,22 +26,22 @@
           "key": "RIE",
           "inhalt": "Feste feiern, wie sie fallen",
           "icon": ["fal", "camera-polaroid"],
-          "disabled":"false",
+          "disabled": "false",
           "url": "rituale-1a"
         }
       ]
     },
     {
-      "name":"Prozesse optimieren",
-      "mode":"Team - Remote",
-      "part":"TMPR",
+      "name": "Prozesse optimieren",
+      "mode": "Team - Remote",
+      "part": "TMPR-R",
       "tuts": [
         {
           "thema": "Koordination",
           "key": "KON",
           "inhalt": "Abstimmung zwischen Menschen",
           "icon": ["fal", "ball-pile"],
-          "disabled":"false",
+          "disabled": "false",
           "url": "koordination-1a"
         },
         {
@@ -49,7 +49,7 @@
           "key": "EIZ",
           "inhalt": "Leistung planen & dosieren",
           "icon": ["fal", "truck-plow"],
-          "disabled":"true",
+          "disabled": "true",
           "url": "coming-soon"
         },
         {
@@ -57,7 +57,7 @@
           "key": "VEG",
           "inhalt": "Aufgaben verteilen & Konsequenzen tragen",
           "icon": ["fal", "raygun"],
-          "disabled":"true",
+          "disabled": "true",
           "url": "coming-soon"
         },
         {
@@ -65,7 +65,7 @@
           "key": "KEZ",
           "inhalt": "Zahlen auswählen & interpretieren",
           "icon": ["fal", "analytics"],
-          "disabled":"true",
+          "disabled": "true",
           "url": "coming-soon"
         },
         {
@@ -73,34 +73,298 @@
           "key": "MUR",
           "inhalt": "Arbeit regelmäßig entschlacken",
           "icon": ["fal", "trash-alt"],
-          "disabled":"true",
+          "disabled": "true",
           "url": "coming-soon"
         }
       ]
     },
     {
-      "name":"Potenziale entwickeln",
-      "mode":"Team - Remote",
-      "part":"TMPO",
+      "name": "Potenziale entwickeln",
+      "mode": "Team - Remote",
+      "part": "TMPO-R",
       "tuts": [
-        {"thema": "Supervision",
-        "key": "SUN",
-        "inhalt": "Voneinander & miteinander lernen",
-        "icon": ["fal", "toolbox"],
-        "disabled":"true",
-        "url": "coming-soon"},
-      {"thema": "Fehler-Analyse",
-        "key": "FEE",
-        "inhalt": "Ursachen von Fehlern erkunden",
-        "icon": ["fal", "poo"],
-        "disabled":"true",
-        "url": "coming-soon"},
-      {"thema": "Sprints",
-        "key": "SPS",
-        "inhalt": "Grenzen überwinden auf Kurzstrecke",
-        "icon": ["fal", "shipping-fast"],
-        "disabled":"true",
-        "url": "coming-soon"}
+        {
+          "thema": "Supervision",
+          "key": "SUN",
+          "inhalt": "Voneinander & miteinander lernen",
+          "icon": ["fal", "toolbox"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Fehler-Analyse",
+          "key": "FEE",
+          "inhalt": "Ursachen von Fehlern erkunden",
+          "icon": ["fal", "poo"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Sprints",
+          "key": "SPS",
+          "inhalt": "Grenzen überwinden auf Kurzstrecke",
+          "icon": ["fal", "shipping-fast"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name": "Beziehungen stärken",
+      "mode": "Team",
+      "part": "TMBE",
+      "tuts": [
+        {
+          "thema": "Vertrauen",
+          "key": "VEN",
+          "inhalt": "Menschen begegnen & Türen öffnen",
+          "icon": ["fal", "key"],
+          "disabled": "false",
+          "url": "vertrauen-1a"
+        },
+        {
+          "thema": "Konflikte",
+          "key": "KOE",
+          "inhalt": "Unterschiede nutzbar machen",
+          "icon": ["fal", "boxing-glove"],
+          "disabled": "false",
+          "url": "konflikte-1a"
+        },
+        {
+          "thema": "Rituale",
+          "key": "RIE",
+          "inhalt": "Feste feiern, wie sie fallen",
+          "icon": ["fal", "camera-polaroid"],
+          "disabled": "false",
+          "url": "rituale-1a"
+        }
+      ]
+    },
+    {
+      "name": "Prozesse optimieren",
+      "mode": "Team",
+      "part": "TMPR",
+      "tuts": [
+        {
+          "thema": "Koordination",
+          "key": "KON",
+          "inhalt": "Abstimmung zwischen Menschen",
+          "icon": ["fal", "ball-pile"],
+          "disabled": "false",
+          "url": "koordination-1a"
+        },
+        {
+          "thema": "Einsatz",
+          "key": "EIZ",
+          "inhalt": "Leistung planen & dosieren",
+          "icon": ["fal", "truck-plow"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Verantwortung",
+          "key": "VEG",
+          "inhalt": "Aufgaben verteilen & Konsequenzen tragen",
+          "icon": ["fal", "raygun"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Kennzahlen",
+          "key": "KEZ",
+          "inhalt": "Zahlen auswählen & interpretieren",
+          "icon": ["fal", "analytics"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Müllabfuhr",
+          "key": "MUR",
+          "inhalt": "Arbeit regelmäßig entschlacken",
+          "icon": ["fal", "trash-alt"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name": "Potenziale entwickeln",
+      "mode": "Team",
+      "part": "TMPO",
+      "tuts": [
+        {
+          "thema": "Supervision",
+          "key": "SUN",
+          "inhalt": "Voneinander & miteinander lernen",
+          "icon": ["fal", "toolbox"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Fehler-Analyse",
+          "key": "FEE",
+          "inhalt": "Ursachen von Fehlern erkunden",
+          "icon": ["fal", "poo"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Sprints",
+          "key": "SPS",
+          "inhalt": "Grenzen überwinden auf Kurzstrecke",
+          "icon": ["fal", "shipping-fast"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name": "Beziehungen stärken",
+      "mode": "Solo",
+      "part": "SOBE",
+      "tuts": [
+        {
+          "thema": "Wertschätzung",
+          "key": "WEG",
+          "inhalt": "Kleine Gesten & passende Worte",
+          "icon": ["fal", "gift"],
+          "disabled": "false",
+          "url": "wertschaetzung-1a"
+        },
+        {
+          "thema": "Beitrag",
+          "key": "BEG",
+          "inhalt": "Persönliche Stärken einbringen",
+          "icon": ["fal", "backpack"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Erwartungen",
+          "key": "ERN",
+          "inhalt": "Gedankliche Landkarten entdecken",
+          "icon": ["fal", "map"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Verletzlichkeit",
+          "key": "VET",
+          "inhalt": "Unvollkommenheit zulassen & zeigen",
+          "icon": ["fal", "box-tissue"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name": "Prozesse optimieren",
+      "mode": "Solo",
+      "part": "SOPR",
+      "tuts": [
+        {
+          "thema": "Ziele",
+          "key": "ZIE",
+          "inhalt": "Richtung festlegen & Fortschritt messen",
+          "icon": ["fal", "map-marker-check"],
+          "disabled": "false",
+          "url": "ziele-1a"
+        },
+        {
+          "thema": "Backlogs",
+          "key": "BAS",
+          "inhalt": "Arbeit stückeln & prioriseren",
+          "icon": ["fal", "list-ol"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Rollen",
+          "key": "RON",
+          "inhalt": "Funktionen in Gruppen",
+          "icon": ["fal", "hat-chef"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Meetings",
+          "key": "MES",
+          "inhalt": "Effektiv in Echtzeit kommunizieren",
+          "icon": ["fal", "sticky-note"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Standards",
+          "key": "STS",
+          "inhalt": "Übergaben reibungslos gestalten",
+          "icon": ["fal", "clipboard-check"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Work in Progress",
+          "key": "WES",
+          "inhalt": "Arbeitsfluss herstellen",
+          "icon": ["fal", "conveyor-belt"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
+      ]
+    },
+    {
+      "name": "Potenziale entwickeln",
+      "mode": "Solo",
+      "part": "SOPO",
+      "tuts": [
+        {
+          "thema": "Leistung",
+          "key": "LEG",
+          "inhalt": "Input & Output optimieren",
+          "icon": ["fal", "road"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Fragen",
+          "key": "FRN",
+          "inhalt": "Denkprozesse strukturieren",
+          "icon": ["fal", "question"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Feedback",
+          "key": "FEK",
+          "inhalt": "Gedanken teilen & umsetzen",
+          "icon": ["fal", "comment-edit"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Innovation",
+          "key": "INN",
+          "inhalt": "Wirklich neue Wege gehen",
+          "icon": ["fal", "rocket-launch"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Prototyping",
+          "key": "PRG",
+          "inhalt": "Schnell & günstig ausprobieren",
+          "icon": ["fal", "tools"],
+          "disabled": "true",
+          "url": "coming-soon"
+        },
+        {
+          "thema": "Dokumentation",
+          "key": "DON",
+          "inhalt": "Denkprozesse erkennen & anpassen",
+          "icon": ["fal", "book"],
+          "disabled": "true",
+          "url": "coming-soon"
+        }
       ]
     }
   ]

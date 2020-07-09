@@ -28,6 +28,10 @@
     padding: .4rem 0;
     margin-right: 1.3rem;
     text-decoration: none;
+    &[aria-current="page"] {
+        border-bottom: 4px solid;
+        color: $primary;
+    }
 }
 
 .nav-item:hover {
@@ -36,21 +40,13 @@
 }
 
 .nav-button {
-    color: $primary;
-    background-color:#ffffff;
-    border: 1px solid $primary;
+    color: $maincolor;
     font-weight: 500;
-    line-height: 2.8;
     margin-right: 1.3rem;
     text-decoration: none;
-    padding: .8rem;
-    border-radius: 6px;
 }
 
 .nav-button:hover {
-    color: #ffffff;
-    background-color: $primary;
-    border: 1px solid $primary;
     text-decoration: none;
 }
 
@@ -58,7 +54,3 @@
     border: 0 !important;
 }
 
-[aria-current]:not([aria-current="false"]) {
-    border-bottom: 4px solid;
-    color: $primary;
-  }

@@ -34,7 +34,7 @@ const TutorialPage = () => {
               <h1 style={{ fontSize: "2rem" }}>Deine Tutorials</h1>
             </Col>
           </Row>
-          {rows.TM.map(item => (
+          {rows.TUTS.map(item => (
             <Row style={{ marginTop: "4rem" }} key={item.part}>
               <Col>
                 <Badge variant="secondary">{item.mode}</Badge>

@@ -14,8 +14,8 @@ const UeberUnsPage = () => {
                 <Row>
                     <Col>
                         <h1 style={{color: "#4285F4"}}>CREWSBY.</h1>
-                        <h2>Wie Gatsby.</h2>
-                        <h2>Crewsby ist der Hinweis, dass sich starke Teams durch ihre Crew selbst erschaffen.</h2>
+                        <h2>Wie Gatsby, ein Hinweis:</h2>
+                        <h2>Starke Teams erschaffen sich selbst durch ihre Crew .</h2>
                     </Col>
                 </Row>
                 <Row>

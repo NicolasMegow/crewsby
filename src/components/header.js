@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { Container, Navbar, Nav } from 'react-bootstrap'
+import { Container, Navbar, Nav, Button } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
@@ -50,22 +50,22 @@ const Header = () => {
                                 <Nav.Item>
                                     <Link className={headerStyles.navItem} to="/account">Account</Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
+                                <Button variant="outline-secondary">
+                                    <Link to='/'className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
                                         event.preventDefault()
                                         logout()
                                     }}>Ausloggen
                                 </Link>
-                                </Nav.Item>
+                                </Button>
                             </>
                                     ) : (
-                                    <Nav.Item>
+                                    <Button variant="outline-dark">
                                         <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
                                             event.preventDefault()
                                             loginWithPopup()
                                         }}>Einloggen
                                 </Link>
-                                    </Nav.Item>
+                                    </Button>
                                 )}
                         </Nav>
                     </Navbar.Collapse>

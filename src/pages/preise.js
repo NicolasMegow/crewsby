@@ -25,9 +25,9 @@ const PreisePage = () => {
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <blockquote class="blockquote">
-                            <p class="mb-0">Endlich ein Methodenkoffer, den wir wirklich nutzen.</p>
-                            <footer class="blockquote-footer">Jeder Nutzer, <cite title="Source Title">immer.</cite></footer>
+                        <blockquote className="blockquote">
+                            <p className="mb-0">Endlich ein Methodenkoffer, den wir wirklich nutzen.</p>
+                            <footer className="blockquote-footer">Jeder Nutzer, <cite title="Source Title">immer.</cite></footer>
                         </blockquote>
                     </Col>
                 </Row>

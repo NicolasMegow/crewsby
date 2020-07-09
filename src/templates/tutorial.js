@@ -15,10 +15,11 @@ import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const shortcodes = { Hint, WSpace }
+const shortcodes = { Hint, WSpace, Row, Col }
 
 var styles = {
     divided: {
+        marginTop: '1.4rem',
         display: 'flex',
         alignItems: 'center',
         maxWidth: '10rem',
@@ -92,9 +93,10 @@ const Tutorial = (props) => {
         <Layout>
             <Head title={title} />
             {isAuthenticated ? (
-                <Container style={{ maxWidth: "700px", marginLeft:"0" }}>
-                    <Row>
+                <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
+                    <Row style={{marginBottom:"2rem"}}>
                         <Col>
+                            <h1 style={{marginTop:"2rem", fontSize:"1.8rem"}}>{title}: <small className="mintitle">{type}</small></h1>
                             <Nav style={styles.divided}>
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Info", type)} as="div">
@@ -114,12 +116,10 @@ const Tutorial = (props) => {
                                     </Nav.Link>
                                 </Nav.Item>
                             </Nav>
-                            <p className="mintitle" style={{marginTop:"2rem"}}>{type}</p>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <h1 style={{fontSize: "2rem"}}>{title}</h1>
                             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>

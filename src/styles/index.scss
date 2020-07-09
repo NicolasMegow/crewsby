@@ -21,6 +21,13 @@ h1 {
   padding: 1rem;
   min-width: 14rem;
 }
+.btn-primary {
+  letter-spacing: 0.1rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem;
+  min-width: 14rem;
+}
 .badge {
   font-size: 1rem;
   text-transform: uppercase;
@@ -39,6 +46,16 @@ h1 {
   font-weight: 500;
   color: $primary;
   text-transform: uppercase;
+}
+
+.tutsegment {
+  border: 1px solid $primary;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 4rem;
 }
 
 // Re-Style KaTex
