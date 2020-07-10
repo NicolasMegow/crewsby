@@ -11,8 +11,8 @@ const CTA = () => {
                 <Col md={8}>
                     <h2>12 Monate Training mit Crewsby <br></br>
                         oder 1 Tag traditionelles Training?</h2>
-                    <p>Regelmäßige Trainings mit Crewsby verbessern die Teamarbeit deutlich.
-                        Mit der Crewsby-Flatrate trainierst du nach Bedarf zu minimalen Kosten.
+                    <p>Regelmäßige Trainings verbessern die Teamarbeit deutlich.
+                        Mit der Crewsby-Flatrate trainierst Du alleine und mit Deinem Team ganz nach Bedarf zu minimalen Kosten.
                     </p>
                     <Link to="/preise" className="btn btn-secondary btn-lg">Kostenlos testen</Link>
                 </Col>

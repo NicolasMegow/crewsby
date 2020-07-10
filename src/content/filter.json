@@ -1,0 +1,128 @@
+{
+  "TUTS": [
+    {
+      "TMR": [
+        {
+          "name": "Beziehungen stärken",
+          "part": "TMBE-R",
+          "tuts": [
+            {
+              "thema": "Vertrauen (1)",
+              "key": "VEN1",
+              "inhalt": "Menschen sehen",
+              "icon": ["fal", "door-open"],
+              "disabled": "false",
+              "url": "vertrauen-r-1a"
+            },
+            {
+              "thema": "Vertrauen (2)",
+              "key": "VEN2",
+              "inhalt": "Persönlichkeit teilen",
+              "icon": ["fal", "mask"],
+              "disabled": "false",
+              "url": "vertrauen-r-2a"
+            },
+            {
+              "thema": "Vertrauen (3)",
+              "key": "VEN3",
+              "inhalt": "Schwäche zeigen",
+              "icon": ["fal", "band-aid"],
+              "disabled": "false",
+              "url": "vertrauen-r-3a"
+            }
+          ]
+        },
+        {
+          "name": "Abläufe optimieren",
+          "part": "TMAB-R",
+          "tuts": [
+            {
+              "thema": "Koordination (1)",
+              "key": "KON1",
+              "inhalt": "Relevante Information",
+              "icon": ["fal", "chart-line"],
+              "disabled": "false",
+              "url": "koordination-r-1a"
+            }
+          ]
+        },
+        {
+          "name": "Talente entwickeln",
+          "part": "TMTA-R",
+          "tuts": [
+            {
+              "thema": "Supervision (1)",
+              "key": "SUN1",
+              "inhalt": "Voneinander lernen",
+              "icon": ["fal", "tools"],
+              "disabled": "true",
+              "url": "supervison-r-1a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SO": [
+        {
+          "name": "Beziehungen stärken",
+          "part": "SOBE",
+          "tuts": [
+            {
+              "thema": "Wertschätzung (1)",
+              "key": "WEG1",
+              "inhalt": "Kleine Gesten",
+              "icon": ["fal", "gift"],
+              "disabled": "false",
+              "url": "wertschaetzung-1a"
+            },
+            {
+              "thema": "Wertschätzung (2)",
+              "key": "WEG2",
+              "inhalt": "Passende Worte",
+              "icon": ["fal", "comment-check"],
+              "disabled": "true",
+              "url": "wertschaetzung-2a"
+            }
+          ]
+        },
+        {
+          "name": "Abläufe optimieren",
+          "part": "SOAB",
+          "tuts": [
+            {
+              "thema": "Ziele (1)",
+              "key": "ZIE1",
+              "inhalt": "Richtung festlegen",
+              "icon": ["fal", "map-marker-check"],
+              "disabled": "false",
+              "url": "ziele-1a"
+            },
+            {
+              "thema": "Ziele (2)",
+              "key": "ZIE2",
+              "inhalt": "Alternativen suchen",
+              "icon": ["fal", "map-signs"],
+              "disabled": "true",
+              "url": "ziele-2a"
+            }
+          ]
+        },
+        {
+          "name": "Talente entwickeln",
+          "part": "SOTA",
+          "tuts": [
+            {
+              "thema": "Fragen (1)",
+              "key": "FRN1",
+              "inhalt": "Denkprozesse anstoßen",
+              "icon": ["fal", "question"],
+              "disabled": "true",
+              "url": "fragen-1a"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

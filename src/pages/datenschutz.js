@@ -17,7 +17,7 @@ const DatenschutzPage = () => {
                         welche Art von personenbezogenen Daten zu welchem Zweck auf dieser Webseite erhoben werden und in welchem Maße diese Daten Dritten zugänglich gemacht werden.</p>
                         <h2>Verantwortliche Stelle</h2>
                         <p>Nicolas Megow<br></br>Arndtstrasse 26<br></br>33100 Paderborn</p>
-                        <p>0049 176 85263478<br></br><a href="mailto:info@teamgefuehl.com">info@teamgefuehl.com</a></p>
+                        <p>0049 176 85263478<br></br><a href="mailto:info@crewsby.com">info@crewsby.com</a></p>
                         <h3>Log-Dateien</h3>
                         <p>In den Serverstatistiken werden automatisch solche Daten gespeichert, die der Browser an uns übermittelt,
                         um Ihnen den Besuch der Website zu ermöglichen (sogenannte „logfiles“). Dies sind im Einzelnen folgende Daten:</p>

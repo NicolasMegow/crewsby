@@ -30,7 +30,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
       res.data.allMdx.edges.forEach(edge => {
         const slug = edge.node.fields.slug
         actions.createPage({
-          path: `/tutorials/${slug}`,
+          path: `/deine-trainings/${slug}`,
           component: require.resolve(`./src/templates/tutorial.js`),
           context: { slug },
         })
@@ -45,8 +45,8 @@ exports.onCreatePage = async ({ page, actions }) => {
 
   // page.matchPath is a special key that's used for matching pages
   // only on the client.
-  if (page.path.match(/^\/account/)) {
-    page.matchPath = "/account/*"
+  if (page.path.match(/^\/dein-account/)) {
+    page.matchPath = "/dein-account/*"
 
     // Update the page.
     createPage(page)

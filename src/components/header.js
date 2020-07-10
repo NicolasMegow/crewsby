@@ -28,9 +28,6 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/teambuilding">Teambuilding</Link>
-                            </Nav.Item>
-                            <Nav.Item>
                                 <Link className={headerStyles.navItem} to="/training">Training</Link>
                             </Nav.Item>
                             <Nav.Item>
@@ -45,10 +42,13 @@ const Header = () => {
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/tutorials">Deine Trainings</Link>
+                                    <Link className={headerStyles.navItem} to="/basics">Basics</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/account">Dein Account</Link>
+                                    <Link className={headerStyles.navItem} to="/deine-trainings">Deine Trainings</Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Link className={headerStyles.navItem} to="/dein-account">Dein Account</Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Link to='/'className="btn btn-dark" style={{marginRight:"0"}} onClick={event => {

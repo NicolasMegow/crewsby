@@ -21,7 +21,8 @@ const FAQPage = () => {
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={180} />
                             <FontAwesomeIcon icon={['fal', 'question-circle']} fixedWidth size="4x" rotation={270} /> {'  '}
                             <FontAwesomeIcon icon={['fal', 'info-circle']} fixedWidth size="4x" color="#4285F4" /></p>
-                        <h1>Deine Fragen, <p style={{color:"#4285F4"}}>unsere Antworten.</p></h1>
+                        <h1>Deine Fragen, </h1>
+                        <h1 style={{color:"#4285F4"}}>unsere Antworten.</h1>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
@@ -41,7 +42,7 @@ const FAQPage = () => {
                 <Row style={{ marginTop: "3rem" }}>
                     <Col>
                         <p>Wir freuen uns von euch zu hören!
-                            Schreibt uns bei weiteren Fragen gerne persönlich eine E-Mail an Lächeln@Teamgefühl.com.</p>
+                            Schreibt uns bei weiteren Fragen gerne persönlich eine E-Mail an Lächeln@crewsby.com.</p>
                     </Col>
                 </Row>
                 <CTA/>

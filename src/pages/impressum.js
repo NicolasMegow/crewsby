@@ -18,7 +18,7 @@ const ImpressumPage = () => {
                         <p>Arndtstrasse 26<br></br>33100 Paderborn</p>
                         <h3>Kontakt</h3>
                         <p>0049 176 8526 3478</p>
-                        <p><a href="mailto:info@teamgefuehl.com">info@teamgefuehl.com</a></p>
+                        <p><a href="mailto:info@crewsby.com">info@crewsby.com</a></p>
                         <h3>Urheberrecht</h3>
                         <p>Als Icons verwenden wir die wunderbaren <a href="https://fontawesome.com/">Font Awesome Icons</a> von Dave Gandy.</p>
                         <h3>Online-Streitbeilegung</h3>

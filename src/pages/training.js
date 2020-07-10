@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
+import Teambuilding from "../img/svg/Teambuilding.svg"
 import TeamTraining from "../img/svg/TeamTraining.svg"
 import DigiTraining from "../img/svg/DigiTraining.svg"
 
@@ -16,14 +17,28 @@ const TrainingPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <TeamTraining width="100%" height={400}/>
-                        <h1 style={{ marginBottom: "0"}}>Training verbessert</h1>
-                        <h1 style={{ marginTop: "0", color: "#4285F4"}}>deine Teamarbeit merklich.</h1>
+                        <Teambuilding width="100%" height={400}/>
+                        <h1 style={{ marginBottom: "0"}}>Gute Teamarbeit</h1>
+                        <h1 style={{ marginTop: "0", color: "#4285F4"}}>ist eine Entscheidung.</h1>
                         <h2>Teamarbeit läuft häufig nebenher — einfach so durch den Alltag im Büro.
-                        Wie gut oder schlecht deine Teamarbeit ist, liegt in deiner Hand.
+                        Wie gut oder schlecht Deine Teamarbeit ist, liegt in Deiner Hand.
                         </h2>
                     </Col>
                 </Row>
+                <Row style={{ marginTop: "8rem" }}>
+                    <Col md={6}>
+                        <FontAwesomeIcon icon={['fas', 'trophy-alt']} size="2x" color="#4285F4"/>
+                        <p className="mintitle">Teamarbeit</p>
+                        <h2>Arbeite Hand in Hand.</h2>
+                        <p>Lerne, wie gute Teamarbeit funktioniert.
+                        Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
+                        Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine,
+                        die beliebig rekombinierbar sind.</p>
+                    </Col>
+                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <TeamTraining width="100%" height="260"/>
+                    </Col>
+                    </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col>
                         <FontAwesomeIcon icon={['fas', 'pepper-hot']} size="2x" color="#4285F4"/>
@@ -65,11 +80,6 @@ const TrainingPage = () => {
                             <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Design Thinking<br></br>
                         </p>
                     </Col>
-                </Row>
-                <Row style={{ marginTop: "1.4rem" }}>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Beziehungen stärken</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Prozesse optimieren</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Potenziale entwickeln</Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col lg={6}>

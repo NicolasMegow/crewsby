@@ -16,6 +16,7 @@ h1 {
 
 .btn {
   font-weight: bold;
+  padding: 0.4rem 0.75rem;
 }
 
 .btn-lg {
@@ -28,6 +29,13 @@ h1 {
 .badge {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.nav-tabs {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 // Create Custom Styles
