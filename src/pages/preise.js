@@ -16,19 +16,18 @@ const PreisePage = () => {
                 <Row>
                     <Col>
                         <ReturnOnTeam width="100%" height={400} />
-                        <h1 style={{ marginBottom: "0" }}>Wie hoch ist Dein</h1>
-                        <h1 style={{ marginTop: "0", color: "#4285F4" }}>Return-on-Teamarbeit?</h1>
-                        <h2>Bessere Teamarbeit steigert die Produktivität und Kreativität.
-                            Die Identifikation mit dem Unternehmen wächst. 
-                            Und manchmal macht die Arbeit sogar mehr Spaß.</h2>
+                        <h1 style={{ marginBottom: "0" }}>Günstiger & besser.</h1>
+                        <h1 style={{ marginTop: "0", color: "#4285F4" }}>Gute Teamarbeit zählt.</h1>
+                        <h2>Geld sollte da keine Rolle spielen. Tut es aber.
+                            Crewsby ermöglicht erfolgreiches Teambuilding zu minimalen Kosten.</h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <blockquote className="blockquote">
-                            <p className="mb-0">Endlich ein Methodenkoffer, den wir wirklich nutzen.</p>
-                            <footer className="blockquote-footer">Jeder Nutzer, <cite title="Source Title">immer.</cite></footer>
-                        </blockquote>
+                        <h2 >Wie hoch ist Dein Return-on-Teamarbeit?</h2>
+                        <p>Bessere Teamarbeit steigert die Produktivität und Kreativität.
+                            Die Identifikation mit dem Unternehmen wächst. 
+                            Und manchmal macht die Arbeit sogar mehr Spaß.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
@@ -49,8 +48,8 @@ const PreisePage = () => {
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>89 €</h2>
                         <p>pro Team/Monat</p>
-                        <Link to="/beta"><Button variant="secondary">Kostenlos testen</Button></Link>
-                        <p style={{ fontSize: "0.8rem" }}>1 Monat kostenlos & unverbindlich testen.</p>
+                        <Link to="/beta" className="btn btn-secondary btn-lg">Kostenlos testen</Link>
+                        <p style={{ fontSize: "1rem" }}>1 Monat kostenlos & unverbindlich testen.</p>
                     </Col>
                     <Col md>
                         <h2>Enterprise-Paket</h2>
@@ -69,13 +68,13 @@ const PreisePage = () => {
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>9 €</h2>
                         <p>pro Nutzer/Monat</p>
-                        <Button variant="secondary" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
-                        <p style={{ fontSize: "0.8rem" }}>oder einfach anrufen: (+49) 176 / 8526 3478.</p>
+                        <Button variant="secondary" size="lg" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
+                        <p style={{ fontSize: "1rem" }}>oder einfach anrufen: (+49) 176 / 8526 3478.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <p style={{ fontSize: "0.8rem" }}>* Die Sprachpakete und Enterprise-Features sind noch im Entwicklungsprozess. 
+                        <p style={{ fontSize: "1rem" }}>* Die Sprachpakete und Enterprise-Features sind noch im Entwicklungsprozess. 
                         Wir arbeiten wirklich hart daran schnell gute Features in die Welt zu bringen.</p>
                     </Col>
                 </Row>

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import Layout from "../components/layout"
@@ -35,7 +35,7 @@ const ErfolgPage = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <Link to="/tutorials"><Button variant="primary">Nächstes Tutorial auswählen</Button></Link>
+                            <Link to="/tutorials" className="btn btn-primary btn-lg">Nächstes Tutorial auswählen</Link>
                         </Col>
                     </Row>
                 </Container>

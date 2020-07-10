@@ -11,7 +11,7 @@ import "katex/dist/katex.min.css"
 import Hint from "../components/hint"
 import WSpace from "../components/wspace"
 
-import { Container, Row, Col, Button, Nav } from 'react-bootstrap'
+import { Container, Row, Col, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
@@ -125,16 +125,15 @@ const Tutorial = (props) => {
                     </Row>
                     <Row>
                         <Col>
-                            <hr></hr>
                             <p style={{ marginTop: "2rem" }}>
                                 {type === "Reflexion" &&
-                                    <Link to={`/erfolg`} ><Button variant="primary">Tutorial abschliessen</Button></Link>
+                                    <Link to={`/erfolg`} className="btn btn-primary btn-lg">Tutorial abschliessen</Link>
                                 }
                                 {type === "Info" &&
-                                    <Link to={`/tutorials/${next}`}><Button variant="primary">Aufgabe starten</Button></Link>
+                                    <Link to={`/tutorials/${next}`} className="btn btn-primary btn-lg">Aufgabe starten</Link>
                                 }
                                 {type === "Aufgabe" &&
-                                    <Link to={`/tutorials/${next}`}><Button variant="primary">Reflexion starten</Button></Link>
+                                    <Link to={`/tutorials/${next}`} className="btn btn-primary btn-lg">Reflexion starten</Link>
                                 }
                             </p>
                         </Col>

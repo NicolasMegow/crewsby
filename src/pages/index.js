@@ -40,19 +40,6 @@ const IndexPage = () => {
             MACHEN.</p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }}>
-          <Col lg={6}>
-            <FontAwesomeIcon icon={['fas', 'phone-laptop']} size="2x" color="#4285F4" />
-            <p className="mintitle">100% Flexibel</p>
-            <h2>Trainiere so, wie Du möchtest.</h2>
-            <p>Trainiere wann Du willst, wo Du willst und was Du willst.
-              Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
-              <Link to={`/training`} style={{ marginTop: "1.4rem" }}>Mehr erfahren</Link>
-          </Col>
-          <Col lg={6} style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-            <Flexibel width="100%" height="260"/>
-          </Col>
-        </Row>
         <Row style={{ marginTop: "8rem", marginBottom:"3rem" }}>
           <Col>
             <h2>Crewsby unterstützt großartige Teamarbeit.</h2>
@@ -92,6 +79,19 @@ const IndexPage = () => {
             <p>Checkin. Jeder hat das Potenzial die Führung zu übernehmen.
                         Grundlage dafür ist die Fähigkeit hervorragend im Team zu arbeiten.<br></br>
             </p>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "8rem" }}>
+          <Col lg={6}>
+            <FontAwesomeIcon icon={['fas', 'phone-laptop']} size="2x" color="#4285F4" />
+            <p className="mintitle">100% Flexibel</p>
+            <h2>Trainiere so, wie Du möchtest.</h2>
+            <p>Trainiere wann Du willst, wo Du willst und was Du willst.
+              Die Tutorials integrieren sich perfekt in deinen Alltag.</p>
+              <Link to={`/training`} style={{ marginTop: "1.4rem" }}>Mehr erfahren</Link>
+          </Col>
+          <Col lg={6} style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+            <Flexibel width="100%" height="260"/>
           </Col>
         </Row>
       </Container>

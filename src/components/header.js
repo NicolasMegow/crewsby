@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { Container, Navbar, Nav, Button } from 'react-bootstrap'
+import { Container, Navbar, Nav } from 'react-bootstrap'
 
 import headerStyles from "../styles/header.module.scss"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
@@ -45,27 +45,27 @@ const Header = () => {
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/tutorials">Tutorials</Link>
+                                    <Link className={headerStyles.navItem} to="/tutorials">Deine Trainings</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/account">Account</Link>
+                                    <Link className={headerStyles.navItem} to="/account">Dein Account</Link>
                                 </Nav.Item>
-                                <Button variant="outline-secondary">
-                                    <Link to='/'className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
+                                <Nav.Item>
+                                    <Link to='/'className="btn btn-dark" style={{marginRight:"0"}} onClick={event => {
                                         event.preventDefault()
                                         logout()
                                     }}>Ausloggen
                                 </Link>
-                                </Button>
+                                </Nav.Item>
                             </>
                                     ) : (
-                                    <Button variant="outline-dark">
-                                        <Link to='/' className={headerStyles.navButton} style={{marginRight:"0"}} onClick={event => {
+                                    <Nav.Item>
+                                        <Link to='/' className="btn btn-dark" style={{marginRight:"0"}} onClick={event => {
                                             event.preventDefault()
                                             loginWithPopup()
                                         }}>Einloggen
                                 </Link>
-                                    </Button>
+                                    </Nav.Item>
                                 )}
                         </Nav>
                     </Navbar.Collapse>

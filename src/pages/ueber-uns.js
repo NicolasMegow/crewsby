@@ -14,8 +14,9 @@ const UeberUnsPage = () => {
                 <Row>
                     <Col>
                         <h1 style={{color: "#4285F4"}}>CREWSBY.</h1>
-                        <h2>Wie Gatsby, ein Hinweis:</h2>
-                        <h2>Starke Teams erschaffen sich selbst durch ihre Crew .</h2>
+                        <h2>Wie Gatsby ein Hinweis: by Gatz.</h2>
+                        <h2>Teams erschaffen sich selbst durch ihre Crew.</h2>
+                        <h2>Crewsby liefert den Rahmen dazu.</h2>
                     </Col>
                 </Row>
                 <Row>
@@ -23,7 +24,8 @@ const UeberUnsPage = () => {
                         <h1 style={{  marginTop: "8rem", marginBottom: "0rem" }}>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#DB4437" /> Teams.*</h1>
                         <p>* Nicht MS Teams, sondern Menschen, die zusammenarbeiten.</p>
                         <p>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens.
-                            Und das Leben ist zu kurz für Probleme im Team.Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
+                            Und das Leben ist zu kurz für Probleme im Team. 
+                            Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
                             Gelegentliche Events reichen selten aus, um das Teamgefühl nachhaltig zu verbessern.
                             Wir wissen, dass ein gutes Teamgefühl Zeit und Aufmerksamkeit braucht.
                             Da beides häufig knapp ist, entwickeln wir Tutorials als Ergänzung zu traditionellem Teambuilding.
@@ -33,7 +35,7 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'atom']} size="2x" color="#4285F4"/>
+                        <FontAwesomeIcon icon={['fas', 'telescope']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Perspektive</p>
                         <h3>Wissenschaftlich unaufgeregt</h3>
                         <p>Jeder Mitarbeiter kann sich zu Supervisionsgruppen anmelden — frei nach Bedarf.
