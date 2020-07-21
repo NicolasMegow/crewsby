@@ -1,10 +1,12 @@
 {
   "TUTS": [
     {
-      "TMR": [
+      "TM": [
         {
           "name": "Beziehungen stärken",
-          "part": "TMBE-R",
+          "symbol":"❤",
+          "label":"heart",
+          "part": "TMBE",
           "tuts": [
             {
               "thema": "Vertrauen (1)",
@@ -12,7 +14,7 @@
               "inhalt": "Menschen sehen",
               "icon": ["fal", "door-open"],
               "disabled": "false",
-              "url": "vertrauen-r-1a"
+              "url": "vertrauen-1a"
             },
             {
               "thema": "Vertrauen (2)",
@@ -20,7 +22,7 @@
               "inhalt": "Persönlichkeit teilen",
               "icon": ["fal", "mask"],
               "disabled": "false",
-              "url": "vertrauen-r-2a"
+              "url": "vertrauen-2a"
             },
             {
               "thema": "Vertrauen (3)",
@@ -28,13 +30,15 @@
               "inhalt": "Schwäche zeigen",
               "icon": ["fal", "band-aid"],
               "disabled": "false",
-              "url": "vertrauen-r-3a"
+              "url": "vertrauen-3a"
             }
           ]
         },
         {
           "name": "Abläufe optimieren",
-          "part": "TMAB-R",
+          "symbol":"💪",
+          "label":"muscle",
+          "part": "TMAB",
           "tuts": [
             {
               "thema": "Koordination (1)",
@@ -42,13 +46,15 @@
               "inhalt": "Relevante Information",
               "icon": ["fal", "chart-line"],
               "disabled": "false",
-              "url": "koordination-r-1a"
+              "url": "koordination-1a"
             }
           ]
         },
         {
           "name": "Talente entwickeln",
-          "part": "TMTA-R",
+          "symbol":"🧠",
+          "label":"brain",
+          "part": "TMTA",
           "tuts": [
             {
               "thema": "Supervision (1)",
@@ -56,7 +62,7 @@
               "inhalt": "Voneinander lernen",
               "icon": ["fal", "tools"],
               "disabled": "true",
-              "url": "supervison-r-1a"
+              "url": "supervison-1a"
             }
           ]
         }
@@ -66,6 +72,8 @@
       "SO": [
         {
           "name": "Beziehungen stärken",
+          "symbol":"❤",
+          "label":"heart",
           "part": "SOBE",
           "tuts": [
             {
@@ -88,6 +96,8 @@
         },
         {
           "name": "Abläufe optimieren",
+          "symbol":"💪",
+          "label":"muscle",
           "part": "SOAB",
           "tuts": [
             {
@@ -110,6 +120,8 @@
         },
         {
           "name": "Talente entwickeln",
+          "symbol":"🧠",
+          "label":"brain",
           "part": "SOTA",
           "tuts": [
             {

@@ -1,13 +1,12 @@
 import React from "react"
 import { Container, Row, Col } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Emoji from "../components/emoji"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
 import CTA from "../components/cta"
 
-import Teambuilding from "../img/svg/Teambuilding.svg"
-import TeamTraining from "../img/svg/TeamTraining.svg"
+import Teamboat from "../img/svg/EinBoot.svg"
 import DigiTraining from "../img/svg/DigiTraining.svg"
 
 const TrainingPage = () => {
@@ -17,85 +16,101 @@ const TrainingPage = () => {
             <Container>
                 <Row>
                     <Col>
-                        <Teambuilding width="100%" height={400}/>
-                        <h1 style={{ marginBottom: "0"}}>Gute Teamarbeit</h1>
-                        <h1 style={{ marginTop: "0", color: "#4285F4"}}>ist eine Entscheidung.</h1>
-                        <h2>Teamarbeit läuft häufig nebenher — einfach so durch den Alltag im Büro.
-                        Wie gut oder schlecht Deine Teamarbeit ist, liegt in Deiner Hand.
+                        <Teamboat width="100%" />
+                        <h1>Training für moderne Teams.</h1>
+                        <h2>Wie bereitest Du Dich auf die nächster Herausforderung vor?
                         </h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'trophy-alt']} size="2x" color="#4285F4"/>
-                        <p className="mintitle">Teamarbeit</p>
-                        <h2>Arbeite Hand in Hand.</h2>
-                        <p>Lerne, wie gute Teamarbeit funktioniert.
-                        Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
-                        Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine,
-                        die beliebig rekombinierbar sind.</p>
+                        <p className="mintitle">Bewusste Verbesserung</p>
+                        <h2>Trainiere alleine & im Team.</h2>
+                        <p>Wie gut oder schlecht Deine Teamarbeit ist, liegt in Deiner Hand.
+                            Lerne alleine oder hol Dein Team ins Boot, damit ihr voneinander & miteinander lernen könnt.
+                        </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <TeamTraining width="100%" height="260"/>
-                    </Col>
-                    </Row>
-                <Row style={{ marginTop: "8rem" }}>
-                    <Col>
-                        <FontAwesomeIcon icon={['fas', 'pepper-hot']} size="2x" color="#4285F4"/>
-                        <p className="mintitle">Doppelte Wirkung</p>
-                        <h2>Trainiere alleine & im Team.</h2>
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: "2rem" }}>
-                    <Col lg style={{ marginBottom: "2rem" }}>
-                        <h3>Solo: jeder persönlich</h3>
-                        <p><FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Führungskompetenz entwickeln<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Echte Beiträge leisten<br></br>
-                            <FontAwesomeIcon icon={['fal', 'check']} fixedWidth color="#4285F4" />{' '}Verantwortung übernehmen</p>
-                    </Col>
-                    <Col lg>
-                        <h3>Team: alle gemeinsam</h3>
-                        <p>Es ist eure Teamarbeit. Also entscheidet ihr selber, wo ihr wann etwas verbessern wollt.
-                        Unsere Tutorials helfen euch dabei über die richtigen Themen zu sprechen und aus neuen Perspektiven auf diese Themen zu blicken.</p>
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: "8rem" }}>
-                    <Col lg>
-                        <FontAwesomeIcon icon={['fas', 'apple-alt']} size="2x" color="#4285F4" />
-                        <p className="mintitle">Futter für Teams</p>
-                        <h2>Nutze bewährte Methoden</h2>
-                        <p>Lerne, wie gute Teamarbeit funktioniert.
-                        Hinter den modernen Arbeitsmethoden stecken grundlegende Mechanismen.
-                        Teamgefühl bricht die Arbeitsmethoden runter in kleine Bausteine,
-              die beliebig rekombinierbar sind.</p>
-                    </Col>
-                    <Col lg style={{ display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-                        <p>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Radical Candor<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Psychological Safety<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}OKRs<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Kanban<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Lean Management<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Scrum<br></br>
-                            <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Design Thinking<br></br>
+                        <p style={{ fontWeight: "bold", fontSize: "2rem" }}>
+                            <strike style={{ textDecorationColor: "#DB4437" }}>Wollen</strike>...<br></br>
+                            <strike style={{ textDecorationColor: "#DB4437" }}>Reden</strike>...<br></br>
+                            MACHEN.
                         </p>
+                    </Col>
+                </Row>
+                <Row style={{marginTop:"4rem"}}>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">1</div>
+                        <div>
+                            <h3>Solo-Training</h3>
+                            <p className="feature-text">Persönlichen Beitrag steigern.</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">2</div>
+                        <div>
+                            <h3>Teambuilding</h3>
+                            <p className="feature-text">Im Block zusammenwachsen.</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">3</div>
+                        <div>
+                            <h3>Retrospektiven</h3>
+                            <p className="feature-text">Zum Check-In Impulse setzen.</p>
+                        </div>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col lg={6}>
-                        <FontAwesomeIcon icon={['fas', 'utensils']} size="2x" color="#4285F4"/>
-                        <p className="mintitle">Lernen durch machen</p>
-                        <h2>Trainiere anwedungsbezogen</h2>
-                        <p>Alltagstauglich. Unsere Tutorials bauen Fähigkeiten auf — genau wie ein menschlicher Trainer, nur wesentlich flexibler.</p>
+                        <p className="mintitle">Kleine Verbesserung</p>
+                        <h2>Starte gute Gespräche.</h2>
+                        <p>über die richtigen Themen zu sprechen und aus neuen Perspektiven auf diese Themen zu blicken.</p>
                     </Col>
                     <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <DigiTraining width="100%" height="260"/>
+                        <DigiTraining width="100%" height="260" />
                     </Col>
                 </Row>
-                <Row style={{ marginTop: "1.4rem" }}>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Machen, statt zuhören</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Viele kleine Trainings</Col>
-                    <Col sm={4}><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Nach persönlichem Bedarf</Col>
+                <Row style={{marginTop:"4rem"}}>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">1</div>
+                        <div>
+                            <h3>Info</h3>
+                            <p className="feature-text">Kurze, verständliche Erklärung</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">2</div>
+                        <div>
+                            <h3>Übung</h3>
+                            <p className="feature-text">Bewusstes Ausprobieren</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">3</div>
+                        <div>
+                            <h3>Reflexion</h3>
+                            <p className="feature-text">Rückblick auf die Erfahrung.</p>
+                        </div>
+                    </Col>
+                </Row>
+                <Row style={{ marginTop: "8rem" }}>
+                    <Col lg>
+                        <p className="mintitle">Langfristige Verbesserung</p>
+                        <h2>Wachse als Team zusammen.</h2>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                            sed diam voluptua.
+                        </p>
+                    </Col>
+                    <Col lg style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="🏆" label="success" />{' '}Erfolg
+                        </p>
+                    </Col>
                 </Row>
             </Container>
             <CTA />

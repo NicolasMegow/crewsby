@@ -1,28 +1,26 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col } from 'react-bootstrap'
+import Emoji from "../components/emoji"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import CTA from "../components/cta"
 
 const UeberUnsPage = () => {
     return (
         <Layout>
             <Head title="Über uns" />
             <Container>
-                <Row>
+                <Row style={{marginTop:"4rem"}}>
                     <Col>
-                        <h1 style={{color: "#4285F4"}}>CREWSBY.</h1>
-                        <h2>Wie Gatsby ein Hinweis: by Gatz.</h2>
-                        <h2>Teams erschaffen sich selbst durch ihre Crew.</h2>
-                        <h2>Crewsby liefert den Rahmen dazu.</h2>
+                        <h1 style={{color: "#4285F4"}}>CREWSBY</h1>
+                        <h2>Wie Gatsby ein Hinweis: by Gatz. 
+                            Die Crew erschafft das Team.</h2>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <h1 style={{  marginTop: "8rem", marginBottom: "0rem" }}>Wir <FontAwesomeIcon icon={['fas', 'heart']} fixedWidth color="#DB4437" /> Teams.*</h1>
-                        <p>* Nicht MS Teams, sondern Menschen, die zusammenarbeiten.</p>
+                        <h2 style={{ marginTop: "8rem" }}>Wir <Emoji symbol="❤" label="heart"/> Teamarbeit.</h2>
                         <p>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens.
                             Und das Leben ist zu kurz für Probleme im Team. 
                             Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
@@ -64,7 +62,6 @@ const UeberUnsPage = () => {
                     </Col>
                 </Row>
             </Container>
-            <CTA />
         </Layout>
     )
 }

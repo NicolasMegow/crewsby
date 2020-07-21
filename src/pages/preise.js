@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Layout from "../components/layout"
 import Head from "../components/head"
 
+import FAQData from "../content/faq.yaml"
+import Emoji from "../components/emoji"
+
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 
 const PreisePage = () => {
@@ -16,35 +19,23 @@ const PreisePage = () => {
                 <Row>
                     <Col>
                         <ReturnOnTeam width="100%" height={400} />
-                        <h1 style={{ marginBottom: "0" }}>Günstiger & besser.</h1>
-                        <h1 style={{ marginTop: "0", color: "#4285F4" }}>Gute Teamarbeit zählt.</h1>
-                        <h2>Geld sollte da keine Rolle spielen. Tut es aber.
-                            Crewsby ermöglicht erfolgreiches Teambuilding zu minimalen Kosten.</h2>
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: "4rem" }}>
-                    <Col>
-                        <h2 >Wie hoch ist Dein Return-on-Teamarbeit?</h2>
-                        <p>Bessere Teamarbeit steigert die Produktivität und Kreativität.
-                            Die Identifikation mit dem Unternehmen wächst. 
-                            Und manchmal macht die Arbeit sogar mehr Spaß.</p>
+                        <h1>Return-on-Teamarbeit<span style={{color:"#4285F4"}}>!</span></h1>
+                        <h2>Regelmäßiges Training ist eine gute Investition.</h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col md style={{ marginBottom: "4rem" }}>
                         <h2>Team-Paket</h2>
-                        <p>Für 1 Team & bis zu 8 Nutzer<br></br>
-                        Die Trainings-Flatrate für starke Teams:</p>
-                        <p><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} alle Tutorials<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} für alle Nutzer<br></br>
+                        <p>Für 1 Team & bis zu 8 Mitglieder<br></br>
+                        Beinhaltet:</p>
+                        <p><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} alle Trainings<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} für alle Mitglieder<br></br>
                             <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} in 9 Sprachen*<br></br>
-                            <br></br>
-                            <br></br>
-                            <br></br></p>
+                        </p>
                         <p>
-                            <FontAwesomeIcon icon={['fas', 'link']} fixedWidth color="#4285F4" />{' '} Starkes Teamgefühl<br></br>
-                            <FontAwesomeIcon icon={['fas', 'trophy-alt']} fixedWidth color="#4285F4" />{' '} Gesteigerte Leistung<br></br>
-                            <FontAwesomeIcon icon={['fas', 'magic']} fixedWidth color="#4285F4" />{' '} Entfesselte Kreativität<br></br>
+                            <Emoji symbol="❤" label="heart"/>{' '} Starkes Teamgefühl<br></br>
+                            <Emoji symbol="💪" label="muscle"/>{' '} Gesteigerte Leistung<br></br>
+                            <Emoji symbol="🧠" label="brain"/>{' '} Entfesselte Kreativität<br></br>
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>89 €</h2>
                         <p>pro Team/Monat</p>
@@ -53,29 +44,44 @@ const PreisePage = () => {
                     </Col>
                     <Col md>
                         <h2>Enterprise-Paket</h2>
-                        <p>Für 2+ Teams & unbegrenzte Nutzer<br></br>
-                        Ideal für Abteilungen & Unternehmen:</p>
-                        <p><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} alle Tutorials<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} für alle Nutzer<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} in 9 Sprachen*<br></br>
-                            <br></br>
-                            <FontAwesomeIcon icon={['fas', 'plus']} fixedWidth color="#4285F4" />{' '} Enterprise-Features*<br></br>
-                            <FontAwesomeIcon icon={['fas', 'plus']} fixedWidth color="#4285F4" />{' '} Employer Branding-Effekt<br></br></p>
+                        <p>Für 2+ Teams & unbegrenzte Mitglieder<br></br>
+                        Beinhaltet das Team-Paket, plus:</p>
                         <p>
-                            <FontAwesomeIcon icon={['fas', 'graduation-cap']} fixedWidth color="#4285F4" />{' '} Selbstgesteuerte Weiterbildung<br></br>
-                            <FontAwesomeIcon icon={['fas', 'globe-europe']} fixedWidth color="#4285F4" />{' '} Unternehmensweite Standards<br></br>
-                            <FontAwesomeIcon icon={['fas', 'analytics']} fixedWidth color="#4285F4" />{' '} Messbare Ergebnisse<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} Supervisions-Gruppen*<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} Trainings-Dashboard*<br></br>
+                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} Innovation-Tournaments*<br></br>
+                        </p>
+                        <p>
+                            <Emoji symbol="🎓" label="training"/>{' '} Selbstgesteuerte Weiterbildung<br></br>
+                            <Emoji symbol="🌐" label="global"/>{' '} Unternehmensweite Standards<br></br>
+                            <Emoji symbol="📈" label="results"/>{' '} Messbare Ergebnisse<br></br>
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>9 €</h2>
                         <p>pro Nutzer/Monat</p>
                         <Button variant="secondary" size="lg" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
-                        <p style={{ fontSize: "1rem" }}>oder einfach anrufen: (+49) 176 / 8526 3478.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
                         <p style={{ fontSize: "1rem" }}>* Die Sprachpakete und Enterprise-Features sind noch im Entwicklungsprozess. 
                         Wir arbeiten wirklich hart daran schnell gute Features in die Welt zu bringen.</p>
+                    </Col>
+                </Row>
+                <Row style={{ marginTop: "4rem" }}>
+                    <Col>
+                        <h2><Emoji symbol="❓" label="question"/>{' '}Deine Fragen, unsere Antworten.</h2>
+                        {FAQData.content.map((hinweis) => (
+                            <div style={{marginTop:"2rem"}} key={hinweis.id}>
+                            <h3>{hinweis.q}</h3>
+                            <p>{hinweis.a}</p>
+                            </div>
+                        ))}
+                    </Col>
+                </Row>
+                <Row style={{ marginTop: "3rem" }}>
+                    <Col>
+                        <p>Wir freuen uns von euch zu hören!
+                            Schreibt uns bei weiteren Fragen gerne persönlich eine E-Mail an Lächeln@crewsby.com.</p>
                     </Col>
                 </Row>
             </Container>

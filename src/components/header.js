@@ -42,16 +42,13 @@ const Header = () => {
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/basics">Basics</Link>
-                                </Nav.Item>
-                                <Nav.Item>
                                     <Link className={headerStyles.navItem} to="/deine-trainings">Deine Trainings</Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Link className={headerStyles.navItem} to="/dein-account">Dein Account</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link to='/'className="btn btn-dark" style={{marginRight:"0"}} onClick={event => {
+                                    <Link to='/'className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
                                         event.preventDefault()
                                         logout()
                                     }}>Ausloggen
@@ -60,7 +57,7 @@ const Header = () => {
                             </>
                                     ) : (
                                     <Nav.Item>
-                                        <Link to='/' className="btn btn-dark" style={{marginRight:"0"}} onClick={event => {
+                                        <Link to='/' className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
                                             event.preventDefault()
                                             loginWithPopup()
                                         }}>Einloggen

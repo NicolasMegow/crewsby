@@ -9,10 +9,9 @@ const CTA = () => {
     return (
             <Row className={footerStyles.cta}>
                 <Col md={8}>
-                    <h2>12 Monate Training mit Crewsby <br></br>
-                        oder 1 Tag traditionelles Training?</h2>
+                    <h2>Deine Flatrate für Trainings.</h2>
                     <p>Regelmäßige Trainings verbessern die Teamarbeit deutlich.
-                        Mit der Crewsby-Flatrate trainierst Du alleine und mit Deinem Team ganz nach Bedarf zu minimalen Kosten.
+                        Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst zum günstigen Fixpreis.
                     </p>
                     <Link to="/preise" className="btn btn-secondary btn-lg">Kostenlos testen</Link>
                 </Col>

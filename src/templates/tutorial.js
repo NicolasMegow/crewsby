@@ -26,12 +26,12 @@ var styles = {
       },
     divider: {
         flexGrow: '1',
-        borderBottom: '1px dashed #717884',
+        borderBottom: '1px dashed #DAE4F2',
         margin: '5px',
       },
     tutnav: {
-        color: '#717884',
-        border: '1px solid #717884',
+        color: '#DAE4F2',
+        border: '1px solid #DAE4F2',
         borderRadius: '6px',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
@@ -95,9 +95,11 @@ const Tutorial = (props) => {
             {isAuthenticated ? (
                 <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
                     <Row style={{marginBottom:"2rem"}}>
-                        <Col>
+                        <Col md={6}>
                             <h1 style={{marginTop:"2rem", fontSize:"1.8rem"}}>{title}: <small className="mintitle">{type}</small></h1>
-                            <Nav style={styles.divided}>
+                        </Col>
+                        <Col md={6}>
+                            <Nav style={styles.divided} className="ml-auto">
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Info", type)} as="div">
                                         <FontAwesomeIcon icon={['fas', 'lightbulb']} fixedWidth />
@@ -119,9 +121,7 @@ const Tutorial = (props) => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
-                        </Col>
+                        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                     </Row>
                     <Row>
                         <Col>

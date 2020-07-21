@@ -47,7 +47,7 @@ const Account = () => {
 
   return (
     <Layout>
-      <Head title="Account" />
+      <Head title="Dein Account" />
       {isAuthenticated ? (
         <Container>
           <Row>
