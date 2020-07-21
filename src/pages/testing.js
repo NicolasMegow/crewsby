@@ -16,9 +16,6 @@ async function getUserProfile() {
     return response
 }
 
-function storeCurrent(currentItem) {
-    window.localStorage.setItem('currentProfile', JSON.stringify(currentItem));
-}
 
 {/*FAILING       
 .then((ret) => console.log(ret))
@@ -28,7 +25,6 @@ Select( ["data","name"] , Get(Match(Index('profile_by_email'),'nicolas.megow@str
 const TestingPage = () => {
     const { isAuthenticated, loading, user } = useAuth0();
     const name = getUserProfile()
-    const profile = storeCurrent(name)
 
 
 
@@ -43,7 +39,7 @@ const TestingPage = () => {
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
                             <p>Läuft</p>
-                            <p>{profile}</p>
+                            <p>{name}</p>
                         </Col>
                     </Row>
                 </Container>
