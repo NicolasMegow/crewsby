@@ -33,7 +33,7 @@ const TutorialPage = () => {
       {isAuthenticated ? (
         <Container>
           <Tabs defaultActiveKey="TM" id="uncontrolled-tab-example">
-            <Tab eventKey="TM" title="Team">
+            <Tab eventKey="TM" title="Team-Trainings">
               <Row style={{marginBottom:"4rem"}}>
                 <Col>
                   <p>
@@ -87,7 +87,7 @@ const TutorialPage = () => {
                 )
               })}
             </Tab>
-            <Tab eventKey="SO" title="Solo">
+            <Tab eventKey="SO" title="Solo-Trainings">
               <Row style={{marginBottom:"4rem"}}>
                 <Col>
                   <p>

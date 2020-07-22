@@ -35,9 +35,10 @@
   a {
     color: $maincolor;
     border-style: solid;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 6px;
-    border-color: $maincolor;
+    border-color: $lightback;
+    background-color: $lightback;
     padding: 1rem;
     min-height: 9rem;
     text-decoration: none;

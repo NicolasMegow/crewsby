@@ -9,9 +9,9 @@ const CTA = () => {
     return (
             <Row className={footerStyles.cta}>
                 <Col md={8}>
-                    <h2>Deine Flatrate für Trainings.</h2>
+                    <h2>Die Flatrate für Trainings.</h2>
                     <p>Regelmäßige Trainings verbessern die Teamarbeit deutlich.
-                        Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst zum günstigen Fixpreis.
+                        Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst zum Fixpreis.
                     </p>
                     <Link to="/preise" className="btn btn-secondary btn-lg">Kostenlos testen</Link>
                 </Col>

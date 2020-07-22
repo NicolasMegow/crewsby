@@ -18,8 +18,8 @@ const IndexPage = () => {
         <Row>
           <Col>
             <Teambuilding width="100%" />
-            <h1>Die Crew macht das Team.</h1>
-            <h2>Crewsby ist die Trainings-Flatrate für moderne  Teamarbeit.</h2>
+            <h1>Trainings für moderne Teams.</h1>
+            <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, agil zu arbeiten und als Team zusammen zu wachsen.</h2>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
@@ -35,13 +35,13 @@ const IndexPage = () => {
               <Emoji symbol="❤" label="heart" />{' '}Starkes Teamgefühl<br></br>
               <Emoji symbol="💪" label="muscle" />{' '}Gesteigerte Leistung<br></br>
               <Emoji symbol="🧠" label="brain" />{' '}Entfesselte Kreativität
-                        </p>
+            </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>
             <p className="mintitle">Training</p>
-            <h2>Trainiere nach Bedarf.</h2>
+            <h2>Trainiere selbstbestimmt.</h2>
             <p>Alle Trainings stehen Dir sofort zur Verfügung. 
               Mobil und am Desktop, zwischendurch oder geblockt. 
               Setze Deine persönlichen Schwerpunkte und
@@ -68,13 +68,13 @@ const IndexPage = () => {
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <p style={{ fontWeight: "bold" }}>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Radical Candor<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Psychological Safety<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}OKRs<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Kanban<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Lean Management<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Scrum<br></br>
-              <FontAwesomeIcon icon={['fas', 'star']} fixedWidth color="#FFD970" />{' '}Design Thinking<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Radical Candor<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Psychological Safety<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}OKRs<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Kanban<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Lean Management<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Scrum<br></br>
+              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Design Thinking<br></br>
             </p>
           </Col>
         </Row>

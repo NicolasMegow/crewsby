@@ -45,7 +45,7 @@ const Header = () => {
                                     <Link className={headerStyles.navItem} to="/deine-trainings">Deine Trainings</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/dein-account">Dein Account</Link>
+                                    <Link className={headerStyles.navItem} to="/account">Account</Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Link to='/'className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
@@ -60,8 +60,8 @@ const Header = () => {
                                         <Link to='/' className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
                                             event.preventDefault()
                                             loginWithPopup()
-                                        }}>Einloggen
-                                </Link>
+                                            }}>Einloggen
+                                        </Link>
                                     </Nav.Item>
                                 )}
                         </Nav>

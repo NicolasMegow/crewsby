@@ -21,9 +21,8 @@ h1 {
 }
 
 .btn-lg {
-  letter-spacing: 0.1rem; 
-  text-transform: uppercase;
-  padding: 1rem;
+  font-size: 1.2rem;
+  padding: .8rem;
   min-width: 14rem;
 }
 
@@ -35,13 +34,12 @@ h1 {
 .nav-tabs {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
   font-weight: bold;
 }
 
 .nav-link {
   color: $maincolor;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .nav-link.active {

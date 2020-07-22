@@ -17,8 +17,8 @@ const TrainingPage = () => {
                 <Row>
                     <Col>
                         <Teamboat width="100%" />
-                        <h1>Training für moderne Teams.</h1>
-                        <h2>Wie bereitest Du Dich auf die nächster Herausforderung vor?
+                        <h1>Teamarbeit neu erleben.</h1>
+                        <h2>Wie bereitest Du Dich auf die nächste Herausforderung vor?
                         </h2>
                     </Col>
                 </Row>
@@ -34,30 +34,30 @@ const TrainingPage = () => {
                         <p style={{ fontWeight: "bold", fontSize: "2rem" }}>
                             <strike style={{ textDecorationColor: "#DB4437" }}>Wollen</strike>...<br></br>
                             <strike style={{ textDecorationColor: "#DB4437" }}>Reden</strike>...<br></br>
-                            MACHEN.
+                            Machen<span style={{color:"#4285F4"}}>.</span>
                         </p>
                     </Col>
                 </Row>
                 <Row style={{marginTop:"4rem"}}>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">1</div>
+                        <div className="feature-num">A</div>
                         <div>
                             <h3>Solo-Training</h3>
                             <p className="feature-text">Persönlichen Beitrag steigern.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">2</div>
+                        <div className="feature-num">B</div>
                         <div>
                             <h3>Teambuilding</h3>
                             <p className="feature-text">Im Block zusammenwachsen.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">3</div>
+                        <div className="feature-num">C</div>
                         <div>
                             <h3>Retrospektiven</h3>
-                            <p className="feature-text">Zum Check-In Impulse setzen.</p>
+                            <p className="feature-text">Immer besser werden.</p>
                         </div>
                     </Col>
                 </Row>
@@ -76,27 +76,27 @@ const TrainingPage = () => {
                         <div className="feature-num">1</div>
                         <div>
                             <h3>Info</h3>
-                            <p className="feature-text">Kurze, verständliche Erklärung</p>
+                            <p className="feature-text">Methode verstehen.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
                         <div className="feature-num">2</div>
                         <div>
                             <h3>Übung</h3>
-                            <p className="feature-text">Bewusstes Ausprobieren</p>
+                            <p className="feature-text">Methode ausprobieren.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
                         <div className="feature-num">3</div>
                         <div>
-                            <h3>Reflexion</h3>
-                            <p className="feature-text">Rückblick auf die Erfahrung.</p>
+                            <h3>Rückblick</h3>
+                            <p className="feature-text">Methode sacken lassen.</p>
                         </div>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col lg>
-                        <p className="mintitle">Langfristige Verbesserung</p>
+                        <p className="mintitle">Nachhaltige Verbesserung</p>
                         <h2>Wachse als Team zusammen.</h2>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
                             sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 

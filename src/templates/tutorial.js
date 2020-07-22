@@ -19,7 +19,6 @@ const shortcodes = { Hint, WSpace, Row, Col }
 
 var styles = {
     divided: {
-        marginTop: '1.4rem',
         display: 'flex',
         alignItems: 'center',
         maxWidth: '10rem',
@@ -30,14 +29,18 @@ var styles = {
         margin: '5px',
       },
     tutnav: {
-        color: '#DAE4F2',
+        fontSize: "1rem",
+        color: '#ffffff',
+        backgroundColor: '#DAE4F2',
         border: '1px solid #DAE4F2',
         borderRadius: '6px',
         paddingLeft: '0.5rem',
         paddingRight: '0.5rem',
     },
     tutnavActive: {
-        color: '#4285F4',
+        fontSize: "1rem",
+        color: '#ffffff',
+        backgroundColor: '#4285F4',
         border: '1px solid #4285F4',
         borderRadius: '6px',
         paddingLeft: '0.5rem',
@@ -94,9 +97,9 @@ const Tutorial = (props) => {
             <Head title={title} />
             {isAuthenticated ? (
                 <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
-                    <Row style={{marginBottom:"2rem"}}>
+                    <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
                         <Col md={6}>
-                            <h1 style={{marginTop:"2rem", fontSize:"1.8rem"}}>{title}: <small className="mintitle">{type}</small></h1>
+                            <h1 style={{fontSize:"1.8rem"}}>{title}: <small className="mintitle">{type}</small></h1>
                         </Col>
                         <Col md={6}>
                             <Nav style={styles.divided} className="ml-auto">
@@ -127,13 +130,13 @@ const Tutorial = (props) => {
                         <Col>
                             <p>
                                 {type === "Reflexion" &&
-                                    <Link to={`/erfolg`} className="btn btn-primary">Tutorial abschliessen</Link>
+                                    <Link to={`/erfolg`} className="btn btn-primary btn-lg">Tutorial abschliessen</Link>
                                 }
                                 {type === "Info" &&
-                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary">Aufgabe starten</Link>
+                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary btn-lg">Aufgabe starten</Link>
                                 }
                                 {type === "Aufgabe" &&
-                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary">Reflexion starten</Link>
+                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary btn-lg">Reflexion starten</Link>
                                 }
                             </p>
                         </Col>

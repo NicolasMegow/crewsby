@@ -47,26 +47,26 @@ const Account = () => {
 
   return (
     <Layout>
-      <Head title="Dein Account" />
+      <Head title="Account" />
       {isAuthenticated ? (
         <Container>
           <Row>
             <Col>
               <Nav>
               <Nav.Item>
-                <Link to="/dein-account/" className={headerStyles.navItem}>Profil</Link>{'   '}
+                <Link to="/account/" className={headerStyles.navItem}>Profil</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/dein-account/team/" className={headerStyles.navItem}>Team</Link>{'   '}
+                <Link to="/account/team/" className={headerStyles.navItem}>Team</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/dein-account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
+                <Link to="/account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
                 </Nav.Item>
               </Nav>
               <Router>
-                <Profil path="/dein-account/" />
-                <Einstellungen path="/dein-account/einstellungen" />
-                <Team path="/dein-account/team" />
+                <Profil path="/account/" />
+                <Einstellungen path="/account/einstellungen" />
+                <Team path="/account/team" />
               </Router>
             </Col>
           </Row>

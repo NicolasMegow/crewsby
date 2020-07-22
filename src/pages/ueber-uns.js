@@ -33,24 +33,25 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'telescope']} size="2x" color="#4285F4"/>
-                        <p className="mintitle">Perspektive</p>
-                        <h3>Wissenschaftlich unaufgeregt</h3>
-                        <p>Jeder Mitarbeiter kann sich zu Supervisionsgruppen anmelden — frei nach Bedarf.
-                        Wir stellen spannende Gruppen zusammen und gestalten den Prozess.
+                        <p className="mintitle">Arbeitsweise</p>
+                        <h3>Wir sind ein schlankes Team.</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+              sed diam voluptua.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fal', 'chart-network']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'books']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'microscope']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
+                        <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
+                            <Emoji symbol="💻" label="remote" />{' '}Remote<br></br>
+                            <Emoji symbol="🔵" label="circle" />{' '}Minimalistisch<br></br>
+                            <Emoji symbol="🔬" label="research" />{' '}Wissenschaftlich
+                        </p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <FontAwesomeIcon icon={['fas', 'leaf-heart']} size="2x" color="#4285F4"/>
                         <p className="mintitle">Anspruch</p>
-                        <h3>Durch & durch nachhaltig</h3>
+                        <h3>Wir sind durch & durch nachhaltig.</h3>
                         <p>Echte Fähigkeiten aufbauen + CO2-neutral.
                         Digitales Training hat eine hervorragende Klimabilanz. Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.
                         </p>
