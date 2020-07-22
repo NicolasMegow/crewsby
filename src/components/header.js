@@ -42,10 +42,10 @@ const Header = () => {
                             {isAuthenticated ? (
                             <>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/deine-trainings">Deine Trainings</Link>
+                                    <Link className={headerStyles.navItem} to="/meine-trainings">Meine Trainings</Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/account">Account</Link>
+                                    <Link className={headerStyles.navItem} to="/mein-account">Mein Account</Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Link to='/'className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {

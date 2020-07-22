@@ -35,7 +35,7 @@ const PreisePage = () => {
                             <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} in 9 Sprachen*<br></br>
                         </p>
                         <p>
-                            <Emoji symbol="❤" label="heart"/>{' '} Starkes Teamgefühl<br></br>
+                            <Emoji symbol="❤️" label="heart"/>{' '} Starkes Teamgefühl<br></br>
                             <Emoji symbol="💪" label="muscle"/>{' '} Gesteigerte Leistung<br></br>
                             <Emoji symbol="🧠" label="brain"/>{' '} Entfesselte Kreativität<br></br>
                             <br></br></p>
@@ -79,7 +79,7 @@ const PreisePage = () => {
                     <Col>
                         <h2><Emoji symbol="❓" label="question"/>{' '}Deine Fragen, unsere Antworten.</h2>
                         {FAQData.content.map((hinweis) => (
-                            <div style={{marginTop:"2rem"}} key={hinweis.id}>
+                            <div style={{marginTop:"3rem"}} key={hinweis.id}>
                             <h3>{hinweis.q}</h3>
                             <p>{hinweis.a}</p>
                             </div>

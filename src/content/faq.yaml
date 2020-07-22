@@ -1,34 +1,33 @@
 content:
   - id: "1"
     q: Wo ist das Solo-Paket?
-    a: Im Team-Paket.
+    a: Im Team-Paket. Teamarbeit lässt sich am Besten im Team verbessern. 
+       Deshalb setzen wir bewusst Anreize weitere Teammitglieder von Crewsby zu begeistern.
   - id: "2"
-    q: Was bringt die Individualisierung?
-    a: Genau die passenden Impulse für euer Team in eurer besonderen Situation.
-       Statistisch betrachtet finden sich natürlich Gemeinsamkeiten und Muster über tausende Teams. Aber ihr seid nunmal keine Statistik. Eine beliebige Teamaufgabe an euch zu schicken könnte mehr Schaden anrichten als Nutzen stiften. Deshalb legen wir großen Wert darauf genau eure Entwicklungswünsche herauszuarbeiten.
+    q: Welche Bezahloptionen gibt es?
+    a: Aktuell nur auf Rechnung.
+       Wir arbeiten daran bald auch automatisiert über Kreditkarte abrechnen zu können.
   - id: "3"
-    q: Wie groß darf ein Team sein?
-    a: Wir empfehlen die Teamgröße zwischen 3und 10 Menschen zu halten. Alles darüber hinaus wird schwierig und es macht mehr Sinn in kleinere Teams aufzuspalten.
+    q: Wieso nur 8 Mitglieder / Team?
+    a: Typische Teams haben zwischen 5 und 7 Mitglieder.
+       Ab 8 Menschen entstehen starke Subgruppen und komplexere Gruppendynamiken.
+       Zur Verbesserung der Teamarbeit empfehlen wir in kleineren Teams zu arbeiten.
   - id: "4"
-    q: Wieviel kostet Teamgefühl?
-    a: Ein gutes Teamgefühl ist unbezahlbar.
-       Wir bieten Teamgefühl in monatlichen Portionen zu 99€/Team an. Jede Portion besteht aus vier Aufgaben. Mit diesen kleinen Investitionen setzen wir einen Anreiz auch wirklich an euch zu Arbeiten - schliesslich habt ihr ja schon dafür bezahlt.
+    q: Kann ich Crewsby auch nutzen, wenn ich nicht in einem Team arbeite?
+    a: Schon, aber es bringt Dir halt nicht so viel...
+       Wenn Du Verantwortung für mehrere Teams hast, dann klink Dich erst einmal bei einem ein.
+       Bald gibt es Team-übergreifende Accounts.
   - id: "5"
-    q: Funktioniert das wirklich ohne Coach?
-    a: Ja. Unsere Aufgaben sind komplett selbsterklärend und wirken garantiert.
-       Wir empfehlen jedem Team einen Moderator zu wählen, der auf die Zeit und Vorbereitung achtet. Dazu könnt ihr z.B. auch euren Personaler oder eine erfahrene Kollegin bitten.
+    q: Funktioniert das wirklich ohne Coach / Trainer?
+    a: Ja. Unsere Trainings sind komplett selbsterklärend und wirken garantiert.
+       Wir empfehlen jedem Team einen Moderator zu wählen, der auf die Zeit und Vorbereitung achtet. 
+       Dazu könnt ihr z.B. auch euren Personaler oder eine erfahrene Kollegin bitten.
   - id: "6"
-    q: Wozu brauchen wir dann noch einen Coach?
-    a: Ein gutes Teamgefühl ist wie ein gutes Fundament. Darauf aufbauend wird die Zusammenarbeit besser. Unsere Aufgaben ergänzen sich gut mit traditionellen Teambuilding-Maßnahmen und bereichern die Lücken zwischen Teamcoachings, wenn diese eh schon stattfinden.
-       Wenn ihr jedoch richtig tiefgreifende Konflikte im Team habt oder vor radikalen Transformationen eures Teams steht (z.B. müssen 50% das Team verlassen), dann braucht ihr dafür stets einen professionellen Coach, der ich euch vollzeit unterstützt und begleitet.
-  - id: "7"
-    q: Warum nicht im Block am Team arbeiten?
-    a: Ein gutes Teamgefühl braucht regelmäßige Pflege. Die kommt bei sporadischen Teambuidlings leider zu kurz.
-       Und um ein gutes Teamgefühl aufzubauen braucht es hin und wieder Veränderungen im eigenen Verhalten. So sehr ihr euch auch anstrengt, seid ihr doch Menschen und verändert euer Verhalten nicht über Nacht. Dem geben wir mit eurem persönlichen Fahrplan genügend Zeit.
-  - id: "8"
-    q: Warum E-Mails?
-    a: Um den Start für euch so einfach wie möglich zu machen.
-       Wir haben alle bereits genügend Accounts und keiner braucht dafür eine neue App. Der Nutzen entsteht bei euch in der Zusammenarbeit, den Beziehungen und Unterhaltungen.
-  - id: "9"
-    q: Was passiert, wenn wir ein Meeting verschieben?
-    a: Dann findet euer Meeting später statt und die Arbeitet an eurem Teamgefühl verzögert sich etwas. Das passiert.
+    q: Wozu brauchen wir dann noch einen Teamcoach / Scrum Master?
+    a: Ein gutes Teamgefühl ist wie ein gutes Fundament. 
+       Darauf aufbauend wird die Zusammenarbeit besser. 
+       Unsere Trainings ergänzen sich gut mit anderen Teambuilding-Maßnahmen 
+       und bereichern die Lücken zwischen Teamcoachings, wenn diese eh schon stattfinden.
+       Wenn ihr jedoch richtig tiefgreifende Konflikte im Team habt 
+       oder vor radikalen Transformationen eures Teams steht (z.B. müssen 50% das Team verlassen), 
+       dann braucht ihr dafür stets einen professionellen Coach, der euch vollzeit unterstützt und begleitet.

@@ -130,13 +130,13 @@ const Tutorial = (props) => {
                         <Col>
                             <p>
                                 {type === "Reflexion" &&
-                                    <Link to={`/erfolg`} className="btn btn-primary btn-lg">Tutorial abschliessen</Link>
+                                    <Link to={`/erfolg`} className="btn btn-primary btn-lg">Training abschliessen</Link>
                                 }
                                 {type === "Info" &&
-                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary btn-lg">Aufgabe starten</Link>
+                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Aufgabe starten</Link>
                                 }
                                 {type === "Aufgabe" &&
-                                    <Link to={`/deine-trainings/${next}`} className="btn btn-primary btn-lg">Reflexion starten</Link>
+                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Reflexion starten</Link>
                                 }
                             </p>
                         </Col>

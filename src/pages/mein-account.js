@@ -54,19 +54,19 @@ const Account = () => {
             <Col>
               <Nav>
               <Nav.Item>
-                <Link to="/account/" className={headerStyles.navItem}>Profil</Link>{'   '}
+                <Link to="/mein-account/" className={headerStyles.navItem}>Profil</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/account/team/" className={headerStyles.navItem}>Team</Link>{'   '}
+                <Link to="/mein-account/team/" className={headerStyles.navItem}>Team</Link>{'   '}
                 </Nav.Item>
                 <Nav.Item>
-                <Link to="/account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
+                <Link to="/mein-account/einstellungen/" className={headerStyles.navItem}>Einstellungen</Link>{'   '}
                 </Nav.Item>
               </Nav>
               <Router>
-                <Profil path="/account/" />
-                <Einstellungen path="/account/einstellungen" />
-                <Team path="/account/team" />
+                <Profil path="/mein-account/" />
+                <Einstellungen path="/mein-account/einstellungen" />
+                <Team path="/mein-account/team" />
               </Router>
             </Col>
           </Row>

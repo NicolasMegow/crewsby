@@ -18,26 +18,23 @@ const UeberUnsPage = () => {
                             Die Crew erschafft das Team.</h2>
                     </Col>
                 </Row>
-                <Row>
+                <Row style={{ marginTop: "8rem" }}>
                     <Col>
-                        <h2 style={{ marginTop: "8rem" }}>Wir <Emoji symbol="❤" label="heart"/> Teamarbeit.</h2>
-                        <p>Wir arbeiten alle in Teams. Arbeit ist ein wichtiger Teil des Lebens.
-                            Und das Leben ist zu kurz für Probleme im Team. 
-                            Gute Zusammenarbeit im Team ist selten ein Produkt aus Glück und Hoffnung.
-                            Gelegentliche Events reichen selten aus, um das Teamgefühl nachhaltig zu verbessern.
-                            Wir wissen, dass ein gutes Teamgefühl Zeit und Aufmerksamkeit braucht.
-                            Da beides häufig knapp ist, entwickeln wir Tutorials als Ergänzung zu traditionellem Teambuilding.
-                            Wir glauben, dass jedes Team ein gutes Teamgefühl verdient.
-                            Deshalb arbeiten wir unermüdlich daran euch einfachen und günstigen Zugang zu genau den richtigen Impulsen zu geben.</p>
+                        <p className="mintitle">Unsere Vision</p>
+                        <h2>Wir <Emoji symbol="❤️" label="heart"/> moderne Teamarbeit.</h2>
+                        <p>Moderne Teamarbeit sollte der Standard sein.
+                            Und wirkliche jedes Team verdient ein gutes Teamgefühl.
+                            </p>
+                        <p>Deshalb arbeiten wir unermüdlich daran die besten Trainings dafür zu entwickeln.</p>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <p className="mintitle">Arbeitsweise</p>
+                        <p className="mintitle">Unsere Arbeitsweise</p>
                         <h3>Wir sind ein schlankes Team.</h3>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-              sed diam voluptua.
+                        <p>Konzentration auf das Wesentliche ist eine Tugend. 
+                            Wir geben uns Mühe dies möglichst diszipliniert umzusetzen.
+                            Dabei stehen wir auf den Schultern von Riesen und greifen auf Spitzenforschung zurück.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -50,10 +47,11 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <p className="mintitle">Anspruch</p>
+                        <p className="mintitle">Unser Anspruch</p>
                         <h3>Wir sind durch & durch nachhaltig.</h3>
-                        <p>Echte Fähigkeiten aufbauen + CO2-neutral.
-                        Digitales Training hat eine hervorragende Klimabilanz. Wir gleichen unseren CO2-Auststoß durch Aufforstungsprojekte aus.
+                        <p>Wir verbessern konstant unsere Trainings, um nachhaltig Fähigkeiten aufzubauen.
+                            Digitales Training hat eine hervorragende Klimabilanz. 
+                            Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

@@ -16,7 +16,7 @@ const TutorialPage = () => {
   if (loading) {
     return (
       <Layout>
-        <Head title="Deine Trainings" />
+        <Head title="Meine Trainings" />
         <Container>
           <Row>
             <Col>
@@ -29,7 +29,7 @@ const TutorialPage = () => {
   }
   return (
     <Layout>
-      <Head title="Deine Trainings" />
+      <Head title="Meine Trainings" />
       {isAuthenticated ? (
         <Container>
           <Tabs defaultActiveKey="TM" id="uncontrolled-tab-example">
@@ -44,9 +44,9 @@ const TutorialPage = () => {
               </Row>
               {data.TUTS[0].TM.map(mode => {
                 return (
-                  <Row key={mode.part} style={{ marginBottom: "4rem" }}>
+                  <Row key={mode.part} style={{ marginBottom: "2rem" }}>
                     <Col>
-                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}</h2>
+                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}:{' '}<small>{mode.job}</small></h2>
                       <Row>
                         {mode.tuts.map(tut => {
                           return (
@@ -100,7 +100,7 @@ const TutorialPage = () => {
                 return (
                   <Row key={mode.part} style={{ marginBottom: "4rem" }}>
                     <Col>
-                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}</h2>
+                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}:{' '}<small>{mode.job}</small></h2>
                       <Row>
                         {mode.tuts.map(tut => {
                           return (

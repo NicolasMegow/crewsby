@@ -39,7 +39,7 @@ const ErfolgPage = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <Link to="/deine-trainings" className="btn btn-primary btn-lg">Nächstes Tutorial auswählen</Link>
+                            <Link to="/meine-trainings" className="btn btn-primary btn-lg">Nächstes Training auswählen</Link>
                         </Col>
                     </Row>
                 </Container>

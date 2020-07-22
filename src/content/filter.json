@@ -3,31 +3,48 @@
     {
       "TM": [
         {
-          "name": "Beziehungen stärken",
-          "symbol":"❤",
-          "label":"heart",
+          "name": "Trainings-Empfehlung",
+          "symbol":"💯",
+          "label":"100",
+          "job": "Anfang machen",
           "part": "TMBE",
           "tuts": [
             {
-              "thema": "Vertrauen (1)",
+              "thema": "Vertrauen aufbauen",
               "key": "VEN1",
-              "inhalt": "Menschen sehen",
+              "inhalt": "1: Menschen sehen",
+              "icon": ["fal", "door-open"],
+              "disabled": "false",
+              "url": "vertrauen-1a"
+            }]
+        },
+        {
+          "name": "Starkes Teamgefühl",
+          "symbol":"❤️",
+          "label":"heart",
+          "job": "Beziehungen gestalten",
+          "part": "TMBE",
+          "tuts": [
+            {
+              "thema": "Vertrauen aufbauen",
+              "key": "VEN1",
+              "inhalt": "1: Menschen sehen",
               "icon": ["fal", "door-open"],
               "disabled": "false",
               "url": "vertrauen-1a"
             },
             {
-              "thema": "Vertrauen (2)",
+              "thema": "Vertrauen aufbauen",
               "key": "VEN2",
-              "inhalt": "Persönlichkeit teilen",
+              "inhalt": "2: Persönlichkeit teilen",
               "icon": ["fal", "mask"],
               "disabled": "false",
               "url": "vertrauen-2a"
             },
             {
-              "thema": "Vertrauen (3)",
+              "thema": "Vertrauen aufbauen",
               "key": "VEN3",
-              "inhalt": "Schwäche zeigen",
+              "inhalt": "3: Schwäche zeigen",
               "icon": ["fal", "band-aid"],
               "disabled": "false",
               "url": "vertrauen-3a"
@@ -35,15 +52,16 @@
           ]
         },
         {
-          "name": "Abläufe optimieren",
+          "name": "Gesteigerte Leistung",
           "symbol":"💪",
           "label":"muscle",
+          "job": "Abläufe optimieren",
           "part": "TMAB",
           "tuts": [
             {
-              "thema": "Koordination (1)",
+              "thema": "Arbeit koordinieren",
               "key": "KON1",
-              "inhalt": "Relevante Information",
+              "inhalt": "1: Information teilen",
               "icon": ["fal", "chart-line"],
               "disabled": "false",
               "url": "koordination-1a"
@@ -51,15 +69,16 @@
           ]
         },
         {
-          "name": "Talente entwickeln",
+          "name": "Entfesselte Kreativität",
           "symbol":"🧠",
           "label":"brain",
+          "job": "Talente entwickeln",
           "part": "TMTA",
           "tuts": [
             {
-              "thema": "Supervision (1)",
+              "thema": "Fähigkeiten verbessern",
               "key": "SUN1",
-              "inhalt": "Voneinander lernen",
+              "inhalt": "1: Voneinander lernen",
               "icon": ["fal", "tools"],
               "disabled": "true",
               "url": "supervison-1a"
@@ -71,23 +90,40 @@
     {
       "SO": [
         {
-          "name": "Beziehungen stärken",
-          "symbol":"❤",
+          "name": "Trainings-Empfehlung",
+          "symbol":"💯",
+          "label":"100",
+          "job": "Anfang machen",
+          "part": "TMBE",
+          "tuts": [
+            {
+              "thema": "Wertschätzung zeigen",
+              "key": "WEG1",
+              "inhalt": "1: Kleine Gesten",
+              "icon": ["fal", "gift"],
+              "disabled": "false",
+              "url": "wertschaetzung-1a"
+            }]
+        },
+        {
+          "name": "Starkes Teamgefühl",
+          "symbol":"❤️",
           "label":"heart",
+          "job": "Beziehungen gestalten",
           "part": "SOBE",
           "tuts": [
             {
-              "thema": "Wertschätzung (1)",
+              "thema": "Wertschätzung zeigen",
               "key": "WEG1",
-              "inhalt": "Kleine Gesten",
+              "inhalt": "1: Kleine Gesten",
               "icon": ["fal", "gift"],
               "disabled": "false",
               "url": "wertschaetzung-1a"
             },
             {
-              "thema": "Wertschätzung (2)",
+              "thema": "Wertschätzung zeigen",
               "key": "WEG2",
-              "inhalt": "Passende Worte",
+              "inhalt": "2: Passende Worte",
               "icon": ["fal", "comment-check"],
               "disabled": "true",
               "url": "wertschaetzung-2a"
@@ -95,23 +131,24 @@
           ]
         },
         {
-          "name": "Abläufe optimieren",
+          "name": "Gesteigerte Leistung",
           "symbol":"💪",
           "label":"muscle",
+          "job": "Abläufe optimieren",
           "part": "SOAB",
           "tuts": [
             {
-              "thema": "Ziele (1)",
+              "thema": "Ziele setzen",
               "key": "ZIE1",
-              "inhalt": "Richtung festlegen",
+              "inhalt": "1: Richtung festlegen",
               "icon": ["fal", "map-marker-check"],
               "disabled": "false",
               "url": "ziele-1a"
             },
             {
-              "thema": "Ziele (2)",
+              "thema": "Ziele setzen",
               "key": "ZIE2",
-              "inhalt": "Alternativen suchen",
+              "inhalt": "2: Alternativen suchen",
               "icon": ["fal", "map-signs"],
               "disabled": "true",
               "url": "ziele-2a"
@@ -119,15 +156,16 @@
           ]
         },
         {
-          "name": "Talente entwickeln",
+          "name": "Entfesselte Kreativität",
           "symbol":"🧠",
           "label":"brain",
+          "job": "Talente entwickeln",
           "part": "SOTA",
           "tuts": [
             {
-              "thema": "Fragen (1)",
+              "thema": "Fragen stellen",
               "key": "FRN1",
-              "inhalt": "Denkprozesse anstoßen",
+              "inhalt": "1: Denkprozesse anstoßen",
               "icon": ["fal", "question"],
               "disabled": "true",
               "url": "fragen-1a"

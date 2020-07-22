@@ -27,12 +27,13 @@ const IndexPage = () => {
             <p className="mintitle">Teamarbeit</p>
             <h2>Entdecke ungeahnte Potenziale.</h2>
             <p>Du kannst mit Deinem Team Berge versetzen, wenn ihr wirklich zusammenarbeitet.
-              Glücklicherweise ist das kein Hexenwerk, sondern trainierbares Handwerk.
+              Glücklicherweise ist das kein Hexenwerk. 
+              Crewsby hilft Dir und Deinem Team die Teamarbeit im Tagesgeschäft zu verbessern.
             </p>
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-              <Emoji symbol="❤" label="heart" />{' '}Starkes Teamgefühl<br></br>
+              <Emoji symbol="❤️" label="heart" />{' '}Starkes Teamgefühl<br></br>
               <Emoji symbol="💪" label="muscle" />{' '}Gesteigerte Leistung<br></br>
               <Emoji symbol="🧠" label="brain" />{' '}Entfesselte Kreativität
             </p>
@@ -51,9 +52,9 @@ const IndexPage = () => {
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-              <Emoji symbol="⏲️" label="timer" />{' '} 30 Min / Training<br></br>
-              <Emoji symbol="💻" label="laptop" />{' '} Remote by Design<br></br>
-              <Emoji symbol="✨ " label="duble" />{' '} Solo + Team Trainings
+              <Emoji symbol="⏲️" label="timer" />{' '}30 Min / Training<br></br>
+              <Emoji symbol="💻" label="laptop" />{' '}Remote by Design<br></br>
+              <Emoji symbol="✨" label="duble" />{' '}Solo + Team Trainings
             </p>
           </Col>
         </Row>
@@ -61,9 +62,9 @@ const IndexPage = () => {
           <Col lg={6}>
             <p className="mintitle">Weiterbildung</p>
             <h2>Nutze bewährte Methoden.</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-              sed diam voluptua.
+            <p>Moderne Teamarbeit hat viele Facetten. 
+              Crewsby bietet Dir einen Einblick in alle bewährten Methoden.
+              So kannst Du mit Deinem Team schnell die für euch passende Elemente ausprobieren & anwenden.
             </p>
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

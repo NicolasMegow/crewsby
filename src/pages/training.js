@@ -27,7 +27,8 @@ const TrainingPage = () => {
                         <p className="mintitle">Bewusste Verbesserung</p>
                         <h2>Trainiere alleine & im Team.</h2>
                         <p>Wie gut oder schlecht Deine Teamarbeit ist, liegt in Deiner Hand.
-                            Lerne alleine oder hol Dein Team ins Boot, damit ihr voneinander & miteinander lernen könnt.
+                            Trainiere mit Crewsby alleine oder hol Dein Team ins Boot.
+                            Dann könnt ihr voneinander & miteinander lernen.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -43,14 +44,14 @@ const TrainingPage = () => {
                         <div className="feature-num">A</div>
                         <div>
                             <h3>Solo-Training</h3>
-                            <p className="feature-text">Persönlichen Beitrag steigern.</p>
+                            <p className="feature-text">Eigenen Beitrag steigern.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
                         <div className="feature-num">B</div>
                         <div>
                             <h3>Teambuilding</h3>
-                            <p className="feature-text">Im Block zusammenwachsen.</p>
+                            <p className="feature-text">Schneller zusammenwachsen.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
@@ -63,9 +64,12 @@ const TrainingPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col lg={6}>
-                        <p className="mintitle">Kleine Verbesserung</p>
+                        <p className="mintitle">Kleine Verbesserungen</p>
                         <h2>Starte gute Gespräche.</h2>
-                        <p>über die richtigen Themen zu sprechen und aus neuen Perspektiven auf diese Themen zu blicken.</p>
+                        <p>Crewsby läd Dich zum Wechsel Deiner Perspektive ein.
+                            So entdeckst Du neue Seiten an Dir und Deinen Teammitgliedern.
+                            Stück für Stück baust Du so neue Fähigkeiten auf und verbesserst die Teamarbeit.
+                        </p>
                     </Col>
                     <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <DigiTraining width="100%" height="260" />
@@ -76,21 +80,21 @@ const TrainingPage = () => {
                         <div className="feature-num">1</div>
                         <div>
                             <h3>Info</h3>
-                            <p className="feature-text">Methode verstehen.</p>
+                            <p className="feature-text">Perspektive verstehen.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
                         <div className="feature-num">2</div>
                         <div>
                             <h3>Übung</h3>
-                            <p className="feature-text">Methode ausprobieren.</p>
+                            <p className="feature-text">Perspektive ausprobieren.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
                         <div className="feature-num">3</div>
                         <div>
                             <h3>Rückblick</h3>
-                            <p className="feature-text">Methode sacken lassen.</p>
+                            <p className="feature-text">Perspektive sacken lassen.</p>
                         </div>
                     </Col>
                 </Row>
@@ -98,9 +102,10 @@ const TrainingPage = () => {
                     <Col lg>
                         <p className="mintitle">Nachhaltige Verbesserung</p>
                         <h2>Wachse als Team zusammen.</h2>
-                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-                            sed diam voluptua.
+                        <p>Verbesserung entsteht aus Veränderung. 
+                            Und das braucht etwas Zeit und Wiederholung.
+                            Crewsby bietet Dir abwechselungsreiche Trainings,
+                            die Du beliebig kombinieren kannst.
                         </p>
                     </Col>
                     <Col lg style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>

@@ -7,9 +7,10 @@ import NameCTA from "../img/svg/CTA.svg"
 
 const CTA = () => {
     return (
-            <Row className={footerStyles.cta}>
+            <div className={footerStyles.cta}>
+                <Row><Col><h2>Die Trainings-Flatrate für moderne Teamarbeit.</h2></Col></Row>
+                <Row>
                 <Col md={8}>
-                    <h2>Die Flatrate für Trainings.</h2>
                     <p>Regelmäßige Trainings verbessern die Teamarbeit deutlich.
                         Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst zum Fixpreis.
                     </p>
@@ -18,7 +19,8 @@ const CTA = () => {
                 <Col md={4} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
                     <NameCTA width="80%" height={180}/>
                 </Col>
-            </Row>
+                </Row>
+            </div>
     )
 }
 
