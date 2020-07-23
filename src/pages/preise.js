@@ -89,7 +89,7 @@ const PreisePage = () => {
                 <Row style={{ marginTop: "3rem" }}>
                     <Col>
                         <p>Wir freuen uns von Dir zu hören!
-                            Schreib uns eine E-Mail an Fragen@crewsby.com.</p>
+                            Schreib uns eine E-Mail an <a href="mailto:Fragen@crewsby.com">Fragen@crewsby.com.</a></p>
                     </Col>
                 </Row>
             </Container>

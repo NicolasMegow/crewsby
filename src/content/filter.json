@@ -3,7 +3,7 @@
     {
       "TM": [
         {
-          "name": "Trainings-Empfehlung",
+          "name": "Trainings-Empfehlungen",
           "symbol":"💯",
           "label":"100",
           "job": "Training starten",
@@ -36,7 +36,7 @@
             {
               "thema": "Vertrauen aufbauen",
               "key": "VEN2",
-              "inhalt": "2: Persönlichkeit teilen",
+              "inhalt": "2: Menschen kennenlernen",
               "icon": ["fal", "mask"],
               "disabled": "false",
               "url": "vertrauen-2a"
@@ -90,7 +90,7 @@
     {
       "SO": [
         {
-          "name": "Trainings-Empfehlung",
+          "name": "Trainings-Empfehlungen",
           "symbol":"💯",
           "label":"100",
           "job": "Training starten",

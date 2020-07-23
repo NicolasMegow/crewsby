@@ -59,7 +59,8 @@ export const query = graphql`
     query($slug: String!) {
         mdx (fields: { slug: { eq: $slug } }) {
             frontmatter {
-                title
+                skill
+                level
                 type
                 part
                 date
@@ -87,19 +88,22 @@ const Tutorial = (props) => {
         </Layout>
     }
 
-    const title = props.data.mdx.frontmatter.title
+    const skill = props.data.mdx.frontmatter.skill
+    const level = props.data.mdx.frontmatter.level
     const type = props.data.mdx.frontmatter.part
     const next = props.data.mdx.frontmatter.next
 
     return (
         <MDXProvider components={shortcodes}>
         <Layout>
-            <Head title={title} />
+            <Head title={skill} />
             {isAuthenticated ? (
                 <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
                     <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
-                        <Col md={8} style={{paddingTop:".6rem"}}>
-                            <p>{title} {'\u00BB'} <span style={{color:"#4285F4"}}>{type}</span></p>
+                        <Col md={8} style={{marginTop:".6rem"}}>
+                            <p>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
+                                <span style={{color:"#4285F4"}}>{type}</span>
+                            </p>
                         </Col>
                         <Col md={4}>
                             <Nav style={styles.divided} className="ml-auto">
@@ -125,7 +129,7 @@ const Tutorial = (props) => {
                     </Row>
                     <Row>
                         <Col>
-                        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+                            <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>
                     <Row>

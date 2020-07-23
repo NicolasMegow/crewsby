@@ -79,7 +79,7 @@ const TutorialPage = () => {
               <Legend info="SO"/>
               {data.TUTS[1].SO.map(mode => {
                 return (
-                  <Row key={mode.part} style={{ marginBottom: "4rem" }}>
+                  <Row key={mode.part} style={{ marginBottom: "2rem" }}>
                     <Col>
                       <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}{' '}<small>•{' '}{mode.job}</small></h2>
                       <Row>
