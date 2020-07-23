@@ -64,7 +64,7 @@ const PreisePage = () => {
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>9 €</h2>
                         <p>pro Nutzer/Monat</p>
-                        <Button variant="secondary" size="lg" href="mailto:moin@strategiepark.de">Gespräch vereinbaren</Button>
+                        <Button variant="secondary" size="lg" href="mailto:moin@crewsby.de">Gespräch vereinbaren</Button>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "2rem" }}>

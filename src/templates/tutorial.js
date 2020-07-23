@@ -101,7 +101,7 @@ const Tutorial = (props) => {
                 <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
                     <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
                         <Col md={8} style={{marginTop:".6rem"}}>
-                            <p>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
+                            <p style={{fontSize:"1rem"}}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
                                 <span style={{color:"#4285F4"}}>{type}</span>
                             </p>
                         </Col>
@@ -114,13 +114,13 @@ const Tutorial = (props) => {
                                 </Nav.Item>
                                 <span style={styles.divider}></span>
                                 <Nav.Item>
-                                    <Nav.Link style={isActive("Aufgabe", type)} as="div">
+                                    <Nav.Link style={isActive("Übung", type)} as="div">
                                         <FontAwesomeIcon icon={['fas', 'stopwatch']} fixedWidth />
                                     </Nav.Link>
                                 </Nav.Item>
                                 <span style={styles.divider}></span>
                                 <Nav.Item>
-                                    <Nav.Link style={isActive("Reflexion", type)} as="div">
+                                    <Nav.Link style={isActive("Rückblick", type)} as="div">
                                         <FontAwesomeIcon icon={['fas', 'question']} fixedWidth />
                                     </Nav.Link>
                                 </Nav.Item>
@@ -135,14 +135,14 @@ const Tutorial = (props) => {
                     <Row>
                         <Col>
                             <p>
-                                {type === "Reflexion" &&
+                                {type === "Rückblick" &&
                                     <Link to={`/erfolg`} className="btn btn-primary btn-lg">Training abschliessen</Link>
                                 }
                                 {type === "Info" &&
-                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Aufgabe starten</Link>
+                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Übung starten</Link>
                                 }
-                                {type === "Aufgabe" &&
-                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Reflexion starten</Link>
+                                {type === "Übung" &&
+                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Rückblick starten</Link>
                                 }
                             </p>
                         </Col>

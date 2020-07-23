@@ -63,8 +63,50 @@ const TrainingPage = () => {
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
-                    <Col lg={6}>
+                    <Col lg>
                         <p className="mintitle">Kleine Verbesserungen</p>
+                        <h2>Entwickle Dich für Dein Team.</h2>
+                        <p>Verbesserung entsteht aus neuen Fähigkeiten. 
+                            Und das braucht etwas Zeit und Wiederholung.
+                            Crewsby bietet Dir abwechselungsreiche Trainings,
+                            die Du beliebig kombinieren kannst, um neue Fähigkeiten aufzubauen.
+                        </p>
+                    </Col>
+                    <Col lg style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
+                            <Emoji symbol="🏆" label="success" />{' '}Fähigkeit
+                        </p>
+                    </Col>
+                </Row>
+                <Row style={{marginTop:"4rem"}}>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">1</div>
+                        <div>
+                            <h3>Verbesserung</h3>
+                            <p className="feature-text">Z.B. starkes Teamgefühl</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">2</div>
+                        <div>
+                            <h3>Fähigkeit</h3>
+                            <p className="feature-text">Z.B. Vertrauen aufbauen</p>
+                        </div>
+                    </Col>
+                    <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
+                        <div className="feature-num">3</div>
+                        <div>
+                            <h3>Training</h3>
+                            <p className="feature-text">Z.B. Menschen sehen</p>
+                        </div>
+                    </Col>
+                </Row>
+                <Row style={{ marginTop: "8rem" }}>
+                    <Col lg={6}>
+                        <p className="mintitle">Nachhaltige Verbesserung</p>
                         <h2>Starte gute Gespräche.</h2>
                         <p>Crewsby läd Dich zum Wechsel Deiner Perspektive ein.
                             So entdeckst Du neue Seiten an Dir und Deinen Teammitgliedern.
@@ -96,25 +138,6 @@ const TrainingPage = () => {
                             <h3>Rückblick</h3>
                             <p className="feature-text">Perspektive sacken lassen.</p>
                         </div>
-                    </Col>
-                </Row>
-                <Row style={{ marginTop: "8rem" }}>
-                    <Col lg>
-                        <p className="mintitle">Nachhaltige Verbesserung</p>
-                        <h2>Wachse als Team zusammen.</h2>
-                        <p>Verbesserung entsteht aus Veränderung. 
-                            Und das braucht etwas Zeit und Wiederholung.
-                            Crewsby bietet Dir abwechselungsreiche Trainings,
-                            die Du beliebig kombinieren kannst.
-                        </p>
-                    </Col>
-                    <Col lg style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
-                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
-                            <Emoji symbol="💦" label="sweat" />{' '}Training<br></br>
-                            <Emoji symbol="🏆" label="success" />{' '}Erfolg
-                        </p>
                     </Col>
                 </Row>
             </Container>

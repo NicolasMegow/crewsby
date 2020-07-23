@@ -43,7 +43,7 @@ const IndexPage = () => {
           <Col lg={6}>
             <p className="mintitle">Training</p>
             <h2>Trainiere selbstbestimmt.</h2>
-            <p>Alle Trainings stehen Dir sofort zur Verfügung. 
+            <p>Alle Trainings stehen Dir sofort 24/7 zur Verfügung. 
               Mobil und am Desktop, zwischendurch oder geblockt. 
               Setze Deine persönlichen Schwerpunkte und
               lerne gemeinsam im Team oder alleine für Dich.
