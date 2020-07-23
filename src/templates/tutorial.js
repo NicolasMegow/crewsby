@@ -98,10 +98,10 @@ const Tutorial = (props) => {
             {isAuthenticated ? (
                 <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
                     <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
-                        <Col md={6}>
-                            <h1 style={{fontSize:"1.8rem"}}>{title}: <small className="mintitle">{type}</small></h1>
+                        <Col md={8} style={{paddingTop:".6rem"}}>
+                            <p>{title} {'\u00BB'} <span style={{color:"#4285F4"}}>{type}</span></p>
                         </Col>
-                        <Col md={6}>
+                        <Col md={4}>
                             <Nav style={styles.divided} className="ml-auto">
                                 <Nav.Item>
                                     <Nav.Link style={isActive("Info", type)} as="div">
@@ -124,7 +124,9 @@ const Tutorial = (props) => {
                         </Col>
                     </Row>
                     <Row>
+                        <Col>
                         <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+                        </Col>
                     </Row>
                     <Row>
                         <Col>

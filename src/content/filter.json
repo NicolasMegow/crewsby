@@ -6,14 +6,14 @@
           "name": "Trainings-Empfehlung",
           "symbol":"💯",
           "label":"100",
-          "job": "Anfang machen",
-          "part": "TMBE",
+          "job": "Training starten",
+          "part": "TMTE",
           "tuts": [
             {
               "thema": "Vertrauen aufbauen",
               "key": "VEN1",
               "inhalt": "1: Menschen sehen",
-              "icon": ["fal", "door-open"],
+              "icon": ["fal", "head-side"],
               "disabled": "false",
               "url": "vertrauen-1a"
             }]
@@ -29,7 +29,7 @@
               "thema": "Vertrauen aufbauen",
               "key": "VEN1",
               "inhalt": "1: Menschen sehen",
-              "icon": ["fal", "door-open"],
+              "icon": ["fal", "head-side"],
               "disabled": "false",
               "url": "vertrauen-1a"
             },
@@ -62,7 +62,7 @@
               "thema": "Arbeit koordinieren",
               "key": "KON1",
               "inhalt": "1: Information teilen",
-              "icon": ["fal", "chart-line"],
+              "icon": ["fal", "share-alt"],
               "disabled": "false",
               "url": "koordination-1a"
             }
@@ -93,8 +93,8 @@
           "name": "Trainings-Empfehlung",
           "symbol":"💯",
           "label":"100",
-          "job": "Anfang machen",
-          "part": "TMBE",
+          "job": "Training starten",
+          "part": "SOTE",
           "tuts": [
             {
               "thema": "Wertschätzung zeigen",

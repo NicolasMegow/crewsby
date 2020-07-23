@@ -8,6 +8,7 @@ import Head from "../components/head"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Legend from "../components/legend"
 import appStyles from "../styles/app.module.scss"
 import data from "../content/filter.json"
 
@@ -34,19 +35,12 @@ const TutorialPage = () => {
         <Container>
           <Tabs defaultActiveKey="TM" id="uncontrolled-tab-example">
             <Tab eventKey="TM" title="Team-Trainings">
-              <Row style={{marginBottom:"4rem"}}>
-                <Col>
-                  <p>
-                    <FontAwesomeIcon icon={["fas", "arrow-circle-right"]} />{" "}
-                    Alle Trainings für Remote-Teams nach Zielen im Teambuilding.
-                  </p>
-                </Col>
-              </Row>
+              <Legend info="TM"/>
               {data.TUTS[0].TM.map(mode => {
                 return (
                   <Row key={mode.part} style={{ marginBottom: "2rem" }}>
                     <Col>
-                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}:{' '}<small>{mode.job}</small></h2>
+                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}{' '}<small>•{' '}{mode.job}</small></h2>
                       <Row>
                         {mode.tuts.map(tut => {
                           return (
@@ -58,25 +52,19 @@ const TutorialPage = () => {
                             >
                               <Link to={tut.url}>
                                 <h4>{tut.thema}</h4>
-                                <Row>
-                                  <Col xs={8}>
                                     <p
                                       style={{
-                                        fontSize: ".8rem",
+                                        fontSize: "1rem",
                                         marginBottom: "0",
                                       }}
                                     >
                                       {tut.inhalt}
                                     </p>
-                                  </Col>
-                                  <Col xs={4}>
                                     <FontAwesomeIcon
                                       icon={tut.icon}
                                       size="2x"
                                       style={{ float: "right" }}
                                     />
-                                  </Col>
-                                </Row>
                               </Link>
                             </Col>
                           )
@@ -88,19 +76,12 @@ const TutorialPage = () => {
               })}
             </Tab>
             <Tab eventKey="SO" title="Solo-Trainings">
-              <Row style={{marginBottom:"4rem"}}>
-                <Col>
-                  <p>
-                    <FontAwesomeIcon icon={["fas", "arrow-circle-right"]} />{" "}
-                    Alle Trainings für Teamriesen nach Zielen im Teambuilding.
-                  </p>
-                </Col>
-              </Row>
+              <Legend info="SO"/>
               {data.TUTS[1].SO.map(mode => {
                 return (
                   <Row key={mode.part} style={{ marginBottom: "4rem" }}>
                     <Col>
-                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}:{' '}<small>{mode.job}</small></h2>
+                      <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}{' '}<small>•{' '}{mode.job}</small></h2>
                       <Row>
                         {mode.tuts.map(tut => {
                           return (
@@ -112,25 +93,19 @@ const TutorialPage = () => {
                             >
                               <Link to={tut.url}>
                                 <h4>{tut.thema}</h4>
-                                <Row>
-                                  <Col xs={8}>
                                     <p
                                       style={{
-                                        fontSize: ".8rem",
+                                        fontSize: "1rem",
                                         marginBottom: "0",
                                       }}
                                     >
                                       {tut.inhalt}
                                     </p>
-                                  </Col>
-                                  <Col xs={4} >
                                     <FontAwesomeIcon
                                       icon={tut.icon}
                                       size="2x"
                                       style={{float:"right"}}
                                     />
-                                  </Col>
-                                </Row>
                               </Link>
                             </Col>
                           )

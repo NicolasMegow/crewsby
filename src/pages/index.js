@@ -18,7 +18,7 @@ const IndexPage = () => {
         <Row>
           <Col>
             <Teambuilding width="100%" />
-            <h1>Trainings für moderne Teams.</h1>
+            <h1>Die Trainings-Flatrate für moderne Teamarbeit.</h1>
             <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, agil zu arbeiten und als Team zusammen zu wachsen.</h2>
           </Col>
         </Row>

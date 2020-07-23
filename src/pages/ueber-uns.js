@@ -33,7 +33,7 @@ const UeberUnsPage = () => {
                         <p className="mintitle">Unsere Arbeitsweise</p>
                         <h3>Wir sind ein schlankes Team.</h3>
                         <p>Konzentration auf das Wesentliche ist eine Tugend. 
-                            Wir geben uns Mühe dies möglichst diszipliniert umzusetzen.
+                            Unser Ziel ist es, dies möglichst diszipliniert umzusetzen.
                             Dabei stehen wir auf den Schultern von Riesen und greifen auf Spitzenforschung zurück.
                         </p>
                     </Col>
@@ -49,7 +49,7 @@ const UeberUnsPage = () => {
                     <Col md={6}>
                         <p className="mintitle">Unser Anspruch</p>
                         <h3>Wir sind durch & durch nachhaltig.</h3>
-                        <p>Wir verbessern konstant unsere Trainings, um nachhaltig Fähigkeiten aufzubauen.
+                        <p>Wir verbessern konstant unsere Trainings, damit Du nachhaltig Fähigkeiten aufbauen kannst.
                             Digitales Training hat eine hervorragende Klimabilanz. 
                             Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
                         </p>
