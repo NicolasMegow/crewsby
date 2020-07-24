@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout"
@@ -6,15 +6,6 @@ import Head from "../components/head"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
-
-async function getUserProfile() {
-    const fauna_secret = "fnEDwLOKfoACBQO_BGPL8AYHqOvFRdR_2SFlWucLsbSLqr5w-QU";
-    const client = new faunadb.Client({ secret: fauna_secret });
-    let response =  await client.query(
-            q.Select(["data","name"], q.Get(q.Ref(q.Collection('profile'), "270379930851738119")))
-        )
-    return response
-}
 
 
 {/*FAILING       
@@ -24,9 +15,20 @@ Select( ["data","name"] , Get(Match(Index('profile_by_email'),'nicolas.megow@str
 
 const TestingPage = () => {
     const { isAuthenticated, loading, user } = useAuth0();
-    const name = getUserProfile()
-
-
+    const [data, setData] = useState([])
+    useEffect(() => {
+        async function getUserProfile() {
+            const fauna_secret = "fnEDwLOKfoACBQO_BGPL8AYHqOvFRdR_2SFlWucLsbSLqr5w-QU";
+            const client = new faunadb.Client({ secret: fauna_secret });
+            const response =  await client.query(
+                    q.Select(["data","name"], q.Get(q.Ref(q.Collection('profile'), "270379930851738119")))
+                )
+            const newData = await response
+            setData(newData)
+        }
+        getUserProfile()
+        
+    }, [])
 
     if (loading) {
         return <p>Loading...</p>
@@ -39,7 +41,7 @@ const TestingPage = () => {
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
                             <p>Läuft</p>
-                            <p>{name}</p>
+                            <p>{data}</p>
                         </Col>
                     </Row>
                 </Container>
