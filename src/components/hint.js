@@ -14,16 +14,17 @@ class Hint extends React.Component {
     }
     render() {
         return (
-            <>
-            <Alert variant={this.props.variant} style={{width:"100%"}} show={this.state.show} onClose={() => this.setState({show: false})} dismissible>
-            <FontAwesomeIcon icon={this.props.icon} fixedWidth/>
-            <p style={{marginBottom:"0"}}>{this.props.line1}</p>
-            <p style={{marginBottom:"0"}}>{this.props.line2}</p>
+            <div>
+            <Alert variant={this.props.variant} style={{width:"100%", marginTop:"2rem", marginBottom:"2rem"}} show={this.state.show} onClose={() => this.setState({show: false})}>
+            <p style={{marginBottom:"0"}}>
+                <FontAwesomeIcon icon={this.props.icon} fixedWidth/>{' '}
+                {this.props.line}
+                </p>
             </Alert>
             {!this.state.show && <p style={{marginLeft: "auto"}}>
                 <FontAwesomeIcon icon={['fas', 'info-circle']} fixedWidth size="2x" onClick={() => this.setState({show: true})} className="info-icon"/>
                 </p>}
-            </>
+            </div>
         )
     }
 }

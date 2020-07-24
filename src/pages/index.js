@@ -19,7 +19,7 @@ const IndexPage = () => {
           <Col>
             <Teambuilding width="100%" />
             <h1>Die Trainings-Flatrate für moderne Teamarbeit.</h1>
-            <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, agil zu arbeiten und als Team zusammen zu wachsen.</h2>
+            <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, als Team zusammen zu wachsen und agil zu arbeiten.</h2>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>

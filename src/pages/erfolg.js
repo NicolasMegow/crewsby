@@ -33,8 +33,7 @@ const ErfolgPage = () => {
                     </Row>
                     <Row style={{marginTop:"4rem"}}>
                         <Hint variant='success' icon={['fas','shoe-prints']}
-                            line1="Das war der erste Schritt. Verbesserung entsteht in vielen kleinen Schritten." 
-                            line2="Vertraut dem Prozess."
+                            line="Das war der erste Schritt. Verbesserung entsteht in vielen kleinen Schritten. Vertraut dem Prozess."
                         />
                     </Row>
                     <Row>

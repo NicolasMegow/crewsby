@@ -13,7 +13,7 @@ class Legend extends React.Component {
 
                 },
             "SO": { col1_icon:["fas", "user"], col1_text:"nur Du", 
-                    col2_icon:["fas", "hourglass-half"], col2_text:"30 Min / Training", 
+                    col2_icon:["fas", "hourglass-half"], col2_text:"20 Min / Training", 
                     col3_icon:["fas", "file-edit"], col3_text:"Stift & Papier", 
                     col4_icon:["fas", "phone-laptop"], col4_text:"mobil & am PC"
                 }
