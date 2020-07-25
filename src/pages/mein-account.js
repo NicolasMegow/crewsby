@@ -3,11 +3,11 @@ import { Router } from "@reach/router"
 import { Link } from "gatsby"
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
 import headerStyles from "../styles/header.module.scss"
 
-import Loading from "../components/loading"
+import Loading from "../components/layout/loading"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 

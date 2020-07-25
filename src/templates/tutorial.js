@@ -1,22 +1,21 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "katex/dist/katex.min.css"
-import Hint from "../components/hint"
-import WSpace from "../components/wspace"
+import Hint from "../components/app/hint"
 
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const shortcodes = { Hint, WSpace, Row, Col }
+const shortcodes = { Hint, Row, Col }
 
 var styles = {
     divided: {

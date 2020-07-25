@@ -2,14 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Emoji from "../components/emoji"
-import Legend from "../components/legend"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
+import Emoji from "../components/shared/emoji"
+import Legend from "../components/app/legend"
 import appStyles from "../styles/app.module.scss"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-import Loading from "../components/loading"
+import Loading from "../components/layout/loading"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 

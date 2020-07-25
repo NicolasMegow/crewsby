@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 
-import footerStyles from "../styles/footer.module.scss"
+import footerStyles from "../../styles/footer.module.scss"
 
 const Footer = () => {
     return (

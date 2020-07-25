@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
 
 const NotFound = () => {
     return (

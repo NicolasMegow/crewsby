@@ -1,10 +1,10 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col } from 'react-bootstrap'
-import Emoji from "../components/emoji"
+import Emoji from "../components/shared/emoji"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
 
 const UeberUnsPage = () => {
     return (

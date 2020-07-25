@@ -2,8 +2,8 @@ import React from "react"
 import { Container, Row, Tab, Nav, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Layout from "../components/layout"
-import Head from "../components/head"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
 import appStyles from "../styles/app.module.scss"
 
 import Selbstcheck from "../img/svg/Selbstcheck.svg"

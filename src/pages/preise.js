@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Emoji from "../components/emoji"
-import FaCheck from "../components/facheck"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
+import Emoji from "../components/shared/emoji"
+import FaCheck from "../components/shared/facheck"
 
 import FAQData from "../content/faq.yaml"
 

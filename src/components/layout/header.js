@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
-import headerStyles from "../styles/header.module.scss"
-import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import headerStyles from "../../styles/header.module.scss"
+import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 
 
 const Header = () => {

@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
-import Layout from "../components/layout"
-import Head from "../components/head"
-import Hint from "../components/hint"
-import Emoji from "../components/emoji"
+import Layout from "../components/layout/layout"
+import Head from "../components/layout/head"
+import Hint from "../components/app/hint"
+import Emoji from "../components/shared/emoji"
 
 
 const ErfolgPage = () => {

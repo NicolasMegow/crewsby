@@ -1,9 +1,9 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import React from "react"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import "../styles/index.scss"
-import layoutStyles from "../styles/layout.module.scss"
+import Header from "./header"
+import Footer from "./footer"
+import "../../styles/index.scss"
+import layoutStyles from "../../styles/layout.module.scss"
 
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { fal } from '@fortawesome/pro-light-svg-icons'
