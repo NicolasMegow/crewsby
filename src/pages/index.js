@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Emoji from "../components/emoji"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Emoji from "../components/emoji"
+import FaCheck from "../components/facheck"
 import CTA from "../components/cta"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
@@ -69,13 +69,13 @@ const IndexPage = () => {
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <p style={{ fontWeight: "bold" }}>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Radical Candor<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Psychological Safety<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}OKRs<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Kanban<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Lean Management<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Scrum<br></br>
-              <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '}Design Thinking<br></br>
+              <FaCheck />{' '}Radical Candor<br></br>
+              <FaCheck />{' '}Psychological Safety<br></br>
+              <FaCheck />{' '}OKRs<br></br>
+              <FaCheck />{' '}Kanban<br></br>
+              <FaCheck />{' '}Lean Management<br></br>
+              <FaCheck />{' '}Scrum<br></br>
+              <FaCheck />{' '}Design Thinking<br></br>
             </p>
           </Col>
         </Row>

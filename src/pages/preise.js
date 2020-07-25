@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import Emoji from "../components/emoji"
+import FaCheck from "../components/facheck"
 
 import FAQData from "../content/faq.yaml"
-import Emoji from "../components/emoji"
 
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 
@@ -30,9 +30,10 @@ const PreisePage = () => {
                         <h2>Team-Paket</h2>
                         <p>Für 1 Team & bis zu 8 Mitglieder<br></br>
                         Beinhaltet:</p>
-                        <p><FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} alle Trainings<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} für alle Mitglieder<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} in 9 Sprachen*<br></br>
+                        <p>
+                            <FaCheck />{' '} alle Trainings<br></br>
+                            <FaCheck />{' '} für alle Mitglieder<br></br>
+                            <FaCheck />{' '} in 9 Sprachen*<br></br>
                         </p>
                         <p>
                             <Emoji symbol="❤️" label="heart"/>{' '} Starkes Teamgefühl<br></br>
@@ -53,9 +54,9 @@ const PreisePage = () => {
                         <p>Für 2+ Teams & unbegrenzte Mitglieder<br></br>
                         Beinhaltet das Team-Paket, plus:</p>
                         <p>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} kostenlose Supervision*<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} Dashboard aller Trainings*<br></br>
-                            <FontAwesomeIcon icon={['fas', 'check']} fixedWidth color="#4285F4" />{' '} Wettbewerbe für Teams*<br></br>
+                            <FaCheck />{' '} kostenlose Supervision*<br></br>
+                            <FaCheck />{' '} Dashboard aller Trainings*<br></br>
+                            <FaCheck />{' '} Wettbewerbe für Teams*<br></br>
                         </p>
                         <p>
                             <Emoji symbol="🎓" label="training"/>{' '} Selbstgesteuerte Weiterbildung<br></br>

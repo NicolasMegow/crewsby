@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import faunadb, { query as q } from "faunadb"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -48,6 +49,7 @@ var styles = {
     },
 }
 
+
 const isActive = (key1, key2) => {
     if (key1 === key2) {
         return styles.tutnavActive
@@ -74,7 +76,17 @@ export const query = graphql`
 
 
 const Tutorial = (props) => {
-    const { isAuthenticated, loading } = useAuth0()
+    const { isAuthenticated, loading, user } = useAuth0()
+{/*    const fauna_secret = user["https://fauna.com/id/secret"];
+    async function updateUserLevel() {
+        const client = new faunadb.Client({ secret: fauna_secret });
+        const response =  await client.query(
+            q.Update(
+            q.Ref(q.Match(q.Index('profile_by_email'), user.email)),
+            { data: { "level" : {"test": 1} } },
+            )
+            ).then((ret) => console.log(ret))
+    } */}
     if (loading) {
         return <Layout>
             <Head title="Tutorial-Navigator" />

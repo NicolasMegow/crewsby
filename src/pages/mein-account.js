@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Router } from "@reach/router"
 import { Link } from "gatsby"
 import { Container, Row, Col, Nav } from 'react-bootstrap'
@@ -6,11 +6,28 @@ import { Container, Row, Col, Nav } from 'react-bootstrap'
 import Layout from "../components/layout"
 import Head from "../components/head"
 import headerStyles from "../styles/header.module.scss"
+
+import Loading from "../components/loading"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import faunadb, { query as q } from "faunadb"
 
 
 const Profil = () => {
-  const { user } = useAuth0()
+  const { user } = useAuth0();
+  const fauna_secret = user["https://fauna.com/id/secret"];
+  const [data, setData] = useState([]);
+  useEffect(() => {
+      async function getUserProfile() {
+          const client = new faunadb.Client({ secret: fauna_secret });
+          const response =  await client.query(
+              q.Select( ["data"] , q.Get(q.Match(q.Index('profile_by_email'), user.email)))
+              );
+          const newData = await response;
+          setData(newData);
+      }
+      getUserProfile()
+  }, []);
+  
   return (
     <Row style={{marginTop:"4rem"}}>
           <Col>
@@ -18,6 +35,10 @@ const Profil = () => {
             <p><strong>Profil:</strong> {user.nickname}</p>
             <p><strong>E-Mail:</strong> {user.email}</p>
             <p><strong>Unternehmen:</strong> TBD</p>
+            <pre>{JSON.stringify(data,null,2)}</pre>
+{/*            <p><strong>Solo Punkte:</strong> {data["punkte_solo"][0]} / {data["punkte_solo"][1]} / {data["punkte_solo"][2]}</p>*/}
+{/*            <p><strong>Team Punkte:</strong> {data["punkte_team"][0]} / {data["punkte_team"][1]} / {data["punkte_team"][2]}</p>*/}
+
     </Col>
   </Row>)
 }
@@ -42,7 +63,7 @@ const Team = () => {
 const Account = () => {
   const { isAuthenticated, loading } = useAuth0()
   if (loading) {
-    return <p>Loading...</p>
+    return (<><Loading /></>)
   }
 
   return (

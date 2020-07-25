@@ -1,31 +1,25 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap"
-import Emoji from "../components/emoji"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Emoji from "../components/emoji"
 import Legend from "../components/legend"
 import appStyles from "../styles/app.module.scss"
+
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import Loading from "../components/loading"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+
 import data from "../content/filter.json"
 
 const TutorialPage = () => {
   const { isAuthenticated, loading } = useAuth0()
   if (loading) {
     return (
-      <Layout>
-        <Head title="Meine Trainings" />
-        <Container>
-          <Row>
-            <Col>
-              <h1>Loading...</h1>
-            </Col>
-          </Row>
-        </Container>
-      </Layout>
+      <><Loading /></>
     )
   }
   return (

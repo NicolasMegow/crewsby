@@ -8,23 +8,18 @@ import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 
 
-{/*FAILING       
-.then((ret) => console.log(ret))
-Select( ["data","name"] , Get(Match(Index('profile_by_email'),'nicolas.megow@strategiepark.de')))
-*/}
-
 const TestingPage = () => {
-    const { isAuthenticated, loading, user } = useAuth0();
+    const { isAuthenticated, loading } = useAuth0();
     const [data, setData] = useState([])
     useEffect(() => {
         async function getUserProfile() {
             const fauna_secret = "fnEDwLOKfoACBQO_BGPL8AYHqOvFRdR_2SFlWucLsbSLqr5w-QU";
             const client = new faunadb.Client({ secret: fauna_secret });
             const response =  await client.query(
-                    q.Select(["data","name"], q.Get(q.Ref(q.Collection('profile'), "270379930851738119")))
-                )
-            const newData = await response
-            setData(newData)
+                q.Select( ["data","name"] , q.Get(q.Match(q.Index('profile_by_email'),'nicolas.megow@strategiepark.de')))
+                );
+            const newData = await response;
+            setData(newData);
         }
         getUserProfile()
         
