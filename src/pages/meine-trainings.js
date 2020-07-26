@@ -1,17 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import Emoji from "../components/shared/emoji"
 import Legend from "../components/app/legend"
-import appStyles from "../styles/app.module.scss"
+import TrainingTile from "../components/app/trainingtile"
+import ComingSoon from "../components/app/comingsoon"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/layout/loading"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 
 import data from "../content/filter.json"
 
@@ -38,29 +36,7 @@ const TutorialPage = () => {
                       <Row>
                         {mode.tuts.map(tut => {
                           return (
-                            <Col
-                              md={6}
-                              lg={4}
-                              className={appStyles.menuItem}
-                              key={tut.key}
-                            >
-                              <Link to={tut.url}>
-                                <h4>{tut.thema}</h4>
-                                    <p
-                                      style={{
-                                        fontSize: "1rem",
-                                        marginBottom: "0",
-                                      }}
-                                    >
-                                      {tut.inhalt}
-                                    </p>
-                                    <FontAwesomeIcon
-                                      icon={tut.icon}
-                                      size="2x"
-                                      style={{ float: "right" }}
-                                    />
-                              </Link>
-                            </Col>
+                            <TrainingTile key={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
                           )
                         })}
                       </Row>
@@ -79,29 +55,7 @@ const TutorialPage = () => {
                       <Row>
                         {mode.tuts.map(tut => {
                           return (
-                            <Col
-                              md={6}
-                              lg={4}
-                              className={appStyles.menuItem}
-                              key={tut.key}
-                            >
-                              <Link to={tut.url}>
-                                <h4>{tut.thema}</h4>
-                                    <p
-                                      style={{
-                                        fontSize: "1rem",
-                                        marginBottom: "0",
-                                      }}
-                                    >
-                                      {tut.inhalt}
-                                    </p>
-                                    <FontAwesomeIcon
-                                      icon={tut.icon}
-                                      size="2x"
-                                      style={{float:"right"}}
-                                    />
-                              </Link>
-                            </Col>
+                            <TrainingTile key={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
                           )
                         })}
                       </Row>
@@ -109,6 +63,9 @@ const TutorialPage = () => {
                   </Row>
                 )
               })}
+            </Tab>
+            <Tab eventKey="CS" title="Coming soon">
+              <ComingSoon />
             </Tab>
           </Tabs>
         </Container>
