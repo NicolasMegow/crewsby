@@ -34,9 +34,9 @@ const TutorialPage = () => {
                     <Col>
                       <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}{' '}<small>•{' '}{mode.job}</small></h2>
                       <Row>
-                        {mode.tuts.map(tut => {
+                        {mode.tuts.map((tut, id) => {
                           return (
-                            <TrainingTile key={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
+                            <TrainingTile key={id} id={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
                           )
                         })}
                       </Row>
@@ -53,9 +53,9 @@ const TutorialPage = () => {
                     <Col>
                       <h2><Emoji symbol={mode.symbol} label={mode.label}/>{' '}{mode.name}{' '}<small>•{' '}{mode.job}</small></h2>
                       <Row>
-                        {mode.tuts.map(tut => {
+                        {mode.tuts.map((tut, id) => {
                           return (
-                            <TrainingTile key={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
+                            <TrainingTile key={id} id={tut.key} url={tut.url} topic={tut.thema} content={tut.inhalt} icon={tut.icon}/>
                           )
                         })}
                       </Row>

@@ -13,7 +13,7 @@ class TrainingTile extends React.Component {
                 md={6}
                 lg={4}
                 className={appStyles.menuItem}
-                key={this.props.key}
+                key={this.props.id}
             >
                 <Link to={this.props.url}>
                     <h4>{this.props.topic}</h4>

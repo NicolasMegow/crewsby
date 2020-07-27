@@ -37,7 +37,7 @@ const Header = () => {
                                 <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
                             </Nav.Item>
                         </Nav>
-                        <hr></hr>
+                        <hr style={{marginTop:"1rem",marginBottom:"1rem"}}></hr>
                         <Nav className="ml-auto">
                             {isAuthenticated ? (
                             <>

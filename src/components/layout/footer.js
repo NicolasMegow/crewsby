@@ -10,7 +10,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col>
-                    <hr style={{color:"#DAE4F2"}}/>
+                    <hr style={{marginTop:"1rem",marginBottom:"1rem"}}/>
                     </Col>
                 </Row>
                 <Row>

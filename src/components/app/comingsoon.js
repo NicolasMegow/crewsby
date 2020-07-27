@@ -17,9 +17,9 @@ class ComingSoon extends React.Component {
                                 <Col>
                                     <h3><Emoji symbol={goal.symbol} label={goal.label}/>{' '}{goal.name}{' '}</h3>
                                     <ul>
-                                    {goal.tuts.map(tut => {
+                                    {goal.tuts.map((tut,id) => {
                                         return (
-                                            <li>{tut}</li>
+                                            <li key={id}>{tut}</li>
                                         )})}
                                     </ul>
                                 </Col>
@@ -35,9 +35,9 @@ class ComingSoon extends React.Component {
                                 <Col>
                                     <h3><Emoji symbol={goal.symbol} label={goal.label}/>{' '}{goal.name}{' '}</h3>
                                     <ul>
-                                    {goal.tuts.map(tut => {
+                                    {goal.tuts.map((tut,id) => {
                                         return (
-                                            <li>{tut}</li>
+                                            <li key={id}>{tut}</li>
                                         )})}
                                     </ul>
                                 </Col>

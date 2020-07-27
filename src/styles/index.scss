@@ -15,6 +15,12 @@ h1 {
   font-weight: 700;
 }
 
+hr {
+  border-color: $primary;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 
 .btn {
   font-weight: bold;

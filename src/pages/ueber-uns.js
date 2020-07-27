@@ -30,11 +30,26 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
+                        <p className="mintitle">Unser Anspruch</p>
+                        <h3>Wir sind durch & durch nachhaltig.</h3>
+                        <p>Wir verbessern konstant unsere Trainings, damit Du nachhaltig Fähigkeiten aufbauen kannst.
+                            Digitales Training hat eine hervorragende Klimabilanz. 
+                            Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
+                        </p>
+                    </Col>
+                    <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <FontAwesomeIcon icon={['fal', 'seedling']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'flower-tulip']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
+                        <FontAwesomeIcon icon={['fal', 'tree-alt']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
+                    </Col>
+                </Row>
+                <Row style={{ marginTop: "8rem" }}>
+                    <Col md={6}>
                         <p className="mintitle">Unsere Arbeitsweise</p>
                         <h3>Wir sind ein schlankes Team.</h3>
                         <p>Konzentration auf das Wesentliche ist eine Tugend. 
                             Unser Ziel ist es, dies möglichst diszipliniert umzusetzen.
-                            Dabei stehen wir auf den Schultern von Riesen und greifen auf Spitzenforschung zurück.
+                            Und das Wesentliche ist für uns Dein Trainingserfolg.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -47,17 +62,32 @@ const UeberUnsPage = () => {
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col md={6}>
-                        <p className="mintitle">Unser Anspruch</p>
-                        <h3>Wir sind durch & durch nachhaltig.</h3>
-                        <p>Wir verbessern konstant unsere Trainings, damit Du nachhaltig Fähigkeiten aufbauen kannst.
-                            Digitales Training hat eine hervorragende Klimabilanz. 
-                            Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
+                        <p className="mintitle">Unser Dank</p>
+                        <h3>Wir stehen auf Riesen-Schultern.</h3>
+                        <p>Wir erstellen unsere Trainings auf Basis von Spitzenforschung und Best-Practices aus der Praxis. 
+                            Wir suchen und analysiren, lassen uns inspirieren und entwicklen darauf aufbauend neue Trainings für Dich.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-                        <FontAwesomeIcon icon={['fal', 'seedling']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#67A4F4" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'flower-tulip']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#418DF1" transform="shrink-8" />
-                        <FontAwesomeIcon icon={['fal', 'tree-alt']} fixedWidth size="5x" mask={['fas', 'rectangle-landscape']} color="#4285F4" transform="shrink-8" />
+                        <strong>
+                            Chip Conley • 
+                            John Doerr • 
+                            Amy Edmundson • 
+                            Tasha Eurich • 
+                            Atul Gawande • 
+                            Adam Grant • 
+                            Jeremy Gutsche • 
+                            Ben Horrowitz • 
+                            Tom Kelley • 
+                            Patrick Lencioni •
+                            Vittorio Loreto • 
+                            Max De Pree • 
+                            Edgar Schein • 
+                            F. Schulz von Thun • 
+                            Kim Scott • 
+                            J.J. Sutherland • 
+                            Karl Weick
+                        </strong>
                     </Col>
                 </Row>
             </Container>
