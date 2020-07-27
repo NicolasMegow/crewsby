@@ -56,6 +56,14 @@ const Header = () => {
                                 </Nav.Item>
                             </>
                                     ) : (
+                                        <>
+                                        <Nav.Item>
+                                        <Link to='/' className="btn btn-outline-primary" style={{marginRight:".5rem"}} onClick={event => {
+                                            event.preventDefault()
+                                            loginWithPopup({ action: 'signup' })
+                                            }}>Anmelden
+                                        </Link>
+                                    </Nav.Item>
                                     <Nav.Item>
                                         <Link to='/' className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
                                             event.preventDefault()
@@ -63,6 +71,7 @@ const Header = () => {
                                             }}>Einloggen
                                         </Link>
                                     </Nav.Item>
+                                    </>
                                 )}
                         </Nav>
                     </Navbar.Collapse>
