@@ -10,6 +10,7 @@ import ComingSoon from "../components/app/comingsoon"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/layout/loading"
+import Login from "../components/layout/login"
 
 import data from "../content/filter.json"
 
@@ -70,13 +71,7 @@ const TutorialPage = () => {
           </Tabs>
         </Container>
       ) : (
-        <Container>
-          <Row>
-            <Col>
-              <h1>Bitte erst einloggen.</h1>
-            </Col>
-          </Row>
-        </Container>
+        <Login />
       )}
     </Layout>
   )

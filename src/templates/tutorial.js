@@ -4,57 +4,22 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import Loading from "../components/layout/loading"
+import Login from "../components/layout/login"
 import faunadb, { query as q } from "faunadb"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "katex/dist/katex.min.css"
 import Hint from "../components/app/hint"
+import TButton from "../components/app/trainingbutton"
+import TNav from "../components/app/trainingnav"
 
-import { Container, Row, Col, Nav } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Container, Row, Col } from 'react-bootstrap'
+
 
 
 const shortcodes = { Hint, Row, Col }
-
-var styles = {
-    divided: {
-        display: 'flex',
-        alignItems: 'center',
-        maxWidth: '10rem',
-      },
-    divider: {
-        flexGrow: '1',
-        borderBottom: '1px dashed #DAE4F2',
-        margin: '5px',
-      },
-    tutnav: {
-        fontSize: "1rem",
-        color: '#ffffff',
-        backgroundColor: '#DAE4F2',
-        border: '1px solid #DAE4F2',
-        borderRadius: '6px',
-        paddingLeft: '0.5rem',
-        paddingRight: '0.5rem',
-    },
-    tutnavActive: {
-        fontSize: "1rem",
-        color: '#ffffff',
-        backgroundColor: '#4285F4',
-        border: '1px solid #4285F4',
-        borderRadius: '6px',
-        paddingLeft: '0.5rem',
-        paddingRight: '0.5rem',
-    },
-}
-
-
-const isActive = (key1, key2) => {
-    if (key1 === key2) {
-        return styles.tutnavActive
-    }
-    return styles.tutnav
-}
 
 export const query = graphql`
     query($slug: String!) {
@@ -87,16 +52,7 @@ const Tutorial = (props) => {
             ).then((ret) => console.log(ret))
     } */}
     if (loading) {
-        return <Layout>
-            <Head title="Tutorial-Navigator" />
-            <Container>
-                <Row>
-                    <Col>
-                        <h1>Loading...</h1>
-                    </Col>
-                </Row>
-            </Container>
-        </Layout>
+        return (<><Loading /></>)
     }
 
     const skill = props.data.mdx.frontmatter.skill
@@ -117,25 +73,7 @@ const Tutorial = (props) => {
                             </p>
                         </Col>
                         <Col md={4}>
-                            <Nav style={styles.divided} className="ml-auto">
-                                <Nav.Item>
-                                    <Nav.Link style={isActive("Info", type)} as="div">
-                                        <FontAwesomeIcon icon={['fas', 'lightbulb']} fixedWidth />
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <span style={styles.divider}></span>
-                                <Nav.Item>
-                                    <Nav.Link style={isActive("Übung", type)} as="div">
-                                        <FontAwesomeIcon icon={['fas', 'stopwatch']} fixedWidth />
-                                    </Nav.Link>
-                                </Nav.Item>
-                                <span style={styles.divider}></span>
-                                <Nav.Item>
-                                    <Nav.Link style={isActive("Rückblick", type)} as="div">
-                                        <FontAwesomeIcon icon={['fas', 'question']} fixedWidth />
-                                    </Nav.Link>
-                                </Nav.Item>
-                            </Nav>
+                            <TNav type={type}/>
                         </Col>
                     </Row>
                     <Row>
@@ -143,30 +81,10 @@ const Tutorial = (props) => {
                             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col>
-                            <p>
-                                {type === "Rückblick" &&
-                                    <Link to={`/erfolg`} className="btn btn-primary btn-lg">Training abschliessen</Link>
-                                }
-                                {type === "Info" &&
-                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Übung starten</Link>
-                                }
-                                {type === "Übung" &&
-                                    <Link to={`/meine-trainings/${next}`} className="btn btn-primary btn-lg">Rückblick starten</Link>
-                                }
-                            </p>
-                        </Col>
-                    </Row>
+                    <TButton type={type} next={next} />
                 </Container>
             ) : (
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1>Bitte erst einloggen ;)</h1>
-                            </Col>
-                        </Row>
-                    </Container>
+                <Login />
                 )}
         </Layout>
         </MDXProvider>
