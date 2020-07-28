@@ -8,9 +8,9 @@ import data from "../../content/coming-soon.json"
 class ComingSoon extends React.Component {
     render() {
         return (
-            <Row>
+            <Row style={{ marginTop: "3rem" }}>
                 <Col lg={6} style={{ marginBottom: "2rem" }}>
-                    <h2 style={{marginBottom:"1.4rem"}}>Team-Trainings{' '}<small>•{' '}in Entwicklung</small></h2>
+                    <h2 style={{marginBottom:"2rem"}}>Team-Trainings{' '}<small>•{' '}in Entwicklung</small></h2>
                     {data.TUTS[0].TM.map(goal => {
                         return (
                             <Row key={goal.part} style={{ marginBottom: "2rem" }}>
@@ -28,7 +28,7 @@ class ComingSoon extends React.Component {
                     })}
                 </Col>
                 <Col lg={6} style={{ marginBottom: "2rem" }}>
-                    <h2 style={{marginBottom:"1.4rem"}}>Solo-Trainings{' '}<small>•{' '}in Entwicklung</small></h2>
+                    <h2 style={{marginBottom:"2rem"}}>Solo-Trainings{' '}<small>•{' '}in Entwicklung</small></h2>
                     {data.TUTS[1].SO.map(goal => {
                         return (
                             <Row key={goal.part} style={{ marginBottom: "2rem" }}>
