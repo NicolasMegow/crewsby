@@ -20,6 +20,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
             node {
               fields {
                 slug
+                trainingType
               }
             }
           }
@@ -28,14 +29,22 @@ module.exports.createPages = async function ({ actions, graphql }) {
     `).then(res => {
       res.data.allMdx.edges.forEach(edge => {
         const slug = edge.node.fields.slug
+        const type = edge.node.fields.trainingType
+        if (type=="solo-trainings") {
         actions.createPage({
           path: `${slug}`,
-          component: require.resolve(`./src/templates/tutorial.js`),
+          component: require.resolve(`./src/templates/solo-template.js`),
           context: { slug },
         })
-      })
+        } else {
+          actions.createPage({
+            path: `${slug}`,
+            component: require.resolve(`./src/templates/team-template.js`),
+            context: { slug },
+          })
+        }
     })
-  }
+  })}
 
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.

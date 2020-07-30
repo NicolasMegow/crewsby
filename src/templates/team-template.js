@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
@@ -30,7 +30,7 @@ export const query = graphql`
             frontmatter {
                 skill
                 level
-                type
+                part
                 part
                 date
                 version
@@ -42,7 +42,7 @@ export const query = graphql`
 `
 
 
-const Tutorial = (props) => {
+const TeamTemplate = (props) => {
     const { isAuthenticated, loading, user } = useAuth0()
 {/*    const fauna_secret = user["https://fauna.com/id/secret"];
     async function updateUserLevel() {
@@ -60,8 +60,9 @@ const Tutorial = (props) => {
 
     const skill = props.data.mdx.frontmatter.skill
     const level = props.data.mdx.frontmatter.level
-    const type = props.data.mdx.frontmatter.part
+    const part = props.data.mdx.frontmatter.part
     const next = props.data.mdx.frontmatter.next
+    const type = props.data.mdx.fields.trainingType
 
     return (
         <MDXProvider components={shortcodes}>
@@ -72,11 +73,11 @@ const Tutorial = (props) => {
                     <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
                         <Col md={8} style={{marginTop:".6rem"}}>
                             <p style={{fontSize:"1rem"}}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
-                                <span style={{color:"#4285F4"}}>{type}</span>
+                                <span style={{color:"#4285F4"}}>{part}</span>
                             </p>
                         </Col>
                         <Col md={4}>
-                            <TNav type={type}/>
+                            <TNav part={part}/>
                         </Col>
                     </Row>
                     <Row>
@@ -84,7 +85,7 @@ const Tutorial = (props) => {
                             <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>
-                    <TButton type={type} next={next} />
+                    <TButton part={part} next={next} type={type}/>
                 </Container>
             ) : (
                 <Login />
@@ -94,4 +95,4 @@ const Tutorial = (props) => {
     )
 }
 
-export default Tutorial
+export default TeamTemplate

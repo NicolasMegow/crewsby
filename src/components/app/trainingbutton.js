@@ -7,14 +7,14 @@ import { Row, Col } from 'react-bootstrap'
 class TButton extends React.Component {
     render() {
         const content = {
-            "Rückblick": { url: "/", text: "Training abschliessen" },
-            "Info": { url: "/meine-trainings/", text: "Übung starten" },
-            "Übung": { url: "/meine-trainings/", text: "Rückblick starten" }
+            "Rückblick": { url: `/${this.props.type}`, text: "Training abschliessen" },
+            "Info": { url: `/${this.props.type}/${this.props.next}`, text: "Übung starten" },
+            "Übung": { url: `/${this.props.type}/${this.props.next}`, text: "Rückblick starten" }
         }
         return (
             <Row>
                 <Col>
-                    <Link to={content[this.props.type].url + this.props.next} className="btn btn-primary btn-lg">{content[this.props.type].text}</Link>
+                    <Link to={content[this.props.part].url} className="btn btn-primary btn-lg">{content[this.props.part].text}</Link>
                 </Col>
             </Row>
         )

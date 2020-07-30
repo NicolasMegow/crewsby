@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col, Tabs, Tab } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
@@ -8,25 +8,12 @@ import Legend from "../components/app/legend"
 import TrainingTile from "../components/app/trainingtile"
 import ComingSoon from "../components/app/comingsoon"
 
-import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-import Loading from "../components/layout/loading"
-import Login from "../components/layout/login"
-
 import data from "../content/filter.json"
 
 const TutorialPage = () => {
-  const { isAuthenticated, loading } = useAuth0()
-  if (loading) {
-    return (
-      <>
-        <Loading />
-      </>
-    )
-  }
   return (
     <Layout>
       <Head title="Meine Trainings" />
-      {isAuthenticated ? (
         <Container>
           <Row>
             <Col>
@@ -65,9 +52,6 @@ const TutorialPage = () => {
             </Col>
           </Row>
         </Container>
-      ) : (
-        <Login />
-      )}
     </Layout>
   )
 }

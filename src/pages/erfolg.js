@@ -11,14 +11,9 @@ import Emoji from "../components/shared/emoji"
 
 const ErfolgPage = () => {
     const { isAuthenticated, loading, user } = useAuth0()
-    if (loading) {
-        return <p>Loading...</p>
-    }
-
     return (
         <Layout>
             <Head title="Erfolg" />
-            {isAuthenticated ? (
                 <Container style={{ maxWidth: "700px", marginLeft: "0" }}>
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
@@ -27,7 +22,9 @@ const ErfolgPage = () => {
                                 <Emoji symbol="🎉" label="party"/>{' '}
                                 <Emoji symbol="🎈" label="balloon"/>
                             </span>
+                            {isAuthenticated ? (
                             <h1 style={{fontSize: "2rem", marginTop:"4rem"}}>Super, {user.nickname}</h1>
+                            ):(null)}
                             <h3>Weiter so!</h3>
                         </Col>
                     </Row>
@@ -42,15 +39,6 @@ const ErfolgPage = () => {
                         </Col>
                     </Row>
                 </Container>
-            ) : (
-                    <Container>
-                        <Row>
-                            <Col>
-                                <h1>Bitte erst einloggen.</h1>
-                            </Col>
-                        </Row>
-                    </Container>
-                )}
         </Layout>
     )
 }
