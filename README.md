@@ -1,1 +1,1 @@
-# Development of a teambuidling-tool
+# Crewsby is the trainings-flatrate for modern teamwork

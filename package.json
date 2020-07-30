@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "crewsby",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "The trainin-flatrate for modern teamwork",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

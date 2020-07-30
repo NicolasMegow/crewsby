@@ -46,19 +46,19 @@ class TButton extends React.Component {
         return (
             <Nav style={styles.divided} className="ml-auto">
             <Nav.Item>
-                <Nav.Link style={isActive("Info", this.props.type)} as="div">
+                <Nav.Link style={isActive("Info", this.props.part)} as="div">
                     <FontAwesomeIcon icon={['fas', 'lightbulb']} fixedWidth />
                 </Nav.Link>
             </Nav.Item>
             <span style={styles.divider}></span>
             <Nav.Item>
-                <Nav.Link style={isActive("Übung", this.props.type)} as="div">
+                <Nav.Link style={isActive("Übung", this.props.part)} as="div">
                     <FontAwesomeIcon icon={['fas', 'stopwatch']} fixedWidth />
                 </Nav.Link>
             </Nav.Item>
             <span style={styles.divider}></span>
             <Nav.Item>
-                <Nav.Link style={isActive("Rückblick", this.props.type)} as="div">
+                <Nav.Link style={isActive("Rückblick", this.props.part)} as="div">
                     <FontAwesomeIcon icon={['fas', 'question']} fixedWidth />
                 </Nav.Link>
             </Nav.Item>

@@ -9,7 +9,7 @@ const Login = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1>Bitte erst einloggen ;)</h1>
+                    <h1 style={{marginBottom:"3rem"}}>Bitte erst einloggen ;)</h1>
                     <Link to='/' className="btn btn-outline-primary" style={{ marginRight: ".5rem" }} onClick={event => {
                         event.preventDefault()
                         loginWithPopup({ action: 'signup' })

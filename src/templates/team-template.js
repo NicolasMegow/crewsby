@@ -28,7 +28,7 @@ export const query = graphql`
             frontmatter {
                 skill
                 level
-                type
+                part
                 part
                 date
                 version
@@ -39,29 +39,26 @@ export const query = graphql`
     }
 `
 
-const Tutorial = ({ data }) => {
+const TeamTemplate = ({ data }) => {
     const { isAuthenticated, loading, user } = useAuth0();
 
     if (loading) {
         return (<Loading />)
     }
 
-    const { trainingType } = data.mdx.fields;
     const {
         skill,
         level,
-        part: type,
+        part,
         next,
     } = data.mdx.frontmatter;
+    const { trainingType: type } = data.mdx.fields;
 
-    console.log("level", level)
 
     const updateUserLevel = async () => {
-        console.log("updateUserLevel called")
         const fauna_secret = user["https://fauna.com/id/secret"];
         const client = new faunadb.Client({ secret: fauna_secret });
-
-        const docKey = trainingType == 'team-trainings' ? 'punkte_team' : 'punkte_solo';
+        const docKey = type == 'team-trainings' ? 'punkte_team' : 'punkte_solo';
 
         await client.query(
             q.Update(
@@ -89,11 +86,11 @@ const Tutorial = ({ data }) => {
                         <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
                             <Col md={8} style={{marginTop:".6rem"}}>
                                 <p style={{fontSize:"1rem"}}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
-                                    <span style={{color:"#4285F4"}}>{type}</span>
+                                    <span style={{color:"#4285F4"}}>{part}</span>
                                 </p>
                             </Col>
                             <Col md={4}>
-                                <TNav type={type}/>
+                                <TNav part={part}/>
                             </Col>
                         </Row>
                         <Row>
@@ -102,10 +99,10 @@ const Tutorial = ({ data }) => {
                             </Col>
                         </Row>
                         <TButton
-                            type={type}
+                            part={part}
                             next={next}
-                            trainingType={trainingType}
-                            onClick={type == 'Rückblick' && updateUserLevel || undefined}
+                            type={type}
+                            onClick={part == 'Rückblick' && updateUserLevel || undefined}
                         />
                     </Container>
                 ) : (
@@ -116,4 +113,4 @@ const Tutorial = ({ data }) => {
     )
 }
 
-export default Tutorial;
+export default TeamTemplate;

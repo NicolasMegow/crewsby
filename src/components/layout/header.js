@@ -28,10 +28,10 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/solo-trainings">Solo-Training</Link>
+                                <Link className={headerStyles.navItem} to="/solo-trainings">Solo-Trainings</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/team-trainings">Team-Training</Link>
+                                <Link className={headerStyles.navItem} to="/team-trainings">Team-Trainings</Link>
                             </Nav.Item>
                         </Nav>
                         <hr style={{marginTop:"1rem",marginBottom:"1rem"}}></hr>

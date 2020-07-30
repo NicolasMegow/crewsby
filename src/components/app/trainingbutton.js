@@ -2,22 +2,22 @@ import React from "react"
 import { Link } from 'gatsby'
 import { Row, Col } from 'react-bootstrap'
 
-const TButton = ({ type, next, trainingType, onClick }) => {
+const TButton = ({ part, next, type, onClick }) => {
     const content = {
-        'Rückblick': { url: '/', text: 'Training abschliessen' },
-        'Info': { url: `/${trainingType}/`, text: 'Übung starten' },
-        'Übung': { url: `/${trainingType}/`, text: 'Rückblick starten' }
+        'Rückblick': { url: `/${type}`, text: 'Training abschliessen' },
+        'Info': { url: `/${type}/${next}`, text: 'Übung starten' },
+        'Übung': { url: `/${type}/${next}`, text: 'Rückblick starten' },
     }
 
     return (
         <Row>
             <Col>
                 <Link
-                    to={content[type].url + next}
+                    to={content[part].url}
                     className="btn btn-primary btn-lg"
                     onClick={onClick}
                 >
-                    {content[type].text}
+                    {content[part].text}
                 </Link>
             </Col>
         </Row>
