@@ -8,11 +8,13 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'CREWSBY',
-    author: "Nicolas Megow"
+    author: "Nicolas Megow",
+    siteUrl: `https://crewsby.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -26,13 +28,20 @@ module.exports = {
         respectDNT: true,
       },
     },
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `pages`,
-      path: `${__dirname}/src/`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'solo-trainings',
+        path: `${__dirname}/src/content/solo-trainings`,
+      },
     },
-  },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'team-trainings',
+        path: `${__dirname}/src/content/team-trainings`,
+      },
+    },
   `gatsby-plugin-sharp`,
   `gatsby-remark-images`,
   {

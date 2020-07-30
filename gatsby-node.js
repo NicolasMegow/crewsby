@@ -1,15 +1,14 @@
 const path = require('path')
 
-module.exports.onCreateNode = ({ node, actions }) => {
+module.exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
 
     if (node.internal.type == "Mdx") {
+        const fileNode = getNode(node.parent);
+        const pathPrefix = fileNode.sourceInstanceName
         const slug = path.basename(node.fileAbsolutePath, '.mdx')
-        createNodeField({
-            node, 
-            name: 'slug',
-            value: slug,
-        })
+        createNodeField({ node, name: "slug", value: `/${pathPrefix}/${slug}` });
+        createNodeField({ node, name: 'trainingType', value: pathPrefix });
     }
   }
 
@@ -30,7 +29,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
       res.data.allMdx.edges.forEach(edge => {
         const slug = edge.node.fields.slug
         actions.createPage({
-          path: `/meine-trainings/${slug}`,
+          path: `${slug}`,
           component: require.resolve(`./src/templates/tutorial.js`),
           context: { slug },
         })

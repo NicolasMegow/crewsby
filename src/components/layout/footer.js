@@ -19,6 +19,7 @@ const Footer = () => {
                     </Col>
                     <Col md={8} style={{ display: "flex", justifyContent: "flex-end"}}>
                         <Nav>
+                            <Nav.Item><Link className={footerStyles.linkItem} to="/ueber-uns">Über uns</Link></Nav.Item>
                             <Nav.Item><Link className={footerStyles.linkItem} to="/impressum">Impressum</Link></Nav.Item>
                             <Nav.Item><Link className={footerStyles.linkItem} to="/datenschutz">Datenschutz</Link></Nav.Item>
                         </Nav>

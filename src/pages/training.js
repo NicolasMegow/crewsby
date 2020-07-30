@@ -9,6 +9,8 @@ import CTA from "../components/cta"
 import Teamboat from "../img/svg/EinBoot.svg"
 import DigiTraining from "../img/svg/DigiTraining.svg"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const TrainingPage = () => {
     return (
         <Layout>
@@ -119,21 +121,21 @@ const TrainingPage = () => {
                 </Row>
                 <Row style={{marginTop:"4rem"}}>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">1</div>
+                        <div className="feature-num"><FontAwesomeIcon icon={['fal', 'lightbulb']}/></div>
                         <div>
                             <h3>Info</h3>
                             <p className="feature-text">Perspektive verstehen.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">2</div>
+                        <div className="feature-num"><FontAwesomeIcon icon={['fal', 'stopwatch']}/></div>
                         <div>
                             <h3>Übung</h3>
                             <p className="feature-text">Perspektive ausprobieren.</p>
                         </div>
                     </Col>
                     <Col lg={4} style={{display: "flex", alignItems: "flex-end"}}>
-                        <div className="feature-num">3</div>
+                        <div className="feature-num"><FontAwesomeIcon icon={['fal', 'question']}/></div>
                         <div>
                             <h3>Rückblick</h3>
                             <p className="feature-text">Perspektive sacken lassen.</p>

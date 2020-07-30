@@ -3,22 +3,6 @@
     {
       "TM": [
         {
-          "name": "Trainings-Empfehlungen",
-          "symbol":"💯",
-          "label":"100",
-          "job": "Training starten",
-          "part": "TMTE",
-          "tuts": [
-            {
-              "thema": "Vertrauen aufbauen",
-              "key": "VEN1",
-              "inhalt": "1. Menschen sehen",
-              "icon": ["fal", "head-side"],
-              "disabled": "false",
-              "url": "vertrauen-1a"
-            }]
-        },
-        {
           "name": "Starkes Teamgefühl",
           "symbol":"❤️",
           "label":"heart",
@@ -89,22 +73,6 @@
     },
     {
       "SO": [
-        {
-          "name": "Trainings-Empfehlungen",
-          "symbol":"💯",
-          "label":"100",
-          "job": "Training starten",
-          "part": "SOTE",
-          "tuts": [
-            {
-              "thema": "Wertschätzung zeigen",
-              "key": "WEG1",
-              "inhalt": "1. Kleine Gesten",
-              "icon": ["fal", "gift"],
-              "disabled": "false",
-              "url": "wertschaetzung-1a"
-            }]
-        },
         {
           "name": "Starkes Teamgefühl",
           "symbol":"❤️",

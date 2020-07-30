@@ -24,6 +24,9 @@ const shortcodes = { Hint, Row, Col }
 export const query = graphql`
     query($slug: String!) {
         mdx (fields: { slug: { eq: $slug } }) {
+            fields {
+                trainingType
+            }
             frontmatter {
                 skill
                 level

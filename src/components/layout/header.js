@@ -28,22 +28,16 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/training">Training</Link>
+                                <Link className={headerStyles.navItem} to="/solo-trainings">Solo-Training</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/preise">Preise</Link>
-                            </Nav.Item>
-                            <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/ueber-uns">Über uns</Link>
+                                <Link className={headerStyles.navItem} to="/team-trainings">Team-Training</Link>
                             </Nav.Item>
                         </Nav>
                         <hr style={{marginTop:"1rem",marginBottom:"1rem"}}></hr>
                         <Nav className="ml-auto">
                             {isAuthenticated ? (
                             <>
-                                <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/meine-trainings">Meine Trainings</Link>
-                                </Nav.Item>
                                 <Nav.Item>
                                     <Link className={headerStyles.navItem} to="/mein-account">Mein Account</Link>
                                 </Nav.Item>

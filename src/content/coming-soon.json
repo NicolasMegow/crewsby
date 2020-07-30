@@ -1,6 +1,5 @@
 {
-    "TUTS": [
-      {
+    "TUTS": {
         "TM": [
           {
             "name": "Starkes Teamgefühl",
@@ -26,9 +25,7 @@
             "part": "TMTA",
             "tuts": ["Fehler analysieren", "Sprints einlegen", "Innovation entwickeln"]
           }
-        ]
-      },
-      {
+        ],
         "SO": [
           {
             "name": "Starkes Teamgefühl",
@@ -56,6 +53,4 @@
           }
         ]
       }
-    ]
-  }
-  
+    }
