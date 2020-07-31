@@ -10,7 +10,7 @@ import Emoji from "../components/shared/emoji"
 
 
 const ErfolgPage = () => {
-    const { isAuthenticated, loading, user } = useAuth0()
+    const { isAuthenticated, user } = useAuth0()
     return (
         <Layout>
             <Head title="Erfolg" />

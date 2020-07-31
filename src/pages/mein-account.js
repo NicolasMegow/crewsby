@@ -27,7 +27,7 @@ const Profil = () => {
             setData(newData);
         }
         getUserProfile()
-    }, []);
+    }, [fauna_secret, user.email]);
 
     return (
         <Row style={{ marginTop: "4rem" }}>
@@ -36,7 +36,6 @@ const Profil = () => {
                 <p><strong>Profil:</strong> {user.nickname}</p>
                 <p><strong>E-Mail:</strong> {user.email}</p>
                 <p><strong>Unternehmen:</strong> TBD</p>
-                <pre>{JSON.stringify(data, null, 2)}</pre>
                 {data["punkte_solo"] && (
                     <div>
                         <p>
@@ -53,6 +52,7 @@ const Profil = () => {
                         </p>
                     </div>
                 )}
+                <pre>{JSON.stringify(data, null, 2)}</pre>
             </Col>
         </Row>
     );

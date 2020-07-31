@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { Row, Col } from 'react-bootstrap'
 
-import footerStyles from "../styles/footer.module.scss"
-import NameCTA from "../img/svg/CTA.svg"
+import footerStyles from "../../styles/footer.module.scss"
+import NameCTA from "../../img/svg/CTA.svg"
 
 const CTA = () => {
     return (

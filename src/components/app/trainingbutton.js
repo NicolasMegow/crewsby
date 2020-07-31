@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 import { Row, Col } from 'react-bootstrap'
 
-const TButton = ({ part, next, type, onClick }) => {
+const TButton = ({ part, next, type, onClickInfo }) => {
     const content = {
         'Rückblick': { url: `/${type}`, text: 'Training abschliessen' },
         'Info': { url: `/${type}/${next}`, text: 'Übung starten' },
@@ -15,7 +15,7 @@ const TButton = ({ part, next, type, onClick }) => {
                 <Link
                     to={content[part].url}
                     className="btn btn-primary btn-lg"
-                    onClick={onClick}
+                    onClick={onClickInfo}
                 >
                     {content[part].text}
                 </Link>

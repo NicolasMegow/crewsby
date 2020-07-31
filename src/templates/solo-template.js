@@ -47,7 +47,7 @@ const SoloTemplate = ({ data }) => {
         if (loading || !isAuthenticated) return;
         const fauna_secret = user["https://fauna.com/id/secret"];
         const client = new faunadb.Client({ secret: fauna_secret });
-        const docKey = type == 'team-trainings' ? 'punkte_team' : 'punkte_solo';
+        const docKey = type === 'team-trainings' ? 'punkte_team' : 'punkte_solo';
 
         await client.query(
             q.Update(
@@ -90,7 +90,7 @@ const SoloTemplate = ({ data }) => {
                         type={type}
                         next={next}
                         part={part}
-                        onClick={part == 'Rückblick' && updateUserLevel || undefined}
+                        onClickInfo={part === 'Rückblick' && ( updateUserLevel || undefined )}
                     />
                 </Container>
         </Layout>
