@@ -5,8 +5,8 @@ import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import Emoji from "../components/shared/emoji"
 import Legend from "../components/app/legend"
-import TrainingTile from "../components/app/trainingtile"
-import ComingSoon from "../components/app/comingsoon"
+import TrainingTile from "../components/app/training-tile"
+import ComingSoon from "../components/app/coming-soon"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/app/loading"
@@ -27,7 +27,7 @@ const TutorialPage = () => {
         <Container>
           <Row style={{marginBottom:"2rem", }}>
             <Col>
-              <h1 style={{fontSize:"2rem"}}>Verbessere Deinen Teambeitrag</h1>
+              <h1 style={{fontSize:"2rem", marginBottom:"1rem"}}>Verbessere Deinen Teambeitrag</h1>
               <Legend info="SO" />
               {!isAuthenticated ? (<LoginReminder/>):(null)}
             </Col>

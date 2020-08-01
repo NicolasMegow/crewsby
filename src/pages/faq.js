@@ -15,7 +15,7 @@ const PreisePage = () => {
             <Container>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <h2><Emoji symbol="❓" label="question"/>{' '}Deine Fragen, unsere Antworten.</h2>
+                        <h1><Emoji symbol="❓" label="question"/>{' '}Deine Fragen,<br></br>unsere Antworten<span style={{color:"#4285F4"}}>.</span></h1>
                         {FAQData.content.map((hinweis) => (
                             <div style={{marginTop:"3rem"}} key={hinweis.id}>
                             <h3>{hinweis.q}</h3>

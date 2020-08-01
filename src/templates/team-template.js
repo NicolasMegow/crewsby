@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
@@ -12,10 +13,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "katex/dist/katex.min.css"
 import Hint from "../components/app/hint"
-import TButton from "../components/app/trainingbutton"
-import TNav from "../components/app/trainingnav"
-
-import { Container, Row, Col } from 'react-bootstrap'
+import TButton from "../components/app/training-button"
+import TNav from "../components/app/training-nav"
 
 const shortcodes = { Hint, Row, Col }
 

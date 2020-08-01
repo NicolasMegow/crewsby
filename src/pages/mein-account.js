@@ -6,6 +6,7 @@ import { Container, Row, Col, Nav } from 'react-bootstrap'
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import headerStyles from "../styles/header.module.scss"
+import Emoji from "../components/shared/emoji"
 
 import Loading from "../components/app/loading"
 import Login from "../components/app/login"
@@ -62,6 +63,7 @@ const Einstellungen = () => (
     <Row style={{ marginTop: "4rem" }}>
         <Col>
             <h1 style={{ fontSize: "2rem", marginBottom: "2rem" }}>Hier siehst du bald deine Einstellungen.</h1>
+            <p><Emoji symbol="👍" label="like" />{" "}Bisher ist alles kostenlos.</p>
         </Col>
     </Row>
 );

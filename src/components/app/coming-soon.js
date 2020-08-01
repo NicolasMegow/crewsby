@@ -1,7 +1,7 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 
-import Emoji from "../../components/shared/emoji"
+import Emoji from "../shared/emoji"
 
 import data from "../../content/coming-soon.json"
 
