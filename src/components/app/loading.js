@@ -1,8 +1,8 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 
-import Layout from "./layout"
-import Head from "./head"
+import Layout from "../layout/layout"
+import Head from "../layout/head"
 
 const Loading = () => {
   return(

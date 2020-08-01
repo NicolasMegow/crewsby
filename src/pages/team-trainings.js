@@ -9,8 +9,8 @@ import TrainingTile from "../components/app/trainingtile"
 import ComingSoon from "../components/app/comingsoon"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-import Loading from "../components/layout/loading"
-import Login from "../components/layout/login"
+import Loading from "../components/app/loading"
+import Login from "../components/app/login"
 
 import data from "../content/filter.json"
 
@@ -28,6 +28,7 @@ const TutorialPage = () => {
         <Container>
           <Row>
             <Col>
+              <h1 style={{fontSize:"2rem"}}>Verbessert eure Teamarbeit</h1>
               <Legend info="SO" />
             </Col>
           </Row>

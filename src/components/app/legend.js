@@ -20,7 +20,7 @@ class Legend extends React.Component {
             }
         return (
             <div>
-                <Row style={{marginBottom:"1.4rem", paddingLeft:"1rem"}}>
+                <Row style={{paddingTop:"1rem", border:"1px solid #000000"}}>
                     <Col md={6} lg={3}>
                         <p><FontAwesomeIcon icon={content[this.props.info].col1_icon} fixedWidth color="#78A9f7"/>{" "}
                         {content[this.props.info].col1_text}</p>

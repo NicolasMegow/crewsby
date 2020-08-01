@@ -7,8 +7,8 @@ import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import headerStyles from "../styles/header.module.scss"
 
-import Loading from "../components/layout/loading"
-import Login from "../components/layout/login"
+import Loading from "../components/app/loading"
+import Login from "../components/app/login"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 
