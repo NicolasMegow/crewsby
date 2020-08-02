@@ -7,6 +7,8 @@ import Head from "../components/layout/head"
 import StarRating from "../components/app/star-rating"
 
 const TestingPage = () => {
+    const curTime = new Date().toLocaleString();
+
     return (
         <Layout>
             <Head title="TESTING" />
@@ -14,6 +16,7 @@ const TestingPage = () => {
                     <Row style={{ marginTop: "3rem" }}>
                         <Col>
                             <p>Läuft</p>
+                            <p>{curTime}</p>
                             <StarRating />
                         </Col>
                     </Row>
