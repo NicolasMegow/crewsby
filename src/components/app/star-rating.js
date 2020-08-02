@@ -25,7 +25,7 @@ const StarRating = () => {
       };
 
     const sendFeedback = async (ratingValue, feedbackText) => {
-        const fauna_secret = process.env.FAUNA_FEEDBACK;
+        const fauna_secret = process.env.GATSBY_FAUNA_FEEDBACK;
         const client = new faunadb.Client({ secret: fauna_secret });
         await client.query(
             q.Create(
