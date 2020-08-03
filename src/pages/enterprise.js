@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
@@ -22,7 +23,27 @@ const PreisePage = () => {
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
-                    <Col>
+                <Col md style={{ marginBottom: "4rem" }}>
+                        <h2>Team-Paket</h2>
+                        <p>Für 1 Team & bis zu 8 Mitglieder<br></br>
+                        Beinhaltet:</p>
+                        <p>
+                            <FaCheck />{' '} alle Trainings<br></br>
+                            <FaCheck />{' '} für alle Mitglieder<br></br>
+                            <FaCheck />{' '} in 9 Sprachen*<br></br>
+                            <br></br>
+                        </p>
+                        <p>
+                            <Emoji symbol="❤️" label="heart"/>{' '} Starkes Teamgefühl<br></br>
+                            <Emoji symbol="💪" label="muscle"/>{' '} Gesteigerte Leistung<br></br>
+                            <Emoji symbol="🧠" label="brain"/>{' '} Entfesselte Kreativität<br></br>
+                            <br></br></p>
+                        <h2 style={{ marginBottom: "0" }}>89 €</h2>
+                        <p>pro Monat</p>
+                        <Link to='/team-trainings' className="btn btn-secondary btn-lg">Mehr erfahren</Link>
+                        <p style={{ fontSize: "1rem" }}>1 Monat kostenlos & unverbindlich testen.</p>
+                    </Col>
+                    <Col md>
                         <h2>Enterprise-Paket</h2>
                         <p>Für 2+ Teams & unbegrenzte Mitglieder<br></br>
                         Beinhaltet das Team-Paket, plus:</p>
@@ -37,21 +58,19 @@ const PreisePage = () => {
                             <Emoji symbol="🌐" label="global"/>{' '} Unternehmensweite Standards<br></br>
                             <Emoji symbol="📈" label="results"/>{' '} Messbare Ergebnisse<br></br>
                             <br></br></p>
-                        <h2 style={{ marginBottom: "0" }}>9 €</h2>
-                        <p>pro Nutzer/Monat</p>
+                        <h2 style={{ marginBottom: "0" }}>49 €</h2>
+                        <p>pro Team/Monat</p>
                         <Button variant="secondary" size="lg" href="mailto:moin@crewsby.de">Gespräch vereinbaren</Button>
                     </Col>
                 </Row>
+                <CTA />
                 <Row style={{ marginTop: "2rem" }}>
                     <Col>
-                        <hr></hr>
                         <p style={{ fontSize: "1rem" }}>* Die Übersetzungen und Enterprise-Features sind noch im Entwicklungsprozess. 
                         Wir arbeiten wirklich hart daran Crewsby konstant & schnell zu verbessern.</p>
-                        <hr></hr>
                     </Col>
                 </Row>
             </Container>
-            <CTA />
         </Layout>
     )
 }

@@ -6,7 +6,7 @@ import Emoji from "../shared/emoji"
 const LoginReminder = () => {
     const { loginWithPopup } = useAuth0()
     return (
-        <>
+        <div style={{marginTop:".5rem"}}>
             <p><Emoji symbol="👉" label="duble" />{' '}
             <Link to='/'  onClick={event => {
                         event.preventDefault()
@@ -16,7 +16,7 @@ const LoginReminder = () => {
                     </Link>
             {' '}um Deinen Fortschritt zu speichern und Infos zu neuen Trainings zu erhalten.
             </p>
-        </>
+        </div>
     )
 }
 

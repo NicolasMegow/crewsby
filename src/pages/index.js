@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import FaCheck from "../components/shared/facheck"
+import Emoji from "../components/shared/emoji"
 import CTA from "../components/layout/cta"
 import FeatureRow from "../components/layout/feature-row"
 
@@ -26,7 +28,7 @@ const IndexPage = () => {
           <Col lg={6}>
             <p className="mintitle">Trainings-Flatrate</p>
             <h2>Trainiere unbegrenzt.</h2>
-            <p>Alle Trainings stehen Dir sofort 24/7 zur Verfügung.
+            <p>Alle Trainings stehen Dir 24/7 zur Verfügung.
             Mobil und am Desktop, zwischendurch oder geblockt.
             Setze Deine persönlichen Schwerpunkte und
             lerne gemeinsam im Team oder alleine für Dich.
@@ -44,9 +46,8 @@ const IndexPage = () => {
           <Col lg={6}>
             <p className="mintitle">Moderne Teamarbeit</p>
             <h2>Nutze bewährte Methoden.</h2>
-            <p>Moderne Teamarbeit hat viele Facetten.
-            Crewsby bietet Dir einen Einblick in alle bewährten Methoden.
-            So kannst Du mit Deinem Team schnell die für euch passende Elemente ausprobieren & anwenden.
+            <p>Fähigkeiten entstehen in der Anwendung. 
+              Mit Crewsby trainierst Du bewährte Methoden und kannst diese problemlos im Tagesgeschäft nutzen.
             </p>
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -59,6 +60,35 @@ const IndexPage = () => {
               <FaCheck />{' '}Scrum<br></br>
               <FaCheck />{' '}Design Thinking<br></br>
             </p>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "6rem" }}>
+          <Col>
+          <h2 style={{fontSize:"3.2rem", fontWeight:"bold", textAlign:"center"}}>Worauf wartest Du?</h2>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "2rem" }}>
+          <Col md style={{border:"1px solid #000000", padding:"1.4rem", margin:"1.4rem"}}>
+            <h3>Solo-Training</h3>
+            <strong>Kostenlos</strong>
+            <p style={{marginTop:"1.4rem"}}>Alle Solo-Trainings<br></br>für Dich.</p>
+            <p>
+              <Emoji symbol="💞" label="brain" />{' '}Beitrag zum Teamgefühl<br></br>
+              <Emoji symbol="⚡" label="heart" />{' '}Neue Fähigkeiten<br></br>
+              <Emoji symbol="💼" label="muscle" />{' '}Berufliche Weiterbildung  
+            </p>
+            <Link to='/solo-trainings' className="btn btn-primary btn-lg">Jetzt trainieren</Link>
+          </Col>
+          <Col md style={{border:"1px solid #000000", padding:"1.4rem", margin:"1.4rem"}}>
+            <h3>Team-Training</h3>
+            <strong>89€ / Monat</strong>
+            <p style={{marginTop:"1.4rem"}}>Alle Solo- & Team-Trainings<br></br>für Dich & Dein Team.</p>
+            <p>
+              <Emoji symbol="❤️" label="heart" />{' '}Starkes Teamgefühl<br></br>
+              <Emoji symbol="💪" label="muscle" />{' '}Gesteigerte Leistung<br></br>
+              <Emoji symbol="🧠" label="brain" />{' '}Entfesselte Kreativität
+            </p>
+            <Link to='/team-trainings' className="btn btn-outline-primary btn-lg">Mehr erfahren</Link>
           </Col>
         </Row>
       </Container>

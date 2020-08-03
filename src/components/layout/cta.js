@@ -12,12 +12,12 @@ const CTA = () => {
                 <Row>
                 <Col md={8}>
                     <p>Regelmäßige Trainings verbessern die Teamarbeit deutlich.
-                        Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst zum Fixpreis.
+                        Mit Crewsby trainierst Du alleine und mit Deinem Team so viel Du willst.
                     </p>
-                    <Link to="/preise" className="btn btn-secondary btn-lg">Kostenlos testen</Link>
+                    <Link to="/solo-trainings" className="btn btn-secondary btn-lg">Kostenlos trainieren</Link>
                 </Col>
                 <Col md={4} style={{ display: "flex", alignItems: "center", justifyContent: "space-around" }}>
-                    <NameCTA width="80%" height={180}/>
+                    <NameCTA height={120} style={{margin:"1.4rem 0"}}/>
                 </Col>
                 </Row>
             </div>
