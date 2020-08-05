@@ -19,7 +19,7 @@ const IndexPage = () => {
         <Row>
           <Col>
             <Teambuilding width="100%" />
-            <h1>Die Trainings-Flatrate für moderne Teamarbeit.</h1>
+            <h1>Einfache Trainings für super Teamarbeit.</h1>
             <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, als Team zusammen zu wachsen und agil zu arbeiten.</h2>
           </Col>
         </Row>
@@ -46,8 +46,8 @@ const IndexPage = () => {
           <Col lg={6}>
             <p className="mintitle">Moderne Teamarbeit</p>
             <h2>Nutze bewährte Methoden.</h2>
-            <p>Fähigkeiten entstehen in der Anwendung. 
-              Mit Crewsby trainierst Du bewährte Methoden und kannst diese problemlos im Tagesgeschäft nutzen.
+            <p>Fähigkeiten entstehen in der Anwendung.
+            Mit Crewsby trainierst Du bewährte Methoden und kannst diese problemlos im Tagesgeschäft nutzen.
             </p>
           </Col>
           <Col lg={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -64,25 +64,25 @@ const IndexPage = () => {
         </Row>
         <Row style={{ marginTop: "6rem" }}>
           <Col>
-          <h2 style={{fontSize:"3.2rem", fontWeight:"bold", textAlign:"center"}}>Worauf wartest Du?</h2>
+            <h2 style={{ fontSize: "3.2rem", fontWeight: "bold", textAlign: "center" }}>Training ohne Trainer.</h2>
           </Col>
         </Row>
         <Row style={{ marginTop: "2rem" }}>
-          <Col md style={{border:"1px solid #000000", padding:"1.4rem", margin:"1.4rem"}}>
-            <h3>Solo-Training</h3>
+          <Col md style={{ border: "1px solid #000000", padding: "1.4rem", margin: "1.4rem" }}>
+            <h3>Solo-Trainings</h3>
             <strong>Kostenlos</strong>
-            <p style={{marginTop:"1.4rem"}}>Alle Solo-Trainings<br></br>für Dich.</p>
+            <p style={{ marginTop: "1.4rem" }}>Alle Solo-Trainings<br></br>für Dich.</p>
             <p>
               <Emoji symbol="💞" label="brain" />{' '}Beitrag zum Teamgefühl<br></br>
               <Emoji symbol="⚡" label="heart" />{' '}Neue Fähigkeiten<br></br>
-              <Emoji symbol="💼" label="muscle" />{' '}Berufliche Weiterbildung  
+              <Emoji symbol="💼" label="muscle" />{' '}Berufliche Weiterbildung
             </p>
             <Link to='/solo-trainings' className="btn btn-primary btn-lg">Jetzt trainieren</Link>
           </Col>
-          <Col md style={{border:"1px solid #000000", padding:"1.4rem", margin:"1.4rem"}}>
-            <h3>Team-Training</h3>
+          <Col md style={{ border: "1px solid #000000", padding: "1.4rem", margin: "1.4rem" }}>
+            <h3>Team-Trainings</h3>
             <strong>89€ / Monat</strong>
-            <p style={{marginTop:"1.4rem"}}>Alle Solo- & Team-Trainings<br></br>für Dich & Dein Team.</p>
+            <p style={{ marginTop: "1.4rem" }}>Alle Solo- & Team-Trainings<br></br>für Dich & Dein Team.</p>
             <p>
               <Emoji symbol="❤️" label="heart" />{' '}Starkes Teamgefühl<br></br>
               <Emoji symbol="💪" label="muscle" />{' '}Gesteigerte Leistung<br></br>

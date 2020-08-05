@@ -15,6 +15,7 @@ import "katex/dist/katex.min.css"
 import Hint from "../components/app/hint"
 import TButton from "../components/app/training-button"
 import TNav from "../components/app/training-nav"
+import StarRating from "../components/app/star-rating"
 
 
 const shortcodes = { Hint, Row, Col }
@@ -47,6 +48,7 @@ const SoloTemplate = ({ data }) => {
 
     const updateUserLevel = async () => {
         if (loading || !isAuthenticated) return;
+        const curTime = new Date().toLocaleString();
         const fauna_secret = user["https://fauna.com/id/secret"];
         const client = new faunadb.Client({ secret: fauna_secret });
         const docKey = type === 'team-trainings' ? 'punkte_team' : 'punkte_solo';
@@ -63,24 +65,24 @@ const SoloTemplate = ({ data }) => {
                 //   statt level sollte ein slug/id verwendet werden die sich nicht ändert
                 // So wird die aktion idempotent
                 // Für die Punkte unter mein-account wird gezählt wie viele keys gesetzt sind
-                { data: { [docKey]: { 1: { [level]: 1, }}}}
+                { data: { [docKey]: { 1: { [level]: curTime, } } } }
             )
         )
     }
 
     return (
         <MDXProvider components={shortcodes}>
-        <Layout>
-            <Head title={skill} />
-                <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
-                    <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
-                        <Col md={8} style={{marginTop:".6rem"}}>
-                            <p style={{fontSize:"1rem"}}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
-                                <span style={{color:"#4285F4"}}>{part}</span>
+            <Layout>
+                <Head title={skill} />
+                <Container style={{ maxWidth: "720px", marginLeft: "0" }}>
+                    <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+                        <Col md={8} style={{ marginTop: ".6rem" }}>
+                            <p style={{ fontSize: "1rem" }}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
+                                <span style={{ color: "#4285F4" }}>{part}</span>
                             </p>
                         </Col>
                         <Col md={4}>
-                            <TNav part={part}/>
+                            <TNav part={part} />
                         </Col>
                     </Row>
                     <Row>
@@ -88,14 +90,20 @@ const SoloTemplate = ({ data }) => {
                             <MDXRenderer>{data.mdx.body}</MDXRenderer>
                         </Col>
                     </Row>
+                    {part === "Rückblick" ?
+                        (<Row className="tutsegment">
+                            <Col>
+                                <StarRating level={level} />
+                            </Col>
+                        </Row>) : null}
                     <TButton
                         type={type}
                         next={next}
                         part={part}
-                        onClickInfo={part === 'Rückblick' && ( updateUserLevel || undefined )}
+                        onClickInfo={part === 'Rückblick' ? updateUserLevel : null}
                     />
                 </Container>
-        </Layout>
+            </Layout>
         </MDXProvider>
     );
 }

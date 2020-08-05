@@ -12,9 +12,11 @@ import faunadb, { query as q } from "faunadb"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "katex/dist/katex.min.css"
+
 import Hint from "../components/app/hint"
 import TButton from "../components/app/training-button"
 import TNav from "../components/app/training-nav"
+import StarRating from "../components/app/star-rating"
 
 const shortcodes = { Hint, Row, Col }
 
@@ -55,6 +57,7 @@ const TeamTemplate = ({ data }) => {
 
 
     const updateUserLevel = async () => {
+        const curTime = new Date().toLocaleString();
         const fauna_secret = user["https://fauna.com/id/secret"];
         const client = new faunadb.Client({ secret: fauna_secret });
         const docKey = type === 'team-trainings' ? 'punkte_team' : 'punkte_solo';
@@ -71,7 +74,7 @@ const TeamTemplate = ({ data }) => {
                 //   statt level sollte ein slug/id verwendet werden die sich nicht ändert
                 // So wird die aktion idempotent
                 // Für die Punkte unter mein-account wird gezählt wie viele keys gesetzt sind
-                { data: { [docKey]: { 1: { [level]: 1, }}}}
+                { data: { [docKey]: { 1: { [level]: curTime, } } } }
             )
         )
     }
@@ -81,15 +84,15 @@ const TeamTemplate = ({ data }) => {
             <Layout>
                 <Head title={skill} />
                 {isAuthenticated ? (
-                    <Container style={{ maxWidth: "720px", marginLeft:"0" }}>
-                        <Row style={{marginTop:"2rem", marginBottom:"2rem"}}>
-                            <Col md={8} style={{marginTop:".6rem"}}>
-                                <p style={{fontSize:"1rem"}}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
-                                    <span style={{color:"#4285F4"}}>{part}</span>
+                    <Container style={{ maxWidth: "720px", marginLeft: "0" }}>
+                        <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+                            <Col md={8} style={{ marginTop: ".6rem" }}>
+                                <p style={{ fontSize: "1rem" }}>{skill} {'\u00BB'} {level} {'\u00BB'}{' '}
+                                    <span style={{ color: "#4285F4" }}>{part}</span>
                                 </p>
                             </Col>
                             <Col md={4}>
-                                <TNav part={part}/>
+                                <TNav part={part} />
                             </Col>
                         </Row>
                         <Row>
@@ -97,16 +100,22 @@ const TeamTemplate = ({ data }) => {
                                 <MDXRenderer>{data.mdx.body}</MDXRenderer>
                             </Col>
                         </Row>
+                        {part === "Rückblick" ?
+                            (<Row className="tutsegment">
+                                <Col>
+                                    <StarRating level={level} />
+                                </Col>
+                            </Row>) : null}
                         <TButton
                             part={part}
                             next={next}
                             type={type}
-                            onClickInfo={part === 'Rückblick' && ( updateUserLevel || undefined )}
+                            onClickInfo={part === 'Rückblick' ? updateUserLevel : null}
                         />
                     </Container>
                 ) : (
-                    <Login />
-                )}
+                        <Login />
+                    )}
             </Layout>
         </MDXProvider>
     )
