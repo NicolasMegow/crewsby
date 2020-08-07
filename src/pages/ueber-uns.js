@@ -11,19 +11,19 @@ const UeberUnsPage = () => {
         <Layout>
             <Head title="Über uns" />
             <Container>
-                <Row style={{marginTop:"4rem"}}>
+                <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <h1 style={{color: "#4285F4"}}>CREWSBY</h1>
-                        <h2>Wie Gatsby ein Hinweis: by Gatz. 
+                        <h1 style={{ color: "#4285F4" }}>CREWSBY</h1>
+                        <h2>Wie Gatsby ein Hinweis: by Gatz.
                             Die Crew erschafft das Team.</h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "8rem" }}>
                     <Col>
                         <p className="mintitle">Unsere Vision</p>
-                        <h2>Wir <Emoji symbol="❤️" label="heart"/> moderne Teamarbeit.</h2>
+                        <h2>Wir <Emoji symbol="❤️" label="heart" /> moderne Teamarbeit.</h2>
                         <p>Moderne Teamarbeit sollte der Standard sein.
-                            Und wirkliche jedes Team verdient ein gutes Teamgefühl.
+                        Und wirkliche jedes Team verdient ein gutes Teamgefühl.
                             </p>
                         <p>Deshalb arbeiten wir unermüdlich daran die besten Trainings dafür zu entwickeln.</p>
                     </Col>
@@ -33,8 +33,8 @@ const UeberUnsPage = () => {
                         <p className="mintitle">Unser Anspruch</p>
                         <h3>Wir sind durch & durch nachhaltig.</h3>
                         <p>Wir verbessern konstant unsere Trainings, damit Du nachhaltig Fähigkeiten aufbauen kannst.
-                            Digitales Training hat eine hervorragende Klimabilanz. 
-                            Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
+                        Digitales Training hat eine hervorragende Klimabilanz.
+                        Wir gleichen darüber hinaus den durch uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -47,9 +47,9 @@ const UeberUnsPage = () => {
                     <Col md={6}>
                         <p className="mintitle">Unsere Arbeitsweise</p>
                         <h3>Wir sind ein schlankes Team.</h3>
-                        <p>Konzentration auf das Wesentliche ist eine Tugend. 
-                            Unser Ziel ist es, dies möglichst diszipliniert umzusetzen.
-                            Und das Wesentliche ist für uns Dein Trainingserfolg.
+                        <p>Konzentration auf das Wesentliche ist eine Tugend.
+                        Unser Ziel ist es, dies möglichst diszipliniert umzusetzen.
+                        Und das Wesentliche ist für uns Dein Trainingserfolg.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -64,28 +64,28 @@ const UeberUnsPage = () => {
                     <Col md={6}>
                         <p className="mintitle">Unser Dank</p>
                         <h3>Wir stehen auf Riesen-Schultern.</h3>
-                        <p>Wir erstellen unsere Trainings auf Basis von Spitzenforschung und Best-Practices aus der Praxis. 
-                            Wir suchen und analysiren, lassen uns inspirieren und entwicklen darauf aufbauend neue Trainings für Dich.
+                        <p>Wir erstellen unsere Trainings auf Basis von Spitzenforschung und Best-Practices aus der Praxis.
+                        Wir suchen und analysieren, lassen uns inspirieren und entwicklen darauf aufbauend neue Trainings für Dich.
                         </p>
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <strong>
-                            Chip Conley • 
-                            John Doerr • 
-                            Amy Edmundson • 
-                            Tasha Eurich • 
-                            Atul Gawande • 
-                            Adam Grant • 
-                            Jeremy Gutsche • 
-                            Ben Horrowitz • 
-                            Tom Kelley • 
+                            Chip Conley •
+                            John Doerr •
+                            Amy Edmundson •
+                            Tasha Eurich •
+                            Atul Gawande •
+                            Adam Grant •
+                            Jeremy Gutsche •
+                            Ben Horrowitz •
+                            Tom Kelley •
                             Patrick Lencioni •
-                            Vittorio Loreto • 
-                            Max De Pree • 
-                            Edgar Schein • 
-                            F. Schulz von Thun • 
-                            Kim Scott • 
-                            J.J. Sutherland • 
+                            Vittorio Loreto •
+                            Max De Pree •
+                            Edgar Schein •
+                            F. Schulz von Thun •
+                            Kim Scott •
+                            J.J. Sutherland •
                             Karl Weick
                         </strong>
                     </Col>
