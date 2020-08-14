@@ -23,7 +23,7 @@ class TrainingTile extends React.Component {
                             marginBottom: "0",
                         }}
                     >
-                        {this.props.content}
+                        {this.props.skill} - {this.props.pass}
                     </p>
                     <FontAwesomeIcon
                         icon={this.props.icon}

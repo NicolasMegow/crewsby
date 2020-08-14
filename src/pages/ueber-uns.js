@@ -54,9 +54,9 @@ const UeberUnsPage = () => {
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-                            <Emoji symbol="💻" label="remote" />{' '}Remote<br></br>
-                            <Emoji symbol="🔵" label="circle" />{' '}Minimalistisch<br></br>
-                            <Emoji symbol="🔬" label="research" />{' '}Wissenschaftlich
+                            <Emoji symbol="🎁" label="present" />{' '}Nützliche Beiträge<br></br>
+                            <Emoji symbol="🔵" label="circle" />{' '}Schlichte Eleganz<br></br>
+                            <Emoji symbol="🍏" label="sustainable" />{' '}Nachhaltigkeit
                         </p>
                     </Col>
                 </Row>
@@ -70,6 +70,7 @@ const UeberUnsPage = () => {
                     </Col>
                     <Col md={6} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <strong>
+                            Ken Blanchard •
                             Chip Conley •
                             John Doerr •
                             Amy Edmundson •
@@ -77,6 +78,7 @@ const UeberUnsPage = () => {
                             Atul Gawande •
                             Adam Grant •
                             Jeremy Gutsche •
+                            Gary Hamel •
                             Ben Horrowitz •
                             Tom Kelley •
                             Patrick Lencioni •

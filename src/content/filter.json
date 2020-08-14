@@ -4,8 +4,8 @@
       "TM": [
         {
           "name": "Starkes Teamgefühl",
-          "symbol":"❤️",
-          "label":"heart",
+          "symbol": "❤️",
+          "label": "heart",
           "job": "Beziehungen gestalten",
           "part": "TMBE",
           "tuts": [
@@ -13,7 +13,10 @@
               "thema": "Vertrauen aufbauen",
               "key": "VEN1",
               "inhalt": "1. Menschen sehen",
-              "icon": ["fal", "head-side"],
+              "icon": [
+                "fal",
+                "head-side"
+              ],
               "disabled": "false",
               "url": "vertrauen-1a"
             },
@@ -21,7 +24,10 @@
               "thema": "Vertrauen aufbauen",
               "key": "VEN2",
               "inhalt": "2. Menschen kennenlernen",
-              "icon": ["fal", "mask"],
+              "icon": [
+                "fal",
+                "mask"
+              ],
               "disabled": "false",
               "url": "vertrauen-2a"
             },
@@ -29,7 +35,10 @@
               "thema": "Vertrauen aufbauen",
               "key": "VEN3",
               "inhalt": "3. Schwäche zeigen",
-              "icon": ["fal", "band-aid"],
+              "icon": [
+                "fal",
+                "band-aid"
+              ],
               "disabled": "false",
               "url": "vertrauen-3a"
             }
@@ -37,8 +46,8 @@
         },
         {
           "name": "Gesteigerte Leistung",
-          "symbol":"💪",
-          "label":"muscle",
+          "symbol": "💪",
+          "label": "muscle",
           "job": "Abläufe optimieren",
           "part": "TMAB",
           "tuts": [
@@ -46,7 +55,10 @@
               "thema": "Arbeit koordinieren",
               "key": "KON1",
               "inhalt": "1. Information teilen",
-              "icon": ["fal", "share-alt"],
+              "icon": [
+                "fal",
+                "share-alt"
+              ],
               "disabled": "false",
               "url": "koordination-1a"
             }
@@ -54,8 +66,8 @@
         },
         {
           "name": "Entfesselte Kreativität",
-          "symbol":"🧠",
-          "label":"brain",
+          "symbol": "🧠",
+          "label": "brain",
           "job": "Talente entwickeln",
           "part": "TMTA",
           "tuts": [
@@ -63,7 +75,10 @@
               "thema": "Fähigkeiten verbessern",
               "key": "SUN1",
               "inhalt": "1. Voneinander lernen",
-              "icon": ["fal", "tools"],
+              "icon": [
+                "fal",
+                "tools"
+              ],
               "disabled": "true",
               "url": "supervision-1a"
             }
@@ -75,8 +90,8 @@
       "SO": [
         {
           "name": "Starkes Teamgefühl",
-          "symbol":"❤️",
-          "label":"heart",
+          "symbol": "❤️",
+          "label": "heart",
           "job": "Beziehungen gestalten",
           "part": "SOBE",
           "tuts": [
@@ -84,24 +99,30 @@
               "thema": "Wertschätzung zeigen",
               "key": "WEG1",
               "inhalt": "1. Kleine Gesten",
-              "icon": ["fal", "gift"],
+              "icon": [
+                "fal",
+                "gift"
+              ],
               "disabled": "false",
-              "url": "wertschaetzung-1a"
+              "url": "kleine-gesten"
             },
             {
               "thema": "Wertschätzung zeigen",
               "key": "WEG2",
               "inhalt": "2. Passende Worte",
-              "icon": ["fal", "comment-check"],
+              "icon": [
+                "fal",
+                "comment-check"
+              ],
               "disabled": "true",
-              "url": "wertschaetzung-2a"
+              "url": "passende-worte"
             }
           ]
         },
         {
           "name": "Gesteigerte Leistung",
-          "symbol":"💪",
-          "label":"muscle",
+          "symbol": "💪",
+          "label": "muscle",
           "job": "Abläufe optimieren",
           "part": "SOAB",
           "tuts": [
@@ -109,24 +130,30 @@
               "thema": "Ziele setzen",
               "key": "ZIE1",
               "inhalt": "1. Richtung festlegen",
-              "icon": ["fal", "map-marker-check"],
+              "icon": [
+                "fal",
+                "map-marker-check"
+              ],
               "disabled": "false",
-              "url": "ziele-1a"
+              "url": "richtung-festlegen"
             },
             {
               "thema": "Ziele setzen",
               "key": "ZIE2",
               "inhalt": "2. Alternativen suchen",
-              "icon": ["fal", "map-signs"],
+              "icon": [
+                "fal",
+                "map-signs"
+              ],
               "disabled": "true",
-              "url": "ziele-2a"
+              "url": "alternativen-suchen"
             }
           ]
         },
         {
           "name": "Entfesselte Kreativität",
-          "symbol":"🧠",
-          "label":"brain",
+          "symbol": "🧠",
+          "label": "brain",
           "job": "Talente entwickeln",
           "part": "SOTA",
           "tuts": [
@@ -134,9 +161,12 @@
               "thema": "Fragen stellen",
               "key": "FRN1",
               "inhalt": "1. Denkprozesse anstoßen",
-              "icon": ["fal", "question"],
+              "icon": [
+                "fal",
+                "question"
+              ],
               "disabled": "true",
-              "url": "fragen-1a"
+              "url": "denkprozesse-anstossen"
             }
           ]
         }

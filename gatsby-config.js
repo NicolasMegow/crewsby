@@ -31,60 +31,60 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'solo-trainings',
-        path: `${__dirname}/src/content/solo-trainings`,
+        name: 'solo-tutorials',
+        path: `${__dirname}/src/content/solo-tutorials`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'team-trainings',
-        path: `${__dirname}/src/content/team-trainings`,
+        name: 'team-tutorials',
+        path: `${__dirname}/src/content/team-tutorials`,
       },
     },
-  `gatsby-plugin-sharp`,
-  `gatsby-remark-images`,
-  {
-    resolve: `gatsby-plugin-mdx`,
-    options: {
-      gatsbyRemarkPlugins: [
-        `gatsby-remark-relative-images`,
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            maxWidth: 900,
-            linkImagesToOriginal: false,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900,
+              linkImagesToOriginal: false,
+            }
+          },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
           }
-        },
-        {
-          resolve: `gatsby-remark-katex`,
-          options: {
-          // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-          strict: `ignore`
-          }
+        ]
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/ // See below to configure properly
         }
-      ]
-    },
-  },
-  {
-    resolve: "gatsby-plugin-react-svg",
-    options: {
-      rule: {
-        include: /svg/ // See below to configure properly
       }
-    }
-  },
-  {
-    resolve: `gatsby-plugin-create-client-paths`,
-    options: { prefixes: [`/app/*`] },
-  },
-  {
-    resolve: "gatsby-plugin-auth0",
-    options: {
-      domain: "dev-82xnrm8r.eu.auth0.com",
-      clientId: "e3FeHnXfDQd1zyL3CCyL2BDlkZbYT8RQ",
     },
-  },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
+      resolve: "gatsby-plugin-auth0",
+      options: {
+        domain: "dev-82xnrm8r.eu.auth0.com",
+        clientId: "e3FeHnXfDQd1zyL3CCyL2BDlkZbYT8RQ",
+      },
+    },
 
-]  
+  ]
 }

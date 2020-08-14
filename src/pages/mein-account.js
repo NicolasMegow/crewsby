@@ -37,6 +37,7 @@ const Profil = () => {
                 <p><strong>Profil:</strong> {user.nickname}</p>
                 <p><strong>E-Mail:</strong> {user.email}</p>
                 <p><strong>Unternehmen:</strong> TBD</p>
+                {data["level"] && (<p>{data.level["default"]}</p>)}
                 {data["punkte_solo"] && (
                     <div>
                         <p>
@@ -109,8 +110,8 @@ const Account = () => {
                     </Row>
                 </Container>
             ) : (
-                <Login />
-            )}
+                    <Login />
+                )}
         </Layout>
     );
 }

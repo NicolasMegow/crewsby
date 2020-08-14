@@ -1,50 +1,53 @@
 const path = require('path')
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
-    const { createNodeField } = actions
+  const { createNodeField } = actions
 
-    if (node.internal.type == "Mdx") {
-        const fileNode = getNode(node.parent);
-        const pathPrefix = fileNode.sourceInstanceName
-        const slug = path.basename(node.fileAbsolutePath, '.mdx')
-        createNodeField({ node, name: "slug", value: `/${pathPrefix}/${slug}` });
-        createNodeField({ node, name: 'trainingType', value: pathPrefix });
-    }
+  if (node.internal.type == "Mdx") {
+    const fileNode = getNode(node.parent);
+    const pathPrefix = fileNode.sourceInstanceName
+    const slug = path.basename(node.fileAbsolutePath, '.mdx')
+    const method = path.dirname(node.fileAbsolutePath).split("/").pop()
+    createNodeField({ node, name: "slug", value: `${slug}` });
+    createNodeField({ node, name: "method", value: `${method}` });
+    createNodeField({ node, name: "tutorialType", value: pathPrefix });
   }
+}
 
 module.exports.createPages = async function ({ actions, graphql }) {
-    await graphql(`
+  await graphql(`
       {
         allMdx {
           edges {
             node {
               fields {
                 slug
-                trainingType
+                tutorialType
+                method
               }
             }
           }
         }
       }
     `).then(res => {
-      res.data.allMdx.edges.forEach(edge => {
-        const slug = edge.node.fields.slug
-        const type = edge.node.fields.trainingType
-        if (type=="solo-trainings") {
+    res.data.allMdx.edges.forEach(edge => {
+      const { slug, tutorialType, method } = edge.node.fields
+      if (slug == "_index") {
         actions.createPage({
-          path: `${slug}`,
-          component: require.resolve(`./src/templates/solo-template.js`),
+          path: `/${tutorialType}/${method}`,
+          component: require.resolve(`./src/templates/collection-template.js`),
+          context: { slug, tutorialType, method },
+        })
+      } else {
+        actions.createPage({
+          path: `/${tutorialType}/${method}/${slug}`,
+          component: require.resolve(`./src/templates/deck-template.js`),
           context: { slug },
         })
-        } else {
-          actions.createPage({
-            path: `${slug}`,
-            component: require.resolve(`./src/templates/team-template.js`),
-            context: { slug },
-          })
-        }
+      }
     })
-  })}
+  })
+}
 
 // Implement the Gatsby API “onCreatePage”. This is
 // called after every page is created.

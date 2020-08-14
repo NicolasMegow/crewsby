@@ -21,50 +21,50 @@ const Header = () => {
         <header>
             <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
                 <Container className={headerStyles.container}>
-                    <Navbar.Brand style={{marginRight:"2rem", paddingLeft:"15px"}}>
+                    <Navbar.Brand style={{ marginRight: "2rem", paddingLeft: "15px" }}>
                         <Link className={headerStyles.title} to="/">{data.site.siteMetadata.title}</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-site" />
                     <Navbar.Collapse id="basic-navbar-site">
                         <Nav>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/solo-trainings">Solo-Trainings</Link>
+                                <Link className={headerStyles.navItem} to="/solo-tutorials">Solo-Tutorials</Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Link className={headerStyles.navItem} to="/team-trainings">Team-Trainings</Link>
+                                <Link className={headerStyles.navItem} to="/team-tutorials">Team-Tutorials</Link>
                             </Nav.Item>
                         </Nav>
-                        <hr style={{marginTop:"1rem",marginBottom:"1rem"}}></hr>
+                        <hr style={{ marginTop: "1rem", marginBottom: "1rem" }}></hr>
                         <Nav className="ml-auto">
                             {isAuthenticated ? (
-                            <>
-                                <Nav.Item>
-                                    <Link className={headerStyles.navItem} to="/mein-account">Mein Account</Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Link to='/'className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
-                                        event.preventDefault()
-                                        logout()
-                                    }}>Ausloggen
-                                </Link>
-                                </Nav.Item>
-                            </>
-                                    ) : (
-                                        <>
-                                        <Nav.Item>
-                                        <Link to='/' className="btn btn-outline-primary" style={{marginRight:".5rem"}} onClick={event => {
-                                            event.preventDefault()
-                                            loginWithPopup({ action: 'signup' })
-                                            }}>Anmelden
-                                        </Link>
+                                <>
+                                    <Nav.Item>
+                                        <Link className={headerStyles.navItem} to="/mein-account">Mein Account</Link>
                                     </Nav.Item>
                                     <Nav.Item>
-                                        <Link to='/' className="btn btn-primary" style={{marginRight:"0"}} onClick={event => {
+                                        <Link to='/' className="btn btn-primary" style={{ marginRight: "0" }} onClick={event => {
                                             event.preventDefault()
-                                            loginWithPopup()
+                                            logout()
+                                        }}>Ausloggen
+                                </Link>
+                                    </Nav.Item>
+                                </>
+                            ) : (
+                                    <>
+                                        <Nav.Item>
+                                            <Link to='/' className="btn btn-outline-primary" style={{ marginRight: ".5rem" }} onClick={event => {
+                                                event.preventDefault()
+                                                loginWithPopup({ action: 'signup' })
+                                            }}>Anmelden
+                                        </Link>
+                                        </Nav.Item>
+                                        <Nav.Item>
+                                            <Link to='/' className="btn btn-primary" style={{ marginRight: "0" }} onClick={event => {
+                                                event.preventDefault()
+                                                loginWithPopup()
                                             }}>Einloggen
                                         </Link>
-                                    </Nav.Item>
+                                        </Nav.Item>
                                     </>
                                 )}
                         </Nav>

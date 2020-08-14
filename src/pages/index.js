@@ -19,7 +19,7 @@ const IndexPage = () => {
         <Row>
           <Col>
             <Teambuilding width="100%" />
-            <h1>Einfache Trainings für super Teamarbeit.</h1>
+            <h1>Tutorials für <Emoji symbol="🔥" label="leidenschaftlich" /> <Emoji symbol="🏆" label="effektiv" /> Teamarbeit.</h1>
             <h2>Crewsby hilft Dir neue Fähigkeiten zu entwickeln, als Team zusammen zu wachsen und agil zu arbeiten.</h2>
           </Col>
         </Row>

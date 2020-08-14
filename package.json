@@ -48,7 +48,6 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
-    "react-horizontal-scrolling-menu": "^0.7.7",
     "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
