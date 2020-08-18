@@ -15,14 +15,14 @@ import LoginReminder from "../components/app/login-reminder"
 
 export const query = graphql`
 query{
-  allMdx (filter: { fields: { tutorialType: { eq: "solo-tutorials" } slug: {eq: "_index"} } })
+  allMdx (filter: { fields: { uebungType: { eq: "solo-uebungen" } slug: {eq: "_index"} } })
   {
     group(field: frontmatter___category) {
     edges {
       node {
         fields {
           slug
-          tutorialType
+          uebungType
           method
         }
         frontmatter {

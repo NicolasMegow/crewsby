@@ -15,6 +15,7 @@ import "katex/dist/katex.min.css"
 
 import Hint from "../components/app/hint"
 import Deck from "../components/app/deck"
+import Emoji from "../components/shared/emoji"
 
 const components = {
     wrapper: ({ children, ...props }) => {
@@ -38,17 +39,17 @@ const components = {
 
         return <Deck {...props} slides={slides} length={slides.length} />
     },
-    Hint, Row, Col,
-    h1: props => <h1 {...props} style={{ size: "2.4rem" }} />,
-    h2: props => <h2 {...props} style={{ color: "#4285F4", size: "2rem", fontWeight: "bold" }} />,
-    p: props => <p {...props} style={{ size: "1.2rem" }} />,
+    Hint, Row, Col, Emoji,
+    h1: props => <h1 {...props} />,
+    h2: props => <h2 {...props} style={{ color: "#4285F4", fontSize: "2rem", fontWeight: "bold" }} />,
+    p: props => <p {...props} style={{ fontSize: "1.4rem" }} />,
 }
 
 export const query = graphql`
     query($slug: String!) {
         mdx (fields: { slug: { eq: $slug } }) {
             fields {
-                tutorialType
+                uebungType
             }
             frontmatter {
                 skill

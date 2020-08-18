@@ -31,15 +31,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'solo-tutorials',
-        path: `${__dirname}/src/content/solo-tutorials`,
+        name: 'solo-uebungen',
+        path: `${__dirname}/src/content/solo-uebungen`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'team-tutorials',
-        path: `${__dirname}/src/content/team-tutorials`,
+        name: 'team-uebungen',
+        path: `${__dirname}/src/content/team-uebungen`,
       },
     },
     `gatsby-plugin-sharp`,

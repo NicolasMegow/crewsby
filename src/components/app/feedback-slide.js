@@ -21,7 +21,7 @@ var styles = {
 
 const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
     const { isAuthenticated, loading, user } = useAuth0();
-    const training = level.toString()
+    const uebung = level.toString()
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
     const [feedback, setFeedback] = useState("");
@@ -35,7 +35,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
         const curTime = new Date().toLocaleString();
         const fauna_secret = user["https://fauna.com/id/secret"];
         const client = new faunadb.Client({ secret: fauna_secret });
-        const docKey = type === 'team-tutorials' ? 'punkte_team' : 'punkte_solo';
+        const docKey = type === 'team-uebung' ? 'punkte_team' : 'punkte_solo';
 
         await client.query(
             q.Update(
@@ -45,7 +45,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
                 // keine optimale Lösung aber tuts erstmal, was passiert hier:
                 // - docKey ist entweder punkte_team oder punkte_solo
                 // - anstatt eines array wird ein object mit index keys verwendet (hier default erstmal 1)
-                // - level beschreibt dieses tutorial wo einfach eine 1 gesetzt wird
+                // - level beschreibt dieses uebung wo einfach eine 1 gesetzt wird
                 //   statt level sollte ein slug/id verwendet werden die sich nicht ändert
                 // So wird die aktion idempotent
                 // Für die Punkte unter mein-account wird gezählt wie viele keys gesetzt sind
@@ -61,7 +61,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
         await client.query(
             q.Create(
                 q.Collection('feedback'),
-                { data: { "training": training, "rating": ratingValue, "feedback": feedbackText } }
+                { data: { "uebung": uebung, "rating": ratingValue, "feedback": feedbackText } }
             )
         )
     }
@@ -72,7 +72,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
     return <>
         <Row style={{ width: "100vw", height: "7rem", marginBottom: "1.4rem" }}>
             <Col>
-                <p>Wie fandest Du das Training {training}?</p>
+                <p>Wie fandest Du die Übung {uebung}?</p>
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
 
@@ -107,7 +107,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
         <Row style={{ width: "100vw", marginTop: "2rem" }}><Col style={{ display: "flex", justifyContent: "space-between" }}>
             <Button onClick={() => setStep(currentStep - 1)}>Zurück</Button>
             <ProgressBar length={length} step={currentStep} />
-            <Link className="btn btn-secondary" to="../" onClick={() => sendFeedback(rating, feedback)}>Tutorial abschliessen</Link>
+            <Link className="btn btn-secondary" to="../" onClick={() => sendFeedback(rating, feedback)}>Übung abschließen</Link>
         </Col></Row>
     </>
 };

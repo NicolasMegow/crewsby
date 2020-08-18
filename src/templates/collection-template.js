@@ -4,16 +4,16 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
-import TutorialInfo from "../components/app/tutorial-info"
+import ÜbungInfo from "../components/app/uebung-info"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export const query = graphql`
-    query($slug: String!, $tutorialType: String!, $method: String! ) {
-        mdx (fields: { slug: { eq: $slug } method: {eq: $method } tutorialType: {eq: $tutorialType } }) {
+    query($slug: String!, $uebungType: String!, $method: String! ) {
+        mdx (fields: { slug: { eq: $slug } method: {eq: $method } uebungType: {eq: $uebungType } }) {
             fields {
-                tutorialType
+                uebungType
                 method
             }
             frontmatter {
@@ -26,18 +26,21 @@ export const query = graphql`
             }
             body
         }
-        allMdx (filter: { fields: { slug: { ne: $slug } method: { eq: $method } tutorialType: {eq: $tutorialType } } }, sort: {fields:[frontmatter___level], order: ASC})
+        allMdx (filter: { fields: { slug: { ne: $slug } method: { eq: $method } uebungType: {eq: $uebungType } } }, 
+            sort: {fields:[frontmatter___rank], order: ASC})
         {
             edges {
               node {
                 fields {
                   slug
-                  tutorialType
+                  uebungType
                   method
                 }
                 frontmatter {
                   skill
                   level
+                  emojis
+                  excerpt
                 }
               }
             }
@@ -63,14 +66,13 @@ const CollectionTemplate = ({ data, props }) => {
                     <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
                         <Col>
                             <MDXRenderer {...props}>{data.mdx.body}</MDXRenderer>
-                            <hr></hr>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
                             {data.allMdx.edges.map((edge, i) => {
                                 return (
-                                    <TutorialInfo key={i} edge={edge} />
+                                    <ÜbungInfo key={i} edge={edge} />
                                 )
                             })}
                         </Col>

@@ -10,7 +10,7 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
     const method = path.dirname(node.fileAbsolutePath).split("/").pop()
     createNodeField({ node, name: "slug", value: `${slug}` });
     createNodeField({ node, name: "method", value: `${method}` });
-    createNodeField({ node, name: "tutorialType", value: pathPrefix });
+    createNodeField({ node, name: "uebungType", value: pathPrefix });
   }
 }
 
@@ -22,7 +22,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
             node {
               fields {
                 slug
-                tutorialType
+                uebungType
                 method
               }
             }
@@ -31,16 +31,16 @@ module.exports.createPages = async function ({ actions, graphql }) {
       }
     `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
-      const { slug, tutorialType, method } = edge.node.fields
+      const { slug, uebungType, method } = edge.node.fields
       if (slug == "_index") {
         actions.createPage({
-          path: `/${tutorialType}/${method}`,
+          path: `/${uebungType}/${method}`,
           component: require.resolve(`./src/templates/collection-template.js`),
-          context: { slug, tutorialType, method },
+          context: { slug, uebungType, method },
         })
       } else {
         actions.createPage({
-          path: `/${tutorialType}/${method}/${slug}`,
+          path: `/${uebungType}/${method}/${slug}`,
           component: require.resolve(`./src/templates/deck-template.js`),
           context: { slug },
         })
