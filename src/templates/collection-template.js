@@ -5,6 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import ÜbungInfo from "../components/app/uebung-info"
+import SharingButtons from "../components/shared/sharing-buttons"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -48,8 +49,9 @@ export const query = graphql`
     }
 `
 
-const CollectionTemplate = ({ data, props }) => {
+const CollectionTemplate = ({ data, props, location }) => {
 
+    const url = location.href ? location.href : '';
     const { skill, levels, job } = data.mdx.frontmatter;
 
     return (
@@ -77,6 +79,7 @@ const CollectionTemplate = ({ data, props }) => {
                             })}
                         </Col>
                     </Row>
+                    <SharingButtons link={url} message={`${levels} Übungen, mit denen ihr ${job} könnt`} />
                 </Container>
             </Layout>
         </MDXProvider>

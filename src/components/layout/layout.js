@@ -9,11 +9,13 @@ import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { fas } from '@fortawesome/pro-solid-svg-icons'
 import { fad } from '@fortawesome/pro-duotone-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 config.autoAddCss = false;
 library.add(fal)
 library.add(fas)
 library.add(fad)
+library.add(fab)
 
 const Layout = (props) => {
     return (
