@@ -6,6 +6,7 @@ import Layout from "../components/layout/layout"
 import Head from "../components/layout/head"
 import FaCheck from "../components/shared/facheck"
 import FeatureRow from "../components/layout/feature-row"
+import HowToRow from "../components/layout/howto-row"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
 
@@ -42,6 +43,7 @@ const IndexPage = () => {
             </p>
           </Col>
         </Row>
+        <HowToRow />
         <Row style={{ marginTop: "8rem" }}>
           <Col md style={{ border: "1px solid #000000", padding: "1.4rem", margin: "1.4rem" }}>
             <h3>Solo-Übungen</h3>
