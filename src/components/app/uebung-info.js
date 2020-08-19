@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 import Emoji from "../shared/emoji"
 
-const TutorialInfo = ({ edge }) => {
+const UebungInfo = ({ edge }) => {
     const slug = edge.node.fields.slug
     const level = edge.node.frontmatter.level
     const emojis = edge.node.frontmatter.emojis
@@ -26,4 +26,4 @@ const TutorialInfo = ({ edge }) => {
     )
 }
 
-export default TutorialInfo
+export default UebungInfo
