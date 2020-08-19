@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import FaCheck from "../components/shared/facheck"
 import FeatureRow from "../components/layout/feature-row"
 import HowToRow from "../components/layout/howto-row"
@@ -13,7 +13,7 @@ import Teambuilding from "../img/svg/Teambuilding.svg"
 const IndexPage = () => {
   return (
     <Layout>
-      <Head title="Startseite" />
+      <SEO title="Startseite" />
       <Container>
         <Row>
           <Col>

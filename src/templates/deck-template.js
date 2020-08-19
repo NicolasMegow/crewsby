@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/app/loading"
@@ -50,6 +50,8 @@ export const query = graphql`
         mdx (fields: { slug: { eq: $slug } }) {
             fields {
                 uebungType
+                method
+                slug
             }
             frontmatter {
                 skill
@@ -59,6 +61,7 @@ export const query = graphql`
                 date
                 version
                 next
+                excerpt
             }
             body
         }
@@ -67,7 +70,7 @@ export const query = graphql`
 
 const DeckTemplate = ({ data, props }) => {
     const { isAuthenticated, loading } = useAuth0();
-
+    const { uebungType, method, slug } = data.mdx.fields
     const { skill, level, pass } = data.mdx.frontmatter;
     const type = data.mdx.fields.trainingType
 
@@ -80,7 +83,7 @@ const DeckTemplate = ({ data, props }) => {
     return (
         <MDXProvider components={components}>
             <Layout>
-                <Head title={skill} />
+                <SEO title={skill} description={data.mdx.frontmatter.excerpt} pathname={`/${uebungType}/${method}/${slug}`} />
                 {pass === "premium" ? (!isAuthenticated ? (<CTA />) : (
                     <Container>
                         <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>

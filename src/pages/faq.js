@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
 import CTA from "../components/layout/cta"
 
@@ -11,15 +11,15 @@ import FAQData from "../content/faq.yaml"
 const PreisePage = () => {
     return (
         <Layout>
-            <Head title="Preise" />
+            <SEO title="FAQ" />
             <Container>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>
-                        <h1><Emoji symbol="❓" label="question"/>{' '}Deine Fragen,<br></br>unsere Antworten<span style={{color:"#4285F4"}}>.</span></h1>
+                        <h1><Emoji symbol="❓" label="question" />{' '}Deine Fragen,<br></br>unsere Antworten<span style={{ color: "#4285F4" }}>.</span></h1>
                         {FAQData.content.map((hinweis) => (
-                            <div style={{marginTop:"3rem"}} key={hinweis.id}>
-                            <h3>{hinweis.q}</h3>
-                            <p>{hinweis.a}</p>
+                            <div style={{ marginTop: "3rem" }} key={hinweis.id}>
+                                <h3>{hinweis.q}</h3>
+                                <p>{hinweis.a}</p>
                             </div>
                         ))}
                     </Col>

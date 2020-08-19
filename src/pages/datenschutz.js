@@ -2,12 +2,12 @@ import React from "react"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 
 const DatenschutzPage = () => {
     return (
         <Layout>
-            <Head title="Datenschutz" />
+            <SEO title="Datenschutz" />
             <Container>
                 <Row>
                     <Col>

@@ -3,7 +3,7 @@ import { Container, Row, Tab, Nav, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import appStyles from "../styles/app.module.scss"
 
 import Selbstcheck from "../img/svg/Selbstcheck.svg"
@@ -11,20 +11,20 @@ import Selbstcheck from "../img/svg/Selbstcheck.svg"
 const SelbstcheckPage = () => {
     return (
         <Layout>
-            <Head title="Selbstcheck" />
+            <SEO title="Selbstcheck" />
             <Container>
                 <Row>
-                    <Selbstcheck width="100%" height={400}/>
+                    <Selbstcheck width="100%" height={400} />
                     <h1>Selbstcheck für professionelle Teamarbeit</h1>
                     <p>Möchtest du dich oder dein Team einschätzen?</p>
                 </Row>
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Nav variant="pills">
                         <Nav.Item>
-                            <Nav.Link eventKey="first" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'user']} fixedWidth/>{'   '}MICH</Nav.Link>
+                            <Nav.Link eventKey="first" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'user']} fixedWidth />{'   '}MICH</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="second" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'users']} fixedWidth/>{'   '}UNS</Nav.Link>
+                            <Nav.Link eventKey="second" className={appStyles.pill}><FontAwesomeIcon icon={['fal', 'users']} fixedWidth />{'   '}UNS</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Tab.Content>
@@ -52,7 +52,7 @@ const SelbstcheckPage = () => {
                             </ListGroup>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second" className={appStyles.tab}>
-                        <h3>Beziehungen</h3>
+                            <h3>Beziehungen</h3>
                             <ListGroup variant="flush" className={appStyles.section}>
                                 <ListGroup.Item>Teams</ListGroup.Item>
                                 <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>

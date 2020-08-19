@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import ÜbungInfo from "../components/app/uebung-info"
 import SharingButtons from "../components/shared/sharing-buttons"
 
@@ -26,6 +26,7 @@ export const query = graphql`
                 icon
             }
             body
+            excerpt
         }
         allMdx (filter: { fields: { slug: { ne: $slug } method: { eq: $method } uebungType: {eq: $uebungType } } }, 
             sort: {fields:[frontmatter___rank], order: ASC})
@@ -50,14 +51,14 @@ export const query = graphql`
 `
 
 const CollectionTemplate = ({ data, props, location }) => {
-
+    const { uebungType, method } = data.mdx.fields;
     const url = location.href ? location.href : '';
     const { skill, levels, job } = data.mdx.frontmatter;
 
     return (
         <MDXProvider>
             <Layout>
-                <Head title={skill} />
+                <SEO title={skill} pathname={`/${uebungType}/${method}`} description={data.mdx.excerpt} />
                 <Container>
                     <Row>
                         <Col>

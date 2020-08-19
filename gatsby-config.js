@@ -9,7 +9,10 @@ module.exports = {
   siteMetadata: {
     title: 'CREWSBY',
     author: "Nicolas Megow",
-    siteUrl: `https://crewsby.com`
+    siteUrl: `https://crewsby.com`,
+    description: 'Übungen für geniale Teamarbeit',
+    keywords: ["scrum", "agile", "remote", "teamwork", "retro", "retrospektive", "teamgefühl", "übungen", "methoden", "lean startup", "design thinking"],
+    siteUrl: 'htts://crewsby.com'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -85,6 +88,28 @@ module.exports = {
         clientId: "e3FeHnXfDQd1zyL3CCyL2BDlkZbYT8RQ",
       },
     },
-
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Crewsby`,
+        short_name: `Crewsby`,
+        icon: `static/crewsby_logo-512x512.png`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#4285F4`,
+        display: `standalone`,
+        cache_busting_mode: 'none',
+        crossOrigin: `use-credentials`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/solo-uebungen/`, `/team-uebungen/`],
+        workboxConfig: {
+          globPatterns: ['**/icon-path*']
+        }
+      },
+    },
   ]
 }

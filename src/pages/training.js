@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Emoji from "../components/shared/emoji"
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import CTA from "../components/layout/cta"
 
 import Teamboat from "../img/svg/EinBoot.svg"
@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const TrainingPage = () => {
     return (
         <Layout>
-            <Head title="Training" />
+            <SEO title="Training" />
             <Container>
                 <Row>
                     <Col>

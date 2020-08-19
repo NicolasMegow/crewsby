@@ -1,9 +1,8 @@
 import React from "react"
 import { Row, Col } from 'react-bootstrap'
 
-import Emoji from "../shared/emoji"
 
-const FeatureRow = () => {
+const HowToRow = () => {
     return (
         <Row style={{ marginTop: "4rem" }}>
             <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
@@ -31,4 +30,4 @@ const FeatureRow = () => {
     )
 }
 
-export default FeatureRow
+export default HowToRow

@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import { Container, Row, Col } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 
 const NotFound = () => {
     return (
         <Layout>
-            <Head title="404"/>
+            <SEO title="404" />
             <Container>
                 <Row>
                     <Col>

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
 import Legend from "../components/app/legend"
 import TrainingTile from "../components/app/training-tile"
@@ -57,7 +57,7 @@ const TeamPage = ({ data }) => {
   }
   return (
     <Layout>
-      <Head title="Team-Tutorials" />
+      <SEO title="Team-Tutorials" />
       <Container>
         <Row style={{ marginBottom: "2rem", }}>
           <Col>

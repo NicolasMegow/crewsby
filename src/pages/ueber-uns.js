@@ -4,12 +4,12 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Emoji from "../components/shared/emoji"
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 
 const UeberUnsPage = () => {
     return (
         <Layout>
-            <Head title="Über uns" />
+            <SEO title="Über uns" />
             <Container>
                 <Row style={{ marginTop: "4rem" }}>
                     <Col>

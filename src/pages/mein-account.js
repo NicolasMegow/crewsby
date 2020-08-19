@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Container, Row, Col, Nav } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import headerStyles from "../styles/header.module.scss"
 import Emoji from "../components/shared/emoji"
 
@@ -85,7 +85,7 @@ const Account = () => {
 
     return (
         <Layout>
-            <Head title="Account" />
+            <SEO title="Account" />
             {isAuthenticated ? (
                 <Container>
                     <Row>

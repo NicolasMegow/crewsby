@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 import Layout from "../components/layout/layout"
-import Head from "../components/layout/head"
+import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
 import FaCheck from "../components/shared/facheck"
 import CTA from "../components/layout/cta"
@@ -13,17 +13,17 @@ import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 const PreisePage = () => {
     return (
         <Layout>
-            <Head title="Preise" />
+            <SEO title="Preise" />
             <Container>
                 <Row>
                     <Col>
                         <ReturnOnTeam width="100%" height={400} />
-                        <h1>Return-on-Teamarbeit<span style={{color:"#4285F4"}}>.</span></h1>
+                        <h1>Return-on-Teamarbeit<span style={{ color: "#4285F4" }}>.</span></h1>
                         <h2>Regelmäßiges Training ist eine gute Investition.</h2>
                     </Col>
                 </Row>
                 <Row style={{ marginTop: "4rem" }}>
-                <Col md style={{ marginBottom: "4rem" }}>
+                    <Col md style={{ marginBottom: "4rem" }}>
                         <h2>Team-Paket</h2>
                         <p>Für 1 Team & bis zu 8 Mitglieder<br></br>
                         Beinhaltet:</p>
@@ -34,9 +34,9 @@ const PreisePage = () => {
                             <br></br>
                         </p>
                         <p>
-                            <Emoji symbol="❤️" label="heart"/>{' '} Starkes Teamgefühl<br></br>
-                            <Emoji symbol="💪" label="muscle"/>{' '} Gesteigerte Leistung<br></br>
-                            <Emoji symbol="🧠" label="brain"/>{' '} Entfesselte Kreativität<br></br>
+                            <Emoji symbol="❤️" label="heart" />{' '} Starkes Teamgefühl<br></br>
+                            <Emoji symbol="💪" label="muscle" />{' '} Gesteigerte Leistung<br></br>
+                            <Emoji symbol="🧠" label="brain" />{' '} Entfesselte Kreativität<br></br>
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>89 €</h2>
                         <p>pro Monat</p>
@@ -54,9 +54,9 @@ const PreisePage = () => {
                             <FaCheck />{' '} Wettbewerbe für Teams*<br></br>
                         </p>
                         <p>
-                            <Emoji symbol="🎓" label="training"/>{' '} Selbstgesteuerte Weiterbildung<br></br>
-                            <Emoji symbol="🌐" label="global"/>{' '} Unternehmensweite Standards<br></br>
-                            <Emoji symbol="📈" label="results"/>{' '} Messbare Ergebnisse<br></br>
+                            <Emoji symbol="🎓" label="training" />{' '} Selbstgesteuerte Weiterbildung<br></br>
+                            <Emoji symbol="🌐" label="global" />{' '} Unternehmensweite Standards<br></br>
+                            <Emoji symbol="📈" label="results" />{' '} Messbare Ergebnisse<br></br>
                             <br></br></p>
                         <h2 style={{ marginBottom: "0" }}>49 €</h2>
                         <p>pro Team/Monat</p>
@@ -66,7 +66,7 @@ const PreisePage = () => {
                 <CTA />
                 <Row style={{ marginTop: "2rem" }}>
                     <Col>
-                        <p style={{ fontSize: "1rem" }}>* Die Übersetzungen und Enterprise-Features sind noch im Entwicklungsprozess. 
+                        <p style={{ fontSize: "1rem" }}>* Die Übersetzungen und Enterprise-Features sind noch im Entwicklungsprozess.
                         Wir arbeiten wirklich hart daran Crewsby konstant & schnell zu verbessern.</p>
                     </Col>
                 </Row>
