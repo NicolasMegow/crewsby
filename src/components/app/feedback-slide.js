@@ -72,7 +72,7 @@ const FeedbackSlide = ({ level, step, currentStep, setStep, length, type }) => {
     return <>
         <Row style={{ width: "100vw", height: "7rem", marginBottom: "1.4rem" }}>
             <Col>
-                <p>Wie fandest Du die Übung {uebung}?</p>
+                <p>Wie fandest Du die Übung <strong>{uebung}</strong>?</p>
                 {[...Array(5)].map((star, i) => {
                     const ratingValue = i + 1;
 
