@@ -98,18 +98,9 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#4285F4`,
         display: `standalone`,
-        cache_busting_mode: 'none',
         crossOrigin: `use-credentials`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/solo-uebungen/`, `/team-uebungen/`],
-        workboxConfig: {
-          globPatterns: ['**/icon-path*']
-        }
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
   ]
 }

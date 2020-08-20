@@ -2,11 +2,11 @@ import React from "react"
 import { Container, Row, Tab, Nav, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/shared/seo"
-import appStyles from "../styles/app.module.scss"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/shared/seo"
+import appStyles from "../../styles/app.module.scss"
 
-import Selbstcheck from "../img/svg/Selbstcheck.svg"
+import Selbstcheck from "../../img/svg/Selbstcheck.svg"
 
 const SelbstcheckPage = () => {
     return (

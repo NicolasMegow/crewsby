@@ -16,7 +16,7 @@ class TrainingTile extends React.Component {
                 key={this.props.id}
             >
                 <Link to={this.props.url}>
-                    <h4>{this.props.topic}</h4>
+                    <h4 style={{fontSize:"1.2rem"}}>{this.props.topic}</h4>
                     <p
                         style={{
                             fontSize: "1rem",
