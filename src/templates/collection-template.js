@@ -7,6 +7,9 @@ import SEO from "../components/shared/seo"
 import ÜbungInfo from "../components/app/uebung-info"
 import SharingButtons from "../components/shared/sharing-buttons"
 
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import LoginReminder from "../components/app/login-reminder"
+
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -51,6 +54,7 @@ export const query = graphql`
 `
 
 const CollectionTemplate = ({ data, props, location }) => {
+    const { isAuthenticated } = useAuth0()
     const { uebungType, method } = data.mdx.fields;
     const url = location.href ? location.href : '';
     const { skill, levels, job } = data.mdx.frontmatter;
@@ -69,6 +73,7 @@ const CollectionTemplate = ({ data, props, location }) => {
                     <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
                         <Col>
                             <MDXRenderer {...props}>{data.mdx.body}</MDXRenderer>
+                            {!isAuthenticated ? (<LoginReminder />) : (null)}
                         </Col>
                     </Row>
                     <Row>

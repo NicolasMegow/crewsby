@@ -7,12 +7,24 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'CREWSBY',
+    title: "CREWSBY",
     author: "Nicolas Megow",
     siteUrl: `https://crewsby.com`,
-    description: 'Übungen für geniale Teamarbeit',
-    keywords: ["scrum", "agile", "remote", "teamwork", "retro", "retrospektive", "teamgefühl", "übungen", "methoden", "lean startup", "design thinking"],
-    siteUrl: 'htts://crewsby.com'
+    description: "Übungen für geniale Teamarbeit",
+    keywords: [
+      "scrum",
+      "agile",
+      "remote",
+      "teamwork",
+      "retro",
+      "retrospektive",
+      "teamgefühl",
+      "übungen",
+      "methoden",
+      "lean startup",
+      "design thinking",
+    ],
+    siteUrl: "htts://crewsby.com",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,20 +44,21 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'solo-uebungen',
+        name: "solo-uebungen",
         path: `${__dirname}/src/content/solo-uebungen`,
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'team-uebungen',
+        name: "team-uebungen",
         path: `${__dirname}/src/content/team-uebungen`,
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -57,25 +70,25 @@ module.exports = {
             options: {
               maxWidth: 900,
               linkImagesToOriginal: false,
-            }
+            },
           },
           {
             resolve: `gatsby-remark-katex`,
             options: {
               // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`
-            }
-          }
-        ]
+              strict: `ignore`,
+            },
+          },
+        ],
       },
     },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svg/ // See below to configure properly
-        }
-      }
+          include: /svg/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-create-client-paths`,
@@ -102,5 +115,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
-  ]
+  ],
 }

@@ -1,22 +1,24 @@
 import React from "react"
-import { Container, Row, Tab, Nav, ListGroup } from 'react-bootstrap'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Container, Row, Col } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../../components/layout/layout"
 import SEO from "../../components/shared/seo"
 
 const RessourcenPage = () => {
-    return (
-        <Layout>
-            <SEO title="Selbstcheck" />
-            <Container>
-                <Row>
-                    <h1>Hello Test</h1>
-                    <p>Möchtest du dich oder dein Team einschätzen?</p>
-                </Row>
-            </Container>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <SEO title="Ressourcen" />
+      <Container>
+        <Row>
+          <Col>
+            <h1>Ressourcen</h1>
+            <h2>Hier findest Du kostenlose Werkzeuge für Dein Team.</h2>
+          </Col>
+        </Row>
+      </Container>
+    </Layout>
+  )
 }
 
 export default RessourcenPage
