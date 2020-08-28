@@ -1,5 +1,4 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "../components/shared/emoji"
 
@@ -17,110 +16,107 @@ const UeberUnsPage = () => {
           <Col>
             <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
             <h1 style={{ color: "#4285F4" }}>CREWSBY</h1>
-            <h2>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Wie Gatsby ein Hinweis: by Gatz. Die Crew erschafft das Team.
-            </h2>
+            </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
             <p className="mintitle">Unsere Vision</p>
-            <h2>
+            <h2 className="feature-h">
               Wir <Emoji symbol="🔥" label="brennen" /> für Teamarbeit.
             </h2>
             <p>
               Moderne Teamarbeit sollte der Standard sein. Und wirkliche jedes
-              Team verdient ein gutes Teamgefühl.
-            </p>
-            <p>
-              Deshalb arbeiten wir unermüdlich daran die besten Trainings dafür
-              zu entwickeln.
+              Team verdient ein gutes Teamgefühl. Deshalb arbeiten wir
+              unermüdlich daran die besten Trainings dafür zu entwickeln. So
+              kannst Du mit Deiner Crew selbstbestimmt als Team wachsen.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
-          <Col md={6}>
+          <Col>
             <p className="mintitle">Unser Anspruch</p>
-            <h3>Wir sind durch & durch nachhaltig.</h3>
-            <p>
-              Wir verbessern konstant unsere Trainings, damit Du nachhaltig
-              Fähigkeiten aufbauen kannst. Digitales Training hat eine
-              hervorragende Klimabilanz. Wir gleichen darüber hinaus den durch
-              uns verursachten CO2-Ausstoß mit Aufforstungsprojekten aus.
-            </p>
-          </Col>
-          <Col
-            md={6}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <FontAwesomeIcon
-              icon={["fal", "seedling"]}
-              fixedWidth
-              size="5x"
-              mask={["fas", "rectangle-landscape"]}
-              color="#67A4F4"
-              transform="shrink-8"
-            />
-            <FontAwesomeIcon
-              icon={["fal", "flower-tulip"]}
-              fixedWidth
-              size="5x"
-              mask={["fas", "rectangle-landscape"]}
-              color="#418DF1"
-              transform="shrink-8"
-            />
-            <FontAwesomeIcon
-              icon={["fal", "tree-alt"]}
-              fixedWidth
-              size="5x"
-              mask={["fas", "rectangle-landscape"]}
-              color="#4285F4"
-              transform="shrink-8"
-            />
+            <h2 className="feature-h">
+              Crewsby definiert Teamentwicklung neu.
+            </h2>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }}>
-          <Col md={6}>
-            <p className="mintitle">Unsere Arbeitsweise</p>
-            <h3>Wir sind ein schlankes Team.</h3>
-            <p>
-              Konzentration auf das Wesentliche ist eine Tugend. Unser Ziel ist
-              es, dies möglichst diszipliniert umzusetzen. Und das Wesentliche
-              ist für uns Dein Trainingserfolg.
-            </p>
-          </Col>
+        <Row>
           <Col
-            md={6}
+            md
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              marginTop: "2rem",
+              border: "1px solid #000000",
+              padding: "1.2rem",
+              margin: "1.2rem",
             }}
           >
-            <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-              <Emoji symbol="🎁" label="present" /> Nützliche Beiträge<br></br>
-              <Emoji symbol="🔵" label="circle" /> Schlichte Eleganz<br></br>
-              <Emoji symbol="🍏" label="sustainable" /> Nachhaltigkeit
+            {" "}
+            <div style={{ fontSize: "2.4rem" }}>
+              <Emoji symbol="🎁" label="present" />{" "}
+            </div>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+              Nützliche Beiträge
+            </p>
+            <p>Wir entwickeln Trainings zu den besten Ideen über Teamarbeit.</p>
+          </Col>
+          <Col
+            md
+            style={{
+              marginTop: "2rem",
+              border: "1px solid #000000",
+              padding: "1.2rem",
+              margin: "1.2rem",
+            }}
+          >
+            {" "}
+            <div style={{ fontSize: "2.4rem" }}>
+              <Emoji symbol="🔵" label="circle" />{" "}
+            </div>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+              Schlichte Eleganz
+            </p>
+            <p>Wir überzeugen durch Zurückhaltung und Einfachheit.</p>
+          </Col>
+          <Col
+            md
+            style={{
+              marginTop: "2rem",
+              border: "1px solid #000000",
+              padding: "1.2rem",
+              margin: "1.2rem",
+            }}
+          >
+            {" "}
+            <div style={{ fontSize: "2.4rem" }}>
+              <Emoji symbol="🍏" label="sustainable" />{" "}
+            </div>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+              Durch & durch nachhaltig
+            </p>
+            <p>
+              Wir helfen Fähigkeiten aufzubauen bei minimalem CO2-Fussabdruck.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
-          <Col md={6}>
+          <Col>
             <p className="mintitle">Unser Dank</p>
-            <h3>Wir stehen auf Riesen-Schultern.</h3>
+            <h2 className="feature-h">
+              Wir stehen auf den Schultern von Riesen.
+            </h2>
             <p>
               Wir erstellen unsere Trainings auf Basis von Spitzenforschung und
               Best-Practices aus der Praxis. Wir suchen und analysieren, lassen
               uns inspirieren und entwicklen darauf aufbauend neue Trainings für
-              Dich.
+              Dich und Deine Crew.
             </p>
           </Col>
+        </Row>
+        <Row>
           <Col
-            md={6}
             style={{
               display: "flex",
               alignItems: "center",
@@ -130,9 +126,10 @@ const UeberUnsPage = () => {
             <strong>
               Ken Blanchard • Chip Conley • John Doerr • Amy Edmundson • Tasha
               Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel •
-              Ben Horrowitz • Tom Kelley • Patrick Lencioni • Vittorio Loreto •
-              Max De Pree • Edgar Schein • F. Schulz von Thun • Kim Scott • J.J.
-              Sutherland • Karl Weick
+              Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni •
+              Vittorio Loreto • Fredrick Pferdt • Max De Pree • Edgar Schein •
+              F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl Weick •
+              Tom Wujec
             </strong>
           </Col>
         </Row>

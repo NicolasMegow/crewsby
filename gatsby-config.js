@@ -46,15 +46,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "solo-uebungen",
-        path: `${__dirname}/src/content/solo-uebungen`,
+        name: "methoden",
+        path: `${__dirname}/src/content/methoden`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "team-uebungen",
-        path: `${__dirname}/src/content/team-uebungen`,
+        name: "uebungen",
+        path: `${__dirname}/src/content/uebungen`,
       },
     },
     `gatsby-plugin-sharp`,

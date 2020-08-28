@@ -5,9 +5,14 @@
 @import "~bootstrap/scss/bootstrap";
 
 // Re-Style Bootstrap
-p, li {
+p,
+li {
   font-size: 1.2rem;
   line-height: 1.7;
+}
+
+a:hover {
+  text-decoration: none,
 }
 
 h1 {
@@ -17,6 +22,7 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
+  font-weight: 700;
 }
 
 hr {
@@ -63,13 +69,6 @@ hr {
 
 
 // Create Custom Styles
-.info-icon {
-  color: $lightback;
-}
-
-.info-icon:hover {
-  color: $primary;
-}
 
 .mintitle {
   font-weight: 500;
@@ -79,16 +78,20 @@ hr {
   line-height: 1.4;
 }
 
+.feature-h {
+  font-size: 3rem;
+}
+
 .feature-num {
   font-size: 7rem;
   font-weight: 700;
   line-height: 1;
   margin-right: .4rem;
 }
+
 .feature-text {
   margin-bottom: .6rem;
-  line-height: 1;
-  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .tutsegment {
@@ -103,16 +106,16 @@ hr {
 
 
 // Re-Style KaTex
-.katex { 
+.katex {
   margin: 3rem 0;
   font-family: $font-family-base !important;
   font-weight: 500 !important;
-}  
+}
 
 
 // Mobilize
-@media(max-width:800px){
+@media(max-width:800px) {
   h1 {
     font-size: 2.8rem;
-  }  
+  }
 }

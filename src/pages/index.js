@@ -4,9 +4,11 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import FaCheck from "../components/shared/facheck"
+
+import BenefitRow from "../components/layout/benefit-row"
 import FeatureRow from "../components/layout/feature-row"
-import HowToRow from "../components/layout/howto-row"
+import MethodBlock from "../components/layout/method-block"
+import PreiseRow from "../components/layout/preise-row"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
 
@@ -18,23 +20,49 @@ const IndexPage = () => {
         <Row>
           <Col>
             <Teambuilding width="100%" />
-            <h1>Ihr seid die Crew.</h1>
-            <h1>Ihr entwickelt euer Team.</h1>
-            <h2>
+            <h1 style={{ marginTop: "2rem" }}>
+              Teamentwicklung durch die Crew.
+            </h1>
+            <p
+              style={{
+                fontSize: "1.4rem",
+                fontWeight: "bold",
+                marginBottom: "4rem",
+              }}
+            >
               Crewsby hilft Dir neue Fähigkeiten zu entwickeln, mit Deiner Crew
               zusammen zu wachsen und agil zu arbeiten.
-            </h2>
+            </p>
+            <Link
+              to="/solo-training/uebungen"
+              className="btn btn-outline-primary btn-lg"
+              style={{ marginRight: "2rem", marginBottom: "2rem" }}
+            >
+              {" "}
+              Solo-Training starten
+            </Link>
+            <Link
+              to="/teamentwicklung/uebungen"
+              className="btn btn-primary btn-lg"
+              style={{ marginRight: "2rem", marginBottom: "2rem" }}
+            >
+              Teamentwicklung beginnen
+            </Link>
           </Col>
         </Row>
-        <FeatureRow />
+        <BenefitRow />
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>
             <p className="mintitle">Geniale Teamarbeit</p>
-            <h2>Nutze bewährte Methoden.</h2>
+            <h2 className="feature-h">Hilfe zur Selbsthilfe.</h2>
             <p>
-              Neue Fähigkeiten brauchen Übung. Mit Crewsby probierst Du bewährte
-              Methoden aus und kannst diese problemlos mit Deinem Team im
-              Tagesgeschäft nutzen.
+              Nicht alle Methoden passen zu Dir und Deiner Crew. Aber es hilft,
+              alle auszuprobieren. Nutze Methoden, die wirklich gut zu Dir und
+              Deiner Crew passen. Mit Crewsby trainiert ihr komplett
+              selbstbestimmt und unabhängig.
+            </p>
+            <p>
+              <Link to="/methoden">→ alle Methoden ansehen</Link>
             </p>
           </Col>
           <Col
@@ -45,68 +73,17 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontWeight: "bold" }}>
-              <FaCheck /> Radical Candor<br></br>
-              <FaCheck /> Psychological Safety<br></br>
-              <FaCheck /> OKRs<br></br>
-              <FaCheck /> Kanban<br></br>
-              <FaCheck /> Lean Management<br></br>
-              <FaCheck /> Scrum<br></br>
-              <FaCheck /> Design Thinking<br></br>
-            </p>
-          </Col>
-        </Row>
-        <HowToRow />
-        <Row style={{ marginTop: "8rem" }}>
-          <Col
-            md
-            style={{
-              border: "1px solid #000000",
-              padding: "1.4rem",
-              margin: "1.4rem",
-            }}
-          >
-            <h3>Solo-Übungen</h3>
-            <strong>Kostenlos</strong>
-            <p>
-              Teamarbeit startet mit Dir. Solo-Übungen helfen Dir Deinen Beitrag
-              zum Team zu verbessern.
-            </p>
-            <Link
-              to="/solo-uebungen"
-              className="btn btn-outline-primary btn-lg"
-            >
-              Alleine trainieren
-            </Link>
-          </Col>
-          <Col
-            md
-            style={{
-              border: "1px solid #000000",
-              padding: "1.4rem",
-              margin: "1.4rem",
-            }}
-          >
-            <h3>Team-Übungen</h3>
-            <strong>Kostenlos</strong>
-            <p>
-              Geniale Teamarbeit entsteht aus dem Zusammenspiel
-              unterschiedlicher Beiträge. Team-Übungen helfen euch als Crew
-              gemeinsam Neues auszuprobieren.
-            </p>
-            <Link to="/team-uebungen" className="btn btn-primary btn-lg">
-              Zusammen wachsen
-            </Link>
+            <MethodBlock />
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>
-            <p className="mintitle">Übungs-Flatrate</p>
-            <h2>Training ohne Trainer.</h2>
+            <p className="mintitle">Echtes Training</p>
+            <h2 className="feature-h">Nur Machen hilft.</h2>
             <p>
-              Alle Übungen stehen Dir 24/7 zur Verfügung. Mobil und am Desktop,
-              zwischendurch oder geblockt. Setze Deine persönlichen Schwerpunkte
-              und lerne gemeinsam im Team oder alleine für Dich.
+              Verhalten zählt. Das braucht Ausprobieren und Anwenden. Crewsby
+              bietet Dir und Deiner Crew komplette Trainings mit aufeinander
+              aufbauenden Übungen und Reflexionen.
             </p>
           </Col>
           <Col
@@ -117,7 +94,13 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontWeight: "bold", fontSize: "2rem" }}>
+            <p
+              style={{
+                fontWeight: "bold",
+                fontSize: "3rem",
+                lineHeight: "1.2",
+              }}
+            >
               <strike style={{ textDecorationColor: "#DB4437" }}>Wollen</strike>
               ...<br></br>
               <strike style={{ textDecorationColor: "#DB4437" }}>Reden</strike>
@@ -126,6 +109,60 @@ const IndexPage = () => {
             </p>
           </Col>
         </Row>
+        <FeatureRow />
+        <Row style={{ marginTop: "8rem" }}>
+          <Col>
+            <p className="mintitle">Solo + Team</p>
+            <h2 className="feature-h">
+              Trainiere alleine und mit Deiner Crew zusammen.
+            </h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            md
+            style={{
+              border: "1px solid #000000",
+              padding: "1.4rem",
+              margin: "1.4rem",
+            }}
+          >
+            <h3>Solo-Training</h3>
+            <p>
+              Teamarbeit startet mit Dir. Im Solo-Training verbesserst Du Deinen
+              Beitrag zum Team und nutzt Methoden zur Moderation und
+              Teamführung.
+            </p>
+            <Link
+              to="/solo-training/uebungen"
+              className="btn btn-outline-primary btn-lg"
+            >
+              Solo-Training starten
+            </Link>
+          </Col>
+          <Col
+            md
+            style={{
+              border: "1px solid #000000",
+              padding: "1.4rem",
+              margin: "1.4rem",
+            }}
+          >
+            <h3>Teamentwicklung</h3>
+            <p>
+              Geniale Teamarbeit entsteht aus dem Zusammenspiel
+              unterschiedlicher Beiträge. Probiert gemeinsam Neues aus und
+              entwickelt euer Team nachhaltig.
+            </p>
+            <Link
+              to="/teamentwicklung/uebungen"
+              className="btn btn-primary btn-lg"
+            >
+              Teamentwicklung beginnen
+            </Link>
+          </Col>
+        </Row>
+        <PreiseRow />
       </Container>
     </Layout>
   )

@@ -1,49 +1,57 @@
-const path = require('path')
+const path = require("path")
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   if (node.internal.type == "Mdx") {
-    const fileNode = getNode(node.parent);
+    const fileNode = getNode(node.parent)
     const pathPrefix = fileNode.sourceInstanceName
-    const slug = path.basename(node.fileAbsolutePath, '.mdx')
+    const slug = path.basename(node.fileAbsolutePath, ".mdx")
     const method = path.dirname(node.fileAbsolutePath).split("/").pop()
-    createNodeField({ node, name: "slug", value: `${slug}` });
-    createNodeField({ node, name: "method", value: `${method}` });
-    createNodeField({ node, name: "uebungType", value: pathPrefix });
+    createNodeField({ node, name: "slug", value: `${slug}` })
+    createNodeField({ node, name: "method", value: `${method}` })
+    createNodeField({ node, name: "contentType", value: pathPrefix })
   }
 }
 
 module.exports.createPages = async function ({ actions, graphql }) {
   await graphql(`
-      {
-        allMdx {
-          edges {
-            node {
-              fields {
-                slug
-                uebungType
-                method
-              }
+    {
+      allMdx {
+        edges {
+          node {
+            fields {
+              slug
+              contentType
+            }
+            frontmatter {
+              type
             }
           }
         }
       }
-    `).then(res => {
+    }
+  `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
-      const { slug, uebungType, method } = edge.node.fields
-      if (slug == "_index") {
+      const { slug, contentType } = edge.node.fields
+      const userType = edge.node.frontmatter.type
+      if (contentType == "methoden") {
         actions.createPage({
-          path: `/${uebungType}/${method}`,
-          component: require.resolve(`./src/templates/collection-template.js`),
-          context: { slug, uebungType, method },
+          path: `/methoden/${slug}`,
+          component: require.resolve(`./src/templates/methode-template.js`),
+          context: { slug, contentType },
         })
       } else {
         actions.createPage({
-          path: `/${uebungType}/${method}/${slug}`,
-          component: require.resolve(`./src/templates/deck-template.js`),
+          path: `/${userType}/${contentType}/${slug}`,
+          component: require.resolve(`./src/templates/uebung-info.js`),
           context: { slug },
-        })
+        }),
+          actions.createPage({
+            path: `/${userType}/${contentType}/${slug}/42`,
+            component: require.resolve(`./src/templates/uebung-template.js`),
+            context: { slug },
+          })
       }
     })
   })

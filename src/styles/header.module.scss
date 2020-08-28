@@ -8,7 +8,7 @@
 }
 
 .container {
-    max-width: 1024px !important;
+    max-width: 1160px !important;
 }
 
 .title {
@@ -17,6 +17,7 @@
     font-weight: 600;
     text-decoration: none;
 }
+
 .title:hover {
     text-decoration: none;
 }
@@ -28,6 +29,7 @@
     padding: .4rem 0;
     margin-right: 1.3rem;
     text-decoration: none;
+
     &[aria-current="page"] {
         border-bottom: 2px solid;
         color: $primary;
