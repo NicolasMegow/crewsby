@@ -57,6 +57,10 @@ const SoloSetsPage = () => {
               <li>Unterschiede zu nutzen</li>
               <li>Gefühle zu kommunizieren</li>
             </ul>
+            <h3 style={{ marginBottom: "0" }}>
+              <strike>89 €</strike> 49 € <small>bis 13.09.</small>
+            </h3>
+            <p>pro Crewmitglied für 12 Wochen</p>
           </Col>
           <Col
             md
@@ -79,6 +83,10 @@ const SoloSetsPage = () => {
               <li>Schnittstellen zu gestalten</li>
               <li>Hindernisse aufzulösen</li>
             </ul>
+            <h3 style={{ marginBottom: "0" }}>
+              <strike>89 €</strike> 49 € <small>bis 13.09.</small>
+            </h3>
+            <p>pro Crewmitglied für 12 Wochen</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }} id="signup">
@@ -86,6 +94,10 @@ const SoloSetsPage = () => {
             <h2 className="feature-h">
               Lerne neue Fähigkeiten mit einer Crew.
             </h2>
+            <p>
+              Einfach anmelden, wir kümmern uns um das Matching von Dir zu einer
+              interessanten Crew.
+            </p>
             <SetSignup />
           </Col>
         </Row>
