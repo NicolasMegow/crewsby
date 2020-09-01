@@ -57,6 +57,7 @@ module.exports = {
         path: `${__dirname}/src/content/uebungen`,
       },
     },
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,

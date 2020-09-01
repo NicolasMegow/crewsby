@@ -11,6 +11,8 @@ import DigiTraining from "../img/svg/DigiTraining.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import ChoiceChips from "../components/shared/choice-chips"
+
 const TrainingPage = () => {
   return (
     <Layout>
@@ -21,6 +23,11 @@ const TrainingPage = () => {
             <Teamboat width="100%" />
             <h1>Teamarbeit neu erleben.</h1>
             <h2>Wie bereitest Du Dich auf die nächste Herausforderung vor?</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ChoiceChips options={["Kanban", "Radical Candor", "Konflikte"]} />
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>

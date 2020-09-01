@@ -15,7 +15,7 @@ const SoloTrainingPage = () => {
           <Col>
             <h1>Dein Beitrag zum Team zählt.</h1>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Steigere deinen Beitrag durch gezielte Übungen und baue Stück für
+              Steigere Deinen Beitrag durch gezielte Übungen und baue Stück für
               Stück wertvolle Fähigkeiten auf.
             </p>
           </Col>
@@ -62,7 +62,9 @@ const SoloTrainingPage = () => {
               Kombinationen von Übungen, mit denen Du strukturiert Fähigkeiten
               aufbaust.
             </p>
-            <strong>COMING SOON</strong>
+            <Link to="sets" className="btn btn-primary btn-lg">
+              Set starten
+            </Link>
           </Col>
           <Col
             md={5}

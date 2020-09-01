@@ -19,7 +19,7 @@ const BenefitRow = () => {
           <span style={{ fontSize: "2.4rem" }}>
             <Emoji symbol="💪" label="muscle" />{" "}
           </span>
-          Inspaniduelle Abläufe
+          Individuelle Abläufe
         </p>
       </Col>
       <Col lg={4}>

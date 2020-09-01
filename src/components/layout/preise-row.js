@@ -32,7 +32,7 @@ const PreiseRow = () => {
           <h3>Solo-Account</h3>
           <p>Alle Übungen</p>
           <p>
-            <FaPlus /> Solo-Sets & Logbuch<br></br>
+            <FaPlus /> Logbuch<br></br>
             <FaPlus /> Newletter mit neuen Übungen<br></br>
           </p>
           <h3 style={{ marginBottom: "0" }}>kostenlos</h3>
