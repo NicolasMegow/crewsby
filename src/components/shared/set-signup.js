@@ -76,6 +76,11 @@ const SetSignup = () => {
   }
   return (
     <>
+      <Row style={{ marginTop: "8rem" }}>
+        <Col>
+          <h2 className="feature-h">Jetzt anmelden:</h2>
+        </Col>
+      </Row>
       <Row>
         <Col md={4}>
           <TextField

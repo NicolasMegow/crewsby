@@ -9,15 +9,15 @@ const SetRow = () => {
           4<br></br>Menschen
         </p>
         <p className="feature-text">
-          Lerne gemeinsam in einer Crew mit 3 ausgewählten Peers.
+          Lerne gemeinsam in einer Crew mit drei ausgewählten Peers.
         </p>
       </Col>
       <Col lg={4}>
         <p className="feature-num" style={{ fontSize: "3rem" }}>
-          60<br></br>Minuten
+          1<br></br>Stunde
         </p>
         <p className="feature-text">
-          Lerne 60 Minuten pro Woche in gemeinsamen Übungen mit Deiner Crew.
+          Investiere 1 Stunde pro Woche in gemeinsame Übungen mit Deiner Crew.
         </p>
       </Col>
       <Col lg={4}>
@@ -25,7 +25,7 @@ const SetRow = () => {
           12<br></br>Wochen
         </p>
         <p className="feature-text">
-          Entwickele echte Fähigkeiten über 12 Wochen strukturierter Übungen.
+          Entwickle echte Fähigkeiten in einem strukturierten Programm.
         </p>
       </Col>
     </Row>

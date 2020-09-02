@@ -7,6 +7,7 @@ import Emoji from "../../../components/shared/emoji"
 
 import SetRow from "../../../components/layout/set-row"
 import SetSignup from "../../../components/shared/set-signup"
+import SetFeatureRow from "../../../components/layout/set-feature-row"
 
 const SoloSetsPage = () => {
   return (
@@ -15,9 +16,9 @@ const SoloSetsPage = () => {
       <Container>
         <Row style={{ marginTop: "4rem" }} id="what">
           <Col>
-            <h1>Lerne gemeinsam mit Peers.</h1>
+            <h1>Lerne gemeinsam mit einer Crew.</h1>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Entwickele <u>online</u> wertvolle Fähigkeiten & knüpfe tolle
+              Entwickle <u>online</u> wertvolle Fähigkeiten & knüpfe tolle
               Kontakte.
             </p>
           </Col>
@@ -98,6 +99,7 @@ const SoloSetsPage = () => {
               Einfach anmelden, wir kümmern uns um das Matching von Dir zu einer
               interessanten Crew.
             </p>
+            <SetFeatureRow />
             <SetSignup />
           </Col>
         </Row>
