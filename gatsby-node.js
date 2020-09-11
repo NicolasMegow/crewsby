@@ -7,9 +7,9 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
     const fileNode = getNode(node.parent)
     const pathPrefix = fileNode.sourceInstanceName
     const slug = path.basename(node.fileAbsolutePath, ".mdx")
-    const method = path.dirname(node.fileAbsolutePath).split("/").pop()
+    const skill = path.dirname(node.fileAbsolutePath).split("/").pop()
     createNodeField({ node, name: "slug", value: `${slug}` })
-    createNodeField({ node, name: "method", value: `${method}` })
+    createNodeField({ node, name: "skill", value: `${skill}` })
     createNodeField({ node, name: "contentType", value: pathPrefix })
   }
 }
@@ -23,6 +23,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
             fields {
               slug
               contentType
+              skill
             }
             frontmatter {
               type
@@ -33,25 +34,26 @@ module.exports.createPages = async function ({ actions, graphql }) {
     }
   `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
-      const { slug, contentType } = edge.node.fields
-      const userType = edge.node.frontmatter.type
-      if (contentType == "methoden") {
-        actions.createPage({
-          path: `/methoden/${slug}`,
-          component: require.resolve(`./src/templates/methode-template.js`),
+      const { slug, contentType, skill } = edge.node.fields
+      if (contentType == "methods") {
+        null
+        /*        actions.createPage({
+          path: `/methods/${slug}`,
+          component: require.resolve(`./src/templates/method-template.js`),
           context: { slug, contentType },
+        })*/
+      } else if (slug == "_index") {
+        actions.createPage({
+          path: `/${contentType}/${skill}/`,
+          component: require.resolve(`./src/templates/skill-info.js`),
+          context: { slug, skill },
         })
       } else {
         actions.createPage({
-          path: `/${userType}/${contentType}/${slug}`,
-          component: require.resolve(`./src/templates/uebung-info.js`),
+          path: `/${contentType}/${skill}/${slug}`,
+          component: require.resolve(`./src/templates/exercise-template.js`),
           context: { slug },
-        }),
-          actions.createPage({
-            path: `/${userType}/${contentType}/${slug}/42`,
-            component: require.resolve(`./src/templates/uebung-template.js`),
-            context: { slug },
-          })
+        })
       }
     })
   })
@@ -64,8 +66,8 @@ exports.onCreatePage = async ({ page, actions }) => {
 
   // page.matchPath is a special key that's used for matching pages
   // only on the client.
-  if (page.path.match(/^\/mein-account/)) {
-    page.matchPath = "/mein-account/*"
+  if (page.path.match(/^\/learning-zone/)) {
+    page.matchPath = "/learning-zone/*"
 
     // Update the page.
     createPage(page)

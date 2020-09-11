@@ -6,26 +6,26 @@ const SetRow = () => {
     <Row style={{ marginTop: "4rem" }}>
       <Col lg={4}>
         <p className="feature-num" style={{ fontSize: "3rem" }}>
-          4<br></br>Menschen
+          4 Peers
         </p>
         <p className="feature-text">
-          Lerne gemeinsam in einer Crew mit drei ausgewählten Peers.
+          Join a crew of 4 peers to develop a new skill together.
         </p>
       </Col>
       <Col lg={4}>
         <p className="feature-num" style={{ fontSize: "3rem" }}>
-          1<br></br>Stunde
+          1 Hour
         </p>
         <p className="feature-text">
-          Investiere 1 Stunde pro Woche in gemeinsame Übungen mit Deiner Crew.
+          Meet for 1 hour every week to learn with and from your peers.
         </p>
       </Col>
       <Col lg={4}>
         <p className="feature-num" style={{ fontSize: "3rem" }}>
-          12<br></br>Wochen
+          12 Weeks
         </p>
         <p className="feature-text">
-          Entwickle echte Fähigkeiten in einem strukturierten Programm.
+          Develop and hone skill over the course of 12 weeks.
         </p>
       </Col>
     </Row>

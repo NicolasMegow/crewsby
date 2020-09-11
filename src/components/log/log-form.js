@@ -22,7 +22,7 @@ const TextField = ({ name, placeholder, handleCallback }) => {
   }
   useEffect(() => {
     handleCallback(name, input)
-  }, [input, name, handleCallback])
+  }, [input])
   return (
     <span>
       <FieldTitle>
@@ -55,12 +55,12 @@ const TextField = ({ name, placeholder, handleCallback }) => {
   )
 }
 
-const SetSignup = () => {
-  const [signupData, setSignup] = useState([])
+const LogForm = () => {
+  const [signupData, LogForm] = useState([])
   const [signupState, setState] = useState(false)
   const btnRef = useRef()
   const handleCallback = (name, info) => {
-    setSignup(prevState => ({
+    LogForm(prevState => ({
       ...prevState,
       [name]: info,
     }))
@@ -171,4 +171,4 @@ const SetSignup = () => {
   )
 }
 
-export default SetSignup
+export default LogForm

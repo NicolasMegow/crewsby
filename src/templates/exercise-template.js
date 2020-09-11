@@ -7,14 +7,14 @@ import SEO from "../components/shared/seo"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/shared/loading"
+import Emoji from "../components/shared/emoji"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import "katex/dist/katex.min.css"
 
-import Hint from "../components/app/hint"
-import Deck from "../components/app/deck"
-import Emoji from "../components/shared/emoji"
+import Hint from "../components/exercise/hint"
+import Deck from "../components/exercise/deck"
 
 const components = {
   wrapper: ({ children, ...props }) => {
@@ -73,7 +73,7 @@ export const query = graphql`
   }
 `
 
-const UebungTemplate = ({ data, props }) => {
+const ExerciseTemplate = ({ data, props }) => {
   const { loading } = useAuth0()
   const { slug, contentType } = data.mdx.fields
   const { method, level, type, title } = data.mdx.frontmatter
@@ -112,4 +112,4 @@ const UebungTemplate = ({ data, props }) => {
   )
 }
 
-export default UebungTemplate
+export default ExerciseTemplate

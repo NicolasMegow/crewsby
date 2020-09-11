@@ -29,18 +29,18 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-site">
             <Nav>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/methoden">
-                  Methoden
+                <Link className={headerStyles.navItem} to="/peer-training">
+                  Peer training
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/solo-training">
-                  Solo-Training
+                <Link className={headerStyles.navItem} to="/skills">
+                  Skills
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/teamentwicklung">
-                  Teamentwicklung
+                <Link className={headerStyles.navItem} to="/learning-zone">
+                  Learning zone
                 </Link>
               </Nav.Item>
             </Nav>
@@ -48,11 +48,6 @@ const Header = () => {
             <Nav className="ml-auto">
               {isAuthenticated ? (
                 <>
-                  <Nav.Item>
-                    <Link className={headerStyles.navItem} to="/mein-account">
-                      Mein Account
-                    </Link>
-                  </Nav.Item>
                   <Nav.Item>
                     <Link
                       to="/"
@@ -63,7 +58,7 @@ const Header = () => {
                         logout()
                       }}
                     >
-                      Ausloggen
+                      Log out
                     </Link>
                   </Nav.Item>
                 </>
@@ -79,7 +74,7 @@ const Header = () => {
                         loginWithPopup({ action: "signup" })
                       }}
                     >
-                      Anmelden
+                      Sign up
                     </Link>
                   </Nav.Item>
                   <Nav.Item>
@@ -92,7 +87,7 @@ const Header = () => {
                         loginWithPopup()
                       }}
                     >
-                      Einloggen
+                      Log in
                     </Link>
                   </Nav.Item>
                 </>

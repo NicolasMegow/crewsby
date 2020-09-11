@@ -57,7 +57,7 @@ const ChoiceChips = ({ name, options, handleCallback }) => {
   }
   useEffect(() => {
     handleCallback(name, choices)
-  }, [choices])
+  }, [choices, name, handleCallback])
 
   return (
     <>

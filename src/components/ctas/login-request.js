@@ -10,30 +10,33 @@ const LoginRequest = () => {
     <Container>
       <Row>
         <Col>
-          <h1 style={{ marginBottom: "3rem" }}>
-            <Emoji symbol="👋" label="welcome" /> Bitte erst einloggen
+          <h1>
+            <Emoji symbol="👋" label="welcome" /> Welcome!
           </h1>
+          <h2 style={{ marginBottom: "2rem", marginTop: "2rem" }}>
+            Please log in to enter your learning zone.
+          </h2>
           <Link
             to="/"
-            className="btn btn-outline-primary"
+            className="btn btn-outline-primary  btn-lg"
             style={{ marginRight: ".5rem" }}
             onClick={event => {
               event.preventDefault()
               loginWithPopup({ action: "signup" })
             }}
           >
-            Anmelden
+            Sign up
           </Link>
           <Link
             to="/"
-            className="btn btn-primary"
+            className="btn btn-primary btn-lg"
             style={{ marginRight: "0" }}
             onClick={event => {
               event.preventDefault()
               loginWithPopup()
             }}
           >
-            Einloggen
+            Log in
           </Link>
         </Col>
       </Row>

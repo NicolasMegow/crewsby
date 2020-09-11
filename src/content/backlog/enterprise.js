@@ -2,11 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
-import FaCheck from "../components/shared/facheck"
-import CTA from "../components/ctas/cta"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/shared/seo"
+import Emoji from "../../components/shared/emoji"
+import FaCheck from "../../components/shared/facheck"
+import CTA from "../../components/ctas/phunt-cta"
 
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 
@@ -80,7 +80,7 @@ const PreisePage = () => {
             </Button>
           </Col>
         </Row>
-        <CTA />
+        <PHuntCTA />
         <Row style={{ marginTop: "2rem" }}>
           <Col>
             <p style={{ fontSize: "1rem" }}>

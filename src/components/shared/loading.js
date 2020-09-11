@@ -2,12 +2,12 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../layout/layout"
-import Head from "../layout/head"
+import SEO from "./seo"
 
 const Loading = () => {
-  return(
-      <Layout>
-      <Head title="Meine Trainings" />
+  return (
+    <Layout>
+      <SEO title="Working hard!" />
       <Container>
         <Row>
           <Col>

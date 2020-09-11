@@ -7,40 +7,36 @@ import SEO from "../components/shared/seo"
 
 import Logo from "../../static/crewsby_logo-512x512.png"
 
-const UeberUnsPage = () => {
+const AboutUsPage = () => {
   return (
     <Layout>
-      <SEO title="Über uns" />
+      <SEO title="About us" />
       <Container>
         <Row style={{ marginTop: "4rem" }}>
           <Col>
             <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
             <h1 style={{ color: "#4285F4" }}>CREWSBY</h1>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Wie Gatsby ein Hinweis: by Gatz. Die Crew erschafft das Team.
+              Like Gatsby a reminder: by Gatz. The crew creates learning.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
-            <p className="mintitle">Unsere Vision</p>
+            <p className="mintitle">Our Vision</p>
             <h2 className="feature-h">
-              Wir <Emoji symbol="🔥" label="brennen" /> für Teamarbeit.
+              We <Emoji symbol="🔥" label="love" /> teamwork.
             </h2>
             <p>
-              Moderne Teamarbeit sollte der Standard sein. Und wirkliche jedes
-              Team verdient ein gutes Teamgefühl. Deshalb arbeiten wir
-              unermüdlich daran die besten Trainings dafür zu entwickeln. So
-              kannst Du mit Deiner Crew selbstbestimmt als Team wachsen.
+              Everyone deserves a crew of peers to accelerate the development of
+              professional skills.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
-            <p className="mintitle">Unser Anspruch</p>
-            <h2 className="feature-h">
-              Crewsby definiert Teamentwicklung neu.
-            </h2>
+            <p className="mintitle">Our standards</p>
+            <h2 className="feature-h">Crewsby redefines online training.</h2>
           </Col>
         </Row>
         <Row>
@@ -48,7 +44,8 @@ const UeberUnsPage = () => {
             md
             style={{
               marginTop: "2rem",
-              border: "1px solid #000000",
+              border: "1px solid #151515",
+              borderRadius: "6px",
               padding: "1.2rem",
               margin: "1.2rem",
             }}
@@ -58,15 +55,16 @@ const UeberUnsPage = () => {
               <Emoji symbol="🎁" label="present" />{" "}
             </div>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Nützliche Beiträge
+              Contribution
             </p>
-            <p>Wir entwickeln Trainings zu den besten Ideen über Teamarbeit.</p>
+            <p>We develop peer trainings for the best ideas around teamwork.</p>
           </Col>
           <Col
             md
             style={{
               marginTop: "2rem",
-              border: "1px solid #000000",
+              border: "1px solid #151515",
+              borderRadius: "6px",
               padding: "1.2rem",
               margin: "1.2rem",
             }}
@@ -75,16 +73,15 @@ const UeberUnsPage = () => {
             <div style={{ fontSize: "2.4rem" }}>
               <Emoji symbol="🔵" label="circle" />{" "}
             </div>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Schlichte Eleganz
-            </p>
-            <p>Wir überzeugen durch Zurückhaltung und Einfachheit.</p>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>Elegance</p>
+            <p>We strive to develop simple and refined learning experiences.</p>
           </Col>
           <Col
             md
             style={{
               marginTop: "2rem",
-              border: "1px solid #000000",
+              border: "1px solid #151515",
+              borderRadius: "6px",
               padding: "1.2rem",
               margin: "1.2rem",
             }}
@@ -94,24 +91,22 @@ const UeberUnsPage = () => {
               <Emoji symbol="🍏" label="sustainable" />{" "}
             </div>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Durch & durch nachhaltig
+              Sustainability
             </p>
             <p>
-              Wir helfen Fähigkeiten aufzubauen bei minimalem CO2-Fussabdruck.
+              We provide well-founded training whith a marginal CO2-footprint.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
-            <p className="mintitle">Unser Dank</p>
+            <p className="mintitle">Our thanks</p>
             <h2 className="feature-h">
-              Wir stehen auf den Schultern von Riesen.
+              We are standing on the shoulders of giants.
             </h2>
             <p>
-              Wir erstellen unsere Trainings auf Basis von Spitzenforschung und
-              Best-Practices aus der Praxis. Wir suchen und analysieren, lassen
-              uns inspirieren und entwicklen darauf aufbauend neue Trainings für
-              Dich und Deine Crew.
+              We develop our peer trainings from state of the art research and
+              best practices. Here are the giants that inspired the trainings:
             </p>
           </Col>
         </Row>
@@ -138,4 +133,4 @@ const UeberUnsPage = () => {
   )
 }
 
-export default UeberUnsPage
+export default AboutUsPage

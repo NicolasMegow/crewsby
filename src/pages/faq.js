@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
-import CTA from "../components/ctas/cta"
+import PHuntCTA from "../components/ctas/phunt-cta"
 
 import FAQData from "../content/faq.yaml"
 
@@ -16,8 +16,8 @@ const PreisePage = () => {
         <Row style={{ marginTop: "4rem" }}>
           <Col>
             <h1>
-              <Emoji symbol="❓" label="question" /> Deine Fragen,<br></br>
-              unsere Antworten<span style={{ color: "#4285F4" }}>.</span>
+              <Emoji symbol="❓" label="question" /> Your questions,<br></br>
+              our answers<span style={{ color: "#4285F4" }}>.</span>
             </h1>
             {FAQData.content.map(hinweis => (
               <div style={{ marginTop: "3rem" }} key={hinweis.id}>
@@ -30,13 +30,13 @@ const PreisePage = () => {
         <Row style={{ marginTop: "3rem" }}>
           <Col>
             <p>
-              Wir freuen uns von Dir zu hören! Schreib uns eine E-Mail an{" "}
-              <a href="mailto:Fragen@crewsby.com">Fragen@crewsby.com.</a>
+              We'd love to read from you! Just send us an email at{" "}
+              <a href="mailto:hello@crewsby.com">hello@crewsby.com.</a>
             </p>
           </Col>
         </Row>
       </Container>
-      <CTA />
+      <PHuntCTA />
     </Layout>
   )
 }

@@ -1,32 +1,19 @@
 // Set the Theme-Colors
 @import "colors";
 
-
 .footer {
-    margin-top: 4rem;
-}
-
-.cta {
-    padding: 4%;
-    margin-top: 4rem;
-    background: $highlightcolor;
-    h2 {
-        color: #ffffff;
-    }
-    p {
-        color: #ffffff;
-    }
+  margin-top: 4rem;
 }
 
 .link-item {
-    color: $maincolor;
-    font-weight: 400;
-    margin-right: 1.3rem;
-    text-decoration: none;
-    float: right;
+  color: $maincolor;
+  font-weight: 400;
+  margin-right: 1.3rem;
+  text-decoration: none;
+  float: right;
 }
 
 .link-item:hover {
-    color: $primary;
-    text-decoration: none;
+  color: $primary;
+  text-decoration: none;
 }

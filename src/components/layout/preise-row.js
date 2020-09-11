@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Row, Col, Button } from "react-bootstrap"
 
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
-import FaPlus from "../shared/faplus"
+import { FaPlus } from "../shared/fa-icons"
 
 const PreiseRow = () => {
   const { loginWithPopup } = useAuth0()

@@ -17,9 +17,7 @@ const SharingButton = ({ link, message }) => {
       }}
     >
       <p style={{ marginBottom: "0", fontWeight: "bold", fontSize: "1.6rem" }}>
-        Teile diese Übung mit der Welt{"  "}
-        <Emoji symbol="👉" label="share" />
-        {"  "}
+        <Emoji symbol="👉" label="share" /> Share this skill with the world:
       </p>
       <a
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(

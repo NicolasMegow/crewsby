@@ -24,8 +24,8 @@ const Footer = () => {
           <Col md={8} style={{ display: "flex", justifyContent: "flex-end" }}>
             <Nav>
               <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/ueber-uns">
-                  Über uns
+                <Link className={footerStyles.linkItem} to="/about-us">
+                  About us
                 </Link>
               </Nav.Item>
               <Nav.Item>
@@ -34,13 +34,13 @@ const Footer = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/impressum">
-                  Impressum
+                <Link className={footerStyles.linkItem} to="/imprint">
+                  Imprint
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/datenschutz">
-                  Datenschutz
+                <Link className={footerStyles.linkItem} to="/privacy">
+                  Privacy
                 </Link>
               </Nav.Item>
             </Nav>

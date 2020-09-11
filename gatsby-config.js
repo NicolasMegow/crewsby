@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "CREWSBY",
+    title: "Crewsby",
     author: "Nicolas Megow",
     siteUrl: `https://crewsby.com`,
     description: "Übungen für geniale Teamarbeit",
@@ -46,15 +46,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "methoden",
-        path: `${__dirname}/src/content/methoden`,
+        name: "methods",
+        path: `${__dirname}/src/content/methods`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "uebungen",
-        path: `${__dirname}/src/content/uebungen`,
+        name: "skills",
+        path: `${__dirname}/src/content/skills`,
       },
     },
     `gatsby-plugin-emotion`,

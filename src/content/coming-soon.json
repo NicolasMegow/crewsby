@@ -1,56 +1,36 @@
-{
-    "TUTS": {
-        "TM": [
-          {
-            "name": "Starkes Teamgefühl",
-            "symbol":"❤️",
-            "label":"heart",
-            "job": "Beziehungen gestalten",
-            "part": "TMBE",
-            "tuts": ["Konflikte nutzen", "Rituale pflegen"]
-          },
-          {
-            "name": "Gesteigerte Leistung",
-            "symbol":"💪",
-            "label":"muscle",
-            "job": "Abläufe optimieren",
-            "part": "TMAB",
-            "tuts": ["Einsatz dosieren", "Verantwortung übernehmen", "Kennzahlen einsetzen", "Müllabfuhr organisieren"]
-          },
-          {
-            "name": "Entfesselte Kreativität",
-            "symbol":"🧠",
-            "label":"brain",
-            "job": "Talente entwickeln",
-            "part": "TMTA",
-            "tuts": ["Fehler analysieren", "Sprints einlegen", "Innovation entwickeln"]
-          }
-        ],
-        "SO": [
-          {
-            "name": "Starkes Teamgefühl",
-            "symbol":"❤️",
-            "label":"heart",
-            "job": "Beziehungen gestalten",
-            "part": "SOBE",
-            "tuts": ["Stärke einbringen", "Erwartungen abgleichen", "Verletzlich sein"]
-          },
-          {
-            "name": "Gesteigerte Leistung",
-            "symbol":"💪",
-            "label":"muscle",
-            "job": "Abläufe optimieren",
-            "part": "SOAB",
-            "tuts": ["Arbeit stückeln", "Rollen verteilen", "Meetings nutzen", "Standards setzen"]
-          },
-          {
-            "name": "Entfesselte Kreativität",
-            "symbol":"🧠",
-            "label":"brain",
-            "job": "Talente entwickeln",
-            "part": "SOTA",
-            "tuts": ["Leistung steigern", "Feedback nutzen", "Prototypen erstellen", "Wissen dokumentieren"]
-          }
-        ]
-      }
-    }
+[
+  {
+    "name": "Strong relationships",
+    "symbol": "❤️",
+    "label": "heart",
+    "tuts": [
+      "Resolve conflict",
+      "Cultivate rituals",
+      "Align expectations",
+      "Share weaknesses"
+    ]
+  },
+  {
+    "name": "Individual processes",
+    "symbol": "💪",
+    "label": "muscle",
+    "tuts": [
+      "Maintain flow",
+      "Decide in groups",
+      "Measure progress",
+      "Design roles"
+    ]
+  },
+  {
+    "name": "Unleashed creativity",
+    "symbol": "🧠",
+    "label": "brain",
+    "tuts": [
+      "Understand problems",
+      "Design solutions",
+      "Explore possibilities",
+      "Build prototypes",
+      "Review mistakes"
+    ]
+  }
+]

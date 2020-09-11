@@ -13,7 +13,7 @@ import LoginRequest from "../components/ctas/login-request"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 
-const Profil = () => {
+const Profile = () => {
   const { user } = useAuth0()
   const fauna_secret = user["https://fauna.com/id/secret"]
   const [data, setData] = useState([])
@@ -92,7 +92,7 @@ const Team = () => (
   </Row>
 )
 
-const Account = () => {
+const LearningZone = () => {
   const { isAuthenticated, loading } = useAuth0()
   if (loading) {
     return <Loading />
@@ -100,21 +100,21 @@ const Account = () => {
 
   return (
     <Layout>
-      <SEO title="Account" />
+      <SEO title="Learning zone" />
       {isAuthenticated ? (
         <Container>
           <Row>
             <Col>
               <Nav>
                 <Nav.Item>
-                  <Link to="/mein-account/" className={headerStyles.navItem}>
-                    Profil
+                  <Link to="/learning-zone/" className={headerStyles.navItem}>
+                    Profile
                   </Link>
                   {"   "}
                 </Nav.Item>
                 <Nav.Item>
                   <Link
-                    to="/mein-account/team/"
+                    to="/learning-zone/team/"
                     className={headerStyles.navItem}
                   >
                     Team
@@ -123,7 +123,7 @@ const Account = () => {
                 </Nav.Item>
                 <Nav.Item>
                   <Link
-                    to="/mein-account/einstellungen/"
+                    to="/learning-zone/einstellungen/"
                     className={headerStyles.navItem}
                   >
                     Einstellungen
@@ -132,9 +132,9 @@ const Account = () => {
                 </Nav.Item>
               </Nav>
               <Router>
-                <Profil path="/mein-account/" />
-                <Einstellungen path="/mein-account/einstellungen" />
-                <Team path="/mein-account/team" />
+                <Profile path="/learning-zone/" />
+                <Einstellungen path="/learning-zone/einstellungen" />
+                <Team path="/learning-zone/team" />
               </Router>
             </Col>
           </Row>
@@ -146,4 +146,4 @@ const Account = () => {
   )
 }
 
-export default Account
+export default LearningZone
