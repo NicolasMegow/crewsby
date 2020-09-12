@@ -8,6 +8,7 @@ import PHuntCTA from "../components/ctas/phunt-cta"
 import TrainingRow from "../components/layout/training-row"
 
 import Teamboat from "../img/svg/EinBoot.svg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const TrainingPage = () => {
   return (
@@ -37,7 +38,9 @@ const TrainingPage = () => {
             <h2>Training is social.</h2>
             <p>
               Peers accelerate your learning by offering new perspectives. They
-              also challenge you to perform at your best.
+              also challenge you to perform at your best. Every time you come
+              together, you do a little check-in with your crew. This helps keep
+              everyone in the loop and on track.
             </p>
           </Col>
           <Col
@@ -47,7 +50,16 @@ const TrainingPage = () => {
               alignItems: "center",
               justifyContent: "center",
             }}
-          ></Col>
+          >
+            {" "}
+            <p className="feature-num">
+              <FontAwesomeIcon
+                icon={["fal", "clipboard-list-check"]}
+                fixedWidth
+                color="#4285F4"
+              />
+            </p>
+          </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg>
@@ -55,7 +67,8 @@ const TrainingPage = () => {
             <h2>Training on the job.</h2>
             <p>
               Exercises provide application and reflection of new methods and
-              ideas.
+              ideas. All the exercises in a peer training are self guided and
+              can be done literally anywhere in 60 minutes.
             </p>
           </Col>
           <Col
@@ -65,7 +78,22 @@ const TrainingPage = () => {
               alignItems: "center",
               justifyContent: "center",
             }}
-          ></Col>
+          >
+            <p className="feature-num">
+              <span className="fa-layers fa-fw">
+                <FontAwesomeIcon
+                  icon={["fas", "chalkboard-teacher"]}
+                  transform="shrink-8"
+                  fixedWidth
+                />
+                <FontAwesomeIcon
+                  icon={["fal", "ban"]}
+                  color="#DB4437"
+                  fixedWidth
+                />
+              </span>
+            </p>
+          </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>

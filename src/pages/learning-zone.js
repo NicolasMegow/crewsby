@@ -9,7 +9,7 @@ import headerStyles from "../styles/header.module.scss"
 import Emoji from "../components/shared/emoji"
 
 import Loading from "../components/shared/loading"
-import LoginRequest from "../components/ctas/login-request"
+import LoginReminder from "../components/ctas/login-reminder"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import faunadb, { query as q } from "faunadb"
 
@@ -101,8 +101,8 @@ const LearningZone = () => {
   return (
     <Layout>
       <SEO title="Learning zone" />
-      {isAuthenticated ? (
-        <Container>
+      <Container>
+        {isAuthenticated ? (
           <Row>
             <Col>
               <Nav>
@@ -138,10 +138,10 @@ const LearningZone = () => {
               </Router>
             </Col>
           </Row>
-        </Container>
-      ) : (
-        <LoginRequest />
-      )}
+        ) : (
+          <LoginReminder />
+        )}
+      </Container>
     </Layout>
   )
 }

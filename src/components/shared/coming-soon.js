@@ -17,7 +17,7 @@ class ComingSoon extends React.Component {
         <Row>
           {data.map(goal => {
             return (
-              <Col md={4} key={goal.part}>
+              <Col md={4} key={goal.label}>
                 <h4>
                   <Emoji symbol={goal.symbol} label={goal.label} /> {goal.name}{" "}
                 </h4>

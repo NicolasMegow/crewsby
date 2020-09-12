@@ -12,7 +12,7 @@ const LoginReminder = () => {
       }}
     >
       <p>
-        <Emoji symbol="👉" label="duble" />{" "}
+        <Emoji symbol="👉" label="double" />{" "}
         <Link
           to="/"
           onClick={event => {
