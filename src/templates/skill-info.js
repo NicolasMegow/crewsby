@@ -7,7 +7,7 @@ import SEO from "../components/shared/seo"
 import { FaMask } from "../components/shared/fa-icons"
 import SharingButtons from "../components/ctas/sharing-buttons"
 
-import TrainingSignup from "../components/log/training-signup"
+import TrainingSignup from "../components/ctas/training-signup"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
 import { MDXProvider } from "@mdx-js/react"

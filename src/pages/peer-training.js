@@ -8,7 +8,7 @@ import PHuntCTA from "../components/ctas/phunt-cta"
 import TrainingRow from "../components/layout/training-row"
 
 import Teamboat from "../img/svg/EinBoot.svg"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FaMask, FaNumber } from "../components/shared/fa-icons"
 
 const TrainingPage = () => {
   return (
@@ -51,13 +51,13 @@ const TrainingPage = () => {
               justifyContent: "center",
             }}
           >
-            {" "}
-            <p className="feature-num">
-              <FontAwesomeIcon
-                icon={["fal", "clipboard-list-check"]}
-                fixedWidth
-                color="#4285F4"
-              />
+            <p
+              style={{ fontWeight: "bold", fontSize: "1.6rem", margin: "2rem" }}
+            >
+              <Emoji symbol="🗺️" label="world" /> Contacts<br></br>
+              <Emoji symbol="🥊" label="feedback" /> Feedback<br></br>
+              <Emoji symbol="☕" label="coffee" /> Support<br></br>
+              <Emoji symbol="📅" label="time" /> Commitment
             </p>
           </Col>
         </Row>
@@ -77,22 +77,15 @@ const TrainingPage = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              padding: "2rem",
             }}
           >
             <p className="feature-num">
-              <span className="fa-layers fa-fw">
-                <FontAwesomeIcon
-                  icon={["fas", "chalkboard-teacher"]}
-                  transform="shrink-8"
-                  fixedWidth
-                />
-                <FontAwesomeIcon
-                  icon={["fal", "ban"]}
-                  color="#DB4437"
-                  fixedWidth
-                />
-              </span>
+              <Emoji symbol="🎯" label="target" />{" "}
             </p>
+            <strong style={{ fontSize: "1.6rem", marginLeft: "1rem" }}>
+              Practice <br></br>makes <br></br>perfect.
+            </strong>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
@@ -113,11 +106,15 @@ const TrainingPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-              <Emoji symbol="💦" label="sweat" /> Exercise<br></br>
-              <Emoji symbol="💦" label="sweat" /> Exercise<br></br>
-              <Emoji symbol="💦" label="sweat" /> Exercise<br></br>
-              <Emoji symbol="🏆" label="success" /> Skill
+            <p
+              style={{ fontWeight: "bold", fontSize: "1.6rem", margin: "2rem" }}
+            >
+              <FaMask icon="check" /> <FaMask icon="check" />{" "}
+              <FaMask icon="check" /> <FaMask icon="check" /> <br></br>
+              <FaMask icon="check" /> <FaMask icon="check" />{" "}
+              <FaMask icon="check" /> <FaMask icon="check" /> <br></br>
+              <FaMask icon="check" /> <FaNumber number={10} />{" "}
+              <FaNumber number={11} /> <FaNumber number={12} />
             </p>
           </Col>
         </Row>

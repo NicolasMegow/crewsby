@@ -8,7 +8,7 @@ import Emoji from "../components/shared/emoji"
 
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 import SkillTile from "../components/shared/skill-tile"
-import ComingSoon from "../components/shared/coming-soon"
+import ComingSoon from "../components/layout/coming-soon"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/shared/loading"
@@ -48,9 +48,9 @@ export const query = graphql`
 const SkillsPage = ({ data }) => {
   const { loading } = useAuth0()
   const categories = [
-    ["❤️", "heart", "Strenghten relationships"],
-    ["💪", "muscle", "Individualize processes"],
-    ["🧠", "brain", "Unleash creativity"],
+    ["❤️", "heart", "Strengthen your relationships"],
+    ["💪", "muscle", "Individualize your processes"],
+    ["🧠", "brain", "Unleash your creativity"],
   ]
 
   if (loading) {

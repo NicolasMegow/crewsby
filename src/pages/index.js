@@ -79,7 +79,7 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <SkillGallery />
+            <SkillGallery style={{ margin: "2rem" }} />
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }} id="crew">
@@ -104,11 +104,13 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontWeight: "bold", fontSize: "1.6rem" }}>
-              <Emoji symbol="🗺️" label="world" /> Contacts<br></br>
-              <Emoji symbol="🥊" label="feedback" /> Feedback<br></br>
-              <Emoji symbol="☕" label="coffee" /> Support<br></br>
-              <Emoji symbol="📅" label="time" /> Commitment
+            <p style={{ fontSize: "3rem", margin: "2rem" }}>
+              <Emoji symbol="👩‍🦱" label="crew-1" />{" "}
+              <Emoji symbol="🧔" label="crew-2" /> <br></br>
+              <Emoji symbol="👩‍🦰" label="crew-3" />{" "}
+              <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
+                & YOU
+              </span>
             </p>
           </Col>
         </Row>
@@ -139,6 +141,7 @@ const IndexPage = () => {
                 fontWeight: "bold",
                 fontSize: "3rem",
                 lineHeight: "1.2",
+                margin: "2rem",
               }}
             >
               <strike style={{ textDecorationColor: "#DB4437" }}>

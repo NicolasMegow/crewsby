@@ -3,6 +3,8 @@ import { Row, Col } from "react-bootstrap"
 
 import Emoji from "../shared/emoji"
 
+// Benefits of entering the learning zone
+
 const BenefitRow = () => {
   return (
     <Row style={{ marginTop: "4rem" }}>
@@ -11,7 +13,7 @@ const BenefitRow = () => {
           <span style={{ fontSize: "2.4rem" }}>
             <Emoji symbol="❤️" label="heart" />{" "}
           </span>
-          Starkes Teamgefühl
+          Strong relationships
         </p>
       </Col>
       <Col lg={4}>
@@ -19,7 +21,7 @@ const BenefitRow = () => {
           <span style={{ fontSize: "2.4rem" }}>
             <Emoji symbol="💪" label="muscle" />{" "}
           </span>
-          Individuelle Abläufe
+          Individual processes
         </p>
       </Col>
       <Col lg={4}>
@@ -27,7 +29,7 @@ const BenefitRow = () => {
           <span style={{ fontSize: "2.4rem" }}>
             <Emoji symbol="🧠" label="brain" />{" "}
           </span>
-          Entfesselte Kreativität
+          Unleashed creativity
         </p>
       </Col>
     </Row>

@@ -3,9 +3,8 @@ import { Row, Col, Button } from "react-bootstrap"
 
 import faunadb, { query as q } from "faunadb"
 
-import { FieldTitle } from "./form-fields"
+import { FieldTitle, ChoiceChips } from "../shared/form-fields"
 import Emoji from "../shared/emoji"
-import ChoiceChips from "./choice-chips"
 
 const TrainingSignup = ({ skill, user }) => {
   const userInfo = [user.nickname, user.email]

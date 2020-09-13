@@ -30,3 +30,28 @@ export const FaMask = ({ icon }) => {
     </>
   )
 }
+
+export const FaLoading = () => {
+  return (
+    <FontAwesomeIcon
+      icon={["fad", "spinner"]}
+      color="#4285F4"
+      size="3x"
+      pulse
+    />
+  )
+}
+
+export const FaNumber = ({ number }) => {
+  return (
+    <span style={{ position: "relative" }}>
+      <FontAwesomeIcon icon={["fal", "square"]} size="2x" />
+      <span
+        className="fa-layers-text"
+        style={{ position: "absolute", top: "25%", fontWeight: "900" }}
+      >
+        {number}
+      </span>
+    </span>
+  )
+}
