@@ -47,31 +47,21 @@ module.exports.createPages = async function ({ actions, graphql }) {
           path: `/${contentType}/${skill}/`,
           component: require.resolve(`./src/templates/skill-info.js`),
           context: { slug, skill },
-        })
+        }),
+          actions.createPage({
+            path: `/learning-zone/${skill}/`,
+            component: require.resolve(`./src/templates/skill-template.js`),
+            context: { slug, skill },
+          })
       } else {
         actions.createPage({
-          path: `/${contentType}/${skill}/${slug}`,
+          path: `/learning-zone/${skill}/${slug}`,
           component: require.resolve(`./src/templates/exercise-template.js`),
           context: { slug },
         })
       }
     })
   })
-}
-
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions
-
-  // page.matchPath is a special key that's used for matching pages
-  // only on the client.
-  if (page.path.match(/^\/learning-zone/)) {
-    page.matchPath = "/learning-zone/*"
-
-    // Update the page.
-    createPage(page)
-  }
 }
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {

@@ -31,8 +31,8 @@ const TrainingSignup = ({ skill, user }) => {
       <Row style={{ marginTop: "8rem" }}>
         <Col>
           <h2 className="feature-h">
-            <Emoji symbol="🙌" label="hands-up" />
-            <br></br>Join a crew to starting learning!
+            <Emoji symbol="🙌" label="hands-up" /> Join a crew to starting
+            learning!
           </h2>
           <p>
             You'll get an invoice for $89 after 6 exercises. Until then you can

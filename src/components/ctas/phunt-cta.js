@@ -11,8 +11,7 @@ const PHuntCTA = () => {
     <Row style={{ marginTop: "8rem" }}>
       <Col>
         <h2 className="feature-h">
-          <Emoji symbol="👋" label="welcome" />
-          <br></br>Join for free today!
+          <Emoji symbol="👋" label="welcome" /> Join for free today!
         </h2>
         <p
           style={{

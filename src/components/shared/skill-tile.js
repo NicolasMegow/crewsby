@@ -23,7 +23,7 @@ const SkillTile = ({ edge }) => {
             marginBottom: "0",
           }}
         >
-          {method} • Level {level}
+          Level {level} of {method}
         </p>
         <p
           style={{

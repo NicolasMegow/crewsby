@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import { FaMask } from "../components/shared/fa-icons"
+import { FaTitle, FaLoading } from "../components/shared/fa-icons"
 import SharingButtons from "../components/ctas/sharing-buttons"
 
 import TrainingSignup from "../components/ctas/training-signup"
@@ -20,8 +20,8 @@ const shortcodes = {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query($slug: String!, $skill: String!) {
+    mdx(fields: { slug: { eq: $slug }, skill: { eq: $skill } }) {
       fields {
         contentType
         skill
@@ -45,7 +45,15 @@ const SkillInfo = ({ data, props, location }) => {
   const { isAuthenticated, user, loading } = useAuth0()
   const url = location.href ? location.href : ""
   const { skill } = data.mdx.fields
-  const { job, method, icon, sources, benefits, summary } = data.mdx.frontmatter
+  const {
+    job,
+    method,
+    level,
+    icon,
+    sources,
+    benefits,
+    summary,
+  } = data.mdx.frontmatter
 
   return (
     <Layout>
@@ -55,11 +63,11 @@ const SkillInfo = ({ data, props, location }) => {
           <Col>
             <Link to="../">⟵ Back</Link>
             <h1>
-              <FaMask icon={icon} />
-              <br></br>
-              {job}
+              <FaTitle icon={icon} title={job} />
             </h1>
-            <p>{method}</p>
+            <p>
+              Level {level} of {method}
+            </p>
             <p>{summary}</p>
             <p>Learn how to:</p>
             <ul>
@@ -82,7 +90,9 @@ const SkillInfo = ({ data, props, location }) => {
         {isAuthenticated ? (
           !loading ? (
             <TrainingSignup skill={job} user={user} />
-          ) : null
+          ) : (
+            <FaLoading />
+          )
         ) : (
           <LoginRequest />
         )}

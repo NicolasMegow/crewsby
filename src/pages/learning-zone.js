@@ -1,22 +1,62 @@
 import React, { useEffect, useState } from "react"
-import { Router } from "@reach/router"
 import { Link } from "gatsby"
-import { Container, Row, Col, Nav } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import headerStyles from "../styles/header.module.scss"
 import Emoji from "../components/shared/emoji"
 
-import Loading from "../components/shared/loading"
-import LoginReminder from "../components/ctas/login-reminder"
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import Loading from "../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
-const Profile = () => {
-  const { user } = useAuth0()
+import LearningZoneInfo from "../components/layout/learning-zone-info"
+import LearningZoneRow from "../components/layout/learning-zone-row"
+import LoginReminder from "../components/ctas/login-reminder"
+
+import SkillRow from "../components/learning-zone/skill-row"
+import Profile from "../components/learning-zone/profile"
+
+export const query = graphql`
+  query {
+    allMdx(
+      filter: {
+        fields: { contentType: { eq: "skills" }, slug: { eq: "_index" } }
+      }
+    ) {
+      group(field: frontmatter___category) {
+        edges {
+          node {
+            fields {
+              slug
+              contentType
+              skill
+            }
+            frontmatter {
+              job
+              method
+              level
+              category
+              icon
+              type
+              summary
+              benefits
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+const Skills = ({ user, skills }) => {
   const fauna_secret = user["https://fauna.com/id/secret"]
   const [data, setData] = useState([])
+  const categories = [
+    ["❤️", "heart", "Strengthen your relationships"],
+    ["💪", "muscle", "Individualize your processes"],
+    ["🧠", "brain", "Unleash your creativity"],
+  ]
 
   useEffect(() => {
     async function getUserProfile() {
@@ -36,25 +76,28 @@ const Profile = () => {
   return (
     <Row style={{ marginTop: "4rem" }}>
       <Col>
-        <h1 style={{ fontSize: "2rem", marginBottom: "2rem" }}>Moin moin.</h1>
-        <p>
-          <strong>Profil:</strong> {user.nickname}
-        </p>
-        <p>
-          <strong>E-Mail:</strong> {user.email}
-        </p>
-        <p>
-          <strong>Unternehmen:</strong> TBD
-        </p>
+        <h2 style={{ fontSize: "2rem", marginBottom: "2rem" }}>
+          <Emoji symbol="🧰" label="skills" /> Your skills:
+        </h2>
+        {skills.allMdx.group.map((group, i) => {
+          return (
+            <Row style={{ marginBottom: "4rem" }}>
+              <Col>
+                <h3 style={{ marginBottom: "1rem" }}>
+                  <Emoji symbol={categories[i][0]} label={categories[i][1]} />{" "}
+                  {categories[i][2]}
+                </h3>
+                {group.edges.map((edge, i) => {
+                  return <SkillRow edge={edge} key={i} />
+                })}
+              </Col>
+            </Row>
+          )
+        })}
+        <hr></hr>
         {data["level"] && <p>{data.level["default"]}</p>}
         {data["punkte_solo"] && (
           <div>
-            <p>
-              <strong>Solo Punkte: </strong>
-              {Object.keys(data["punkte_solo"][0] || {}).length} /&nbsp;
-              {Object.keys(data["punkte_solo"][1] || {}).length} /&nbsp;
-              {Object.keys(data["punkte_solo"][2] || {}).length}
-            </p>
             <p>
               <strong>Team Punkte: </strong>
               {Object.keys(data["punkte_team"][0] || {}).length} /&nbsp;
@@ -63,37 +106,13 @@ const Profile = () => {
             </p>
           </div>
         )}
-        <pre>{JSON.stringify(data, null, 2)}</pre>
       </Col>
     </Row>
   )
 }
 
-const Einstellungen = () => (
-  <Row style={{ marginTop: "4rem" }}>
-    <Col>
-      <h1 style={{ fontSize: "2rem", marginBottom: "2rem" }}>
-        Hier siehst du bald deine Einstellungen.
-      </h1>
-      <p>
-        <Emoji symbol="👍" label="like" /> Bisher ist alles kostenlos.
-      </p>
-    </Col>
-  </Row>
-)
-
-const Team = () => (
-  <Row style={{ marginTop: "4rem" }}>
-    <Col>
-      <h1 style={{ fontSize: "2rem", marginBottom: "2rem" }}>
-        Hier siehst du bald deine Teamgefährten.
-      </h1>
-    </Col>
-  </Row>
-)
-
-const LearningZone = () => {
-  const { isAuthenticated, loading } = useAuth0()
+const LearningZone = ({ data }) => {
+  const { isAuthenticated, loading, user } = useAuth0()
   if (loading) {
     return <Loading />
   }
@@ -105,41 +124,17 @@ const LearningZone = () => {
         {isAuthenticated ? (
           <Row>
             <Col>
-              <Nav>
-                <Nav.Item>
-                  <Link to="/learning-zone/" className={headerStyles.navItem}>
-                    Profile
-                  </Link>
-                  {"   "}
-                </Nav.Item>
-                <Nav.Item>
-                  <Link
-                    to="/learning-zone/team/"
-                    className={headerStyles.navItem}
-                  >
-                    Team
-                  </Link>
-                  {"   "}
-                </Nav.Item>
-                <Nav.Item>
-                  <Link
-                    to="/learning-zone/einstellungen/"
-                    className={headerStyles.navItem}
-                  >
-                    Einstellungen
-                  </Link>
-                  {"   "}
-                </Nav.Item>
-              </Nav>
-              <Router>
-                <Profile path="/learning-zone/" />
-                <Einstellungen path="/learning-zone/einstellungen" />
-                <Team path="/learning-zone/team" />
-              </Router>
+              <Profile user={user} />
+              <hr></hr>
+              <Skills user={user} skills={data} />
             </Col>
           </Row>
         ) : (
-          <LoginReminder />
+          <>
+            <LearningZoneInfo />
+            <LearningZoneRow />
+            <LoginReminder />
+          </>
         )}
       </Container>
     </Layout>

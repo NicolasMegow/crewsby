@@ -7,14 +7,14 @@ const SharingButton = ({ link, message }) => {
   return (
     <div
       style={{
-        background: "#4285F4",
         display: "flex",
         alignItems: "center",
-        color: "#ffffff",
+        color: "#151515",
         padding: "2rem",
         marginTop: "2rem",
         marginBottom: "2rem",
         borderRadius: "6px",
+        border: "1px solid #4285F4",
       }}
     >
       <p style={{ marginBottom: "0", fontWeight: "bold", fontSize: "1.6rem" }}>
@@ -32,7 +32,7 @@ const SharingButton = ({ link, message }) => {
           icon={["fab", "linkedin"]}
           size="3x"
           fixedWidth
-          color="#ffffff"
+          color="#4285F4"
         />
       </a>
       <a
@@ -47,7 +47,7 @@ const SharingButton = ({ link, message }) => {
           icon={["fab", "twitter-square"]}
           size="3x"
           fixedWidth
-          color="#ffffff"
+          color="#4285F4"
         />
       </a>
     </div>

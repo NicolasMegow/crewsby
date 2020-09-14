@@ -17,7 +17,7 @@ module.exports = {
       "remote",
       "teamwork",
       "retro",
-      "retrospektive",
+      "retrospective",
       "teamgefühl",
       "übungen",
       "methoden",

@@ -17,17 +17,37 @@ export const FaPlus = () => {
   )
 }
 
-export const FaMask = ({ icon }) => {
+export const FaMask = ({ icon, size }) => {
   return (
     <>
       <FontAwesomeIcon
         icon={["fas", icon]}
         mask={["fas", "square"]}
-        size="2x"
+        size={size}
         transform="shrink-8"
         color="#4285F4"
       />
     </>
+  )
+}
+
+export const FaTitle = ({ icon, title }) => {
+  const title2 = title.split(" ")
+  return (
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <FaMask icon={icon} size="3x" />
+      <div
+        style={{
+          marginLeft: "1rem",
+          lineHeight: "1",
+          marginBottom: "0",
+        }}
+      >
+        {title2[0]}
+        <br></br>
+        {title2[1]}
+      </div>
+    </div>
   )
 }
 

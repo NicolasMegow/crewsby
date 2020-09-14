@@ -104,10 +104,10 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontSize: "3rem", margin: "2rem" }}>
-              <Emoji symbol="👩‍🦱" label="crew-1" />{" "}
-              <Emoji symbol="🧔" label="crew-2" /> <br></br>
-              <Emoji symbol="👩‍🦰" label="crew-3" />{" "}
+            <p style={{ fontSize: "3rem", margin: "2rem", color: "#151515" }}>
+              <Emoji symbol="👩🏾‍🦱" label="crew-1" />{" "}
+              <Emoji symbol="🧔🏻" label="crew-2" /> <br></br>
+              <Emoji symbol="👩🏼‍🦰" label="crew-3" />{" "}
               <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
                 & YOU
               </span>

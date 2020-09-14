@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FaMask } from "../shared/fa-icons"
+import { FaTitle } from "../shared/fa-icons"
 
 var styles = {
   active: {
@@ -13,12 +13,11 @@ var styles = {
 const SkillGallery = () => {
   return (
     <div>
-      <Link to="skills/radical-candor" style={styles.active}>
-        <FaMask icon="gift" /> Communicate appreciation
+      <Link to="skills/communicate-appreciation" style={styles.active}>
+        <FaTitle icon="gift" title="Communicate Appreciation" />
       </Link>
-      <br></br>
-      <Link to="skills/kanban" style={styles.active}>
-        <FaMask icon="conveyor-belt" /> Analyze processes
+      <Link to="skills/analyze-processes" style={styles.active}>
+        <FaTitle icon="conveyor-belt" title="Analyze Processes" />
       </Link>
     </div>
   )
