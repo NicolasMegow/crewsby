@@ -122,8 +122,8 @@ const AboutUsPage = () => {
               Ken Blanchard • Chip Conley • John Doerr • Amy Edmundson • Tasha
               Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel •
               Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni •
-              Vittorio Loreto • Fredrick Pferdt • Max De Pree • Edgar Schein •
-              F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl Weick •
+              Vittorio Loreto • Fredrick G. Pferdt • Max De Pree • Edgar Schein
+              • F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl Weick •
               Tom Wujec
             </strong>
           </Col>
