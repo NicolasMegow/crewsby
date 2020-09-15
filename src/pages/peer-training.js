@@ -109,11 +109,15 @@ const TrainingPage = () => {
             <p
               style={{ fontWeight: "bold", fontSize: "1.6rem", margin: "2rem" }}
             >
-              <FaMask icon="check" /> <FaMask icon="check" />{" "}
-              <FaMask icon="check" /> <FaMask icon="check" /> <br></br>
-              <FaMask icon="check" /> <FaMask icon="check" />{" "}
-              <FaMask icon="check" /> <FaMask icon="check" /> <br></br>
-              <FaMask icon="check" /> <FaNumber number={10} />{" "}
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" /> <br></br>
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" />{" "}
+              <FaMask icon="check" size="2x" /> <br></br>
+              <FaMask icon="check" size="2x" /> <FaNumber number={10} />{" "}
               <FaNumber number={11} /> <FaNumber number={12} />
             </p>
           </Col>
