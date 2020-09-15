@@ -39,9 +39,9 @@ const SkillTemplate = ({ data }) => {
   if (loading) {
     return <Loading />
   }
-  if (!isAuthenticated) {
+  if (!isAuthenticated && typeof window !== "undefined") {
     navigate("../")
-    return <p>Coming soon</p>
+    return <Loading />
   }
   return (
     <Layout>

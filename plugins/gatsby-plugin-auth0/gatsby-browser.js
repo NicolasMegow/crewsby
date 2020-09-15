@@ -2,7 +2,7 @@ import React from "react"
 import { Auth0Provider } from "./auth"
 import { navigate } from "gatsby"
 
-const onRedirectCallback = (appState) =>
+const onRedirectCallback = appState =>
   appState && appState.targetUrl && navigate(appState.targetUrl)
 
 export const wrapRootElement = ({ element }, pluginOptions) => {
