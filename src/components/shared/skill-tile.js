@@ -13,7 +13,7 @@ const SkillTile = ({ edge }) => {
     <Col md={6} className={appStyles.menuItem}>
       <Link to={skill}>
         <h3>
-          <FaMask icon={icon} />
+          <FaMask icon={icon} size="2x" />
           <br></br>
           {job}
         </h3>

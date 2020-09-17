@@ -34,7 +34,7 @@ export const query = graphql`
 const SkillTemplate = ({ data }) => {
   const { isAuthenticated, user, loading } = useAuth0()
   const { skill } = data.mdx.fields
-  const { job, method, icon, sources, benefits, summary } = data.mdx.frontmatter
+  const { job, icon, summary } = data.mdx.frontmatter
 
   if (loading) {
     return <Loading />

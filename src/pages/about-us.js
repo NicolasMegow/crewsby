@@ -88,7 +88,7 @@ const AboutUsPage = () => {
           >
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
-              <Emoji symbol="🍏" label="sustainable" />{" "}
+              <Emoji symbol="🌱" label="sustainable" />{" "}
             </div>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Sustainability
