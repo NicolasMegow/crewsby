@@ -4,10 +4,10 @@
     "symbol": "❤️",
     "label": "heart",
     "tuts": [
-      "Resolve conflict",
-      "Cultivate rituals",
-      "Align expectations",
-      "Share weaknesses"
+      "Align Expectations",
+      "Share Weaknesses",
+      "Resolve Conflict",
+      "Cultivate Rituals"
     ]
   },
   {
@@ -15,10 +15,10 @@
     "symbol": "💪",
     "label": "muscle",
     "tuts": [
-      "Maintain flow",
-      "Decide in groups",
-      "Measure progress",
-      "Design roles"
+      "Maintain Flow",
+      "Facilitate Groups",
+      "Measure Progress",
+      "Design Roles"
     ]
   },
   {
@@ -26,11 +26,11 @@
     "symbol": "🧠",
     "label": "brain",
     "tuts": [
-      "Understand problems",
-      "Design solutions",
-      "Explore possibilities",
-      "Build prototypes",
-      "Review mistakes"
+      "Understand Problems",
+      "Design Solutions",
+      "Explore Possibilities",
+      "Build Prototypes",
+      "Review Mistakes"
     ]
   }
 ]

@@ -81,7 +81,7 @@ const Skills = ({ user, skills }) => {
         </h2>
         {skills.allMdx.group.map((group, i) => {
           return (
-            <Row style={{ marginBottom: "4rem" }}>
+            <Row style={{ marginBottom: "4rem" }} key={i}>
               <Col>
                 <h3 style={{ marginBottom: "1rem" }}>
                   <Emoji symbol={categories[i][0]} label={categories[i][1]} />{" "}

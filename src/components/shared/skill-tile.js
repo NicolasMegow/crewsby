@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Col } from "react-bootstrap"
 
 import appStyles from "../../styles/app.module.scss"
-import { FaMask } from "../shared/fa-icons"
+import { FaTitle } from "../shared/fa-icons"
 
 const SkillTile = ({ edge }) => {
   const { skill } = edge.node.fields
@@ -13,9 +13,7 @@ const SkillTile = ({ edge }) => {
     <Col md={6} className={appStyles.menuItem}>
       <Link to={skill}>
         <h3>
-          <FaMask icon={icon} size="2x" />
-          <br></br>
-          {job}
+          <FaTitle icon={icon} title={job} size="2x" />
         </h3>
         <p
           style={{

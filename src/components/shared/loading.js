@@ -10,7 +10,7 @@ const Loading = () => {
     <Layout>
       <SEO title="Working hard!" />
       <Container>
-        <Row>
+        <Row style={{ marginTop: "2rem" }}>
           <Col>
             <FaLoading />
             <h1>Loading...</h1>

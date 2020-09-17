@@ -6,7 +6,6 @@ import faunadb, { query as q } from "faunadb"
 
 import { FormControl, Row, Col, Button } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import ProgressBar from "./progress-bar"
 
 var styles = {
   hidden: {
@@ -132,17 +131,12 @@ const FeedbackSlide = ({
           />
         </Col>
       </Row>
-      <Row style={{ width: "100vw" }}>
-        <Col style={{ display: "flex", justifyContent: "flex-end" }}>
-          <p>
-            {step}/{length}
-          </p>
-        </Col>
-      </Row>
       <Row style={{ width: "100vw", marginTop: "2rem" }}>
         <Col style={{ display: "flex", justifyContent: "space-between" }}>
           <Button onClick={() => setStep(currentStep - 1)}>Zurück</Button>
-          <ProgressBar length={length} step={currentStep} />
+          <strong>
+            {step}/{length}
+          </strong>
           <Link
             className="btn btn-secondary"
             to="../"

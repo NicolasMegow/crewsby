@@ -17,7 +17,7 @@ const SkillRow = ({ edge }) => {
         {[...Array(12)].map((exercise, i) => {
           const exerciseValue = i + 1
           return (
-            <span style={{ margin: ".2rem" }}>
+            <span style={{ margin: ".2rem" }} key={i}>
               <FaNumber number={exerciseValue} />
             </span>
           )

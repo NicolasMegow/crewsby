@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Row, Col, Button } from "react-bootstrap"
-import ProgressBar from "./progress-bar"
 
 const Slide = ({ slide, step, currentStep, setStep, length }) => {
   if (currentStep !== step) {
@@ -15,13 +14,6 @@ const Slide = ({ slide, step, currentStep, setStep, length }) => {
         <Col>{slide}</Col>
       </Row>
       <Row style={{ width: "100vw" }}>
-        <Col style={{ display: "flex", justifyContent: "flex-end" }}>
-          <p>
-            {step}/{length}
-          </p>
-        </Col>
-      </Row>
-      <Row style={{ width: "100vw" }}>
         <Col style={{ display: "flex", justifyContent: "space-between" }}>
           {currentStep >= 1 ? (
             <Button onClick={() => setStep(currentStep - 1)}>Zurück</Button>
@@ -30,7 +22,9 @@ const Slide = ({ slide, step, currentStep, setStep, length }) => {
               Zurück
             </Link>
           )}
-          <ProgressBar length={length} step={currentStep} />
+          <strong>
+            {step}/{length}
+          </strong>
           <Button onClick={() => setStep(currentStep + 1)}>Weiter</Button>
         </Col>
       </Row>
