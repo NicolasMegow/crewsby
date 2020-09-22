@@ -14,7 +14,7 @@ import PHuntCTA from "../components/ctas/phunt-cta"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
 
-import ProductHuntButton from "../components/shared/producthunt-button"
+import EmailSignup from "../components/ctas/email-signup"
 
 const IndexPage = () => {
   const { loginWithPopup } = useAuth0()
@@ -40,17 +40,9 @@ const IndexPage = () => {
               <Emoji symbol="💪" label="muscle" />, and unleash creativity{" "}
               <Emoji symbol="🧠" label="brain" />.
             </p>
-            <Link
-              to="/leadership-skills"
-              className="btn btn-outline-primary btn-lg"
-              style={{ marginRight: "2rem", marginBottom: "2rem" }}
-            >
-              {" "}
-              Browse the skills
-            </Link>
-            <ProductHuntButton />
           </Col>
         </Row>
+        <EmailSignup />
         <KeyFeatures id="key features" />
         <Row style={{ marginTop: "8rem" }} id="skills">
           <Col lg>

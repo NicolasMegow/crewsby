@@ -23,20 +23,22 @@ const AboutUsPage = () => {
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
-            <p className="mintitle">Our Vision</p>
+            <p className="mintitle">Our mission</p>
             <h2 className="feature-h">
               We <Emoji symbol="🔥" label="love" /> teamwork.
             </h2>
             <p>
               Everyone deserves a crew of peers to accelerate the development of
-              professional skills.
+              leadership skills.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
-            <p className="mintitle">Our standards</p>
-            <h2 className="feature-h">Crewsby redefines online training.</h2>
+            <p className="mintitle">Our aspiration</p>
+            <h2 className="feature-h">
+              Crewsby redefines leadership training.
+            </h2>
           </Col>
         </Row>
         <Row>
@@ -57,7 +59,9 @@ const AboutUsPage = () => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Contribution
             </p>
-            <p>We develop peer trainings for the best ideas around teamwork.</p>
+            <p>
+              We develop peer trainings for the best ideas around leadership.
+            </p>
           </Col>
           <Col
             md
@@ -94,7 +98,7 @@ const AboutUsPage = () => {
               Sustainability
             </p>
             <p>
-              We provide well-founded training whith a marginal CO2-footprint.
+              We provide professional trainings with a marginal CO2-footprint.
             </p>
           </Col>
         </Row>
@@ -105,8 +109,9 @@ const AboutUsPage = () => {
               We are standing on the shoulders of giants.
             </h2>
             <p>
-              We develop our peer trainings from state of the art research and
-              best practices. Here are the giants that inspired the trainings:
+              We develop our leadership trainings from state of the art research
+              and best practices. Here are the giants that inspired the
+              trainings:
             </p>
           </Col>
         </Row>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialIcons = () => {
   return (
-    <>
+    <span>
       <a
         href={`https://www.linkedin.com/company/crewsby/`}
         target="_blank"
@@ -24,7 +24,7 @@ const SocialIcons = () => {
           fixedWidth
         />
       </a>
-    </>
+    </span>
   )
 }
 

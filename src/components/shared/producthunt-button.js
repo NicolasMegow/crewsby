@@ -13,8 +13,6 @@ const ProductHuntButton = () => {
         style={{
           width: "250px",
           height: "54px",
-          marginRight: "2rem",
-          marginBottom: "2rem",
         }}
         width="250"
         height="54"

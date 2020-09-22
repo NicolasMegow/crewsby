@@ -6,7 +6,7 @@ import "../../styles/switch.css"
 export const FieldTitle = styled.p`
   line-height: 1;
   margin-bottom: 0.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 `
 
 export const TextField = ({ name, type, placeholder, handleCallback }) => {
@@ -34,7 +34,7 @@ export const TextField = ({ name, type, placeholder, handleCallback }) => {
         css={css`
           border: 1px solid #151515;
           border-radius: 6px;
-          padding: 0.6rem;
+          padding: 0.8rem;
           margin-right: 1rem;
           margin-bottom: 2rem;
           font-size: 1.2rem;
