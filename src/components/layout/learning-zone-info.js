@@ -12,7 +12,7 @@ const LearningZoneInfo = () => {
           <Emoji symbol="🍣" label="sushi" />
         </h1>
         <h1>
-          You deserve opportunities <br></br>to make mistakes.
+          You deserve <br></br>opportunities to practise.
         </h1>
         <p
           style={{

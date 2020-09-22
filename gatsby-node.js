@@ -44,7 +44,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
         })*/
       } else if (slug == "_index") {
         actions.createPage({
-          path: `/${contentType}/${skill}/`,
+          path: `/leadership-skills/${skill}/`,
           component: require.resolve(`./src/templates/skill-info.js`),
           context: { slug, skill },
         }),

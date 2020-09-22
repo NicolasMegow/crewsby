@@ -1,12 +1,32 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Row, Col } from "react-bootstrap"
+import React, { useState, useRef } from "react"
 
-import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
+import { Row, Col, Button } from "react-bootstrap"
+
+import faunadb, { query as q } from "faunadb"
+
 import Emoji from "../shared/emoji"
+import { TextField } from "../shared/form-fields"
 
 const PHuntCTA = () => {
-  const { loginWithPopup } = useAuth0()
+  const [signupData, setSignup] = useState()
+  const [signupState, setState] = useState(false)
+  const btnRef = useRef()
+  const handleCallback = (name, info) => {
+    setSignup(prevState => ({
+      ...prevState,
+      [name]: info,
+    }))
+  }
+
+  const sendSignup = async signupData => {
+    const fauna_secret = process.env.GATSBY_FAUNA_FEEDBACK
+    const client = new faunadb.Client({ secret: fauna_secret })
+    await client.query(
+      q.Create(q.Collection("signup"), {
+        data: { signupData },
+      })
+    )
+  }
   return (
     <Row style={{ marginTop: "8rem" }}>
       <Col>
@@ -19,24 +39,52 @@ const PHuntCTA = () => {
             fontWeight: "bold",
           }}
         >
-          Save $89 per peer training until Oct 1st, 2020.
+          Save $89 per skill until Oct 1st, 2020.
         </p>
         <p>
-          Every peer training consists of 12 exercises for you to do with your
-          crew of peers. <br></br>We'll match you to three peers according to
-          your preferences.
+          Every skill consists of 12 practise sessions for you and your crew of
+          peers. <br></br>We'll match you to three peers according to your
+          preferences.
         </p>
-        <Link
-          to="/"
-          onClick={event => {
-            event.preventDefault()
-            loginWithPopup({ action: "signup" })
+        <Row>
+          <Col>
+            <TextField
+              name="Name"
+              type="text"
+              placeholder="Jay Gatsby"
+              handleCallback={handleCallback}
+            />
+          </Col>
+          <Col>
+            <TextField
+              name="Email"
+              type="email"
+              placeholder="jay.gatsby@crewsby.com"
+              handleCallback={handleCallback}
+            />
+          </Col>
+        </Row>
+        <br></br>
+        <Button
+          size="lg"
+          ref={btnRef}
+          onClick={() => {
+            sendSignup(signupData)
+            btnRef.current.setAttribute("disabled", "disabled")
+            setState(true)
           }}
-          className="btn btn-primary btn-lg"
-          style={{ marginTop: "2rem" }}
         >
-          Join a crew
-        </Link>
+          Find me a crew!
+        </Button>
+        <p>
+          {signupState ? (
+            <strong>
+              Welcome! We've received your info and are off to work. We'll send
+              you everything you need soon to get you started. <br></br>
+              Thank you for training with us!
+            </strong>
+          ) : null}
+        </p>
       </Col>
     </Row>
   )

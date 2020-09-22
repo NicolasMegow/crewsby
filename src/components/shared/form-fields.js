@@ -9,7 +9,7 @@ export const FieldTitle = styled.p`
   margin-top: 2rem;
 `
 
-export const TextField = ({ name, placeholder, handleCallback }) => {
+export const TextField = ({ name, type, placeholder, handleCallback }) => {
   const [input, setInput] = useState("")
   const handleInputChange = e => {
     setInput(e.target.value)
@@ -17,14 +17,14 @@ export const TextField = ({ name, placeholder, handleCallback }) => {
 
   useEffect(() => {
     handleCallback(name, input)
-  }, [input, name, handleCallback])
+  }, [input, name])
   return (
     <span>
       <FieldTitle>
         <label>{name}</label>
       </FieldTitle>
       <input
-        type="text"
+        type={type}
         name={name}
         id={name}
         placeholder={placeholder}

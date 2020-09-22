@@ -75,8 +75,8 @@ const SkillsPage = ({ data }) => {
                 marginBottom: "2rem",
               }}
             >
-              Crewsby provides a range of skills to develop your professonal
-              work. All of these skills are rooted in tried and tested methods.
+              Leadership skills are learnable. Crewsby offers professional
+              leadership training online to develop these skill.
             </p>
           </Col>
         </Row>

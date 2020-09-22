@@ -29,13 +29,13 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-site">
             <Nav>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/peer-training">
-                  Peer training
+                <Link className={headerStyles.navItem} to="/leadership-skills">
+                  Leadership skills
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/skills">
-                  Skills
+                <Link className={headerStyles.navItem} to="/peer-training">
+                  Peer training
                 </Link>
               </Nav.Item>
               <Nav.Item>

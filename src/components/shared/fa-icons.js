@@ -75,3 +75,30 @@ export const FaNumber = ({ number }) => {
     </span>
   )
 }
+
+export const FaChecked = ({}) => {
+  return (
+    <>
+      <FontAwesomeIcon
+        icon={["fas", "checkmark"]}
+        mask={["fas", "circle"]}
+        transform="shrink-8"
+        color="#4285F4"
+      />
+    </>
+  )
+}
+
+export const FaToDo = ({}) => {
+  return (
+    <>
+      <FontAwesomeIcon
+        icon={["fas", "question"]}
+        mask={["fas", "circle"]}
+        size="lg"
+        transform="shrink-8"
+        color="#4285F4"
+      />
+    </>
+  )
+}

@@ -28,11 +28,11 @@ const Footer = () => {
                   About us
                 </Link>
               </Nav.Item>
-              <Nav.Item>
+              {/*<Nav.Item>
                 <Link className={footerStyles.linkItem} to="/faq">
                   FAQ
                 </Link>
-              </Nav.Item>
+              </Nav.Item>*/}
               <Nav.Item>
                 <Link className={footerStyles.linkItem} to="/imprint">
                   Imprint

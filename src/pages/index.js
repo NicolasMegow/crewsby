@@ -14,6 +14,8 @@ import PHuntCTA from "../components/ctas/phunt-cta"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
 
+import ProductHuntButton from "../components/shared/producthunt-button"
+
 const IndexPage = () => {
   const { loginWithPopup } = useAuth0()
   return (
@@ -24,7 +26,7 @@ const IndexPage = () => {
           <Col>
             <Teambuilding width="100%" />
             <h1>
-              Develop your skills<br></br>with a crew of peers.
+              Develop your leadership skills<br></br>with a crew of peers.
             </h1>
             <p
               style={{
@@ -33,42 +35,36 @@ const IndexPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              Crewsby offers a range of peer trainings that develop your
-              professional skills and expand your network.
+              Crewsby helps you to strengthen relationships
+              <Emoji symbol="❤️" label="heart" />, optimize processes{" "}
+              <Emoji symbol="💪" label="muscle" />, and unleash creativity{" "}
+              <Emoji symbol="🧠" label="brain" />.
             </p>
             <Link
-              to="/skills"
+              to="/leadership-skills"
               className="btn btn-outline-primary btn-lg"
               style={{ marginRight: "2rem", marginBottom: "2rem" }}
             >
               {" "}
               Browse the skills
             </Link>
-            <Link
-              to="/"
-              onClick={event => {
-                event.preventDefault()
-                loginWithPopup({ action: "signup" })
-              }}
-              className="btn btn-primary btn-lg"
-              style={{ marginRight: "2rem", marginBottom: "2rem" }}
-            >
-              Join a crew
-            </Link>
+            <ProductHuntButton />
           </Col>
         </Row>
         <KeyFeatures id="key features" />
         <Row style={{ marginTop: "8rem" }} id="skills">
           <Col lg>
-            <p className="mintitle">Professional skills</p>
-            <h2 className="feature-h">Develop professionally.</h2>
+            <p className="mintitle">Skills</p>
+            <h2 className="feature-h">Become a leader.</h2>
             <p>
-              Continuous learning is the basis for success. Crewsby provides
-              easy online delivery for a range of peer trainings to enhance your
-              professional skills on the job.
+              Continuous learning is the basis for success. Crewsby offers
+              professional trainings to develop your leadership skills on the
+              job.
             </p>
             <p>
-              <Link to="/skills">→ More skills are coming soon!</Link>
+              <Link to="/leadership-skills">
+                → More skills are coming soon!
+              </Link>
             </p>
           </Col>
           <Col
@@ -88,12 +84,11 @@ const IndexPage = () => {
             <h2 className="feature-h">Learn with peers.</h2>
             <p>
               Training becomes easier with peers. Your crew of peers provides
-              support and feedback. You learn with and from them just as much as
-              they learn from you. Your crew also holds you accountable for your
-              progress when the daily grind clogs you down.
+              support and feedback. Your crew also holds you accountable for
+              your progress when the daily grind clogs you down.
             </p>
             <p>
-              <Link to="/skills">→ See the peer in training</Link>
+              <Link to="/peer-training">→ See the peer in training</Link>
             </p>
           </Col>
           <Col

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 
 import Emoji from "../shared/emoji"
+import { FaChecked, FaToDo } from "../shared/fa-icons"
 import CheckinForm from "./checkin-form"
 import CheckinResults from "./checkin-results"
 
@@ -51,8 +52,8 @@ const SessionRow = ({ session, exercise, week }) => {
           </h2>
           <span style={{ display: "flex", alignItems: "center" }}>
             <p style={{ marginBottom: 0, marginRight: "2rem" }}>
-              Check in: {checkinDone ? "Done" : "Pending"} • Exercise:{" "}
-              {exerciseDone ? "Done" : "Pending"}{" "}
+              {checkinDone ? <FaChecked /> : <FaToDo />} Check in •{" "}
+              {exerciseDone ? <FaChecked /> : <FaToDo />} Exercise
             </p>
             {!sessionVisible ? (
               <button
