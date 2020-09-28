@@ -35,7 +35,7 @@ const TrainingSignup = ({ skill, user }) => {
             learning!
           </h2>
           <p>
-            You'll get an invoice for $89 after 6 exercises. Until then you can
+            You'll get an invoice for 99€ after 6 exercises. Until then you can
             withdraw without penalty.
           </p>
         </Col>

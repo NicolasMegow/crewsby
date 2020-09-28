@@ -18,7 +18,7 @@ const PHuntCTA = () => {
               fontWeight: "bold",
             }}
           >
-            Save $89 per skill until Oct 1st, 2020.
+            Save 99€ per skill until Oct 1st, 2020.
           </p>
           <p>
             Every skill consists of 12 practise sessions for you and your crew
