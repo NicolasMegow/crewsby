@@ -10,7 +10,7 @@ module.exports = {
     title: "Crewsby",
     author: "Nicolas Megow",
     siteUrl: `https://crewsby.com`,
-    description: "Übungen für geniale Teamarbeit",
+    description: "Leadership training with a crew of peers",
     keywords: [
       "scrum",
       "agile",
@@ -55,6 +55,13 @@ module.exports = {
       options: {
         name: "skills",
         path: `${__dirname}/src/content/skills`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/img`,
       },
     },
     `gatsby-plugin-emotion`,

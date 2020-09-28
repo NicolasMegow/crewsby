@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "../components/shared/emoji"
 
@@ -7,7 +9,26 @@ import SEO from "../components/shared/seo"
 
 import Logo from "../../static/crewsby_logo-512x512.png"
 
-const AboutUsPage = () => {
+export const query = graphql`
+  query {
+    imageLili: file(relativePath: { eq: "LI_square.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    imageNici: file(relativePath: { eq: "NM_square.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+const AboutUsPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About us" />
@@ -30,6 +51,54 @@ const AboutUsPage = () => {
             <p>
               Everyone deserves a crew of peers to accelerate the development of
               leadership skills.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col
+            md
+            style={{
+              margin: "2rem 0",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Img
+              fluid={data.imageLili.childImageSharp.fluid}
+              alt="Lilian Izsak"
+              style={{
+                width: "12rem",
+                height: "12rem",
+                borderRadius: "50%",
+                margin: "1rem",
+              }}
+            />
+            <p>
+              <strong>Lilian Izsak</strong>
+              <br></br>Co-Founder Marketing
+            </p>
+          </Col>
+          <Col
+            md
+            style={{
+              margin: "2rem 0",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Img
+              fluid={data.imageNici.childImageSharp.fluid}
+              alt="Nicolas Megow"
+              style={{
+                width: "12rem",
+                height: "12rem",
+                borderRadius: "50%",
+                margin: "1rem",
+              }}
+            />
+            <p>
+              <strong>Nicolas Megow</strong>
+              <br></br>Co-Founder Product
             </p>
           </Col>
         </Row>
