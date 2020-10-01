@@ -5,7 +5,7 @@ const ProductHuntButton = () => {
     <a
       href="https://www.producthunt.com/posts/crewsby?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-crewsby"
       target="_blank"
-      rel="norefferer"
+      rel="noreferrer"
     >
       <img
         src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=265368&theme=dark"

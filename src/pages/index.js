@@ -6,8 +6,6 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
 
-import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-
 import KeyFeatures from "../components/layout/key-features"
 import SkillGallery from "../components/layout/skill-gallery"
 import PHuntCTA from "../components/ctas/phunt-cta"
@@ -17,7 +15,6 @@ import Teambuilding from "../img/svg/Teambuilding.svg"
 import EmailSignup from "../components/ctas/email-signup"
 
 const IndexPage = () => {
-  const { loginWithPopup } = useAuth0()
   return (
     <Layout>
       <SEO title="Home" />

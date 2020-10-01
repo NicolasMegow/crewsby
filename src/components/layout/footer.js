@@ -4,7 +4,6 @@ import { Container, Row, Col, Nav } from "react-bootstrap"
 
 import footerStyles from "../../styles/footer.module.scss"
 import SocialIcons from "../shared/social-icons"
-import ProductHuntButton from "../shared/producthunt-button"
 
 const Footer = () => {
   return (
@@ -16,14 +15,11 @@ const Footer = () => {
           </Col>
         </Row>
         <Row style={{ display: "flex", alignItems: "center" }}>
-          <Col md={2}>
+          <Col md={3}>
             <p>Crewsby © 2020 </p>
           </Col>
-          <Col md={4}>
-            <ProductHuntButton />
-          </Col>
           <Col
-            md={6}
+            md={9}
             style={{ display: "flex", justifyContent: "space-between" }}
           >
             <SocialIcons />

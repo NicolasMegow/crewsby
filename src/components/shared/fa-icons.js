@@ -76,7 +76,7 @@ export const FaNumber = ({ number }) => {
   )
 }
 
-export const FaChecked = ({}) => {
+export const FaChecked = () => {
   return (
     <>
       <FontAwesomeIcon
@@ -89,7 +89,7 @@ export const FaChecked = ({}) => {
   )
 }
 
-export const FaToDo = ({}) => {
+export const FaToDo = () => {
   return (
     <>
       <FontAwesomeIcon

@@ -31,16 +31,18 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-172124771-1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
+        googleAnalytics: {
+          trackingId: "UA-172124771-1",
+          // Setting this parameter is optional
+          anonymize: true,
+        },
+        facebookPixel: {
+          pixelId: "",
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production"],
       },
     },
     {
