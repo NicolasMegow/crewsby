@@ -59,9 +59,7 @@ const SelfReview = ({ behavior, skill, session }) => {
             className={appStyles.formfield}
           />
         </span>
-        <p className={appStyles.fieldtitle}>
-          <label>What was your biggest obstacle?</label>
-        </p>
+        <p className={appStyles.fieldtitle}>What was your biggest obstacle?</p>
         <textarea
           id="Obstacle"
           name="Obstacle"
@@ -72,9 +70,7 @@ const SelfReview = ({ behavior, skill, session }) => {
           className={appStyles.formfield}
         />
         <span>
-          <p className={appStyles.fieldtitle}>
-            <label>What have you noticed?</label>
-          </p>
+          <p className={appStyles.fieldtitle}>What have you noticed?</p>
           <textarea
             id="Learnings"
             name="Learnings"
@@ -86,9 +82,7 @@ const SelfReview = ({ behavior, skill, session }) => {
           />
         </span>
         <span>
-          <p className={appStyles.fieldtitle}>
-            <label>What are your goals next week?</label>
-          </p>
+          <p className={appStyles.fieldtitle}>What are your goals next week?</p>
           <textarea
             id="Goals"
             name="Goals"

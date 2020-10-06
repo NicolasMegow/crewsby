@@ -13,13 +13,10 @@ var styles = {
 const SkillGallery = () => {
   return (
     <div>
-      <Link
-        to="leadership-skills/communicate-appreciation"
-        style={styles.active}
-      >
+      <Link to="people-skills/communicate-appreciation" style={styles.active}>
         <FaTitle icon="gift" title="Communicate Appreciation" />
       </Link>
-      <Link to="leadership-skills/analyze-processes" style={styles.active}>
+      <Link to="people-skills/analyze-processes" style={styles.active}>
         <FaTitle icon="conveyor-belt" title="Analyze Processes" />
       </Link>
     </div>

@@ -23,7 +23,8 @@ const IndexPage = () => {
           <Col>
             <Teambuilding width="100%" />
             <h1>
-              Develop your leadership skills<br></br>with a crew of peers.
+              Develop people skills on the job<br></br>with a curated crew of
+              peers.
             </h1>
             <p
               style={{
@@ -43,17 +44,14 @@ const IndexPage = () => {
         <KeyFeatures id="key features" />
         <Row style={{ marginTop: "8rem" }} id="skills">
           <Col lg>
-            <p className="mintitle">Skills</p>
-            <h2 className="feature-h">Become a leader.</h2>
+            <p className="mintitle">People skills</p>
+            <h2 className="feature-h">Teamwork like a pro.</h2>
             <p>
               Continuous learning is the basis for success. Crewsby offers
-              professional trainings to develop your leadership skills on the
-              job.
+              professional trainings to develop your people skills on the job.
             </p>
             <p>
-              <Link to="/leadership-skills">
-                → More skills are coming soon!
-              </Link>
+              <Link to="/people-skills">→ More skills are coming soon!</Link>
             </p>
           </Col>
           <Col
@@ -67,40 +65,9 @@ const IndexPage = () => {
             <SkillGallery style={{ margin: "2rem" }} />
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }} id="crew">
+        <Row style={{ marginTop: "8rem" }} id="training on the job">
           <Col lg>
-            <p className="mintitle">Peer training</p>
-            <h2 className="feature-h">Learn with peers.</h2>
-            <p>
-              Training becomes easier with peers. Your crew of peers provides
-              support and feedback. Your crew also holds you accountable for
-              your progress when the daily grind clogs you down.
-            </p>
-            <p>
-              <Link to="/peer-training">→ See the peer in training</Link>
-            </p>
-          </Col>
-          <Col
-            lg
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <p style={{ fontSize: "3rem", margin: "2rem", color: "#151515" }}>
-              <Emoji symbol="👩🏾‍🦱" label="crew-1" />{" "}
-              <Emoji symbol="🧔🏼" label="crew-2" /> <br></br>
-              <Emoji symbol="👩🏻‍🦰" label="crew-3" />{" "}
-              <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                & YOU
-              </span>
-            </p>
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "8rem" }} id="training">
-          <Col lg>
-            <p className="mintitle">Learning zone</p>
+            <p className="mintitle">Training on the job</p>
             <h2 className="feature-h">Learn through exercise.</h2>
             <p>
               Everyone learns best by doing. Crewsby designs sequences of
@@ -109,7 +76,9 @@ const IndexPage = () => {
               skills.
             </p>
             <p>
-              <Link to="/learning-zone">→ Explore your learning zone</Link>
+              <Link to="/training-on-the-job">
+                → Discover your training on the job
+              </Link>
             </p>
           </Col>
           <Col
@@ -128,15 +97,42 @@ const IndexPage = () => {
                 margin: "2rem",
               }}
             >
-              <strike style={{ textDecorationColor: "#DB4437" }}>
-                Dreaming
-              </strike>
-              ...<br></br>
-              <strike style={{ textDecorationColor: "#DB4437" }}>
-                Talking
-              </strike>
-              ...<br></br>
-              Doing<span style={{ color: "#4285F4" }}>.</span>
+              Knowing
+              <br></br>
+              <span style={{ color: "#4285F4" }}>+</span>
+              <br></br>
+              Doing
+            </p>
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "8rem" }} id="crew">
+          <Col lg>
+            <p className="mintitle">Curated crews</p>
+            <h2 className="feature-h">Learn with peers.</h2>
+            <p>
+              Training becomes easier with peers. Your crew of peers provides
+              support and feedback. Your crew also holds you accountable for
+              your progress when the daily grind clogs you down.
+            </p>
+            <p>
+              <Link to="/learning-zone">→ Explore your learning zone</Link>
+            </p>
+          </Col>
+          <Col
+            lg
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ fontSize: "3rem", margin: "2rem", color: "#151515" }}>
+              <Emoji symbol="👩🏾‍🦱" label="crew-1" />{" "}
+              <Emoji symbol="🧔🏼" label="crew-2" /> <br></br>
+              <Emoji symbol="👩🏻‍🦰" label="crew-3" />{" "}
+              <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
+                <span style={{ color: "#4285F4" }}>&</span> YOU
+              </span>
             </p>
           </Col>
         </Row>

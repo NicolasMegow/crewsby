@@ -62,7 +62,7 @@ const SkillsPage = ({ data }) => {
   }
   return (
     <Layout>
-      <SEO title="Skills" />
+      <SEO title="People skills" />
       <Container>
         <Row style={{ marginBottom: "2rem" }}>
           <Col>
@@ -76,7 +76,7 @@ const SkillsPage = ({ data }) => {
               }}
             >
               Leadership skills are learnable. Crewsby offers professional
-              leadership training online to develop these skill.
+              people training online to develop these skill.
             </p>
           </Col>
         </Row>

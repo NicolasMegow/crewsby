@@ -50,7 +50,7 @@ const AboutUsPage = ({ data }) => {
             </h2>
             <p>
               Everyone deserves a crew of peers to accelerate the development of
-              leadership skills.
+              people skills.
             </p>
           </Col>
         </Row>
@@ -105,9 +105,7 @@ const AboutUsPage = ({ data }) => {
         <Row style={{ marginTop: "8rem" }}>
           <Col>
             <p className="mintitle">Our aspiration</p>
-            <h2 className="feature-h">
-              Crewsby redefines leadership training.
-            </h2>
+            <h2 className="feature-h">Crewsby redefines people training.</h2>
           </Col>
         </Row>
         <Row>
@@ -128,9 +126,7 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Contribution
             </p>
-            <p>
-              We develop peer trainings for the best ideas around leadership.
-            </p>
+            <p>We develop peer trainings for the best ideas around people.</p>
           </Col>
           <Col
             md
@@ -178,9 +174,8 @@ const AboutUsPage = ({ data }) => {
               We are standing on the shoulders of giants.
             </h2>
             <p>
-              We develop our leadership trainings from state of the art research
-              and best practices. Here are the giants that inspired the
-              trainings:
+              We develop our people trainings from state of the art research and
+              best practices. Here are the giants that inspired the trainings:
             </p>
           </Col>
         </Row>

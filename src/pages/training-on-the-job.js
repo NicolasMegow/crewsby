@@ -13,7 +13,7 @@ import { FaMask, FaNumber } from "../components/shared/fa-icons"
 const TrainingPage = () => {
   return (
     <Layout>
-      <SEO title="Peer training" />
+      <SEO title="Training on the job" />
       <Container>
         <Row>
           <Col>
