@@ -76,9 +76,7 @@ const Skills = ({ user, skills }) => {
   return (
     <Row style={{ marginTop: "4rem" }}>
       <Col>
-        <h2 style={{ fontSize: "2rem", marginBottom: "2rem" }}>
-          <Emoji symbol="🧰" label="skills" /> Your skills:
-        </h2>
+        <h2 style={{ fontSize: "2rem", marginBottom: "2rem" }}>Your skills:</h2>
         {skills.allMdx.group.map((group, i) => {
           return (
             <Row style={{ marginBottom: "4rem" }} key={i}>

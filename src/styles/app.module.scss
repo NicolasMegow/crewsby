@@ -1,6 +1,28 @@
 // Set the Theme-Colors
 @import "colors";
 
+.formfield {
+  border: 1px solid #151515;
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #151515;
+  width: 100%;
+  max-width: 30rem;
+}
+.formfield::placeholder {
+  color: #78a9f7;
+}
+
+.fieldtitle {
+  line-height: 1;
+  margin-bottom: 0.2rem;
+  margin-top: 1rem;
+}
+
 .info1 {
   margin-bottom: 0;
   font-size: 1rem;

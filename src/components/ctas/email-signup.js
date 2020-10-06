@@ -2,18 +2,24 @@ import React, { useState, useRef } from "react"
 import { Row, Col, Button } from "react-bootstrap"
 
 import faunadb, { query as q } from "faunadb"
-import { TextField } from "../shared/form-fields"
+
+import { useFormik } from "formik"
+import appStyles from "../../styles/app.module.scss"
 
 const EmailSignup = () => {
-  const [signupData, setSignup] = useState()
-  const [signupState, setState] = useState(false)
+  const [signupState, setSignup] = useState(false)
   const btnRef = useRef()
-  const handleCallback = (name, info) => {
-    setSignup(prevState => ({
-      ...prevState,
-      [name]: info,
-    }))
-  }
+  const formik = useFormik({
+    initialValues: {
+      Name: "",
+      email: "",
+    },
+    onSubmit: values => {
+      sendSignup(values)
+      setSignup(true)
+      btnRef.current.setAttribute("disabled", "disabled")
+    },
+  })
 
   const sendSignup = async signupData => {
     const fauna_secret = process.env.GATSBY_FAUNA_FEEDBACK
@@ -26,38 +32,43 @@ const EmailSignup = () => {
   }
   return (
     <>
-      <Row>
-        <Col lg>
-          <TextField
-            name="Name"
-            type="text"
-            placeholder="Jay Gatsby"
-            handleCallback={handleCallback}
-          />
-        </Col>
-        <Col lg>
-          <TextField
-            name="Email"
-            type="email"
-            placeholder="jay.gatsby@crewsby.com"
-            handleCallback={handleCallback}
-          />
-        </Col>
-        <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
-          <Button
-            size="lg"
-            style={{ marginBottom: "2rem" }}
-            ref={btnRef}
-            onClick={() => {
-              sendSignup(signupData)
-              btnRef.current.setAttribute("disabled", "disabled")
-              setState(true)
-            }}
-          >
-            Find me a crew!
-          </Button>
-        </Col>
-      </Row>
+      <form onSubmit={formik.handleSubmit}>
+        <Row>
+          <Col md>
+            <span>
+              <input
+                id="Name"
+                name="Name"
+                type="text"
+                placeholder="your name"
+                aria-label="text-form"
+                onChange={formik.handleChange}
+                value={formik.values.Name}
+                className={appStyles.formfield}
+              />
+            </span>
+          </Col>
+          <Col md>
+            <span>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="your.email@domain.com"
+                aria-label="text-form"
+                onChange={formik.handleChange}
+                value={formik.values.email}
+                className={appStyles.formfield}
+              />
+            </span>
+          </Col>
+          <Col md>
+            <Button type="submit" ref={btnRef} className="btn btn-lg">
+              Find me a crew
+            </Button>
+          </Col>
+        </Row>
+      </form>
       <Row>
         <Col>
           <p>

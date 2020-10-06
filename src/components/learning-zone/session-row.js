@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap"
 
 import Emoji from "../shared/emoji"
 import { FaChecked, FaToDo } from "../shared/fa-icons"
-import CheckinForm from "./checkin-form"
+import SelfReview from "./self-review"
 import CheckinResults from "./checkin-results"
 
 function addDays(date, days) {
@@ -14,8 +14,7 @@ function addDays(date, days) {
 }
 
 const SessionRow = ({ session, exercise, week }) => {
-  const [sessionDone, setDone] = useState(false)
-  const [checkinDone, setCheckin] = useState(false)
+  const [reviewDone, setReview] = useState(false)
   const [exerciseDone, setExercise] = useState(false)
   const [sessionVisible, setVisability] = useState(false)
   const { title, emojis } = exercise.node.frontmatter
@@ -52,7 +51,7 @@ const SessionRow = ({ session, exercise, week }) => {
           </h2>
           <span style={{ display: "flex", alignItems: "center" }}>
             <p style={{ marginBottom: 0, marginRight: "2rem" }}>
-              {checkinDone ? <FaChecked /> : <FaToDo />} Check in •{" "}
+              {reviewDone ? <FaChecked /> : <FaToDo />} Self-review •{" "}
               {exerciseDone ? <FaChecked /> : <FaToDo />} Exercise
             </p>
             {!sessionVisible ? (
@@ -74,10 +73,12 @@ const SessionRow = ({ session, exercise, week }) => {
         </div>
         {!sessionVisible ? null : (
           <div>
-            {!checkinDone ? (
-              <CheckinForm
-                setDone={setCheckin}
+            {!reviewDone ? (
+              <SelfReview
+                setDone={setReview}
                 behavior={["times", "shared your appreciation"]}
+                skill={skill}
+                session={session}
               />
             ) : (
               <CheckinResults
