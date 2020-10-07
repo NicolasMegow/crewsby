@@ -54,13 +54,6 @@ const FeedbackSlide = ({
           ["ref"],
           q.Get(q.Match(q.Index("profile_by_email"), user.email))
         ),
-        // keine optimale Lösung aber tuts erstmal, was passiert hier:
-        // - docKey ist entweder punkte_team oder punkte_solo
-        // - anstatt eines array wird ein object mit index keys verwendet (hier default erstmal 1)
-        // - level beschreibt dieses uebung wo einfach eine 1 gesetzt wird
-        //   statt level sollte ein slug/id verwendet werden die sich nicht ändert
-        // So wird die aktion idempotent
-        // Für die Punkte unter mein-account wird gezählt wie viele keys gesetzt sind
         { data: { [docKey]: { 1: { [level]: curTime } } } }
       )
     )

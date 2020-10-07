@@ -56,7 +56,7 @@ export const query = graphql`
 `
 
 const SkillTemplate = ({ data }) => {
-  const { isAuthenticated, user, loading } = useAuth0()
+  const { isAuthenticated, loading } = useAuth0()
   const { skill } = data.mdx.fields
   const { job, icon, summary } = data.mdx.frontmatter
   const startingDate = new Date("2020-09-14")

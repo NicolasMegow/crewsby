@@ -1,6 +1,7 @@
 // Set the Theme-Colors
 @import "colors";
 
+// for form fields in email-signup & self-review
 .formfield {
   border: 1px solid #151515;
   border-radius: 6px;
@@ -13,6 +14,7 @@
   width: 100%;
   max-width: 30rem;
 }
+
 .formfield::placeholder {
   color: #78a9f7;
 }
@@ -23,31 +25,8 @@
   margin-top: 1rem;
 }
 
-.info1 {
-  margin-bottom: 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
 
-.info2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-// Style Bootstrap
-.pill {
-  border-style: solid;
-  border-width: 1px;
-  border-color: $primary;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  min-width: 13.2rem;
-  text-align: center;
-  padding: 1rem;
-}
-
-// ggf nur ab hier behalten!
+// for skill-tile & emoji tile
 .menu-item {
   width: 100%;
   min-height: 7rem;
@@ -76,24 +55,4 @@
     margin-bottom: 0.2rem;
   }
 
-  .disabled-link {
-    color: #9197a1;
-    border-color: $lightback;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 6px;
-    padding: 1rem;
-    min-height: 9rem;
-    text-decoration: none;
-    display: block;
-    pointer-events: none;
-  }
-}
-
-.scroll-menu-arrow {
-  padding: 2.5rem 0.5rem;
-  cursor: pointer;
-  color: #ffffff;
-  background-color: $maincolor;
-  border: 1px solid $maincolor;
 }

@@ -42,8 +42,8 @@ const Header = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/learning-zone">
-                  Learning zone
+                <Link className={headerStyles.navItem} to="/curated-crews">
+                  Curated crews
                 </Link>
               </Nav.Item>
             </Nav>
@@ -51,6 +51,11 @@ const Header = () => {
             <Nav className="ml-auto">
               {isAuthenticated ? (
                 <>
+                  <Nav.Item>
+                    <Link className={headerStyles.navItem} to="/learning-zone">
+                      Learning zone
+                    </Link>
+                  </Nav.Item>
                   <Nav.Item>
                     <Link
                       to="/"

@@ -48,9 +48,9 @@ export const query = graphql`
 const SkillsPage = ({ data }) => {
   const { loading } = useAuth0()
   const categories = [
-    ["❤️", "heart", "Strengthen your relationships"],
-    ["💪", "muscle", "Individualize your processes"],
-    ["🧠", "brain", "Unleash your creativity"],
+    ["❤️", "heart", "Communication"],
+    ["💪", "muscle", "Collaboration"],
+    ["🧠", "brain", "Innovation"],
   ]
 
   if (loading) {
@@ -75,8 +75,8 @@ const SkillsPage = ({ data }) => {
                 marginBottom: "2rem",
               }}
             >
-              Leadership skills are learnable. Crewsby offers professional
-              people training online to develop these skill.
+              Teamwork can be effective, efficient & creative. Crewsby offers
+              professional training online to develop the necessary skill.
             </p>
           </Col>
         </Row>

@@ -5,11 +5,6 @@
 @import "~bootstrap/scss/bootstrap";
 
 // Re-Style Bootstrap
-p,
-li {
-  font-size: 1.2rem;
-  line-height: 1.7;
-}
 
 a:hover {
   text-decoration: none;
@@ -85,6 +80,10 @@ hr {
   font-weight: 700;
   line-height: 1;
   margin-right: 0.4rem;
+}
+
+.feature-emoji {
+  font-size: 4rem;
 }
 
 .feature-text {

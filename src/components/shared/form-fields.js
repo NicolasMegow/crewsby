@@ -65,7 +65,7 @@ export const ChoiceChips = ({ name, options, handleCallback }) => {
   }
   useEffect(() => {
     handleCallback(name, choices)
-  }, [choices, name])
+  }, [choices, name, handleCallback])
 
   return (
     <>

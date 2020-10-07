@@ -6,13 +6,13 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
 
+import EmailSignup from "../components/ctas/email-signup"
 import KeyFeatures from "../components/layout/key-features"
 import SkillGallery from "../components/layout/skill-gallery"
-import PHuntCTA from "../components/ctas/phunt-cta"
+import PricingRow from "../components/layout/pricing-row"
+import SignupCTA from "../components/ctas/signup-cta"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
-
-import EmailSignup from "../components/ctas/email-signup"
 
 const IndexPage = () => {
   return (
@@ -23,7 +23,7 @@ const IndexPage = () => {
           <Col>
             <Teambuilding width="100%" />
             <h1>
-              Develop people skills on the job<br></br>with a curated crew of
+              People skills training on the job<br></br>with a curated crew of
               peers.
             </h1>
             <p
@@ -33,10 +33,10 @@ const IndexPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              Crewsby helps you to strengthen relationships
-              <Emoji symbol="❤️" label="heart" />, optimize processes{" "}
-              <Emoji symbol="💪" label="muscle" />, and unleash creativity{" "}
-              <Emoji symbol="🧠" label="brain" />.
+              Upgrade your <Emoji symbol="❤️" label="heart" /> communication,{" "}
+              <Emoji symbol="💪" label="muscle" /> collaboration, and{" "}
+              <Emoji symbol="🧠" label="brain" /> innovation skills with
+              Crewsby.
             </p>
           </Col>
         </Row>
@@ -110,12 +110,12 @@ const IndexPage = () => {
             <p className="mintitle">Curated crews</p>
             <h2 className="feature-h">Learn with peers.</h2>
             <p>
-              Training becomes easier with peers. Your crew of peers provides
-              support and feedback. Your crew also holds you accountable for
+              Training is easier and better with peers. Your crew of peers
+              provides support and feedback. It also holds you accountable for
               your progress when the daily grind clogs you down.
             </p>
             <p>
-              <Link to="/learning-zone">→ Explore your learning zone</Link>
+              <Link to="/curated-crews">→ Explore training with peers</Link>
             </p>
           </Col>
           <Col
@@ -131,12 +131,13 @@ const IndexPage = () => {
               <Emoji symbol="🧔🏼" label="crew-2" /> <br></br>
               <Emoji symbol="👩🏻‍🦰" label="crew-3" />{" "}
               <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                <span style={{ color: "#4285F4" }}>&</span> YOU
+                & YOU
               </span>
             </p>
           </Col>
         </Row>
-        <PHuntCTA />
+        <PricingRow />
+        <SignupCTA />
       </Container>
     </Layout>
   )

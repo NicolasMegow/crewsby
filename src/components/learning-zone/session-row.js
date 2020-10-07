@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap"
 import Emoji from "../shared/emoji"
 import { FaChecked, FaToDo } from "../shared/fa-icons"
 import SelfReview from "./self-review"
-import CheckinResults from "./checkin-results"
+import ReviewResults from "./review-results"
 
 function addDays(date, days) {
   var result = new Date(date)
@@ -15,7 +15,7 @@ function addDays(date, days) {
 
 const SessionRow = ({ session, exercise, week }) => {
   const [reviewDone, setReview] = useState(false)
-  const [exerciseDone, setExercise] = useState(false)
+  const exerciseDone = false
   const [sessionVisible, setVisability] = useState(false)
   const { title, emojis } = exercise.node.frontmatter
   const { slug, skill } = exercise.node.fields
@@ -81,7 +81,7 @@ const SessionRow = ({ session, exercise, week }) => {
                 session={session}
               />
             ) : (
-              <CheckinResults
+              <ReviewResults
                 results={resultsData}
                 behavior={["times", "shared your appreciation"]}
               />

@@ -4,21 +4,21 @@ import Emoji from "../components/shared/emoji"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import SignupCTA from "../components/ctas/signup-cta"
-import TrainingRow from "../components/layout/training-row"
 
-import Teamboat from "../img/svg/EinBoot.svg"
+import CrewImage from "../components/layout/crew-example"
+import CrewRow from "../components/layout/crew-row"
 import { FaMask, FaNumber } from "../components/shared/fa-icons"
+import SignupCTA from "../components/ctas/signup-cta"
 
-const TrainingPage = () => {
+const CrewsPage = () => {
   return (
     <Layout>
-      <SEO title="Training on the job" />
+      <SEO title="Curated crews" />
       <Container>
         <Row>
           <Col>
-            <Teamboat width="100%" />
-            <h1>Train on the job.</h1>
+            <CrewImage />
+            <h1>Train with a curated crew of peers.</h1>
             <p
               style={{
                 fontSize: "1.4rem",
@@ -26,14 +26,15 @@ const TrainingPage = () => {
                 marginBottom: "2rem",
               }}
             >
-              Upgrade you people skills now with just 1h per session.
+              Crewsby matches you with a crew of three peers. Together you work
+              through 4-12 sessions.
             </p>
           </Col>
         </Row>
-        <TrainingRow />
+        <CrewRow />
         <Row style={{ marginTop: "8rem" }}>
           <Col md={6}>
-            <p className="mintitle">Self-reviews</p>
+            <p className="mintitle">Networking</p>
             <h2>Training is social.</h2>
             <p>
               Peers accelerate your learning by offering new perspectives. They
@@ -50,19 +51,14 @@ const TrainingPage = () => {
               justifyContent: "center",
             }}
           >
-            <p
-              style={{ fontWeight: "bold", fontSize: "1.6rem", margin: "2rem" }}
-            >
-              <Emoji symbol="🗺️" label="world" /> Contacts<br></br>
-              <Emoji symbol="🥊" label="feedback" /> Feedback<br></br>
-              <Emoji symbol="☕" label="coffee" /> Support<br></br>
-              <Emoji symbol="📅" label="time" /> Commitment
+            <p className="feature-emoji">
+              <Emoji symbol="🗺️" label="networking" />{" "}
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg>
-            <p className="mintitle">Exercises</p>
+            <p className="mintitle">Perspectives</p>
             <h2>Training on the job.</h2>
             <p>
               Exercises provide application and reflection of new methods and
@@ -79,17 +75,17 @@ const TrainingPage = () => {
               padding: "2rem",
             }}
           >
-            <p className="feature-num">
-              <Emoji symbol="🎯" label="target" />{" "}
+            <p className="feature-emoji">
+              <Emoji symbol="☕" label="support" />{" "}
             </p>
-            <strong style={{ fontSize: "1.6rem", marginLeft: "1rem" }}>
-              Practice <br></br>makes <br></br>perfect.
-            </strong>
+            <p className="feature-emoji">
+              <Emoji symbol="🥊" label="feedback" />{" "}
+            </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col lg={6}>
-            <p className="mintitle">Levels</p>
+            <p className="mintitle">Accountability</p>
             <h2>Training in chunks.</h2>
             <p>
               Peer trainings gradually develop your skills through structured
@@ -105,19 +101,8 @@ const TrainingPage = () => {
               justifyContent: "center",
             }}
           >
-            <p
-              style={{ fontWeight: "bold", fontSize: "1.6rem", margin: "2rem" }}
-            >
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" /> <br></br>
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" />{" "}
-              <FaMask icon="check" size="2x" /> <br></br>
-              <FaMask icon="check" size="2x" /> <FaNumber number={10} />{" "}
-              <FaNumber number={11} /> <FaNumber number={12} />
+            <p className="feature-emoji">
+              <Emoji symbol="📅" label="accountability" />{" "}
             </p>
           </Col>
         </Row>
@@ -127,4 +112,4 @@ const TrainingPage = () => {
   )
 }
 
-export default TrainingPage
+export default CrewsPage

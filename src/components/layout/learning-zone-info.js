@@ -6,7 +6,11 @@ const LearningZoneInfo = () => {
   return (
     <Row style={{ marginTop: "4rem" }}>
       <Col>
-        <h1>
+        <h1
+          style={{
+            margin: "4rem 0",
+          }}
+        >
           <Emoji symbol="🐡" label="fugu" />
           <Emoji symbol="🔪" label="knife" />
           <Emoji symbol="🍣" label="sushi" />

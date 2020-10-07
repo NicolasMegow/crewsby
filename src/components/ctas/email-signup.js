@@ -64,7 +64,7 @@ const EmailSignup = () => {
           </Col>
           <Col md>
             <Button type="submit" ref={btnRef} className="btn btn-lg">
-              Find me a crew
+              Start for free
             </Button>
           </Col>
         </Row>

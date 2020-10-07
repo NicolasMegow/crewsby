@@ -1,14 +1,14 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 
-const TrainingRow = () => {
+const CrewRow = () => {
   return (
     <Row style={{ marginTop: "4rem" }}>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
         <div className="feature-num">1</div>
         <div>
           <p style={{ marginBottom: "0" }} className="mintitle">
-            Self-reviews{" "}
+            Networking{" "}
           </p>
           <p className="feature-text">
             Reflect on your actions and strengthen your self-efficacy.
@@ -19,7 +19,7 @@ const TrainingRow = () => {
         <div className="feature-num">2</div>
         <div>
           <p style={{ marginBottom: "0" }} className="mintitle">
-            Exercises
+            Perspectives
           </p>
           <p className="feature-text">
             Learn by doing in exercises with your crew of peers.
@@ -30,7 +30,7 @@ const TrainingRow = () => {
         <div className="feature-num">3</div>
         <div>
           <p style={{ marginBottom: "0" }} className="mintitle">
-            Levels
+            Accountability
           </p>
           <p className="feature-text">
             Upgrade your people skills over 3 levels of 4 exercises each.
@@ -41,4 +41,4 @@ const TrainingRow = () => {
   )
 }
 
-export default TrainingRow
+export default CrewRow

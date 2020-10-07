@@ -6,7 +6,7 @@ import Layout from "../../components/layout/layout"
 import SEO from "../../components/shared/seo"
 import Emoji from "../../components/shared/emoji"
 import FaCheck from "../../components/shared/facheck"
-import CTA from "../../components/ctas/phunt-cta"
+import SignupCTA from "../../components/ctas/signup-cta"
 
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 
@@ -80,7 +80,7 @@ const PreisePage = () => {
             </Button>
           </Col>
         </Row>
-        <PHuntCTA />
+        <SignupCTA />
         <Row style={{ marginTop: "2rem" }}>
           <Col>
             <p style={{ fontSize: "1rem" }}>

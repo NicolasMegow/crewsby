@@ -17,15 +17,15 @@ const SetRow = () => {
           1 Hour
         </p>
         <p className="feature-text">
-          Meet for 1 hour every week to learn with and from your peers.
+          Meet in 1 hour sessions to practise and reflect with your peers.
         </p>
       </Col>
       <Col lg={4}>
         <p className="feature-num" style={{ fontSize: "3rem" }}>
-          12 Weeks
+          4 Sessions
         </p>
         <p className="feature-text">
-          Develop and hone skill over the course of 12 weeks.
+          Develop and hone a skill over 3 levels of 4 sessions each.
         </p>
       </Col>
     </Row>

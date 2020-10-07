@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
-import PHuntCTA from "../components/ctas/phunt-cta"
+import SignupCTA from "../components/ctas/signup-cta"
 
 import FAQData from "../content/faq.yaml"
 
@@ -36,7 +36,7 @@ const PreisePage = () => {
           </Col>
         </Row>
       </Container>
-      <PHuntCTA />
+      <SignupCTA />
     </Layout>
   )
 }
