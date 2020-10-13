@@ -4,7 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 export const FaCheck = () => {
   return (
     <>
-      <FontAwesomeIcon icon={["fas", "check"]} fixedWidth color="#4285F4" />
+      <FontAwesomeIcon
+        icon={["fas", "check"]}
+        fixedWidth
+        color="#4285F4"
+        size="2x"
+        style={{ margin: ".5rem" }}
+      />
+    </>
+  )
+}
+
+export const FaTimes = () => {
+  return (
+    <>
+      <FontAwesomeIcon
+        icon={["fas", "times"]}
+        fixedWidth
+        color="#151515"
+        size="2x"
+        style={{ margin: ".5rem" }}
+      />
     </>
   )
 }
@@ -31,26 +51,6 @@ export const FaMask = ({ icon, size }) => {
   )
 }
 
-export const FaTitle = ({ icon, title }) => {
-  const title2 = title.split(" ")
-  return (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <FaMask icon={icon} size="3x" />
-      <div
-        style={{
-          marginLeft: "1rem",
-          lineHeight: "1",
-          marginBottom: "0",
-        }}
-      >
-        {title2[0]}
-        <br></br>
-        {title2[1]}
-      </div>
-    </div>
-  )
-}
-
 export const FaLoading = () => {
   return (
     <FontAwesomeIcon
@@ -59,20 +59,6 @@ export const FaLoading = () => {
       size="3x"
       pulse
     />
-  )
-}
-
-export const FaNumber = ({ number }) => {
-  return (
-    <span style={{ position: "relative" }}>
-      <FontAwesomeIcon icon={["fal", "square"]} size="2x" />
-      <span
-        className="fa-layers-text"
-        style={{ position: "absolute", top: "25%", fontWeight: "900" }}
-      >
-        {number}
-      </span>
-    </span>
   )
 }
 

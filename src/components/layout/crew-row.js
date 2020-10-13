@@ -7,33 +7,34 @@ const CrewRow = () => {
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
         <div className="feature-num">1</div>
         <div>
-          <p style={{ marginBottom: "0" }} className="mintitle">
+          <h3 style={{ marginBottom: "0" }} className="mintitle">
             Networking{" "}
-          </p>
+          </h3>
           <p className="feature-text">
-            Reflect on your actions and strengthen your self-efficacy.
+            Connect to peers from different industries and countries.
           </p>
         </div>
       </Col>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
         <div className="feature-num">2</div>
         <div>
-          <p style={{ marginBottom: "0" }} className="mintitle">
+          <h3 style={{ marginBottom: "0" }} className="mintitle">
             Perspectives
-          </p>
+          </h3>
           <p className="feature-text">
-            Learn by doing in exercises with your crew of peers.
+            Learn from the experience of your peers and share your point of
+            view.
           </p>
         </div>
       </Col>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
         <div className="feature-num">3</div>
         <div>
-          <p style={{ marginBottom: "0" }} className="mintitle">
+          <h3 style={{ marginBottom: "0" }} className="mintitle">
             Accountability
-          </p>
+          </h3>
           <p className="feature-text">
-            Upgrade your people skills over 3 levels of 4 exercises each.
+            Persevere on your journey despite the daily grind clogging you down.
           </p>
         </div>
       </Col>

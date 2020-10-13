@@ -4,7 +4,7 @@ import { Row, Col, Button } from "react-bootstrap"
 import faunadb, { query as q } from "faunadb"
 
 import { useFormik } from "formik"
-import appStyles from "../../styles/app.module.scss"
+import formStyles from "../../styles/form.module.scss"
 
 const EmailSignup = () => {
   const [signupState, setSignup] = useState(false)
@@ -12,7 +12,7 @@ const EmailSignup = () => {
   const formik = useFormik({
     initialValues: {
       Name: "",
-      email: "",
+      EMail: "",
     },
     onSubmit: values => {
       sendSignup(values)
@@ -44,27 +44,27 @@ const EmailSignup = () => {
                 aria-label="text-form"
                 onChange={formik.handleChange}
                 value={formik.values.Name}
-                className={appStyles.formfield}
+                className={formStyles.formfield}
               />
             </span>
           </Col>
           <Col md>
             <span>
               <input
-                id="email"
-                name="email"
+                id="EMail"
+                name="EMail"
                 type="email"
                 placeholder="your.email@domain.com"
                 aria-label="text-form"
                 onChange={formik.handleChange}
-                value={formik.values.email}
-                className={appStyles.formfield}
+                value={formik.values.EMail}
+                className={formStyles.formfield}
               />
             </span>
           </Col>
           <Col md>
-            <Button type="submit" ref={btnRef} className="btn btn-lg">
-              Start for free
+            <Button type="submit" ref={btnRef} variant="primary" size="lg">
+              Keep me posted
             </Button>
           </Col>
         </Row>
@@ -74,9 +74,7 @@ const EmailSignup = () => {
           <p>
             {signupState ? (
               <strong>
-                Welcome! We've received your info and are off to work. We'll
-                send you everything you need soon to get you started. <br></br>
-                Thank you for training with us!
+                Welcome on board! You'll receive a a confirmation email soon.
               </strong>
             ) : null}
           </p>

@@ -11,12 +11,12 @@ const Footer = () => {
       <Container>
         <Row>
           <Col>
-            <hr style={{ marginTop: "1rem", marginBottom: "1rem" }} />
+            <hr />
           </Col>
         </Row>
         <Row style={{ display: "flex", alignItems: "center" }}>
           <Col md={3}>
-            <p>Crewsby © 2020 </p>
+            <strong>Crewsby © 2020 </strong>
           </Col>
           <Col
             md={9}

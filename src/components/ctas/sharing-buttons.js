@@ -1,24 +1,18 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import Emoji from "../shared/emoji"
-
 const SharingButton = ({ link, message }) => {
   return (
     <div
       style={{
         display: "flex",
         alignItems: "center",
-        color: "#151515",
-        padding: "2rem",
         marginTop: "2rem",
         marginBottom: "2rem",
-        borderRadius: "6px",
-        border: "1px solid #4285F4",
       }}
     >
-      <p style={{ marginBottom: "0", fontWeight: "bold", fontSize: "1.6rem" }}>
-        <Emoji symbol="👉" label="share" /> Share this skill with the world:
+      <p style={{ marginBottom: "0", fontSize: "1.4rem" }}>
+        Share {message} with the world 🡒
       </p>
       <a
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
@@ -27,10 +21,11 @@ const SharingButton = ({ link, message }) => {
         target="_blank"
         rel="noreferrer noopener"
         aria-label="LinkedIn"
+        style={{ marginLeft: ".5rem" }}
       >
         <FontAwesomeIcon
           icon={["fab", "linkedin"]}
-          size="3x"
+          size="2x"
           fixedWidth
           color="#4285F4"
         />
@@ -42,10 +37,11 @@ const SharingButton = ({ link, message }) => {
         target="_blank"
         rel="noreferrer noopener"
         aria-label="Twitter"
+        style={{ marginLeft: ".5rem" }}
       >
         <FontAwesomeIcon
           icon={["fab", "twitter-square"]}
-          size="3x"
+          size="2x"
           fixedWidth
           color="#4285F4"
         />

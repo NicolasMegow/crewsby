@@ -5,11 +5,9 @@ import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Emoji from "../components/shared/emoji"
+import { FaCheck, FaTimes } from "../components/shared/fa-icons"
 
 import EmailSignup from "../components/ctas/email-signup"
-import KeyFeatures from "../components/layout/key-features"
-import SkillGallery from "../components/layout/skill-gallery"
-import PricingRow from "../components/layout/pricing-row"
 import SignupCTA from "../components/ctas/signup-cta"
 
 import Teambuilding from "../img/svg/Teambuilding.svg"
@@ -22,63 +20,34 @@ const IndexPage = () => {
         <Row id="intro">
           <Col>
             <Teambuilding width="100%" />
-            <h1>
-              People skills training on the job<br></br>with a curated crew of
-              peers.
-            </h1>
+            <h1>Hack your culture.</h1>
             <p
               style={{
                 fontSize: "1.4rem",
-                fontWeight: "bold",
                 marginBottom: "2rem",
               }}
             >
-              Upgrade your <Emoji symbol="❤️" label="heart" /> communication,{" "}
-              <Emoji symbol="💪" label="muscle" /> collaboration, and{" "}
-              <Emoji symbol="🧠" label="brain" /> innovation skills with
-              Crewsby.
+              Crewsby curates & designs spicy culture hacks{" "}
+              <Emoji symbol="🌶️" label="crew-1" /> for crews venturing in
+              uncharted waters.
+              <br></br>Join our community to enjoy bittersweet reflection{" "}
+              <Emoji symbol="🍋" label="crew-1" /> and nutritious peer-feedback{" "}
+              <Emoji symbol="🍏" label="crew-1" />.
             </p>
           </Col>
         </Row>
         <EmailSignup />
-        <KeyFeatures id="key features" />
         <Row style={{ marginTop: "8rem" }} id="skills">
           <Col lg>
-            <p className="mintitle">People skills</p>
-            <h2 className="feature-h">Teamwork like a pro.</h2>
+            <p className="mintitle">Culture hacks</p>
+            <h2 className="feature-h">Use actionable resources.</h2>
             <p>
-              Continuous learning is the basis for success. Crewsby offers
-              professional trainings to develop your people skills on the job.
+              The world is full of advice. Crewsby curates the best ideas &
+              designs actionable resources for you to deploy on your job. Change
+              doesn't happen. It is created by exploring new paths.
             </p>
             <p>
-              <Link to="/people-skills">→ More skills are coming soon!</Link>
-            </p>
-          </Col>
-          <Col
-            lg
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <SkillGallery style={{ margin: "2rem" }} />
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "8rem" }} id="training on the job">
-          <Col lg>
-            <p className="mintitle">Training on the job</p>
-            <h2 className="feature-h">Learn through exercise.</h2>
-            <p>
-              Everyone learns best by doing. Crewsby designs sequences of
-              exercises to guide you on this adventure. In your learning zone
-              you can experiment safely and effectively to develop and hone your
-              skills.
-            </p>
-            <p>
-              <Link to="/training-on-the-job">
-                → Discover your training on the job
-              </Link>
+              <Link to="/culture-hacks">→ Deploy culture hacks</Link>
             </p>
           </Col>
           <Col
@@ -94,28 +63,65 @@ const IndexPage = () => {
                 fontWeight: "bold",
                 fontSize: "3rem",
                 lineHeight: "1.2",
-                margin: "2rem",
               }}
             >
               Knowing
-              <br></br>
-              <span style={{ color: "#4285F4" }}>+</span>
-              <br></br>
+              <span style={{ color: "#4285F4" }}> + </span>
               Doing
             </p>
           </Col>
         </Row>
+        <Row style={{ marginTop: "8rem" }} id="training on the job">
+          <Col lg>
+            <p className="mintitle">Learning zone</p>
+            <h2 className="feature-h">Track & review your journey.</h2>
+            <p>
+              Everyone learns best by doing. In your learning zone you can
+              experiment safely and effectively on the job. Start developing
+              your skills or track the progress of your change initiative.
+            </p>
+            <p>
+              <Link to="/learning-zone">→ Enter your learning zone</Link>
+            </p>
+          </Col>
+          <Col
+            lg
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "2rem",
+            }}
+          >
+            <span>
+              <FaTimes />
+              <FaTimes />
+              <FaCheck />
+              <FaTimes />
+              <br></br>
+              <FaCheck />
+              <FaTimes />
+              <FaTimes />
+              <FaTimes />
+              <br></br>
+              <FaCheck />
+              <FaTimes />
+              <FaCheck />
+              <FaCheck />
+            </span>
+          </Col>
+        </Row>
         <Row style={{ marginTop: "8rem" }} id="crew">
           <Col lg>
-            <p className="mintitle">Curated crews</p>
-            <h2 className="feature-h">Learn with peers.</h2>
+            <p className="mintitle">Peer support</p>
+            <h2 className="feature-h">Learn with & from peers.</h2>
             <p>
-              Training is easier and better with peers. Your crew of peers
+              Learning is easier and better with peers. Your crew of peers
               provides support and feedback. It also holds you accountable for
               your progress when the daily grind clogs you down.
             </p>
             <p>
-              <Link to="/curated-crews">→ Explore training with peers</Link>
+              <Link to="/curated-crews">→ Explore learning with peers</Link>
             </p>
           </Col>
           <Col
@@ -136,7 +142,6 @@ const IndexPage = () => {
             </p>
           </Col>
         </Row>
-        <PricingRow />
         <SignupCTA />
       </Container>
     </Layout>

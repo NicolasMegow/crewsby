@@ -5,12 +5,10 @@ module.exports.onCreateNode = ({ node, getNode, actions }) => {
 
   if (node.internal.type == "Mdx") {
     const fileNode = getNode(node.parent)
-    const pathPrefix = fileNode.sourceInstanceName
+    const contentType = fileNode.sourceInstanceName
     const slug = path.basename(node.fileAbsolutePath, ".mdx")
-    const skill = path.dirname(node.fileAbsolutePath).split("/").pop()
     createNodeField({ node, name: "slug", value: `${slug}` })
-    createNodeField({ node, name: "skill", value: `${skill}` })
-    createNodeField({ node, name: "contentType", value: pathPrefix })
+    createNodeField({ node, name: "contentType", value: contentType })
   }
 }
 
@@ -23,10 +21,6 @@ module.exports.createPages = async function ({ actions, graphql }) {
             fields {
               slug
               contentType
-              skill
-            }
-            frontmatter {
-              type
             }
           }
         }
@@ -34,7 +28,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
     }
   `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
-      const { slug, contentType, skill } = edge.node.fields
+      const { slug, contentType } = edge.node.fields
       if (contentType == "methods") {
         null
         /*        actions.createPage({
@@ -42,21 +36,10 @@ module.exports.createPages = async function ({ actions, graphql }) {
           component: require.resolve(`./src/templates/method-template.js`),
           context: { slug, contentType },
         })*/
-      } else if (slug == "_index") {
-        actions.createPage({
-          path: `/leadership-skills/${skill}/`,
-          component: require.resolve(`./src/templates/skill-info.js`),
-          context: { slug, skill },
-        }),
-          actions.createPage({
-            path: `/learning-zone/${skill}/`,
-            component: require.resolve(`./src/templates/skill-template.js`),
-            context: { slug, skill },
-          })
       } else {
         actions.createPage({
-          path: `/learning-zone/${skill}/${slug}`,
-          component: require.resolve(`./src/templates/exercise-template.js`),
+          path: `/culture-hacks/${slug}/`,
+          component: require.resolve(`./src/templates/hack-template.js`),
           context: { slug },
         })
       }

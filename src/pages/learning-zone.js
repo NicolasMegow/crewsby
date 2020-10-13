@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
@@ -10,38 +10,19 @@ import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
-import LearningZoneInfo from "../components/layout/learning-zone-info"
-import LearningZoneRow from "../components/layout/learning-zone-row"
-import LoginReminder from "../components/ctas/login-reminder"
-
-import SkillRow from "../components/learning-zone/skill-row"
-import Profile from "../components/learning-zone/profile"
+import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
+import SelfReview from "../components/learning-zone/self-review"
+import LearningObjective from "../components/learning-zone/learning-objective"
+import AddHack from "../components/learning-zone/add-hack"
 
 export const query = graphql`
   query {
-    allMdx(
-      filter: {
-        fields: { contentType: { eq: "skills" }, slug: { eq: "_index" } }
-      }
-    ) {
-      group(field: frontmatter___category) {
-        edges {
-          node {
-            fields {
-              slug
-              contentType
-              skill
-            }
-            frontmatter {
-              job
-              method
-              level
-              category
-              icon
-              type
-              summary
-              benefits
-            }
+    allMdx(filter: { fields: { contentType: { eq: "hacks" } } }) {
+      edges {
+        node {
+          frontmatter {
+            hack
+            type
           }
         }
       }
@@ -49,68 +30,30 @@ export const query = graphql`
   }
 `
 
-const Skills = ({ user, skills }) => {
-  const fauna_secret = user["https://fauna.com/id/secret"]
-  const [data, setData] = useState([])
-  const categories = [
-    ["❤️", "heart", "Strengthen your relationships"],
-    ["💪", "muscle", "Individualize your processes"],
-    ["🧠", "brain", "Unleash your creativity"],
-  ]
-
+const LearningZone = ({ data }) => {
+  const { isAuthenticated, loading, user } = useAuth0()
+  {
+    /*const fauna_secret = isAuthenticated
+    ? user["https://fauna.com/id/secret"]
+    : ""
+  const user_email = isAuthenticated ? user.email : ""
+  const [profile, setProfile] = useState([])
   useEffect(() => {
     async function getUserProfile() {
       const client = new faunadb.Client({ secret: fauna_secret })
       const response = await client.query(
         q.Select(
           ["data"],
-          q.Get(q.Match(q.Index("profile_by_email"), user.email))
+          q.Get(q.Match(q.Index("profile_by_email"), user_email))
         )
       )
-      const newData = await response
-      setData(newData)
+      const profileData = await response
+      setProfile(profileData)
     }
     getUserProfile()
-  }, [fauna_secret, user.email])
-
-  return (
-    <Row style={{ marginTop: "4rem" }}>
-      <Col>
-        <h2 style={{ fontSize: "2rem", marginBottom: "2rem" }}>Your skills:</h2>
-        {skills.allMdx.group.map((group, i) => {
-          return (
-            <Row style={{ marginBottom: "4rem" }} key={i}>
-              <Col>
-                <h3 style={{ marginBottom: "1rem" }}>
-                  <Emoji symbol={categories[i][0]} label={categories[i][1]} />{" "}
-                  {categories[i][2]}
-                </h3>
-                {group.edges.map((edge, i) => {
-                  return <SkillRow edge={edge} key={i} />
-                })}
-              </Col>
-            </Row>
-          )
-        })}
-        <hr></hr>
-        {data["level"] && <p>{data.level["default"]}</p>}
-        {data["punkte_solo"] && (
-          <div>
-            <p>
-              <strong>Team Punkte: </strong>
-              {Object.keys(data["punkte_team"][0] || {}).length} /&nbsp;
-              {Object.keys(data["punkte_team"][1] || {}).length} /&nbsp;
-              {Object.keys(data["punkte_team"][2] || {}).length}
-            </p>
-          </div>
-        )}
-      </Col>
-    </Row>
-  )
-}
-
-const LearningZone = ({ data }) => {
-  const { isAuthenticated, loading, user } = useAuth0()
+  }, [fauna_secret, user_email])
+*/
+  }
   if (loading) {
     return <Loading />
   }
@@ -119,21 +62,75 @@ const LearningZone = ({ data }) => {
     <Layout>
       <SEO title="Learning zone" />
       <Container>
-        {isAuthenticated ? (
-          <Row>
-            <Col>
-              <Profile user={user} />
-              <hr></hr>
-              <Skills user={user} skills={data} />
-            </Col>
-          </Row>
-        ) : (
-          <>
-            <LearningZoneInfo />
-            <LearningZoneRow />
-            <LoginReminder />
-          </>
-        )}
+        <Row>
+          <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
+            <span style={{ marginTop: "4rem" }}>
+              <p className="title-emoji">
+                <Emoji symbol="🍋" label="bittersweet" />
+              </p>
+              <h1>Learning zone</h1>
+              <p
+                style={{
+                  fontSize: "1.4rem",
+                  marginBottom: "2rem",
+                }}
+              >
+                Change is a rollercoaster. Take a moment to pause and observe
+                the trend beneath your ups and downs.
+              </p>
+            </span>
+          </Col>
+          <Col lg>
+            <ReturnOnLearning width="100%" height="300" />
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "4rem" }}>
+          <Col lg>
+            <h2>Quick start</h2>
+            <p style={{ marginTop: "1rem" }}>
+              Your learning zone is the time you spend deliberately trying new
+              stuff expecting to fail.
+            </p>
+            <p>
+              <strong>1) Set yourself a learning objective.</strong>
+              <br></br>
+              An objective could be to improve your candor or to streamline the
+              way your team completes work.
+            </p>
+            <p>
+              <strong>2) Commit to an activity of trial & error.</strong>
+              <br></br>
+              Activities are the input to your progress. Measure how often you
+              share your appreciation or how much waste you eliminate from your
+              processes.
+            </p>
+            <p>
+              <strong>3) Pause once a week & review your progress.</strong>
+              <br></br>
+              You own your progress. Regular check-ins show you how much you've
+              achieved and help to narrow down where further improvement is
+              warranted.
+            </p>
+            <p
+              style={{
+                fontSize: "1.4rem",
+                marginBottom: "2rem",
+              }}
+            >
+              <strong>Access to you learning zone is free.</strong>
+              <br></br>We might switch to a fremium setup later.
+            </p>
+          </Col>
+          <Col lg>
+            <LearningObjective />
+            <SelfReview
+              behavior={["times", "shared your appreciation"]}
+              isAuth={isAuthenticated}
+              user=""
+            />
+            <AddHack hackCollection={data} isAuth={isAuthenticated} />
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

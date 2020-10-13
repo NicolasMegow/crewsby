@@ -8,7 +8,7 @@ import { FaLoading } from "./fa-icons"
 const Loading = () => {
   return (
     <Layout>
-      <SEO title="Working hard!" />
+      <SEO title="Loading..." />
       <Container>
         <Row style={{ marginTop: "2rem" }}>
           <Col>

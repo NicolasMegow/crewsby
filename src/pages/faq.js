@@ -35,8 +35,8 @@ const PreisePage = () => {
             </p>
           </Col>
         </Row>
+        <SignupCTA />
       </Container>
-      <SignupCTA />
     </Layout>
   )
 }

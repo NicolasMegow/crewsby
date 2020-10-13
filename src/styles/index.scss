@@ -16,30 +16,30 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 hr {
   border-color: $maincolor;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
   font-weight: bold;
-  padding: 0.4rem 0.75rem;
+  padding: 0.6rem 0.8rem;
 }
 
 .btn-lg {
   font-size: 1.2rem;
   padding: 0.8rem;
   min-width: 14rem;
-}
-
-.badge {
-  font-size: 1rem;
-  text-transform: uppercase;
 }
 
 .nav-tabs {
@@ -65,14 +65,12 @@ hr {
 
 .mintitle {
   font-weight: 500;
-  color: $primary;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-}
-
-.feature-h {
-  font-size: 3rem;
+  margin-bottom: 0rem;
+  margin-top: 2rem;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  color: $primary;
 }
 
 .feature-num {
@@ -82,23 +80,13 @@ hr {
   margin-right: 0.4rem;
 }
 
-.feature-emoji {
+.title-emoji {
   font-size: 4rem;
 }
 
 .feature-text {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
   line-height: 1.2;
-}
-
-.tutsegment {
-  border: 1px solid $primary;
-  padding-top: 3rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 2rem;
-  margin-top: 1.4rem;
-  margin-bottom: 2rem;
 }
 
 // Re-Style KaTex
@@ -112,5 +100,29 @@ hr {
 @media (max-width: 800px) {
   h1 {
     font-size: 2.8rem;
+  }
+}
+
+.chip {
+  position: relative;
+  cursor: pointer;
+  margin-right: 1rem;
+  & p:hover {
+    border-color: #4285f4;
+    color: #4285f4;
+  }
+  > input {
+    display: none;
+  }
+  > input:checked + p {
+    border-color: #4285f4;
+    color: #4285f4;
+  }
+  > p {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 1px solid #151515;
+    margin-bottom: 0;
   }
 }

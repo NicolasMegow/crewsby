@@ -1,14 +1,19 @@
-import React from "react"
+import React, { useState, useRef } from "react"
 import { Button } from "react-bootstrap"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import faunadb, { query as q } from "faunadb"
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 
 import { useFormik } from "formik"
-import appStyles from "../../styles/app.module.scss"
+import formStyles from "../../styles/form.module.scss"
 
-const SelfReview = ({ behavior, skill, session }) => {
-  const { isAuthenticated, loading, user } = useAuth0()
+import { WeekString } from "../shared/timetravel"
+
+const SelfReview = ({ isAuth, user }) => {
+  const [visible, setVisible] = useState(false)
+  const btnRef = useRef(isAuth ? "enabled" : "disabled")
+  const curTime = new Date()
   const formik = useFormik({
     initialValues: {
       Behavior: 0,
@@ -22,9 +27,7 @@ const SelfReview = ({ behavior, skill, session }) => {
   })
 
   const updateUserLevel = async reviewData => {
-    if (loading || !isAuthenticated) return
-    const curTime = new Date().toLocaleString()
-    const sessionId = session.toString()
+    if (!isAuth) return
     const fauna_secret = user["https://fauna.com/id/secret"]
     const client = new faunadb.Client({ secret: fauna_secret })
 
@@ -34,70 +37,125 @@ const SelfReview = ({ behavior, skill, session }) => {
           ["ref"],
           q.Get(q.Match(q.Index("profile_by_email"), user.email))
         ),
-        { data: { [skill]: { [curTime]: { [sessionId]: reviewData } } } }
+        { data: { [curTime]: reviewData } }
       )
     )
   }
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <div style={{ margin: "2rem 0" }}>
-        <h3>Self-review</h3>
-        <span>
-          <p className={appStyles.fieldtitle}>
-            <label>{`How many ${behavior[0]} have you ${behavior[1]}?`}</label>
-          </p>
-          <input
-            id="Behavior"
-            name="Behavior"
-            type="number"
-            placeholder={0}
-            aria-label="count"
-            range={[0, 20]}
-            onChange={formik.handleChange}
-            value={formik.values.Behavior}
-            className={appStyles.formfield}
-          />
+      <div
+        style={{
+          padding: "1rem",
+          marginTop: "2rem",
+          borderRadius: "6px",
+          background: "#ebebeb",
+        }}
+      >
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <button
+            onClick={() => setVisible(!visible)}
+            onKeyDown={() => setVisible(!visible)}
+            style={{
+              background: "none",
+              border: "none",
+              outline: "none",
+              padding: 0,
+              cursor: "pointer",
+            }}
+          >
+            <h3>
+              Self-review{" "}
+              <small>
+                <WeekString />
+              </small>
+            </h3>
+          </button>
+          <span style={{ padding: "0 .5rem", cursor: "pointer" }}>
+            {visible ? (
+              <FontAwesomeIcon
+                icon={["fas", "angle-up"]}
+                size="2x"
+                color="#151515"
+                onClick={() => setVisible(false)}
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={["fas", "angle-down"]}
+                size="2x"
+                color="#151515"
+                onClick={() => setVisible(true)}
+              />
+            )}
+          </span>
         </span>
-        <p className={appStyles.fieldtitle}>What was your biggest obstacle?</p>
-        <textarea
-          id="Obstacle"
-          name="Obstacle"
-          placeholder="??"
-          aria-label="text-form"
-          onChange={formik.handleChange}
-          value={formik.values.Obstacle}
-          className={appStyles.formfield}
-        />
-        <span>
-          <p className={appStyles.fieldtitle}>What have you noticed?</p>
-          <textarea
-            id="Learnings"
-            name="Learnings"
-            placeholder="I rock"
-            aria-label="text-form"
-            onChange={formik.handleChange}
-            value={formik.values.Learnings}
-            className={appStyles.formfield}
-          />
-        </span>
-        <span>
-          <p className={appStyles.fieldtitle}>What are your goals next week?</p>
-          <textarea
-            id="Goals"
-            name="Goals"
-            placeholder="1 2 3"
-            aria-label="text-form"
-            onChange={formik.handleChange}
-            value={formik.values.Goals}
-            className={appStyles.formfield}
-          />
-        </span>
-      </div>
-      <div>
-        <Button type="submit" className="btn btn-lg">
-          Submit
-        </Button>
+        {visible ? (
+          <>
+            <span>
+              <label
+                className={formStyles.fieldtitle}
+              >{`How many time have you done X?`}</label>
+              <input
+                id="Behavior"
+                name="Behavior"
+                type="number"
+                placeholder={0}
+                aria-label="count"
+                range={[0, 20]}
+                onChange={formik.handleChange}
+                value={formik.values.Behavior}
+                className={formStyles.formfield}
+              />
+            </span>
+            <p className={formStyles.fieldtitle}>
+              What was your biggest obstacle?
+            </p>
+            <textarea
+              id="Obstacle"
+              name="Obstacle"
+              placeholder="My ego"
+              aria-label="text-form"
+              onChange={formik.handleChange}
+              value={formik.values.Obstacle}
+              className={formStyles.formfield}
+            />
+            <span>
+              <p className={formStyles.fieldtitle}>What have you noticed?</p>
+              <textarea
+                id="Learnings"
+                name="Learnings"
+                placeholder="Baby steps"
+                aria-label="text-form"
+                onChange={formik.handleChange}
+                value={formik.values.Learnings}
+                className={formStyles.formfield}
+              />
+            </span>
+            <span>
+              <p className={formStyles.fieldtitle}>
+                What are your goals next week?
+              </p>
+              <textarea
+                id="Goals"
+                name="Goals"
+                placeholder="1 2 3"
+                aria-label="text-form"
+                onChange={formik.handleChange}
+                value={formik.values.Goals}
+                className={formStyles.formfield}
+              />
+            </span>
+            <Button type="submit" className="btn btn-lg" ref={btnRef}>
+              Submit
+            </Button>
+          </>
+        ) : null}
       </div>
     </form>
   )

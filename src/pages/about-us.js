@@ -36,9 +36,9 @@ const AboutUsPage = ({ data }) => {
         <Row style={{ marginTop: "4rem" }}>
           <Col>
             <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
-            <h1 style={{ color: "#4285F4" }}>CREWSBY</h1>
+            <h1 style={{ color: "#4285F4" }}>Crewsby</h1>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Like Gatsby a reminder: by Gatz. The crew creates learning.
+              Like Gatsby a reminder: by Gatz. The crew creates culture.
             </p>
           </Col>
         </Row>
@@ -46,11 +46,11 @@ const AboutUsPage = ({ data }) => {
           <Col>
             <p className="mintitle">Our mission</p>
             <h2 className="feature-h">
-              We <Emoji symbol="🔥" label="love" /> teamwork.
+              We <Emoji symbol="❤️" label="love" /> culture.
             </h2>
             <p>
-              Everyone deserves a crew of peers to accelerate the development of
-              people skills.
+              Culture creates a place to belong. Everybody deserves this
+              connection at work.
             </p>
           </Col>
         </Row>
@@ -76,6 +76,7 @@ const AboutUsPage = ({ data }) => {
             <p>
               <strong>Lilian Izsak</strong>
               <br></br>Co-Founder Marketing
+              <br></br>Professional happiness fairy
             </p>
           </Col>
           <Col
@@ -99,13 +100,14 @@ const AboutUsPage = ({ data }) => {
             <p>
               <strong>Nicolas Megow</strong>
               <br></br>Co-Founder Product
+              <br></br>Experienced business trainer & coach
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
           <Col>
             <p className="mintitle">Our aspiration</p>
-            <h2 className="feature-h">Crewsby redefines people training.</h2>
+            <h2 className="feature-h">Crewsby redefines culture change.</h2>
           </Col>
         </Row>
         <Row>
@@ -126,7 +128,7 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Contribution
             </p>
-            <p>We develop peer trainings for the best ideas around people.</p>
+            <p>We develop culture hacks from the best ideas.</p>
           </Col>
           <Col
             md
@@ -162,9 +164,7 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Sustainability
             </p>
-            <p>
-              We provide professional trainings with a marginal CO2-footprint.
-            </p>
+            <p>We provide everything with a marginal CO2-footprint.</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
@@ -174,8 +174,8 @@ const AboutUsPage = ({ data }) => {
               We are standing on the shoulders of giants.
             </h2>
             <p>
-              We develop our people trainings from state of the art research and
-              best practices. Here are the giants that inspired the trainings:
+              We develop our culture hacks from state of the art research and
+              best practices. Here are the giants that inspire us:
             </p>
           </Col>
         </Row>

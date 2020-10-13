@@ -3,6 +3,8 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from "react-bootstrap"
 
 import headerStyles from "../../styles/header.module.scss"
+import Emoji from "../shared/emoji"
+
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 
 const Header = () => {
@@ -29,21 +31,18 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-site">
             <Nav>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/people-skills">
-                  People skills
+                <Link className={headerStyles.navItem} to="/culture-hacks">
+                  <Emoji symbol="🌶️" label="culture hacks" /> Culture hacks
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link
-                  className={headerStyles.navItem}
-                  to="/training-on-the-job"
-                >
-                  Training on the job
+                <Link className={headerStyles.navItem} to="/learning-zone">
+                  <Emoji symbol="🍋" label="learning zone" /> Learning zone
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/curated-crews">
-                  Curated crews
+                <Link className={headerStyles.navItem} to="/peer-support">
+                  <Emoji symbol="🍏" label="peer support" /> Peer support
                 </Link>
               </Nav.Item>
             </Nav>
@@ -52,14 +51,9 @@ const Header = () => {
               {isAuthenticated ? (
                 <>
                   <Nav.Item>
-                    <Link className={headerStyles.navItem} to="/learning-zone">
-                      Learning zone
-                    </Link>
-                  </Nav.Item>
-                  <Nav.Item>
                     <Link
                       to="/"
-                      className="btn btn-primary"
+                      className="btn btn-outline-primary"
                       style={{ marginRight: "0" }}
                       onClick={event => {
                         event.preventDefault()
