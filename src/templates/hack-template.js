@@ -55,11 +55,7 @@ const HackTemplate = ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO
-        title={hack}
-        description={"Placeholder"}
-        pathname={`/culture-hacks/${slug}`}
-      />
+      <SEO title={hack} description={job} pathname={`/culture-hacks/${slug}`} />
       <Container>
         <Row style={{ marginTop: "4rem" }}>
           <Col lg={8}>
