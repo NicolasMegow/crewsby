@@ -83,6 +83,9 @@ const CrewSignup = () => {
                 id="Timezone"
                 className={formStyles.formfield}
               >
+                <option value={""} key="abc">
+                  Pick your timezone
+                </option>
                 {timezones.map((zone, i) => {
                   return (
                     <option value={zone} key={i}>

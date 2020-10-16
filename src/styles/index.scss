@@ -126,3 +126,31 @@ hr {
     margin-bottom: 0;
   }
 }
+
+.bordered {
+  border: 1px solid #151515;
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin: 1.2rem;
+}
+
+.area-blue {
+  padding: 1rem;
+  border-radius: 6px;
+  background: #c5dafb;
+  max-width: 750px;
+}
+
+.area-grey {
+  padding: 1rem;
+  border-radius: 6px;
+  background: #ebebeb;
+  max-width: 750px;
+  margin-top: 2rem;
+}
+.area-white {
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #151515;
+  max-width: 750px;
+}

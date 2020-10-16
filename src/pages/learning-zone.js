@@ -14,6 +14,7 @@ import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
 import SelfReview from "../components/learning-zone/self-review"
 import LearningObjective from "../components/learning-zone/learning-objective"
 import AddHack from "../components/learning-zone/add-hack"
+import TrackRedord from "../components/learning-zone/track-record"
 
 export const query = graphql`
   query {
@@ -32,28 +33,27 @@ export const query = graphql`
 
 const LearningZone = ({ data }) => {
   const { isAuthenticated, loading, user } = useAuth0()
-  {
-    /*const fauna_secret = isAuthenticated
-    ? user["https://fauna.com/id/secret"]
-    : ""
-  const user_email = isAuthenticated ? user.email : ""
+  const fauna_secret =
+    !loading && isAuthenticated ? user["https://fauna.com/id/secret"] : ""
+  const user_email = !loading && isAuthenticated ? user.email : ""
   const [profile, setProfile] = useState([])
   useEffect(() => {
-    async function getUserProfile() {
-      const client = new faunadb.Client({ secret: fauna_secret })
-      const response = await client.query(
-        q.Select(
-          ["data"],
-          q.Get(q.Match(q.Index("profile_by_email"), user_email))
+    if (!loading && isAuthenticated) {
+      async function getUserProfile() {
+        const client = new faunadb.Client({ secret: fauna_secret })
+        const response = await client.query(
+          q.Select(
+            ["data"],
+            q.Get(q.Match(q.Index("profile_by_email"), user_email))
+          )
         )
-      )
-      const profileData = await response
-      setProfile(profileData)
+        const profileData = await response
+        setProfile(profileData)
+      }
+      getUserProfile()
     }
-    getUserProfile()
-  }, [fauna_secret, user_email])
-*/
-  }
+  }, [loading, isAuthenticated, fauna_secret, user_email])
+
   if (loading) {
     return <Loading />
   }
@@ -117,18 +117,29 @@ const LearningZone = ({ data }) => {
                 marginBottom: "2rem",
               }}
             >
-              <strong>Access to you learning zone is free.</strong>
+              <strong>Access to your learning zone is free.</strong>
               <br></br>We might switch to a fremium setup later.
             </p>
           </Col>
           <Col lg>
-            <LearningObjective />
+            <LearningObjective
+              learnObj={profile.learnObj}
+              isAuth={isAuthenticated}
+              user={user}
+            />
             <SelfReview
               behavior={["times", "shared your appreciation"]}
               isAuth={isAuthenticated}
               user=""
             />
-            <AddHack hackCollection={data} isAuth={isAuthenticated} />
+            <AddHack
+              hackCollection={data}
+              isAuth={isAuthenticated}
+              user={user}
+            />
+            {!loading && isAuthenticated && profile.hacks != null ? (
+              <TrackRedord logData={profile.hacks} />
+            ) : null}
           </Col>
         </Row>
       </Container>

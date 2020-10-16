@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Button } from "react-bootstrap"
 
 import faunadb, { query as q } from "faunadb"
@@ -7,9 +7,9 @@ import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 import { useFormik } from "formik"
 import formStyles from "../../styles/form.module.scss"
 
-const LearningObjective = () => {
-  const { isAuthenticated, loading, user } = useAuth0()
-  const curTime = new Date()
+const LearningObjective = ({ learnObj, isAuth, user }) => {
+  const { loginWithPopup } = useAuth0()
+  const btnRef = useRef()
   const formik = useFormik({
     initialValues: {
       Objective: "",
@@ -17,11 +17,12 @@ const LearningObjective = () => {
     },
     onSubmit: values => {
       updateUserLevel(values)
+      btnRef.current.setAttribute("disabled", "disabled")
     },
   })
 
-  const updateUserLevel = async reviewData => {
-    if (loading || !isAuthenticated) return
+  const updateUserLevel = async objectiveData => {
+    const curTime = new Date()
     const fauna_secret = user["https://fauna.com/id/secret"]
     const client = new faunadb.Client({ secret: fauna_secret })
 
@@ -31,16 +32,14 @@ const LearningObjective = () => {
           ["ref"],
           q.Get(q.Match(q.Index("profile_by_email"), user.email))
         ),
-        { data: { [curTime]: reviewData } }
+        { data: { learnObj: { objectiveData, curTime } } }
       )
     )
   }
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <div
-        style={{ padding: "1rem", borderRadius: "6px", background: "#c5dafb" }}
-      >
+      <div className="area-blue">
         <h3>Learning objective</h3>
         <span>
           <label className={formStyles.fieldtitle} htmlFor="Objective">
@@ -72,9 +71,20 @@ const LearningObjective = () => {
             className={formStyles.formfield}
           />
         </span>
-        <Button type="submit" className="btn btn-lg">
-          Save
-        </Button>
+        {isAuth ? (
+          <Button type="submit" className="btn btn-lg" ref={btnRef}>
+            Save
+          </Button>
+        ) : (
+          <Button
+            size="lg"
+            onClick={() => {
+              loginWithPopup()
+            }}
+          >
+            Signup / Login
+          </Button>
+        )}
       </div>
     </form>
   )

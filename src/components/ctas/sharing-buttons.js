@@ -9,6 +9,7 @@ const SharingButton = ({ link, message }) => {
         alignItems: "center",
         marginTop: "2rem",
         marginBottom: "2rem",
+        padding: "1rem",
       }}
     >
       <p style={{ marginBottom: "0", fontSize: "1.4rem" }}>

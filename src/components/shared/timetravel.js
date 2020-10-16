@@ -76,3 +76,7 @@ export const timezones = [
   "Brazil Eastern Time (GMT-3:00)",
   "Central African Time (GMT-1:00)",
 ]
+
+export function formatDate(date) {
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+}

@@ -5,20 +5,18 @@ import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
-import LoginReminder from "../components/ctas/login-reminder"
-
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Emoji from "../components/shared/emoji"
-import Hint from "../components/culture-hacks/hint"
+import { Hint1, Hint2 } from "../components/culture-hacks/hint"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import FeedbackWidget from "../components/culture-hacks/feedback-widget"
+import MarkAsDone from "../components/culture-hacks/mark-as-done"
 import SharingButtons from "../components/ctas/sharing-buttons"
 
 const shortcodes = {
   Emoji,
-  Hint,
   h2: props => <h2 {...props} style={{ marginTop: "4rem" }} />,
   td: props => (
     <td {...props} style={{ border: "1px solid #151515", padding: ".4rem" }} />
@@ -58,7 +56,7 @@ const HackTemplate = ({ data, location }) => {
       <SEO title={hack} description={job} pathname={`/culture-hacks/${slug}`} />
       <Container>
         <Row style={{ marginTop: "4rem" }}>
-          <Col lg={8}>
+          <Col>
             <Link to="../">⟵ Back</Link>
             <h1>{hack}</h1>
             <p style={{ marginBottom: 0 }}>
@@ -68,19 +66,23 @@ const HackTemplate = ({ data, location }) => {
               {job}
             </p>
           </Col>
-          <Col lg={4} style={{ display: "flex", alignItems: "center" }}>
-            <LoginReminder />
-          </Col>
         </Row>
-        <Row style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+        <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
           <Col style={{ maxWidth: "750px" }}>
+            <Hint1 />
             <MDXProvider components={shortcodes}>
               <MDXRenderer>{data.mdx.body}</MDXRenderer>
             </MDXProvider>
+            <Hint2 />
           </Col>
         </Row>
-        <SharingButtons link={url} message={`${hack}`} />
-        <FeedbackWidget hack={hack} />
+        <Row>
+          <Col style={{ maxWidth: "750px" }}>
+            <SharingButtons link={url} message={`${hack}`} />
+            <MarkAsDone hackName={hack} hackType={type} />
+            <FeedbackWidget hack={hack} />
+          </Col>
+        </Row>
       </Container>
     </Layout>
   )

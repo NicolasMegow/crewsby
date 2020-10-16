@@ -1,35 +1,36 @@
-import React from "react"
+import React, { useState } from "react"
 import { Button } from "react-bootstrap"
 
 import { CurTime } from "../shared/timetravel"
 import faunadb, { query as q } from "faunadb"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form, Field, resetForm } from "formik"
 import formStyles from "../../styles/form.module.scss"
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const AddHack = ({ hackCollection, isAuth }) => {
+const AddHack = ({ hackCollection, isAuth, user }) => {
   const { loginWithPopup } = useAuth0()
+  const [isSent, setSent] = useState(false)
   const curTime = new Date()
-  const sendHack = async hackData => {
-    const fauna_secret = process.env.GATSBY_FAUNA_FEEDBACK
+
+  const updateUserProfile = async formData => {
+    const fauna_secret = user["https://fauna.com/id/secret"]
     const client = new faunadb.Client({ secret: fauna_secret })
     await client.query(
-      q.Create(q.Collection("signup"), {
-        data: { [curTime]: hackData },
-      })
+      q.Update(
+        q.Select(
+          ["ref"],
+          q.Get(q.Match(q.Index("profile_by_email"), user.email))
+        ),
+        { data: { hacks: { [curTime]: formData["Hack"] } } }
+      )
     )
   }
+
   return (
-    <div
-      style={{
-        padding: "1rem",
-        marginTop: "2rem",
-        borderRadius: "6px",
-        background: "#ebebeb",
-      }}
-    >
+    <div className="area-grey">
       <h3>
-        Track a hack{" "}
+        Track a hack as completed{" "}
         <small>
           <CurTime />
         </small>
@@ -37,10 +38,11 @@ const AddHack = ({ hackCollection, isAuth }) => {
       <Formik
         initialValues={{
           Hack: "",
-          time: curTime,
         }}
         onSubmit={async values => {
-          sendHack(values)
+          updateUserProfile(values)
+          resetForm()
+          setSent(!isSent)
         }}
       >
         <Form>
@@ -51,19 +53,27 @@ const AddHack = ({ hackCollection, isAuth }) => {
               id="Hack"
               className={formStyles.formfield}
             >
+              <option value={""} key="xyz">
+                Select a hack
+              </option>
               {hackCollection.allMdx.edges.map((edge, i) => {
+                const hackData = `${edge.node.frontmatter.hack} (${edge.node.frontmatter.type})`
                 return (
-                  <option value={edge.node.frontmatter.hack} key={i}>
-                    {edge.node.frontmatter.hack} ({edge.node.frontmatter.type})
+                  <option value={hackData} key={i}>
+                    {hackData}
                   </option>
                 )
               })}
             </Field>
           </span>
           {isAuth ? (
-            <Button size="lg" type="submit">
-              Add a hack{" "}
-            </Button>
+            <>
+              <Button size="lg" type="submit">
+                <FontAwesomeIcon icon={["fas", "check-circle"]} fixedWidth />{" "}
+                completed
+              </Button>
+              {isSent ? <p>Sent, pick another if you like</p> : null}
+            </>
           ) : (
             <Button
               size="lg"

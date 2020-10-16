@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "../components/shared/emoji"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
@@ -75,8 +76,25 @@ const AboutUsPage = ({ data }) => {
             />
             <p>
               <strong>Lilian Izsak</strong>
-              <br></br>Co-Founder Marketing
+              <br></br>Community builder
               <br></br>Professional happiness fairy
+              <br></br>
+              <a
+                href="https://www.linkedin.com/in/lilian-izsak/"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="LinkedIn"
+              >
+                <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+              </a>{" "}
+              <a
+                href="https://twitter.com/lili07marie"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Twitter"
+              >
+                <FontAwesomeIcon icon={["fab", "twitter-square"]} size="2x" />
+              </a>
             </p>
           </Col>
           <Col
@@ -99,8 +117,25 @@ const AboutUsPage = ({ data }) => {
             />
             <p>
               <strong>Nicolas Megow</strong>
-              <br></br>Co-Founder Product
-              <br></br>Experienced business trainer & coach
+              <br></br>Culture hacker
+              <br></br>Coach, model thinker & elephant
+              <br></br>
+              <a
+                href="https://www.linkedin.com/in/nicolas-megow/"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="LinkedIn"
+              >
+                <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" />
+              </a>{" "}
+              <a
+                href="http://github.com/NicolasMegow/"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Github"
+              >
+                <FontAwesomeIcon icon={["fab", "github-square"]} size="2x" />
+              </a>
             </p>
           </Col>
         </Row>
@@ -111,16 +146,18 @@ const AboutUsPage = ({ data }) => {
           </Col>
         </Row>
         <Row>
-          <Col
-            md
-            style={{
-              marginTop: "2rem",
-              border: "1px solid #151515",
-              borderRadius: "6px",
-              padding: "1.2rem",
-              margin: "1.2rem",
-            }}
-          >
+          <Col md className="bordered">
+            {" "}
+            <div style={{ fontSize: "2.4rem" }}>
+              <FontAwesomeIcon icon={["fab", "creative-commons"]} />{" "}
+              <FontAwesomeIcon icon={["fab", "creative-commons-by"]} />{" "}
+            </div>
+            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+              Open source
+            </p>
+            <p>We offer our culture hacks for free and encourage sharing.</p>
+          </Col>
+          <Col md className="bordered">
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
               <Emoji symbol="🎁" label="present" />{" "}
@@ -128,43 +165,15 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Contribution
             </p>
-            <p>We develop culture hacks from the best ideas.</p>
+            <p>We develop culture hacks from the best ideas there.</p>
           </Col>
-          <Col
-            md
-            style={{
-              marginTop: "2rem",
-              border: "1px solid #151515",
-              borderRadius: "6px",
-              padding: "1.2rem",
-              margin: "1.2rem",
-            }}
-          >
+          <Col md className="bordered">
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
               <Emoji symbol="🔵" label="circle" />{" "}
             </div>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>Elegance</p>
             <p>We strive to develop simple and refined learning experiences.</p>
-          </Col>
-          <Col
-            md
-            style={{
-              marginTop: "2rem",
-              border: "1px solid #151515",
-              borderRadius: "6px",
-              padding: "1.2rem",
-              margin: "1.2rem",
-            }}
-          >
-            {" "}
-            <div style={{ fontSize: "2.4rem" }}>
-              <Emoji symbol="🌱" label="sustainable" />{" "}
-            </div>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Sustainability
-            </p>
-            <p>We provide everything with a marginal CO2-footprint.</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "8rem" }}>
