@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useRef, useState } from "react"
 import { Button } from "react-bootstrap"
 
 import faunadb, { query as q } from "faunadb"
@@ -7,22 +7,26 @@ import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 import { useFormik } from "formik"
 import formStyles from "../../styles/form.module.scss"
 
-const LearningObjective = ({ learnObj, isAuth, user }) => {
+const LearningObjective = ({ learnObj, isAuth, user, update }) => {
   const { loginWithPopup } = useAuth0()
   const btnRef = useRef()
+  const [buttonText, setButton] = useState("Save")
   const formik = useFormik({
     initialValues: {
-      Objective: "",
-      Activity: "",
+      Objective: learnObj ? learnObj["objectiveData"]["Objective"] : "",
+      Activity: learnObj ? learnObj["objectiveData"]["Activity"] : "",
     },
+    enableReinitialize: true,
     onSubmit: values => {
       updateUserLevel(values)
       btnRef.current.setAttribute("disabled", "disabled")
+      update("learning-zone")
+      setButton("Saved")
     },
   })
 
   const updateUserLevel = async objectiveData => {
-    const curTime = new Date()
+    const curTime = new Date().toDateString()
     const fauna_secret = user["https://fauna.com/id/secret"]
     const client = new faunadb.Client({ secret: fauna_secret })
 
@@ -40,7 +44,10 @@ const LearningObjective = ({ learnObj, isAuth, user }) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="area-blue">
-        <h3>Learning objective</h3>
+        <h3>
+          Learning objective{" "}
+          <small>{learnObj ? `set on ${learnObj["curTime"]}` : ""}</small>
+        </h3>
         <span>
           <label className={formStyles.fieldtitle} htmlFor="Objective">
             Objective
@@ -73,7 +80,7 @@ const LearningObjective = ({ learnObj, isAuth, user }) => {
         </span>
         {isAuth ? (
           <Button type="submit" className="btn btn-lg" ref={btnRef}>
-            Save
+            {buttonText}
           </Button>
         ) : (
           <Button

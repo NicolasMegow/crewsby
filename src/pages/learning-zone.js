@@ -14,7 +14,7 @@ import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
 import SelfReview from "../components/learning-zone/self-review"
 import LearningObjective from "../components/learning-zone/learning-objective"
 import AddHack from "../components/learning-zone/add-hack"
-import TrackRedord from "../components/learning-zone/track-record"
+import TrackRecord from "../components/learning-zone/track-record"
 
 export const query = graphql`
   query {
@@ -37,6 +37,7 @@ const LearningZone = ({ data }) => {
     !loading && isAuthenticated ? user["https://fauna.com/id/secret"] : ""
   const user_email = !loading && isAuthenticated ? user.email : ""
   const [profile, setProfile] = useState([])
+  const [actions, setActions] = useState("starting")
   useEffect(() => {
     if (!loading && isAuthenticated) {
       async function getUserProfile() {
@@ -51,8 +52,9 @@ const LearningZone = ({ data }) => {
         setProfile(profileData)
       }
       getUserProfile()
+      const lol = actions
     }
-  }, [loading, isAuthenticated, fauna_secret, user_email])
+  }, [loading, isAuthenticated, fauna_secret, user_email, actions])
 
   if (loading) {
     return <Loading />
@@ -118,7 +120,7 @@ const LearningZone = ({ data }) => {
               }}
             >
               <strong>Access to your learning zone is free.</strong>
-              <br></br>We might switch to a fremium setup later.
+              <br></br>We might switch to a freemium setup later.
             </p>
           </Col>
           <Col lg>
@@ -126,19 +128,28 @@ const LearningZone = ({ data }) => {
               learnObj={profile.learnObj}
               isAuth={isAuthenticated}
               user={user}
+              update={setActions}
             />
             <SelfReview
               behavior={["times", "shared your appreciation"]}
               isAuth={isAuthenticated}
-              user=""
+              user={user}
+              activity={
+                profile.learnObj != null
+                  ? profile.learnObj["objectiveData"]["Activity"]
+                  : "set your Learning Objective first!"
+              }
+              update={setActions}
+              weeks={profile.weeks}
             />
             <AddHack
               hackCollection={data}
               isAuth={isAuthenticated}
               user={user}
+              update={setActions}
             />
-            {!loading && isAuthenticated && profile.hacks != null ? (
-              <TrackRedord logData={profile.hacks} />
+            {!loading && isAuthenticated && profile.logs != null ? (
+              <TrackRecord logData={profile.logs} />
             ) : null}
           </Col>
         </Row>

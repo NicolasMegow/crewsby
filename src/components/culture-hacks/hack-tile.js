@@ -30,7 +30,7 @@ const HackTile = ({ edge }) => {
       <p style={{ marginBottom: 0 }}>
         {type} • {crewsize}{" "}
         <FontAwesomeIcon icon={["fas", "users"]} fixedWidth /> • {time}{" "}
-        <FontAwesomeIcon icon={["fas", "hourglass-half"]} fixedWidth /> • {job}
+        <FontAwesomeIcon icon={["fas", "hourglass-half"]} /> • {job}
       </p>
     </Link>
   )

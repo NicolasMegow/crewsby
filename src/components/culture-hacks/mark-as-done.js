@@ -42,7 +42,7 @@ const MarkAsDone = ({ hackName, hackType }) => {
           ["ref"],
           q.Get(q.Match(q.Index("profile_by_email"), user.email))
         ),
-        { data: { hacks: { [curTime]: hackInfo } } }
+        { data: { logs: { [curTime]: hackInfo } } }
       )
     )
   }

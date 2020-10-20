@@ -23,25 +23,18 @@ const months = [
   "Nov",
   "Dec",
 ]
+const oldTime = new Date(new Date().getTime() - 60 * 60 * 24 * 7 * 1000)
+const weekStart = startOfWeek(oldTime).getDate().toLocaleString()
+const weekEnd = endOfWeek(oldTime).getDate().toLocaleString()
+const month_1 = months[startOfWeek(oldTime).getMonth()]
+const month_2 = months[endOfWeek(oldTime).getMonth()]
+const year = oldTime.getFullYear().toString()
+export const lastWeek = `${month_1} ${weekStart} - ${month_2} ${weekEnd}, ${year}`
 
-export const WeekString = () => {
-  const oldTime = new Date(new Date().getTime() - 60 * 60 * 24 * 7 * 1000)
-  const weekStart = startOfWeek(oldTime).getDate().toLocaleString()
-  const weekEnd = endOfWeek(oldTime).getDate().toLocaleString()
-  const month_1 = months[startOfWeek(oldTime).getMonth()]
-  const month_2 = months[endOfWeek(oldTime).getMonth()]
-  const year = oldTime.getFullYear().toString()
-  const week = `${month_1} ${weekStart} - ${month_2} ${weekEnd}, ${year}`
-  return `${week}`
-}
-
-export const CurTime = () => {
-  const curDate = new Date()
-  const curTime = `${
-    months[curDate.getMonth()]
-  } ${curDate.getDate()}, ${curDate.getFullYear()}`
-  return `${curTime}`
-}
+const curDate = new Date()
+export const curTime = `${
+  months[curDate.getMonth()]
+} ${curDate.getDate()}, ${curDate.getFullYear()}`
 
 export const timezones = [
   "Greenwich Mean Time (GMT)",

@@ -1,17 +1,17 @@
 import React, { useState } from "react"
 import { Button } from "react-bootstrap"
 
-import { CurTime } from "../shared/timetravel"
+import { curTime } from "../shared/timetravel"
 import faunadb, { query as q } from "faunadb"
-import { Formik, Form, Field, resetForm } from "formik"
+import { Formik, Form, Field } from "formik"
 import formStyles from "../../styles/form.module.scss"
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const AddHack = ({ hackCollection, isAuth, user }) => {
+const AddHack = ({ hackCollection, isAuth, user, update }) => {
   const { loginWithPopup } = useAuth0()
   const [isSent, setSent] = useState(false)
-  const curTime = new Date()
+  const newTime = new Date()
 
   const updateUserProfile = async formData => {
     const fauna_secret = user["https://fauna.com/id/secret"]
@@ -22,7 +22,7 @@ const AddHack = ({ hackCollection, isAuth, user }) => {
           ["ref"],
           q.Get(q.Match(q.Index("profile_by_email"), user.email))
         ),
-        { data: { hacks: { [curTime]: formData["Hack"] } } }
+        { data: { logs: { [newTime]: formData["Hack"] } } }
       )
     )
   }
@@ -30,10 +30,7 @@ const AddHack = ({ hackCollection, isAuth, user }) => {
   return (
     <div className="area-grey">
       <h3>
-        Track a hack as completed{" "}
-        <small>
-          <CurTime />
-        </small>
+        Track a hack as completed <small>{curTime}</small>
       </h3>
       <Formik
         initialValues={{
@@ -41,8 +38,8 @@ const AddHack = ({ hackCollection, isAuth, user }) => {
         }}
         onSubmit={async values => {
           updateUserProfile(values)
-          resetForm()
           setSent(!isSent)
+          update("add-hack")
         }}
       >
         <Form>
