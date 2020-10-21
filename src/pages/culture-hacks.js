@@ -62,9 +62,11 @@ const HacksPage = ({ data }) => {
           >
             <span>
               <h2>Tutorials</h2>
-              <p>Step-by-step guides for self-made change.</p>
+              <p>Step-by-step guides for self-made change. [coming soon]</p>
               <h2 style={{ marginTop: "2rem" }}>Exercises</h2>
-              <p>Simple activities that stretch your comfort zone.</p>
+              <p>Simple crew-activities that stretch your comfort zone.</p>
+              <h2 style={{ marginTop: "2rem" }}>Tools</h2>
+              <p>Micro-services for collaboration in crews. [coming soon]</p>
             </span>
           </Col>
         </Row>

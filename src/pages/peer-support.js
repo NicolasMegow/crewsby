@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
 import Teamboat from "../img/svg/EinBoot.svg"
-import CrewRow from "../components/layout/crew-row"
+import PSInfo from "../components/layout/ps-info"
 import CrewSignup from "../components/ctas/crew-signup"
 
 const SupportPage = () => {
@@ -36,7 +36,7 @@ const SupportPage = () => {
             <Teamboat width="100%" />
           </Col>
         </Row>
-        <CrewRow />
+        <PSInfo />
         <Row style={{ marginTop: "8rem" }}>
           <Col lg>
             <h2>

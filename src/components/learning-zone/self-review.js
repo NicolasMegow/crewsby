@@ -9,12 +9,18 @@ import formStyles from "../../styles/form.module.scss"
 
 import { lastWeek } from "../shared/timetravel"
 
-const SelfReview = ({ isAuth, user, activity, update, weeks }) => {
+const SelfReview = ({ isAuth, user, learnObj, update, weeks }) => {
   const [visible, setVisible] = useState(false)
   const [done, setDone] = useState("notyet")
+  const [activity, setActivity] = useState("")
   useEffect(() => {
     setDone(weeks != null && weeks.includes(lastWeek) ? "done" : "notyet")
-  }, [setDone, weeks])
+    setActivity(
+      learnObj != null
+        ? learnObj["objectiveData"]["Activity"]
+        : "set your Learning Objective first!"
+    )
+  }, [setDone, weeks, learnObj])
 
   const btnRef = useRef(isAuth ? "enabled" : "disabled")
   const curTime = new Date()

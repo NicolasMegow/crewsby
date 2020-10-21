@@ -38,12 +38,12 @@ const AboutUsPage = ({ data }) => {
           <Col>
             <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
             <h1 style={{ color: "#4285F4" }}>Crewsby</h1>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+            <p style={{ fontSize: "1.4rem", marginBottom: "2rem" }}>
               Like Gatsby a reminder: by Gatz. The crew creates culture.
             </p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }}>
+        <Row style={{ marginTop: "4rem" }}>
           <Col>
             <p className="mintitle">Our mission</p>
             <h2 className="feature-h">
@@ -51,7 +51,12 @@ const AboutUsPage = ({ data }) => {
             </h2>
             <p>
               Culture creates a place to belong. Everybody deserves this
-              connection at work.
+              connection at work. We believe that change can only come from
+              within a crew. Learning to fish is so much more fun than just
+              getting a fish. It is our mission to provide actionable resources
+              for you to change gracefully. We scout the web for amazing ideas
+              and best practices from which we design tutorials, exercises and
+              tools.
             </p>
           </Col>
         </Row>
@@ -68,13 +73,13 @@ const AboutUsPage = ({ data }) => {
               fluid={data.imageLili.childImageSharp.fluid}
               alt="Lilian Izsak"
               style={{
-                width: "12rem",
-                height: "12rem",
+                width: "10rem",
+                height: "10rem",
                 borderRadius: "50%",
                 margin: "1rem",
               }}
             />
-            <p>
+            <p style={{ marginBottom: "0" }}>
               <strong>Lilian Izsak</strong>
               <br></br>Community builder
               <br></br>Professional happiness fairy
@@ -109,13 +114,13 @@ const AboutUsPage = ({ data }) => {
               fluid={data.imageNici.childImageSharp.fluid}
               alt="Nicolas Megow"
               style={{
-                width: "12rem",
-                height: "12rem",
+                width: "10rem",
+                height: "10rem",
                 borderRadius: "50%",
                 margin: "1rem",
               }}
             />
-            <p>
+            <p style={{ marginBottom: "0" }}>
               <strong>Nicolas Megow</strong>
               <br></br>Culture hacker
               <br></br>Coach, model thinker & elephant
@@ -139,7 +144,7 @@ const AboutUsPage = ({ data }) => {
             </p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }}>
+        <Row style={{ marginTop: "4rem" }}>
           <Col>
             <p className="mintitle">Our aspiration</p>
             <h2 className="feature-h">Crewsby redefines culture change.</h2>
@@ -155,7 +160,18 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Open source
             </p>
-            <p>We offer our culture hacks for free and encourage sharing.</p>
+            <p>
+              We offer our culture hacks for free, encourage sharing and love
+              fedback or suggestions.
+              <br></br>
+              <a
+                href="https://github.com/NicolasMegow/crewsby"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                → Join us on github
+              </a>
+            </p>
           </Col>
           <Col md className="bordered">
             {" "}
@@ -165,7 +181,10 @@ const AboutUsPage = ({ data }) => {
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
               Contribution
             </p>
-            <p>We develop culture hacks from the best ideas there.</p>
+            <p>
+              We develop culture hacks from the best ideas there. We're working
+              on a better way to emphasize our sources of inspiration.
+            </p>
           </Col>
           <Col md className="bordered">
             {" "}
@@ -173,10 +192,17 @@ const AboutUsPage = ({ data }) => {
               <Emoji symbol="🔵" label="circle" />{" "}
             </div>
             <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>Elegance</p>
-            <p>We strive to develop simple and refined learning experiences.</p>
+            <p>
+              We strive to develop simple and refined experiences. Give us
+              feedback to improve our support on your journey.
+              <br></br>
+              <a href="mailto:amazing.input@crewsby.com">
+                amazing.input@crewsby.com
+              </a>
+            </p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }}>
+        <Row style={{ marginTop: "4rem" }}>
           <Col>
             <p className="mintitle">Our thanks</p>
             <h2 className="feature-h">

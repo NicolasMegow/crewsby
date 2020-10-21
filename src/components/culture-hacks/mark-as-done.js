@@ -49,8 +49,9 @@ const MarkAsDone = ({ hackName, hackType }) => {
 
   return (
     <div className="area-blue">
-      {!loading && isAuthenticated && profile.hacks != null ? (
-        Object.values(profile.hacks).includes(hackInfo) ? (
+      {!loading && isAuthenticated ? (
+        profile.logs != null &&
+        Object.values(profile.logs).includes(hackInfo) ? (
           <p style={{ fontSize: "1.4rem", marginBottom: 0 }}>
             <FontAwesomeIcon icon={["fas", "check-circle"]} fixedWidth />{" "}
             {hackName} completed

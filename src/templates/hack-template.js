@@ -17,6 +17,8 @@ import SharingButtons from "../components/ctas/sharing-buttons"
 
 const shortcodes = {
   Emoji,
+  Link,
+  FontAwesomeIcon,
   h2: props => <h2 {...props} style={{ marginTop: "4rem" }} />,
   td: props => (
     <td {...props} style={{ border: "1px solid #151515", padding: ".4rem" }} />

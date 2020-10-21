@@ -28,16 +28,16 @@ const IndexPage = () => {
               }}
             >
               Crewsby curates & designs spicy culture hacks{" "}
-              <Emoji symbol="🌶️" label="crew-1" /> for crews venturing in
-              uncharted waters.
-              <br></br>Join our community to enjoy bittersweet reflection{" "}
-              <Emoji symbol="🍋" label="crew-1" /> and nutritious peer-feedback{" "}
-              <Emoji symbol="🍏" label="crew-1" />.
+              <Emoji symbol="🌶️" label="spice" /> for crews.
+              <br></br>Enter your learning zone to enjoy bittersweet reflection{" "}
+              <Emoji symbol="🍋" label="zest" />.<br></br>Or join our community
+              for nutritious peer-feedback{" "}
+              <Emoji symbol="🍏" label="vitamins" />.
             </p>
           </Col>
         </Row>
         <EmailSignup />
-        <Row style={{ marginTop: "8rem" }} id="skills">
+        <Row style={{ marginTop: "6rem" }} id="skills">
           <Col lg>
             <p className="mintitle">Culture hacks</p>
             <h2 className="feature-h">Use actionable resources.</h2>
@@ -71,7 +71,7 @@ const IndexPage = () => {
             </p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }} id="training on the job">
+        <Row style={{ marginTop: "6rem" }} id="training on the job">
           <Col lg>
             <p className="mintitle">Learning zone</p>
             <h2 className="feature-h">Track & review your journey.</h2>
@@ -111,7 +111,7 @@ const IndexPage = () => {
             </span>
           </Col>
         </Row>
-        <Row style={{ marginTop: "8rem" }} id="crew">
+        <Row style={{ marginTop: "6rem" }} id="crew">
           <Col lg>
             <p className="mintitle">Peer support</p>
             <h2 className="feature-h">Learn with & from peers.</h2>
@@ -121,7 +121,7 @@ const IndexPage = () => {
               your progress when the daily grind clogs you down.
             </p>
             <p>
-              <Link to="/curated-crews">→ Explore learning with peers</Link>
+              <Link to="/peer-support">→ Explore learning with peers</Link>
             </p>
           </Col>
           <Col

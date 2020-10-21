@@ -11,8 +11,10 @@ import Loading from "../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
 import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
-import SelfReview from "../components/learning-zone/self-review"
+import LZInfo from "../components/learning-zone/lz-info"
+
 import LearningObjective from "../components/learning-zone/learning-objective"
+import SelfReview from "../components/learning-zone/self-review"
 import AddHack from "../components/learning-zone/add-hack"
 import TrackRecord from "../components/learning-zone/track-record"
 
@@ -86,6 +88,7 @@ const LearningZone = ({ data }) => {
             <ReturnOnLearning width="100%" height="300" />
           </Col>
         </Row>
+        <LZInfo />
         <Row style={{ marginTop: "4rem" }}>
           <Col lg>
             <h2>Quick start</h2>
@@ -134,11 +137,7 @@ const LearningZone = ({ data }) => {
               behavior={["times", "shared your appreciation"]}
               isAuth={isAuthenticated}
               user={user}
-              activity={
-                profile.learnObj != null
-                  ? profile.learnObj["objectiveData"]["Activity"]
-                  : "set your Learning Objective first!"
-              }
+              learnObj={profile.learnObj}
               update={setActions}
               weeks={profile.weeks}
             />

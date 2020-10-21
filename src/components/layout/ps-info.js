@@ -1,37 +1,37 @@
 import React from "react"
 import { Row, Col } from "react-bootstrap"
 
-const CrewRow = () => {
+const PSInfo = () => {
   return (
-    <Row style={{ marginTop: "4rem" }}>
+    <Row style={{ marginTop: "2rem" }}>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-        <div className="feature-num">1</div>
+        <div className="feature-num">A</div>
         <div>
           <h3 style={{ marginBottom: "0" }} className="mintitle">
-            Networking{" "}
+            Get feedback
           </h3>
           <p className="feature-text">
-            Connect to peers from different industries and countries.
+            Learn from the experience of your peers in different industries.
           </p>
         </div>
       </Col>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-        <div className="feature-num">2</div>
+        <div className="feature-num">B</div>
         <div>
           <h3 style={{ marginBottom: "0" }} className="mintitle">
-            Perspectives
+            Give feedback
           </h3>
           <p className="feature-text">
-            Learn from the experience of your peers and share your point of
-            view.
+            Share your experience & point of view to help others in similar
+            situations.
           </p>
         </div>
       </Col>
       <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-        <div className="feature-num">3</div>
+        <div className="feature-num">C</div>
         <div>
           <h3 style={{ marginBottom: "0" }} className="mintitle">
-            Accountability
+            Join a circle
           </h3>
           <p className="feature-text">
             Persevere on your journey despite the daily grind clogging you down.
@@ -42,4 +42,4 @@ const CrewRow = () => {
   )
 }
 
-export default CrewRow
+export default PSInfo
