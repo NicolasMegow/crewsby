@@ -1,1 +1,1 @@
-# Crewsby is the trainings-flatrate for modern teamwork
+# Crewsby curates & designs culture hacks.
