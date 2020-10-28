@@ -2,21 +2,21 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/shared/seo"
+import Emoji from "../../components/shared/emoji"
 
-import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
-import Loading from "../components/shared/loading"
+import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
+import Loading from "../../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
 import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
-import LZInfo from "../components/learning-zone/lz-info"
+import LZInfo from "../../components/learning-zone/lz-info"
 
-import LearningObjective from "../components/learning-zone/learning-objective"
-import SelfReview from "../components/learning-zone/self-review"
-import AddHack from "../components/learning-zone/add-hack"
-import TrackRecord from "../components/learning-zone/track-record"
+import LearningObjective from "../../components/learning-zone/learning-objective"
+import SelfReview from "../../components/learning-zone/self-review"
+import AddHack from "../../components/learning-zone/add-hack"
+import TrackRecord from "../../components/learning-zone/track-record"
 
 export const query = graphql`
   query {

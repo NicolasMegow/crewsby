@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Container, Navbar, Nav } from "react-bootstrap"
 
 import headerStyles from "../../styles/header.module.scss"
-import Emoji from "../shared/emoji"
 
 import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
 
@@ -31,18 +30,18 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-site">
             <Nav>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/culture-hacks">
-                  <Emoji symbol="🌶️" label="culture hacks" /> Culture hacks
+                <Link className={headerStyles.navItem} to="/people-skills">
+                  People skills
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/learning-zone">
-                  <Emoji symbol="🍋" label="learning zone" /> Learning zone
+                <Link className={headerStyles.navItem} to="/teambuilding">
+                  Teambuilding
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/peer-support">
-                  <Emoji symbol="🍏" label="peer support" /> Peer support
+                <Link className={headerStyles.navItem} to="/pricing">
+                  Pricing
                 </Link>
               </Nav.Item>
             </Nav>

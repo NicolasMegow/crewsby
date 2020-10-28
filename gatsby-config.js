@@ -46,15 +46,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "methods",
-        path: `${__dirname}/src/content/methods`,
+        name: "peopleskills",
+        path: `${__dirname}/src/content/people-skills`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "hacks",
-        path: `${__dirname}/src/content/hacks`,
+        name: "teambuilding",
+        path: `${__dirname}/src/content/teambuilding`,
       },
     },
     {

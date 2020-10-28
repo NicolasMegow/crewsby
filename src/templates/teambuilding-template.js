@@ -8,11 +8,11 @@ import SEO from "../components/shared/seo"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Emoji from "../components/shared/emoji"
-import { Hint1, Hint2 } from "../components/culture-hacks/hint"
+import { Hint1, Hint2 } from "../components/teambuilding/hint"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import FeedbackWidget from "../components/culture-hacks/feedback-widget"
-import MarkAsDone from "../components/culture-hacks/mark-as-done"
+import FeedbackWidget from "../components/teambuilding/feedback-widget"
+import MarkAsDone from "../components/teambuilding/mark-as-done"
 import SharingButtons from "../components/ctas/sharing-buttons"
 
 const shortcodes = {

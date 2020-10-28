@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Row, Col, Button } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
@@ -25,9 +25,9 @@ const NotFound = () => {
             >
               Something went missing here...
             </p>
-            <Button variant="primary" size="lg">
-              <Link to="/">→ back to start</Link>
-            </Button>
+            <Link to="/" className="btn btn-lg btn-primary">
+              → Back to start
+            </Link>{" "}
           </Col>
         </Row>
       </Container>

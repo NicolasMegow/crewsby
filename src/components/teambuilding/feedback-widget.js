@@ -73,22 +73,34 @@ const FeedbackWidget = ({ hack }) => {
                 value={ratingValue}
                 onClick={() => setRating(ratingValue)}
               />
-              <FontAwesomeIcon
-                icon={["fas", "star"]}
-                fixedWidth
-                size="2x"
-                style={styles.star}
-                onMouseEnter={() => setHover(ratingValue)}
-                onMouseLeave={() => setHover(null)}
-                color={ratingValue <= (hover || rating) ? "#FFD970" : "#C5DAFB"}
-              />
+              <span
+                className="fa-layers fa-fw"
+                style={{ marginRight: "1.2rem" }}
+              >
+                <FontAwesomeIcon
+                  icon={["fas", "star"]}
+                  fixedWidth
+                  size="2x"
+                  style={styles.star}
+                  color={
+                    ratingValue <= (hover || rating) ? "#FFD970" : "#ffffff"
+                  }
+                />
+                <FontAwesomeIcon
+                  icon={["fal", "star"]}
+                  fixedWidth
+                  size="2x"
+                  onMouseEnter={() => setHover(ratingValue)}
+                  onMouseLeave={() => setHover(null)}
+                />
+              </span>
             </label>
           )
         })}
         <p
           style={{
             marginLeft: "2rem",
-            fontWeight: "bold",
+            fontWeight: "500",
           }}
         >
           {ratingText[hover ? hover - 1 : rating - 1]}

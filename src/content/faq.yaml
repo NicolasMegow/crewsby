@@ -1,34 +1,16 @@
 content:
   - id: "1"
-    q: Wo ist das Solo-Paket?
-    a: Im Team-Paket. Teamarbeit lässt sich am Besten im Team verbessern. 
-       Deshalb setzen wir bewusst Anreize weitere Teammitglieder von Crewsby zu begeistern.
+    q: Do you offer discounts?
+    a: Yes. When you pay for a year up front, you get a 15% discount.
   - id: "2"
-    q: Welche Bezahloptionen gibt es?
-    a: Aktuell nur auf Rechnung.
-       Wir arbeiten daran bald auch automatisiert über Kreditkarte abrechnen zu können.
+    q: Do we pay extra for more people?
+    a: No. Unlike most e-learning providers, we don't charge you based on how many people learn with us. 5 learners or 50, the price is the same. This adds up to significant savings as your company grows.
   - id: "3"
-    q: Wieso nur 8 Mitglieder / Team?
-    a: Typische Teams haben zwischen 5 und 7 Mitglieder.
-       Ab 8 Menschen entstehen starke Subgruppen und komplexere Gruppendynamiken.
-       Zur Verbesserung der Teamarbeit empfehlen wir die Trainings in geeigneten Subgruppen durchzuführen.
+    q: Can we cancel at any time?
+    a: Yes. There's no minimum contract for Crewsby Business — cancel at any time without penalty or hassle. If you prepaid for a year, we’ll refund any unused months.
   - id: "4"
-    q: Kann ich Crewsby auch nutzen, wenn ich nicht in einem Team arbeite?
-    a: Schon, aber es bringt Dir nicht so viel...
-       Wenn Du Verantwortung für mehrere Teams hast, dann klink Dich erst einmal bei einem ein.
-       Bald bieten wir Team-übergreifende Accounts.
+    q: Is Crewsby only for teams?
+    a: No. Crewsby offers tutorials & exercises for teams and trainings in people skills for individuals. We believe that you need both to create a great company.
   - id: "5"
-    q: Funktioniert das wirklich ohne Coach / Trainer?
-    a: Ja. Unsere Trainings sind komplett selbsterklärend und wirken garantiert.
-       Wir empfehlen jedem Team eine Person zu wählen, die auf die Zeit und Vorbereitung achtet. 
-       Dazu könnt ihr z.B. auch jemanden bitten, der nicht in eurem Team arbeitet (Kolleg*innen oder eure Personaler*in),
-       wenn sich keiner in eurem Team diese Rolle zutraut.
-  - id: "6"
-    q: Wozu brauchen wir dann noch einen Teamcoach / Scrum Master?
-    a: Ein gutes Teamgefühl ist wie ein gutes Fundament. 
-       Darauf aufbauend wird die Zusammenarbeit besser. 
-       Unsere Trainings ergänzen sich gut mit anderen Teambuilding-Maßnahmen 
-       und bereichern die Lücken zwischen regulären Teamcoachings.
-       Wenn ihr jedoch richtig tiefgreifende Konflikte im Team habt 
-       oder vor radikalen Transformationen eures Teams steht (z.B. müssen 50% das Team verlassen), 
-       dann braucht ihr dafür stets einen professionellen Coach, der euch vollzeit unterstützt und begleitet.
+    q: Does it really work without a coach or trainer?
+    a: Yes. Everything is completely self-explanatory and works right out of the box.

@@ -5,13 +5,13 @@ const Hint = ({ line1, icon1, line2, icon2 }) => {
   return (
     <div
       style={{
-        borderColor: "#4285f4",
-        marginLeft: 0,
-        marginRight: 0,
+        border: "1px solid #4285f4",
+        borderRadius: "6px",
+        margin: "1rem 0",
+        padding: "1rem",
         color: "#4285f4",
-        fontWeight: "bold",
+        fontWeight: "500",
       }}
-      className="bordered"
     >
       <p>
         <FontAwesomeIcon icon={icon1} fixedWidth /> {line1}

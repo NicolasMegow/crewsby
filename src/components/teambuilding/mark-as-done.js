@@ -54,13 +54,11 @@ const MarkAsDone = ({ hackName, hackType }) => {
         Object.values(profile.logs).includes(hackInfo) ? (
           <p style={{ fontSize: "1.4rem", marginBottom: 0 }}>
             <FontAwesomeIcon icon={["fas", "check-circle"]} fixedWidth />{" "}
-            {hackName} completed
+            {hackName} completed.
           </p>
         ) : (
           <>
-            <p style={{ fontSize: "1.4rem" }}>
-              Mark {hackName} as done in your learning zone
-            </p>
+            <p style={{ fontSize: "1.4rem" }}>Log {hackName} as done.</p>
             <Button
               className="btn btn-lg"
               ref={btnRef}
@@ -70,15 +68,13 @@ const MarkAsDone = ({ hackName, hackType }) => {
               }}
             >
               <FontAwesomeIcon icon={["fas", "check-circle"]} fixedWidth />{" "}
-              {hackType} completed
+              {hackType} completed.
             </Button>
           </>
         )
       ) : (
         <>
-          <p style={{ fontSize: "1.4rem" }}>
-            Mark {hackName} as done in your learning zone
-          </p>
+          <p style={{ fontSize: "1.4rem" }}>Log {hackName} as done.</p>
           <Button
             size="lg"
             onClick={() => {

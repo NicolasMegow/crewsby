@@ -38,8 +38,10 @@ module.exports.createPages = async function ({ actions, graphql }) {
         })*/
       } else {
         actions.createPage({
-          path: `/culture-hacks/${slug}/`,
-          component: require.resolve(`./src/templates/hack-template.js`),
+          path: `/teambuilding/${slug}/`,
+          component: require.resolve(
+            `./src/templates/teambuilding-template.js`
+          ),
           context: { slug },
         })
       }

@@ -7,15 +7,15 @@ import EmailSignup from "./email-signup"
 const SignupCTA = () => {
   return (
     <>
-      <Row style={{ marginTop: "8rem" }}>
+      <Row style={{ marginTop: "6rem" }}>
         <Col>
-          <h2 className="feature-h">
-            <Emoji symbol="👋" label="welcome" /> Stay up to date on new culture
-            hacks!
+          <h2>
+            <Emoji symbol="👋" label="welcome" /> Stay up to date on new
+            resources!
           </h2>
           <p>
-            We'll send you the occasional heads-up when we've added new culture
-            hacks to our collection.
+            We'll send you the occasional heads-up when we've added new
+            tutorials or exercises to our collection.
           </p>
         </Col>
       </Row>

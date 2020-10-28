@@ -12,25 +12,26 @@ const HackTile = ({ edge }) => {
     <Link
       to={slug}
       css={css`
-        max-width: 750px;
+        width: 32rem;
         color: #151515;
         border-radius: 6px;
         padding: 1rem;
-        margin-top: 1rem;
+        margin: 1rem;
         display: block;
         text-decoration: none;
         background: #ebebeb;
         & :hover {
-          background: #c5dafb;
+          background: #d9e6fc;
           color: #151515;
         }
       `}
     >
       <h3>{hack}</h3>
+      <p style={{ marginBottom: 0 }}>{job}</p>
       <p style={{ marginBottom: 0 }}>
         {type} • {crewsize}{" "}
         <FontAwesomeIcon icon={["fas", "users"]} fixedWidth /> • {time}{" "}
-        <FontAwesomeIcon icon={["fas", "hourglass-half"]} /> • {job}
+        <FontAwesomeIcon icon={["fas", "hourglass-half"]} />
       </p>
     </Link>
   )

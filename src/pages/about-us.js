@@ -37,32 +37,31 @@ const AboutUsPage = ({ data }) => {
         <Row style={{ marginTop: "4rem" }}>
           <Col>
             <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
-            <h1 style={{ color: "#4285F4" }}>Crewsby</h1>
+            <h1>Crewsby - Change by the crew.</h1>
             <p style={{ fontSize: "1.4rem", marginBottom: "2rem" }}>
-              Like Gatsby a reminder: by Gatz. The crew creates culture.
+              Great companies are made by their crews. Just like John Gatz
+              created the great Gatsby.
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "4rem" }}>
           <Col>
-            <p className="mintitle">Our mission</p>
-            <h2 className="feature-h">
+            <h2>
               We <Emoji symbol="❤️" label="love" /> culture.
             </h2>
             <p>
               Culture creates a place to belong. Everybody deserves this
-              connection at work. We believe that change can only come from
-              within a crew. Learning to fish is so much more fun than just
+              connection at work. We believe that change can only come from the
+              crew itself. Learning to fish is so much more fun than just
               getting a fish. It is our mission to provide actionable resources
               for you to change gracefully. We scout the web for amazing ideas
-              and best practices from which we design tutorials, exercises and
-              tools.
+              and best practices from which we design tutorials & exercises.
             </p>
           </Col>
         </Row>
         <Row>
           <Col
-            md
+            lg
             style={{
               margin: "2rem 0",
               display: "flex",
@@ -81,8 +80,8 @@ const AboutUsPage = ({ data }) => {
             />
             <p style={{ marginBottom: "0" }}>
               <strong>Lilian Izsak</strong>
-              <br></br>Community builder
-              <br></br>Professional happiness fairy
+              <br></br>Lili is a happiness engineer <br></br>with a sixth sense
+              for inclusion.
               <br></br>
               <a
                 href="https://www.linkedin.com/in/lilian-izsak/"
@@ -103,7 +102,7 @@ const AboutUsPage = ({ data }) => {
             </p>
           </Col>
           <Col
-            md
+            lg
             style={{
               margin: "2rem 0",
               display: "flex",
@@ -122,8 +121,7 @@ const AboutUsPage = ({ data }) => {
             />
             <p style={{ marginBottom: "0" }}>
               <strong>Nicolas Megow</strong>
-              <br></br>Culture hacker
-              <br></br>Coach, model thinker & elephant
+              <br></br>Nicolas is a team coach <br></br>with a love for games.
               <br></br>
               <a
                 href="https://www.linkedin.com/in/nicolas-megow/"
@@ -146,23 +144,19 @@ const AboutUsPage = ({ data }) => {
         </Row>
         <Row style={{ marginTop: "4rem" }}>
           <Col>
-            <p className="mintitle">Our aspiration</p>
-            <h2 className="feature-h">Crewsby redefines culture change.</h2>
+            <h2>Crewsby redefines change.</h2>
           </Col>
         </Row>
         <Row>
-          <Col md className="bordered">
+          <Col lg className="area-white">
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
               <FontAwesomeIcon icon={["fab", "creative-commons"]} />{" "}
               <FontAwesomeIcon icon={["fab", "creative-commons-by"]} />{" "}
             </div>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Open source
-            </p>
+            <h3>Open source</h3>
             <p>
-              We offer our culture hacks for free, encourage sharing and love
-              fedback or suggestions.
+              Our tutorials & exercises are free. Share them, if you like.
               <br></br>
               <a
                 href="https://github.com/NicolasMegow/crewsby"
@@ -173,63 +167,52 @@ const AboutUsPage = ({ data }) => {
               </a>
             </p>
           </Col>
-          <Col md className="bordered">
+          <Col lg className="area-white">
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
               <Emoji symbol="🎁" label="present" />{" "}
             </div>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
-              Contribution
-            </p>
+            <h3>Contribution</h3>
             <p>
-              We develop culture hacks from the best ideas there. We're working
-              on a better way to emphasize our sources of inspiration.
+              We design tutorials & exercises to make the best ideas out there
+              actionable.
             </p>
           </Col>
-          <Col md className="bordered">
+          <Col lg className="area-white">
             {" "}
             <div style={{ fontSize: "2.4rem" }}>
               <Emoji symbol="🔵" label="circle" />{" "}
             </div>
-            <p style={{ fontSize: "1.4rem", fontWeight: "bold" }}>Elegance</p>
+            <h3>Elegance</h3>
             <p>
-              We strive to develop simple and refined experiences. Give us
-              feedback to improve our support on your journey.
-              <br></br>
-              <a href="mailto:amazing.input@crewsby.com">
-                amazing.input@crewsby.com
-              </a>
+              We strive for simple & refined experiences. Tell us how to get
+              better:{" "}
+              <a href="mailto:feedback@crewsby.com">feedback@crewsby.com</a>
             </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "4rem" }}>
           <Col>
-            <p className="mintitle">Our thanks</p>
-            <h2 className="feature-h">
-              We are standing on the shoulders of giants.
-            </h2>
+            <h2>Crewsby stands on the shoulders of giants.</h2>
             <p>
-              We develop our culture hacks from state of the art research and
-              best practices. Here are the giants that inspire us:
+              We merely add to what smarter people have discovered. Here are the
+              giants that inspire us:
             </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <strong>
-              Ken Blanchard • Chip Conley • John Doerr • Amy Edmundson • Tasha
-              Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel •
-              Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni •
-              Vittorio Loreto • Fredrick G. Pferdt • Max De Pree • Edgar Schein
-              • F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl Weick •
-              Tom Wujec
-            </strong>
+            <p>
+              <strong>
+                Ken Blanchard • Chip Conley • John Doerr • Amy Edmundson • Tasha
+                Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel
+                • Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni
+                • Vittorio Loreto • Fredrick G. Pferdt • Max De Pree • Edgar
+                Schein • F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl
+                Weick • Tom Wujec
+              </strong>
+            </p>
+            <p>
+              <small>
+                We're working on a better way to express our thanks!
+              </small>
+            </p>
           </Col>
         </Row>
       </Container>

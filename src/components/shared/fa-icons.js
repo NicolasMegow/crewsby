@@ -6,10 +6,10 @@ export const FaCheck = () => {
     <>
       <FontAwesomeIcon
         icon={["fas", "check"]}
-        fixedWidth
         color="#4285F4"
-        size="2x"
-        style={{ margin: ".5rem" }}
+        size="lg"
+        mask={["fas", "circle"]}
+        transform="shrink-8"
       />
     </>
   )

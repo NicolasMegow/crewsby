@@ -1,35 +1,24 @@
 [
   {
-    "name": "Communication",
+    "name": "Relationships",
     "symbol": "❤️",
     "label": "heart",
     "tuts": [
+      "Communicate Appreciation",
       "Align Expectations",
-      "Share Weaknesses",
-      "Resolve Conflict",
-      "Cultivate Rituals"
+      "Build Trust",
+      "Resolve Conflict"
     ]
   },
   {
-    "name": "Collaboration",
+    "name": "Workflow",
     "symbol": "💪",
     "label": "muscle",
     "tuts": [
+      "Reduce Waste",
       "Maintain Flow",
       "Facilitate Groups",
       "Measure Progress",
-      "Design Roles"
-    ]
-  },
-  {
-    "name": "Innovation",
-    "symbol": "🧠",
-    "label": "brain",
-    "tuts": [
-      "Understand Problems",
-      "Design Solutions",
-      "Explore Possibilities",
-      "Build Prototypes",
       "Review Mistakes"
     ]
   }
