@@ -18,7 +18,8 @@ import SelfReview from "../../components/learning-zone/self-review"
 import AddHack from "../../components/learning-zone/add-hack"
 import TrackRecord from "../../components/learning-zone/track-record"
 
-export const query = graphql`
+{
+  /*export const query = graphql`
   query {
     allMdx(filter: { fields: { contentType: { eq: "hacks" } } }) {
       edges {
@@ -31,7 +32,8 @@ export const query = graphql`
       }
     }
   }
-`
+`*/
+}
 
 const LearningZone = ({ data }) => {
   const { isAuthenticated, loading, user } = useAuth0()
