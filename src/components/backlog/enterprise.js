@@ -2,11 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { Container, Row, Col, Button } from "react-bootstrap"
 
-import Layout from "../../components/layout/layout"
-import SEO from "../../components/shared/seo"
-import Emoji from "../../components/shared/emoji"
+import Layout from "../layout/layout"
+import SEO from "../shared/seo"
+import Emoji from "../shared/emoji"
 import FaCheck from "../../components/shared/facheck"
-import SignupCTA from "../../components/ctas/signup-cta"
+import SignupCTA from "../ctas/signup-cta"
 
 import ReturnOnTeam from "../img/svg/ReturnOnTeam.svg"
 
