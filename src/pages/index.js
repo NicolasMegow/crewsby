@@ -4,9 +4,10 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
 
+import { FaCheck } from "../components/shared/fa-icons"
 import MakeChange from "../img/svg/MakeChange.svg"
+import Helix from "../img/svg/Helix.svg"
 import TeamPlusWork from "../img/svg/Teampluswork.svg"
 import SignupCTA from "../components/ctas/signup-cta"
 
@@ -26,56 +27,71 @@ const IndexPage = () => {
               }}
             >
               You are the source of change. Crewsby is your power-up. <br></br>
-              Use our tutorials & exercises to grow personally or improve
-              together as a team.
+              Use our tutorials, exercises & trainings to grow personally or
+              improve together as a team.
             </p>
             <Link
               className="btn btn-lg btn-primary"
               to="/people-skills"
-              style={{ marginRight: "2rem" }}
+              style={{ marginRight: "1rem", marginBottom: "1rem" }}
             >
               Develop a people skill
             </Link>
-            <Link className="btn btn-lg btn-outline-primary" to="/teambuilding">
+            <Link
+              className="btn btn-lg btn-outline-primary"
+              to="/teambuilding"
+              style={{ marginBottom: "1rem" }}
+            >
               Start teambuilding
             </Link>
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }} id="skills">
-          <Col lg>
-            <h2>Learn by doing.</h2>
-            <p>
-              Change doesn't happen. It is made by you. Crewsby designs
-              tutorials & exercises from the best ideas out there. Deploy them
-              right on your job.
-            </p>
+          <Col lg style={{ display: "flex", alignItems: "center" }}>
+            <span>
+              <h2>Learn by doing.</h2>
+              <p>
+                Change doesn't happen. It is made by you. Crewsby designs
+                actionable tutorials, exercises & trainings for you to deploy
+                right on your job. Every resource we offer is remote-ready and
+                works without a trainer.
+              </p>
+            </span>
           </Col>
-          <Col
-            lg
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <p
-              style={{
-                fontWeight: "bold",
-                fontSize: "3rem",
-                lineHeight: "1.2",
-              }}
-            >
-              Knowing + <span style={{ color: "#4285F4" }}>Doing</span>
-            </p>
+          <Col lg>
+            <div className="area-blue">
+              <p style={{ marginBottom: "0" }}>
+                <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
+                  <FaCheck /> Tutorials:
+                </span>{" "}
+                Step by step guides
+              </p>
+            </div>
+            <div className="area-blue">
+              <p style={{ marginBottom: "0" }}>
+                <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
+                  <FaCheck /> Exercises:
+                </span>{" "}
+                Activities for deliberate practice
+              </p>
+            </div>
+            <div className="area-blue">
+              <p style={{ marginBottom: "0" }}>
+                <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
+                  <FaCheck /> Trainings:
+                </span>{" "}
+                Combos of tutorials & exercises
+              </p>
+            </div>
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }} id="crew">
           <Col lg>
-            <h2>Grow personally & as a team.</h2>
+            <h2>Grow personally & together.</h2>
             <p>
               Learn to contribute to a great team & improve as a crew how you
-              collaborate together. Committing to improve as a crew holds you
-              accountable.
+              collaborate together. Great teamwork requires mindful crewmates &
+              regular investments in collaboration.
             </p>
           </Col>
           <Col
@@ -86,23 +102,21 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p style={{ fontSize: "3rem" }}>
-              <Emoji symbol="👩🏾‍🦱" label="crew-1" />{" "}
-              <Emoji symbol="🧔🏼" label="crew-2" /> <br></br>
-              <Emoji symbol="👩🏻‍🦰" label="crew-3" />{" "}
-              <span style={{ fontSize: "2rem", fontWeight: "bold" }}>
-                & YOU
-              </span>
-            </p>
+            <p>Teambuilding</p>
+            <Helix width="8rem" height="8rem" />
+            <p>People skills</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }} id="training on the job">
-          <Col lg>
-            <h2>Teamwork = Team + Work.</h2>
-            <p>
-              Great teamwork requires both: A workflow unique to your crew &
-              strong personal relationships within the crew.
-            </p>
+          <Col lg style={{ display: "flex", alignItems: "center" }}>
+            <span>
+              <h2>Improve Team + Work.</h2>
+              <p>
+                A unique workflow is just the visible part of teamwork. Under
+                the surface great teamwork emerges from strong personal
+                relationships within the crew. Work on both with Crewsby.
+              </p>
+            </span>
           </Col>
           <Col
             lg

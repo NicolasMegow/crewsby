@@ -6,7 +6,7 @@ import faunadb, { query as q } from "faunadb"
 import { useFormik } from "formik"
 import formStyles from "../../styles/form.module.scss"
 
-const EmailSignup = () => {
+const Waitlist = () => {
   const [signupState, setSignup] = useState(false)
   const btnRef = useRef()
   const formik = useFormik({
@@ -25,7 +25,7 @@ const EmailSignup = () => {
     const fauna_secret = process.env.GATSBY_FAUNA_FEEDBACK
     const client = new faunadb.Client({ secret: fauna_secret })
     await client.query(
-      q.Create(q.Collection("signup"), {
+      q.Create(q.Collection("waitlist"), {
         data: { signupData },
       })
     )
@@ -64,7 +64,7 @@ const EmailSignup = () => {
           </Col>
           <Col md>
             <Button type="submit" ref={btnRef} variant="primary" size="lg">
-              Keep me posted
+              Join the waitlist
             </Button>
           </Col>
         </Row>
@@ -74,7 +74,7 @@ const EmailSignup = () => {
           <p>
             {signupState ? (
               <strong>
-                Welcome on board! You'll receive a a confirmation email soon.
+                Welcome on board! You'll receive a welcome email soon.
               </strong>
             ) : null}
           </p>
@@ -84,4 +84,4 @@ const EmailSignup = () => {
   )
 }
 
-export default EmailSignup
+export default Waitlist

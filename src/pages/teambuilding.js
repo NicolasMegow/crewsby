@@ -6,6 +6,8 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 import Teamboat from "../img/svg/EinBoot.svg"
 
+import FilteredList from "../components/teambuilding/filtered-list"
+
 import HackTile from "../components/teambuilding/hack-tile"
 import SignupCTA from "../components/ctas/signup-cta"
 
@@ -20,6 +22,7 @@ export const query = graphql`
           frontmatter {
             hack
             type
+            category
             time
             job
             crewsize
@@ -54,6 +57,7 @@ const HacksPage = ({ data }) => {
             <Teamboat width="100%" />
           </Col>
         </Row>
+        {/*<FilteredList data={data} />*/}
         <Row style={{ marginTop: "4rem" }}>
           {data.allMdx.edges.map((hack, i) => {
             return <HackTile key={i} edge={hack} />

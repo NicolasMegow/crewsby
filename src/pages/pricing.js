@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
@@ -7,28 +8,31 @@ import Emoji from "../components/shared/emoji"
 import SignupCTA from "../components/ctas/signup-cta"
 import { FaCheck } from "../components/shared/fa-icons"
 
-import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
+import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
+import Waitlist from "../components/ctas/waitlist-signup"
 import FAQData from "../content/faq.yaml"
 
 const PricingPage = () => {
+  const { loginWithPopup } = useAuth0()
   return (
     <Layout>
       <SEO title="Pricing" />
       <Container>
         <Row>
           <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
-            <span style={{ marginTop: "4rem" }}>
-              <h1>Invest in culture.</h1>
+            <span style={{ marginTop: "2rem" }}>
+              <h1>Invest in teamwork.</h1>
               <p
                 style={{
                   fontSize: "1.4rem",
                   marginBottom: "2rem",
                 }}
               >
-                The soft issues do not rush, but they kill great companies
-                silently. Steadily investing in the way you work together pays
-                dividends individually & collectively.
+                Soft issues don't rush, but they kill great companies silently.
+                Steadily investing in the way you work together pays dividends &
+                compounds.
               </p>
             </span>
           </Col>
@@ -37,102 +41,137 @@ const PricingPage = () => {
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }}>
-          <Col>
+          <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>Crewsby Free: Free forever</h2>
             <p>Everything you need to make change.</p>
           </Col>
-        </Row>
-        <Row>
-          <div
-            className="area-blue"
-            style={{ margin: ".5rem", width: "32rem" }}
-          >
-            <h3>
-              <FaCheck /> All people skills.
-            </h3>
-            <p style={{ marginBottom: "0" }}>
-              Grow personally by completing all our trainings on people skills.
-            </p>
-          </div>
-          <div
-            className="area-blue"
-            style={{ margin: ".5rem", width: "32rem" }}
-          >
-            <h3>
-              <FaCheck /> All teambuilding resources.
-            </h3>
-            <p style={{ marginBottom: "0" }}>
-              Grow together as a team with all our tutorials & exercises on
-              great teamwork.
-            </p>
-          </div>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> All people skills.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Grow personally by completing all our trainings on people
+                skills.
+              </p>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> All teambuilding resources.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Grow together as a crew with all our tutorials & exercises on
+                great teamwork.
+              </p>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Track your pogress.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Log which tutorials, exercises & trainings you have completed.
+              </p>
+            </div>
+          </Col>
+          <Col lg={12} style={{ marginTop: "2rem" }}>
+            <Link
+              className="btn btn-lg btn-primary"
+              to="/"
+              style={{ marginRight: "1rem", marginBottom: "1rem" }}
+              onClick={event => {
+                event.preventDefault()
+                loginWithPopup({ action: "signup" })
+              }}
+            >
+              Signup for free
+            </Link>
+            <Link
+              className="btn btn-lg btn-outline-primary"
+              to="/teambuilding"
+              style={{ marginBottom: "1rem" }}
+            >
+              Start without signup
+            </Link>
+          </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }}>
-          <Col>
+          <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>
               Crewsby Business: $99/month flat <small>coming soon!</small>
             </h2>
-            <p>Everything you need to change continuously & at scale.</p>
+            <p>Everything you need to change continously & at scale.</p>
           </Col>
-        </Row>
-        <Row>
-          <div
-            className="area-blue"
-            style={{ margin: ".5rem", width: "32rem" }}
-          >
-            <h3>
-              <FaCheck /> Unlock the learning zone.
-            </h3>
-            <p style={{ marginBottom: "0" }}>
-              Get access to specific training programs & peer supervision for
-              leaders & managers.
-            </p>
-          </div>
-          <div
-            className="area-blue"
-            style={{ margin: ".5rem", width: "32rem" }}
-          >
-            <h3>
-              <FaCheck /> Unlock the crewbuilder.
-            </h3>
-            <p style={{ marginBottom: "0" }}>
-              Get access to crew-specific recommendations for teambuilding &
-              individal development.
-            </p>
-          </div>
-          <div
-            className="area-blue"
-            style={{ margin: ".5rem", width: "32rem" }}
-          >
-            <h3>
-              <FaCheck /> Celebrate learning on the job.
-            </h3>
-            <p style={{ marginBottom: "0" }}>
-              Show your crew that you appreciate & support their efforts to
-              improve w/ Crewsby.
-            </p>
-          </div>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Unlock the learning zone.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Get access to training programs w/ peer support to develop
+                lasting skills & new connections.
+              </p>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Unlock the crewbuilder.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Get access to recommendations & combos specific to your crew.
+                Join crewmates into a single team.
+              </p>
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Celebrate learning on the job.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Show your crew that you appreciate & support their efforts to
+                improve w/ Crewsby.
+              </p>
+            </div>
+          </Col>
+          <Col lg={12} style={{ marginTop: "2rem" }}>
+            <Waitlist />
+          </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }}>
           <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>Free yourself of ineffective E-Learning!</h2>
+            <p>
+              It's your choice which type of culture you favor. We don't judge
+              ;)
+            </p>
           </Col>
           <Col lg className="area-white">
-            <h3>
+            <h3 style={{ fontSize: "1.8rem" }}>
               <Emoji symbol="🍏" label="appel" />
               <br></br>Crewsby
             </h3>
             <p>
-              Tutorials & exercises<br></br>→ Learning by doing
+              Tutorials & exercises
+              <br></br>→ Learn by doing
+              <br></br>→ Increase in self-efficiancy
+              <br></br>→ Fuel for change
             </p>
           </Col>
           <Col lg className="area-white">
-            <h3>
+            <h3 style={{ fontSize: "1.8rem" }}>
               <Emoji symbol="🍿" label="popcorn" />
               <br></br> Edutainment
             </h3>
             <p>
-              Advice & video lectures<br></br>→ Fake competence
+              Advice & video lectures
+              <br></br>→ Fake competence
+              <br></br>→ Increase in complacency
+              <br></br>→ Fuel for stagnation
             </p>
           </Col>
         </Row>
@@ -142,17 +181,20 @@ const PricingPage = () => {
               <Emoji symbol="❓" label="question" /> Common questions
             </h2>
             {FAQData.content.map(hinweis => (
-              <div style={{ marginTop: "3rem" }} key={hinweis.id}>
+              <div
+                style={{ marginTop: "2rem", maxWidth: "750px" }}
+                key={hinweis.id}
+              >
                 <h3>{hinweis.q}</h3>
                 <p>{hinweis.a}</p>
               </div>
             ))}
-            <h3 style={{ marginTop: "3rem" }}>
+            <h3 style={{ marginTop: "2rem" }}>
               What if I have more questions?
             </h3>
             <p>
               We'd be happy to answer them! Just send us an email at{" "}
-              <a href="mailto:hello@crewsby.com">hello@crewsby.com.</a>
+              <a href="mailto:support@crewsby.com">support@crewsby.com.</a>
             </p>
           </Col>
         </Row>
