@@ -51,11 +51,16 @@ const AboutUsPage = ({ data }) => {
             </h2>
             <p>
               Culture creates a place to belong. Everybody deserves this
-              connection at work. We believe that change can only come from the
-              crew itself. Learning to fish is so much more fun than just
-              getting a fish. It is our mission to provide actionable resources
-              for you to change gracefully. We scout the web for amazing ideas
-              and best practices from which we design tutorials & exercises.
+              connection at work.
+            </p>
+            <p>
+              We believe that change can only come from the crew itself.
+              Learning to fish is so much more fun than just getting a fish.
+            </p>
+            <p>
+              It is our mission to provide actionable resources for you to
+              change gracefully. We scout the web for amazing ideas and best
+              practices from which we design tutorials & exercises.
             </p>
           </Col>
         </Row>
@@ -156,7 +161,8 @@ const AboutUsPage = ({ data }) => {
             </div>
             <h3>Open source</h3>
             <p>
-              Our tutorials & exercises are free. Share them, if you like.
+              Our tutorials, exercises & trainings are free. Share them, if you
+              like.
               <br></br>
               <a
                 href="https://github.com/NicolasMegow/crewsby"
@@ -185,8 +191,8 @@ const AboutUsPage = ({ data }) => {
             </div>
             <h3>Elegance</h3>
             <p>
-              We strive for simple & refined experiences. Tell us how to get
-              better:{" "}
+              Our goal is to offer simple & refined resources. Tell us how to
+              get better:{" "}
               <a href="mailto:feedback@crewsby.com">feedback@crewsby.com</a>
             </p>
           </Col>
@@ -204,14 +210,13 @@ const AboutUsPage = ({ data }) => {
                 Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel
                 • Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni
                 • Vittorio Loreto • Fredrick G. Pferdt • Max De Pree • Edgar
-                Schein • F. Schulz von Thun • Kim Scott • J.J. Sutherland • Karl
-                Weick • Tom Wujec
+                Schein • F. Schulz von Thun • Kim Scott • Simon Sinek • J.J.
+                Sutherland • Karl Weick • Tom Wujec
               </strong>
             </p>
             <p>
-              <small>
-                We're working on a better way to express our thanks!
-              </small>
+              We are currently working on a better way to express our
+              appreciation!
             </p>
           </Col>
         </Row>

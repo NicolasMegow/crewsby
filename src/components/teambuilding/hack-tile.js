@@ -3,35 +3,48 @@ import { Link } from "gatsby"
 
 import { css } from "@emotion/core"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Emoji from "../shared/emoji"
 
 const HackTile = ({ edge }) => {
   const { slug } = edge.node.fields
-  const { hack, type, job, time, crewsize } = edge.node.frontmatter
+  const { hack, type, category, job, time, crewsize } = edge.node.frontmatter
 
   return (
     <Link
       to={slug}
       css={css`
-        width: 32rem;
+        width: 22rem;
         color: #151515;
         border-radius: 6px;
         padding: 1rem;
-        margin: 1rem;
+        margin: 0.5rem;
         display: block;
+        border: 1px solid #151515;
         text-decoration: none;
-        background: #ebebeb;
         & :hover {
-          background: #d9e6fc;
-          color: #151515;
+          border-color: #4285f4;
+          color: #4285f4;
         }
       `}
     >
       <h3>{hack}</h3>
       <p style={{ marginBottom: 0 }}>{job}</p>
       <p style={{ marginBottom: 0 }}>
-        {type} • {crewsize}{" "}
-        <FontAwesomeIcon icon={["fas", "users"]} fixedWidth /> • {time}{" "}
-        <FontAwesomeIcon icon={["fas", "hourglass-half"]} />
+        {category === "Workflow" ? (
+          <Emoji symbol="💪" label="muscle" />
+        ) : (
+          <Emoji symbol="❤️" label="heart" />
+        )}{" "}
+        {type}
+        {"  "}
+        <br></br>
+        {crewsize}{" "}
+        <FontAwesomeIcon
+          icon={["fas", "users"]}
+          style={{ marginRight: "1rem" }}
+        />
+        {"  "}
+        {time} <FontAwesomeIcon icon={["fas", "hourglass-half"]} />
       </p>
     </Link>
   )

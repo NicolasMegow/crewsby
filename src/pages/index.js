@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
+import Emoji from "../components/shared/emoji"
 import { FaCheck } from "../components/shared/fa-icons"
 import MakeChange from "../img/svg/MakeChange.svg"
 import Helix from "../img/svg/Helix.svg"
@@ -27,7 +28,7 @@ const IndexPage = () => {
               }}
             >
               You are the source of change. Crewsby is your power-up. <br></br>
-              Use our tutorials, exercises & trainings to grow personally or
+              Use our tutorials, exercises & trainings to grow personally and
               improve together as a team.
             </p>
             <Link
@@ -58,7 +59,7 @@ const IndexPage = () => {
               </p>
             </span>
           </Col>
-          <Col lg>
+          <Col lg style={{ padding: "0 2rem" }}>
             <div className="area-blue">
               <p style={{ marginBottom: "0" }}>
                 <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
@@ -102,9 +103,9 @@ const IndexPage = () => {
               justifyContent: "center",
             }}
           >
-            <p>Teambuilding</p>
-            <Helix width="8rem" height="8rem" />
             <p>People skills</p>
+            <Helix width="8rem" height="8rem" />
+            <p>Teambuilding</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }} id="training on the job">
@@ -127,9 +128,13 @@ const IndexPage = () => {
             }}
           >
             <span style={{ textAlign: "center" }}>
-              <p style={{ marginBottom: "0" }}>Workflow</p>
+              <p style={{ marginBottom: "0" }}>
+                <Emoji symbol="💪" label="muscle" /> Workflow
+              </p>
               <TeamPlusWork height="10rem" />
-              <p>Relationships</p>
+              <p>
+                <Emoji symbol="❤️" label="heart" /> Relationships
+              </p>
             </span>
           </Col>
         </Row>

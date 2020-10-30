@@ -7,27 +7,13 @@ import SEO from "../components/shared/seo"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Emoji from "../components/shared/emoji"
+import { shortcodes } from "./shortcodes"
+
 import { Hint1, Hint2 } from "../components/teambuilding/hint"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import FeedbackWidget from "../components/teambuilding/feedback-widget"
-import MarkAsDone from "../components/teambuilding/mark-as-done"
 import SharingButtons from "../components/ctas/sharing-buttons"
-
-const shortcodes = {
-  Emoji,
-  Link,
-  FontAwesomeIcon,
-  h2: props => <h2 {...props} style={{ marginTop: "4rem" }} />,
-  td: props => (
-    <td {...props} style={{ border: "1px solid #151515", padding: ".4rem" }} />
-  ),
-  th: props => <th {...props} style={{ padding: ".4rem", color: "#4285f4" }} />,
-  table: props => (
-    <table {...props} style={{ marginTop: ".5rem", marginBottom: "2rem" }} />
-  ),
-}
+import MarkAsDone from "../components/teambuilding/mark-as-done"
+import FeedbackWidget from "../components/teambuilding/feedback-widget"
 
 export const query = graphql`
   query($slug: String!) {
@@ -48,29 +34,35 @@ export const query = graphql`
   }
 `
 
-const HackTemplate = ({ data, location }) => {
+const ExerciseTemplate = ({ data, location }) => {
   const { slug } = data.mdx.fields
-  const { hack, type, job, time, crewsize } = data.mdx.frontmatter
+  const { hack, type, job } = data.mdx.frontmatter
   const url = location.href ? location.href : ""
 
   return (
     <Layout>
       <SEO title={hack} description={job} pathname={`/culture-hacks/${slug}`} />
-      <Container>
+      <Container
+        style={{
+          maxWidth: "800px",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
         <Row style={{ marginTop: "4rem" }}>
           <Col>
-            <Link to="../">⟵ Back</Link>
-            <h1>{hack}</h1>
-            <p style={{ marginBottom: 0 }}>
-              {type} • {crewsize}{" "}
-              <FontAwesomeIcon icon={["fas", "users"]} fixedWidth /> • {time}{" "}
-              <FontAwesomeIcon icon={["fas", "hourglass-half"]} fixedWidth /> •{" "}
-              {job}
+            <Link to="../" style={{ marginLeft: ".3rem" }}>
+              ⟵ Back
+            </Link>
+            <p style={{ margin: "1rem 0rem 0rem .3rem", fontWeight: "500" }}>
+              {type}:
             </p>
+            <h1 style={{ marginTop: 0, lineHeight: 1 }}>{hack}</h1>
+            <p style={{ marginBottom: 0, fontSize: "1.4rem" }}>{job}</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-          <Col style={{ maxWidth: "750px" }}>
+          <Col>
             <Hint1 />
             <MDXProvider components={shortcodes}>
               <MDXRenderer>{data.mdx.body}</MDXRenderer>
@@ -90,4 +82,4 @@ const HackTemplate = ({ data, location }) => {
   )
 }
 
-export default HackTemplate
+export default ExerciseTemplate

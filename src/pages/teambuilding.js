@@ -7,6 +7,8 @@ import SEO from "../components/shared/seo"
 import Teamboat from "../img/svg/EinBoot.svg"
 
 import FilteredList from "../components/teambuilding/filtered-list"
+import { FaCheck } from "../components/shared/fa-icons"
+import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
 import HackTile from "../components/teambuilding/hack-tile"
 import SignupCTA from "../components/ctas/signup-cta"
@@ -39,7 +41,7 @@ const HacksPage = ({ data }) => {
       <SEO title="Teambuilding" />
       <Container>
         <Row>
-          <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
+          <Col lg={6} style={{ display: "flex", alignItems: "flex-end" }}>
             <span style={{ marginTop: "4rem" }}>
               <h1>Grow together.</h1>
               <p
@@ -53,12 +55,39 @@ const HacksPage = ({ data }) => {
               </p>
             </span>
           </Col>
-          <Col lg>
+          <Col lg={6}>
             <Teamboat width="100%" />
+          </Col>
+          <Col lg={6} style={{ marginTop: "2rem" }}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Spice up your team meeting.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Pick & choose what you like for your next meeting or
+                retrospective.
+              </p>
+            </div>
+          </Col>
+          <Col lg={6} style={{ marginTop: "2rem" }}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Make your own combos.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Combine tutorials & exercises for a unique teambuilding
+                workshop.
+              </p>
+            </div>
+          </Col>
+          <Col lg={12}>
+            <UpgradeReminder variant="teambuilding" />
           </Col>
         </Row>
         {/*<FilteredList data={data} />*/}
-        <Row style={{ marginTop: "4rem" }}>
+        <Row
+          style={{ marginTop: "4rem", marginLeft: "auto", marginRight: "auto" }}
+        >
           {data.allMdx.edges.map((hack, i) => {
             return <HackTile key={i} edge={hack} />
           })}

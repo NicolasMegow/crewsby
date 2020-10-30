@@ -60,6 +60,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: "pages",
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/img`,
       },
@@ -76,7 +83,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 900,
+              maxWidth: 750,
               linkImagesToOriginal: false,
             },
           },
@@ -94,7 +101,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svg/, // See below to configure properly
+          include: /svg/,
         },
       },
     },

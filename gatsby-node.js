@@ -22,6 +22,9 @@ module.exports.createPages = async function ({ actions, graphql }) {
               slug
               contentType
             }
+            frontmatter {
+              type
+            }
           }
         }
       }
@@ -29,19 +32,17 @@ module.exports.createPages = async function ({ actions, graphql }) {
   `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
       const { slug, contentType } = edge.node.fields
-      if (contentType == "methods") {
-        null
-        /*        actions.createPage({
-          path: `/methods/${slug}`,
-          component: require.resolve(`./src/templates/method-template.js`),
-          context: { slug, contentType },
-        })*/
+      const { type } = edge.node.frontmatter
+      if (type === "Exercise") {
+        actions.createPage({
+          path: `/teambuilding/${slug}/`,
+          component: require.resolve(`./src/templates/exercise-template.js`),
+          context: { slug },
+        })
       } else {
         actions.createPage({
           path: `/teambuilding/${slug}/`,
-          component: require.resolve(
-            `./src/templates/teambuilding-template.js`
-          ),
+          component: require.resolve(`./src/templates/tutorial-template.js`),
           context: { slug },
         })
       }

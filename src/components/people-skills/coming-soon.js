@@ -21,13 +21,15 @@ class ComingSoon extends React.Component {
                 <h3>
                   <Emoji symbol={goal.symbol} label={goal.label} /> {goal.name}{" "}
                 </h3>
-                <p>
-                  <ul>
-                    {goal.tuts.map((tut, id) => {
-                      return <li key={id}>{tut}</li>
-                    })}
-                  </ul>
-                </p>
+                <ul>
+                  {goal.tuts.map((tut, id) => {
+                    return (
+                      <li key={id}>
+                        <p style={{ marginBottom: "0" }}>{tut}</p>
+                      </li>
+                    )
+                  })}
+                </ul>
               </Col>
             )
           })}
