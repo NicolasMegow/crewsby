@@ -41,7 +41,7 @@ const ExerciseTemplate = ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title={hack} description={job} pathname={`/culture-hacks/${slug}`} />
+      <SEO title={hack} description={job} pathname={`/teambuilding/${slug}`} />
       <Container
         style={{
           maxWidth: "800px",

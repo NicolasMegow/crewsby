@@ -35,12 +35,12 @@ export const query = graphql`
 
 const TutorialTemplate = ({ data, location }) => {
   const { slug } = data.mdx.fields
-  const { hack, type, job, time, crewsize } = data.mdx.frontmatter
+  const { hack, type, job } = data.mdx.frontmatter
   const url = location.href ? location.href : ""
 
   return (
     <Layout>
-      <SEO title={hack} description={job} pathname={`/culture-hacks/${slug}`} />
+      <SEO title={hack} description={job} pathname={`/teambuilding/${slug}`} />
       <Container
         style={{
           maxWidth: "800px",

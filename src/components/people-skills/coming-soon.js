@@ -22,10 +22,10 @@ class ComingSoon extends React.Component {
                   <Emoji symbol={goal.symbol} label={goal.label} /> {goal.name}{" "}
                 </h3>
                 <ul>
-                  {goal.tuts.map((tut, id) => {
+                  {goal.skills.map((skill, id) => {
                     return (
                       <li key={id}>
-                        <p style={{ marginBottom: "0" }}>{tut}</p>
+                        <p style={{ marginBottom: "0" }}>{skill}</p>
                       </li>
                     )
                   })}

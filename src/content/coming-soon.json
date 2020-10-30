@@ -3,18 +3,19 @@
     "name": "Relationships",
     "symbol": "❤️",
     "label": "heart",
-    "tuts": [
+    "skills": [
       "Communicate appreciation",
       "Align expectations",
       "Build trust",
-      "Resolve conflict"
+      "Resolve conflict",
+      "Say no"
     ]
   },
   {
     "name": "Workflow",
     "symbol": "💪",
     "label": "muscle",
-    "tuts": [
+    "skills": [
       "Reduce waste",
       "Maintain flow",
       "Facilitate groups",
