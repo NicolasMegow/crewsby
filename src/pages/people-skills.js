@@ -8,10 +8,31 @@ import { FaCheck } from "../components/shared/fa-icons"
 import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
 import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
+import SkillTile from "../components/people-skills/skill-tile"
 import ComingSoon from "../components/people-skills/coming-soon"
 import SignupCTA from "../components/ctas/signup-cta"
 
-const SupportPage = () => {
+export const query = graphql`
+  query {
+    allMdx(filter: { fields: { contentType: { eq: "peopleskills" } } }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            skill
+            category
+            method
+            sources
+          }
+        }
+      }
+    }
+  }
+`
+
+const SupportPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="People skills" />
@@ -53,6 +74,13 @@ const SupportPage = () => {
             <UpgradeReminder variant="peopleskills" />
           </Col>
         </Row>
+        {/*<Row
+          style={{ marginTop: "4rem", marginLeft: "auto", marginRight: "auto" }}
+        >
+          {data.allMdx.edges.map((hack, i) => {
+            return <SkillTile key={i} edge={hack} />
+          })}
+        </Row>*/}
         <ComingSoon />
         <SignupCTA />
       </Container>

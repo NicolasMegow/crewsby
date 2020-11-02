@@ -15,7 +15,7 @@ var styles = {
   },
 }
 
-const FeedbackWidget = ({ hack }) => {
+const FeedbackWidget = ({ resource }) => {
   const [rating, setRating] = useState(null)
   const [hover, setHover] = useState(null)
   const [feedback, setFeedback] = useState("")
@@ -36,7 +36,11 @@ const FeedbackWidget = ({ hack }) => {
     const client = new faunadb.Client({ secret: fauna_secret })
     await client.query(
       q.Create(q.Collection("feedback"), {
-        data: { hack: hack, rating: ratingValue, feedback: feedbackText },
+        data: {
+          resource: resource,
+          rating: ratingValue,
+          feedback: feedbackText,
+        },
       })
     )
   }
@@ -51,7 +55,7 @@ const FeedbackWidget = ({ hack }) => {
         marginTop: "2rem",
       }}
     >
-      <p style={{ fontSize: "1.4rem" }}>How do you like {hack}?</p>
+      <p style={{ fontSize: "1.4rem" }}>How do you like {resource}?</p>
       <div
         style={{
           display: "flex",

@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Row, Col } from "react-bootstrap"
 
 import FilterBox from "./filter-box"
-import HackTile from "./hack-tile"
+import TeamTile from "./team-tile"
 
 export default class FilteredList extends Component {
   state = {
@@ -47,7 +47,7 @@ export default class FilteredList extends Component {
         </Row>
         <Row style={{ marginTop: "4rem" }}>
           {data.allMdx.edges.map((hack, i) => {
-            return <HackTile key={i} edge={hack} />
+            return <TeamTile key={i} edge={hack} />
           })}
         </Row>
       </>

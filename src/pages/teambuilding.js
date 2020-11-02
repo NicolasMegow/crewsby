@@ -10,7 +10,7 @@ import FilteredList from "../components/teambuilding/filtered-list"
 import { FaCheck } from "../components/shared/fa-icons"
 import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
-import HackTile from "../components/teambuilding/hack-tile"
+import TeamTile from "../components/teambuilding/team-tile"
 import SignupCTA from "../components/ctas/signup-cta"
 
 export const query = graphql`
@@ -84,7 +84,7 @@ const HacksPage = ({ data }) => {
           style={{ marginTop: "4rem", marginLeft: "auto", marginRight: "auto" }}
         >
           {data.allMdx.edges.map((hack, i) => {
-            return <HackTile key={i} edge={hack} />
+            return <TeamTile key={i} edge={hack} />
           })}
         </Row>
         <SignupCTA />

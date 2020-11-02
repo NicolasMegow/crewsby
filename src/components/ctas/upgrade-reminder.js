@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Emoji from "../shared/emoji"
-
 const UpgradeReminder = ({ variant }) => {
   const vText = {
     teambuilding: "get customized recommendations & combos",

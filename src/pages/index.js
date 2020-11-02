@@ -16,7 +16,7 @@ import SignupCTA from "../components/ctas/signup-cta"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Self-made team development" />
       <Container>
         <Row id="intro">
           <Col lg={12}>

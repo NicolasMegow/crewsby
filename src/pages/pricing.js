@@ -49,8 +49,8 @@ const PricingPage = () => {
                 <FaCheck /> All people skills.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Grow personally by completing all our combos of tutorials &
-                exercises on people skills.
+                Grow personally by training with our combos of tutorials &
+                exercises on workflows & relationships.
               </p>
             </div>
           </Col>
@@ -60,8 +60,8 @@ const PricingPage = () => {
                 <FaCheck /> All teambuilding resources.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Grow together as a crew with all our tutorials & exercises on
-                great teamwork.
+                Grow together as a crew with our tutorials & exercises on great
+                teamwork.
               </p>
             </div>
           </Col>

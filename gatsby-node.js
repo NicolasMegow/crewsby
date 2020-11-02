@@ -31,7 +31,7 @@ module.exports.createPages = async function ({ actions, graphql }) {
     }
   `).then(res => {
     res.data.allMdx.edges.forEach(edge => {
-      const { slug, contentType } = edge.node.fields
+      const { slug } = edge.node.fields
       const { type } = edge.node.frontmatter
       if (type === "Exercise") {
         actions.createPage({
@@ -39,10 +39,16 @@ module.exports.createPages = async function ({ actions, graphql }) {
           component: require.resolve(`./src/templates/exercise-template.js`),
           context: { slug },
         })
-      } else {
+      } else if (type === "Tutorial") {
         actions.createPage({
           path: `/teambuilding/${slug}/`,
           component: require.resolve(`./src/templates/tutorial-template.js`),
+          context: { slug },
+        })
+      } else {
+        actions.createPage({
+          path: `/people-skills/${slug}/`,
+          component: require.resolve(`./src/templates/skill-template.js`),
           context: { slug },
         })
       }

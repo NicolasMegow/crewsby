@@ -152,10 +152,17 @@ hr {
   max-width: 750px;
   margin-top: 2rem;
 }
+
 .area-white {
   margin: 0.5rem;
   padding: 1rem;
   border-radius: 6px;
-  border: 1px solid #151515;
+  border: 1px solid $maincolor;
   max-width: 750px;
+}
+
+.bordered-blue {
+  border: 2px solid $primary;
+  border-radius: 6px;
+  padding: 1rem;
 }

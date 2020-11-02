@@ -74,7 +74,7 @@ const ExerciseTemplate = ({ data, location }) => {
           <Col style={{ maxWidth: "750px" }}>
             <SharingButtons link={url} message={`${hack}`} />
             <MarkAsDone hackName={hack} hackType={type} />
-            <FeedbackWidget hack={hack} />
+            <FeedbackWidget resource={hack} />
           </Col>
         </Row>
       </Container>

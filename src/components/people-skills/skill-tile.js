@@ -2,12 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { css } from "@emotion/core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Emoji from "../shared/emoji"
 
-const HackTile = ({ edge }) => {
+const SkillTile = ({ edge }) => {
   const { slug } = edge.node.fields
-  const { hack, type, category, job, time, crewsize } = edge.node.frontmatter
+  const { skill, category, method, sources } = edge.node.frontmatter
 
   return (
     <Link
@@ -27,27 +26,19 @@ const HackTile = ({ edge }) => {
         }
       `}
     >
-      <h3>{hack}</h3>
-      <p style={{ marginBottom: 0 }}>{job}</p>
+      <h3>{skill}</h3>
       <p style={{ marginBottom: 0 }}>
-        {category === "Workflow" ? (
+        {category === "workflows" ? (
           <Emoji symbol="💪" label="muscle" />
         ) : (
           <Emoji symbol="❤️" label="heart" />
         )}{" "}
-        {type}
-        {"  "}
+        {method}
         <br></br>
-        {crewsize}{" "}
-        <FontAwesomeIcon
-          icon={["fas", "users"]}
-          style={{ marginRight: "1rem" }}
-        />
-        {"  "}
-        {time} <FontAwesomeIcon icon={["fas", "hourglass-half"]} />
+        <small>{sources.join(" • ")}</small>
       </p>
     </Link>
   )
 }
 
-export default HackTile
+export default SkillTile

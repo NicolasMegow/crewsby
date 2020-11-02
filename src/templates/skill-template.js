@@ -7,11 +7,9 @@ import SEO from "../components/shared/seo"
 
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
 import { shortcodes } from "./shortcodes"
 
 import SharingButtons from "../components/ctas/sharing-buttons"
-import MarkAsDone from "../components/teambuilding/mark-as-done"
 import FeedbackWidget from "../components/teambuilding/feedback-widget"
 
 export const query = graphql`
@@ -22,9 +20,9 @@ export const query = graphql`
         slug
       }
       frontmatter {
-        hack
-        type
-        job
+        skill
+        category
+        method
         crewsize
         time
       }
@@ -33,14 +31,18 @@ export const query = graphql`
   }
 `
 
-const TutorialTemplate = ({ data, location }) => {
+const SkillTemplate = ({ data, location }) => {
   const { slug } = data.mdx.fields
-  const { hack, type, job } = data.mdx.frontmatter
+  const { skill, category, method } = data.mdx.frontmatter
   const url = location.href ? location.href : ""
 
   return (
     <Layout>
-      <SEO title={hack} description={job} pathname={`/teambuilding/${slug}`} />
+      <SEO
+        title={skill}
+        description={method}
+        pathname={`/people-skills/${slug}`}
+      />
       <Container
         style={{
           maxWidth: "800px",
@@ -53,11 +55,10 @@ const TutorialTemplate = ({ data, location }) => {
             <Link to="../" style={{ marginLeft: ".3rem" }}>
               ⟵ Back
             </Link>
-            <p style={{ margin: "1rem 0rem 0rem .3rem", fontWeight: "500" }}>
-              {type}:
+            <h1 style={{ marginTop: 0, lineHeight: 1 }}>{skill}</h1>
+            <p className="subtitle">
+              Improve {category} with {method}.
             </p>
-            <h1 style={{ marginTop: 0, lineHeight: 1 }}>{hack}</h1>
-            <p className="subtitle">{job}</p>
           </Col>
         </Row>
         <Row style={{ marginTop: "1rem", marginBottom: "2rem" }}>
@@ -69,9 +70,8 @@ const TutorialTemplate = ({ data, location }) => {
         </Row>
         <Row>
           <Col style={{ maxWidth: "750px" }}>
-            <SharingButtons link={url} message={`${hack}`} />
-            <MarkAsDone hackName={hack} hackType={type} />
-            <FeedbackWidget resource={hack} />
+            <SharingButtons link={url} message={`${skill}`} />
+            <FeedbackWidget resource={skill} />
           </Col>
         </Row>
       </Container>
@@ -79,4 +79,4 @@ const TutorialTemplate = ({ data, location }) => {
   )
 }
 
-export default TutorialTemplate
+export default SkillTemplate
