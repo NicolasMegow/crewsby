@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
-import Logo from "../../static/crewsby_logo-512x512.png"
+import Teambuilding from "../img/svg/Teambuilding.svg"
 
 export const query = graphql`
   query {
@@ -34,14 +34,20 @@ const AboutUsPage = ({ data }) => {
     <Layout>
       <SEO title="About us" />
       <Container>
-        <Row style={{ marginTop: "4rem" }}>
-          <Col>
-            <img src={Logo} alt="Logo" style={{ maxWidth: "12rem" }} />
-            <h1>Crewsby - Change by the crew.</h1>
-            <p style={{ fontSize: "1.4rem", marginBottom: "2rem" }}>
-              Great companies are made by their crews. Just like John Gatz
-              created the great Gatsby.
-            </p>
+        <Row>
+          <Col lg={6} style={{ display: "flex", alignItems: "flex-end" }}>
+            <span>
+              <h1>
+                Teamwork<br></br>by the crew.
+              </h1>
+              <p className="subtitle">
+                Great teams are made by their crews.<br></br>Just like John Gatz
+                created the great Gatsby.
+              </p>
+            </span>
+          </Col>
+          <Col lg={6}>
+            <Teambuilding width="100%" />
           </Col>
         </Row>
         <Row style={{ marginTop: "4rem" }}>
@@ -150,6 +156,7 @@ const AboutUsPage = ({ data }) => {
         <Row style={{ marginTop: "4rem" }}>
           <Col>
             <h2>Crewsby redefines change.</h2>
+            <p className="subtitle">And this is how we do it:</p>
           </Col>
         </Row>
         <Row>
@@ -199,10 +206,10 @@ const AboutUsPage = ({ data }) => {
         </Row>
         <Row style={{ marginTop: "4rem" }}>
           <Col>
-            <h2>Crewsby stands on the shoulders of giants.</h2>
-            <p>
-              We merely add to what smarter people have discovered. Here are the
-              giants that inspire us:
+            <h2>Crewsby curates & designs.</h2>
+            <p className="subtitle">
+              We merely add to the genius of smarter people. Here are the giants
+              on whose shoulders we stand:
             </p>
             <p>
               <strong>

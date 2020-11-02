@@ -1,16 +1,19 @@
 content:
   - id: "1"
+    q: Does it really work without a coach or trainer?
+    a: Yes. All our tutorials & exercises are completely self-explanatory and work right out of the box. We've gone to great length to test & vet each resource we provide.
+  - id: "2"
     q: Do you offer discounts?
     a: Yes. When you pay for a year up front, you get a 15% discount.
-  - id: "2"
-    q: Do we pay extra for more people?
-    a: No. Unlike most e-learning providers, we don't charge you based on how many people learn with us. 5 learners or 50, the price is the same. This adds up to significant savings as your company grows.
   - id: "3"
-    q: Can we cancel at any time?
-    a: Yes. There's no minimum contract for Crewsby Business — cancel at any time without penalty or hassle. If you prepaid for a year, we’ll refund any unused months.
+    q: Do we pay extra for more people?
+    a: No. Unlike most e-learning providers, we don't charge you based on how many people learn with us. 12 learners or 50, the price is the same. This adds up to significant savings as your company grows.
   - id: "4"
+    q: Can we cancel at any time?
+    a: Yes. There's no minimum contract for Crewsby Teams & Business — cancel at any time without penalty or hassle. If you prepaid for a year, we’ll refund any unused months.
+  - id: "5"
     q: Is Crewsby only for teams?
     a: No. Crewsby offers tutorials & exercises for teams and trainings in people skills for individuals. We believe that you need both to create a great company.
-  - id: "5"
-    q: Does it really work without a coach or trainer?
-    a: Yes. Everything is completely self-explanatory and works right out of the box.
+  - id: "6"
+    q: What is the difference between Crewsby Teams & Crewsby Business?
+    a: Crewsby Teams is for individual teams with crews of up to 8 people. If your team is larger than 8 people, we recommend you split up. If you have multiple teams, please upgrade to Crewsby Business.

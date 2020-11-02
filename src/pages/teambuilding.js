@@ -44,12 +44,7 @@ const HacksPage = ({ data }) => {
           <Col lg={6} style={{ display: "flex", alignItems: "flex-end" }}>
             <span style={{ marginTop: "4rem" }}>
               <h1>Grow together.</h1>
-              <p
-                style={{
-                  fontSize: "1.4rem",
-                  marginBottom: "2rem",
-                }}
-              >
+              <p className="subtitle">
                 You are on the job & in the same boat. Use our tutorials &
                 exercises to make the best out of yourselves.
               </p>

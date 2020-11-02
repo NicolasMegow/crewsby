@@ -5,12 +5,12 @@ import Emoji from "../shared/emoji"
 
 const UpgradeReminder = ({ variant }) => {
   const vText = {
-    teambuilding: "get customized recommendations",
+    teambuilding: "get customized recommendations & combos",
     peopleskills: "access dedicated peer support",
   }
   return (
     <Link to="../pricing">
-      → Upgrade to {vText[variant]} with Crewsby Business for $99/month flat.
+      → Upgrade to {vText[variant]} with Crewsby Teams for $49/month flat.
     </Link>
   )
 }

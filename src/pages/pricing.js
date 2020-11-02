@@ -24,13 +24,8 @@ const PricingPage = () => {
           <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
             <span style={{ marginTop: "2rem" }}>
               <h1>Invest in teamwork.</h1>
-              <p
-                style={{
-                  fontSize: "1.4rem",
-                  marginBottom: "2rem",
-                }}
-              >
-                Soft issues don't rush, but they kill great companies silently.
+              <p className="subtitle">
+                Soft issues don't rush, but they kill great teams silently.
                 Steadily investing in the way you work together pays dividends &
                 compounds.
               </p>
@@ -43,7 +38,10 @@ const PricingPage = () => {
         <Row style={{ marginTop: "6rem" }}>
           <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>Crewsby Free: Free forever</h2>
-            <p>Everything you need to make change.</p>
+            <p className="subtitle">
+              Access all tutorials & exercises without login. Create a free
+              account to log & track your progress.
+            </p>
           </Col>
           <Col lg={6}>
             <div className="area-blue">
@@ -51,8 +49,8 @@ const PricingPage = () => {
                 <FaCheck /> All people skills.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Grow personally by completing all our trainings on people
-                skills.
+                Grow personally by completing all our combos of tutorials &
+                exercises on people skills.
               </p>
             </div>
           </Col>
@@ -64,16 +62,6 @@ const PricingPage = () => {
               <p style={{ marginBottom: "0" }}>
                 Grow together as a crew with all our tutorials & exercises on
                 great teamwork.
-              </p>
-            </div>
-          </Col>
-          <Col lg={6}>
-            <div className="area-blue">
-              <h3>
-                <FaCheck /> Track your pogress.
-              </h3>
-              <p style={{ marginBottom: "0" }}>
-                Log which tutorials, exercises & trainings you have completed.
               </p>
             </div>
           </Col>
@@ -101,9 +89,9 @@ const PricingPage = () => {
         <Row style={{ marginTop: "6rem" }}>
           <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>
-              Crewsby Business: $99/month flat <small>coming soon!</small>
+              Crewsby Teams: $49/month flat <small>coming soon!</small>
             </h2>
-            <p>Everything you need to change continously & at scale.</p>
+            <p className="subtitle">Everything in Crewsby Free plus:</p>
           </Col>
           <Col lg={6}>
             <div className="area-blue">
@@ -127,6 +115,19 @@ const PricingPage = () => {
               </p>
             </div>
           </Col>
+          <Col lg={12} style={{ marginTop: "2rem" }}>
+            <Waitlist />
+          </Col>
+        </Row>
+        <Row style={{ marginTop: "6rem" }}>
+          <Col lg={12} style={{ marginBottom: "2rem" }}>
+            <h2>
+              Crewsby Business: $99/month flat <small>coming soon!</small>
+            </h2>
+            <p className="subtitle">
+              Everything in Crewsby Teams at scale for the whole company.
+            </p>
+          </Col>{" "}
           <Col lg={6}>
             <div className="area-blue">
               <h3>
@@ -138,6 +139,17 @@ const PricingPage = () => {
               </p>
             </div>
           </Col>
+          <Col lg={6}>
+            <div className="area-blue">
+              <h3>
+                <FaCheck /> Visualize learning on the job.
+              </h3>
+              <p style={{ marginBottom: "0" }}>
+                Get access to a dashboard of all the teams learning with Crewsby
+                & their progress.
+              </p>
+            </div>
+          </Col>
           <Col lg={12} style={{ marginTop: "2rem" }}>
             <Waitlist />
           </Col>
@@ -145,7 +157,7 @@ const PricingPage = () => {
         <Row style={{ marginTop: "6rem" }}>
           <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>Free yourself of ineffective E-Learning!</h2>
-            <p>
+            <p className="subtitle">
               It's your choice which type of culture you favor. We don't judge
               ;)
             </p>

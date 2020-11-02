@@ -15,7 +15,21 @@ export const FaCheck = () => {
   )
 }
 
-export const FaTimes = () => {
+export const FaSuccess = () => {
+  return (
+    <>
+      <FontAwesomeIcon
+        icon={["fas", "check"]}
+        fixedWidth
+        color="#4285F4"
+        size="2x"
+        style={{ margin: ".5rem" }}
+      />
+    </>
+  )
+}
+
+export const FaError = () => {
   return (
     <>
       <FontAwesomeIcon

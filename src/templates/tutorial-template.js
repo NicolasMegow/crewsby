@@ -57,10 +57,10 @@ const TutorialTemplate = ({ data, location }) => {
               {type}:
             </p>
             <h1 style={{ marginTop: 0, lineHeight: 1 }}>{hack}</h1>
-            <p style={{ marginBottom: 0, fontSize: "1.4rem" }}>{job}</p>
+            <p className="subtitle">{job}</p>
           </Col>
         </Row>
-        <Row style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+        <Row style={{ marginTop: "1rem", marginBottom: "2rem" }}>
           <Col>
             <MDXProvider components={shortcodes}>
               <MDXRenderer>{data.mdx.body}</MDXRenderer>

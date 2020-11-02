@@ -25,16 +25,6 @@ const Footer = () => {
             <SocialIcons />
             <Nav>
               <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/about-us">
-                  About us
-                </Link>
-              </Nav.Item>
-              {/*<Nav.Item>
-                <Link className={footerStyles.linkItem} to="/faq">
-                  FAQ
-                </Link>
-              </Nav.Item>*/}
-              <Nav.Item>
                 <Link className={footerStyles.linkItem} to="/imprint">
                   Imprint
                 </Link>

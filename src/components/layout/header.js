@@ -44,6 +44,11 @@ const Header = () => {
                   Pricing
                 </Link>
               </Nav.Item>
+              <Nav.Item>
+                <Link className={headerStyles.navItem} to="/about-us">
+                  About us
+                </Link>
+              </Nav.Item>
             </Nav>
             <hr style={{ marginTop: "1rem", marginBottom: "1rem" }}></hr>
             <Nav className="ml-auto">
