@@ -11,6 +11,7 @@ const Hint = ({ line1, icon1, line2, icon2 }) => {
         padding: "1rem",
         color: "#4285f4",
         fontWeight: "500",
+        maxWidth: "750px",
       }}
     >
       <p>

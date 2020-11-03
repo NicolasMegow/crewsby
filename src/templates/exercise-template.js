@@ -44,7 +44,7 @@ const ExerciseTemplate = ({ data, location }) => {
       <SEO title={hack} description={job} pathname={`/teambuilding/${slug}`} />
       <Container
         style={{
-          maxWidth: "800px",
+          maxWidth: "750px",
           marginLeft: "auto",
           marginRight: "auto",
         }}

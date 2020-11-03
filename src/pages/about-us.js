@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
-import Teambuilding from "../img/svg/Teambuilding.svg"
+import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
 
 export const query = graphql`
   query {
@@ -47,7 +47,7 @@ const AboutUsPage = ({ data }) => {
             </span>
           </Col>
           <Col lg={6}>
-            <Teambuilding width="100%" />
+            <Zusammenhalt width="100%" height="18rem" />
           </Col>
         </Row>
         <Row style={{ marginTop: "4rem" }}>

@@ -21,10 +21,10 @@ const IndexPage = () => {
         <Row id="intro">
           <Col lg={12}>
             <MakeChange width="100%" />
-            <h1>Develop as a team.</h1>
+            <h1>Improve teamwork.</h1>
             <p className="subtitle">
-              Crewsby offers actionable resources for self-service team
-              development. <br></br>
+              Crewsby offers actionable resources for self-service leadership &
+              team development. <br></br>
               Use our free tutorials & exercises to grow personally and upgrade
               the way you work together.
             </p>
@@ -32,7 +32,7 @@ const IndexPage = () => {
           <Col lg={4}>
             <p style={{ marginBottom: "0" }}>
               <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
-                <FaCheck /> Improve teamwork
+                <FaCheck /> Optimize workflow
               </span>
             </p>
           </Col>
@@ -56,7 +56,8 @@ const IndexPage = () => {
           <Col lg={12} style={{ marginBottom: "1rem" }}>
             <h2>Grow personally & together.</h2>
             <p className="subtitle">
-              Great teamwork rests on two pillars. Strengthen both with Crewsby.
+              Great teamwork rests on two pillars. Strengthen either or both
+              with Crewsby.
             </p>
           </Col>
           <Col lg className="area-white">
@@ -181,8 +182,8 @@ const IndexPage = () => {
               </div>
               <h3>Boost Team + Work.</h3>
               <p>
-                Build a unique workflow & create strong personal relationships
-                under the surface.
+                Create unique workflows & build strong relationships under the
+                surface.
               </p>
             </span>
           </Col>

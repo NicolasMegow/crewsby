@@ -7,7 +7,7 @@ import { FaCheck } from "../components/shared/fa-icons"
 
 import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
-import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
+import GrowPersonally from "../img/svg/Growpersonally.svg"
 import SkillTile from "../components/people-skills/skill-tile"
 import ComingSoon from "../components/people-skills/coming-soon"
 import SignupCTA from "../components/ctas/signup-cta"
@@ -48,7 +48,7 @@ const SupportPage = ({ data }) => {
             </span>
           </Col>
           <Col lg={6}>
-            <Zusammenhalt width="100%" height="18rem" />
+            <GrowPersonally width="100%" height="18rem" />
           </Col>
           <Col lg={6} style={{ marginTop: "2rem" }}>
             <div className="area-blue">
@@ -66,7 +66,7 @@ const SupportPage = ({ data }) => {
                 <FaCheck /> Make learning a habit.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Schedule weekly sessions to constantly refine your skills.
+                Set yourself weekly goals to constantly refine your skills.
               </p>
             </div>
           </Col>
