@@ -32,7 +32,7 @@ const IndexPage = () => {
           <Col lg={4}>
             <p style={{ marginBottom: "0" }}>
               <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
-                <FaCheck /> Optimize workflow
+                <FaCheck /> Optimize workflows
               </span>
             </p>
           </Col>
@@ -63,8 +63,8 @@ const IndexPage = () => {
           <Col lg className="area-white">
             <h3>People skills</h3>
             <p>
-              Combos of tutorials & exercises for deliberate practice in
-              improving workflows & relationships.
+              Combos of 12 exercises for deliberate practice in improving
+              workflows & relationships.
             </p>
             <Link
               className="btn btn-lg btn-primary"
@@ -85,17 +85,17 @@ const IndexPage = () => {
             <Helix width="8rem" height="8rem" />
           </Col>
           <Col lg className="area-white">
-            <h3>Teambuilding</h3>
+            <h3>Team building</h3>
             <p>
               Tutorials & exercises that provide new ways of working together as
               a team.
             </p>
             <Link
               className="btn btn-lg btn-primary"
-              to="/teambuilding"
+              to="/team-building"
               style={{ marginBottom: "1rem" }}
             >
-              Start teambuilding
+              Start team building
             </Link>
           </Col>
         </Row>

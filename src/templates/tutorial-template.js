@@ -11,8 +11,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { shortcodes } from "./shortcodes"
 
 import SharingButtons from "../components/ctas/sharing-buttons"
-import MarkAsDone from "../components/teambuilding/mark-as-done"
-import FeedbackWidget from "../components/teambuilding/feedback-widget"
+import FeedbackWidget from "../components/shared/feedback-widget"
 
 export const query = graphql`
   query($slug: String!) {
@@ -68,9 +67,8 @@ const TutorialTemplate = ({ data, location }) => {
           </Col>
         </Row>
         <Row>
-          <Col style={{ maxWidth: "750px" }}>
+          <Col>
             <SharingButtons link={url} message={`${hack}`} />
-            <MarkAsDone hackName={hack} hackType={type} />
             <FeedbackWidget resource={hack} />
           </Col>
         </Row>

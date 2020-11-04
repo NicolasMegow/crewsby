@@ -129,7 +129,7 @@ const FeedbackWidget = ({ resource }) => {
             btnRef.current.setAttribute("disabled", "disabled")
         }}
       >
-        Send Feedback
+        Send feedback
       </Button>
     </div>
   )

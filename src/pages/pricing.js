@@ -57,7 +57,7 @@ const PricingPage = () => {
           <Col lg={6}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> All teambuilding resources.
+                <FaCheck /> All team building resources.
               </h3>
               <p style={{ marginBottom: "0" }}>
                 Grow together as a crew with our tutorials & exercises on great
@@ -79,7 +79,7 @@ const PricingPage = () => {
             </Link>
             <Link
               className="btn btn-lg btn-outline-primary"
-              to="/teambuilding"
+              to="/team-building"
               style={{ marginBottom: "1rem" }}
             >
               Start without signup
@@ -170,7 +170,7 @@ const PricingPage = () => {
             <p>
               Tutorials & exercises
               <br></br>→ Learn by doing
-              <br></br>→ Increase in self-efficiancy
+              <br></br>→ Increase in self-efficacy
               <br></br>→ Fuel for change
             </p>
           </Col>

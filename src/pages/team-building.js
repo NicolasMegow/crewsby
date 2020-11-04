@@ -70,7 +70,7 @@ const HacksPage = ({ data }) => {
                 <FaCheck /> Make your own combos.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Combine tutorials & exercises for a unique teambuilding
+                Combine tutorials & exercises for a unique team building
                 workshop.
               </p>
             </div>

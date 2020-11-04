@@ -92,7 +92,7 @@ const AboutUsPage = ({ data }) => {
             <p style={{ marginBottom: "0" }}>
               <strong>Lilian Izsak</strong>
               <br></br>Lili is a happiness engineer <br></br>with a sixth sense
-              for inclusion.
+              for details.
               <br></br>
               <a
                 href="https://www.linkedin.com/in/lilian-izsak/"

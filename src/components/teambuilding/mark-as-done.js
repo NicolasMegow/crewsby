@@ -63,8 +63,8 @@ const MarkAsDone = ({ hackName, hackType }) => {
               className="btn btn-lg"
               ref={btnRef}
               onClick={() => {
-                updateUserProfile(hackInfo) &&
-                  btnRef.current.setAttribute("disabled", "disabled")
+                updateUserProfile(hackInfo)
+                btnRef.current.setAttribute("disabled", "disabled")
               }}
             >
               <FontAwesomeIcon icon={["fas", "check-circle"]} fixedWidth />{" "}

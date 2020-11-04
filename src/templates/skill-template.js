@@ -9,8 +9,10 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { shortcodes } from "./shortcodes"
 
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+
 import SharingButtons from "../components/ctas/sharing-buttons"
-import FeedbackWidget from "../components/teambuilding/feedback-widget"
+import FeedbackWidget from "../components/shared/feedback-widget"
 
 export const query = graphql`
   query($slug: String!) {
@@ -32,6 +34,7 @@ export const query = graphql`
 `
 
 const SkillTemplate = ({ data, location }) => {
+  const { loginWithPopup, isAuthenticated, loading, user } = useAuth0()
   const { slug } = data.mdx.fields
   const { skill, category, method } = data.mdx.frontmatter
   const url = location.href ? location.href : ""
@@ -59,17 +62,38 @@ const SkillTemplate = ({ data, location }) => {
             <p className="subtitle">
               Improve {category} with {method}.
             </p>
+            <p>
+              Completed: 0/12{" "}
+              {!loading && !isAuthenticated ? (
+                <Link
+                  to="/"
+                  style={{ marginRight: "0" }}
+                  onClick={event => {
+                    event.preventDefault()
+                    loginWithPopup()
+                  }}
+                >
+                  → Log in to save your progress
+                </Link>
+              ) : null}
+            </p>
           </Col>
         </Row>
         <Row style={{ marginTop: "1rem", marginBottom: "2rem" }}>
           <Col>
             <MDXProvider components={shortcodes}>
-              <MDXRenderer>{data.mdx.body}</MDXRenderer>
+              <MDXRenderer
+                frontmatter={data.mdx.frontmatter}
+                user={user}
+                skillLog={3}
+              >
+                {data.mdx.body}
+              </MDXRenderer>
             </MDXProvider>
           </Col>
         </Row>
         <Row>
-          <Col style={{ maxWidth: "750px" }}>
+          <Col>
             <SharingButtons link={url} message={`${skill}`} />
             <FeedbackWidget resource={skill} />
           </Col>

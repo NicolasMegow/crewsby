@@ -2,26 +2,22 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
-import Layout from "../../components/layout/layout"
-import SEO from "../../components/shared/seo"
-import Emoji from "../../components/shared/emoji"
+import Layout from "../components/layout/layout"
+import SEO from "../components/shared/seo"
+import Emoji from "../components/shared/emoji"
 
-import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
-import Loading from "../../components/shared/loading"
+import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
+import Loading from "../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
-import ReturnOnLearning from "../img/svg/ReturnOnLearning.svg"
-import LZInfo from "../../components/learning-zone/lz-info"
+import LearningObjective from "../components/learning-zone/learning-objective"
+import SelfReview from "../components/learning-zone/self-review"
+import AddHack from "../components/learning-zone/add-hack"
+import TrackRecord from "../components/learning-zone/track-record"
 
-import LearningObjective from "../../components/learning-zone/learning-objective"
-import SelfReview from "../../components/learning-zone/self-review"
-import AddHack from "../../components/learning-zone/add-hack"
-import TrackRecord from "../../components/learning-zone/track-record"
-
-{
-  /*export const query = graphql`
+export const query = graphql`
   query {
-    allMdx(filter: { fields: { contentType: { eq: "hacks" } } }) {
+    allMdx(filter: { fields: { contentType: { eq: "peopleskills" } } }) {
       edges {
         node {
           frontmatter {
@@ -32,8 +28,7 @@ import TrackRecord from "../../components/learning-zone/track-record"
       }
     }
   }
-`*/
-}
+`
 
 const LearningZone = ({ data }) => {
   const { isAuthenticated, loading, user } = useAuth0()
@@ -71,26 +66,15 @@ const LearningZone = ({ data }) => {
         <Row>
           <Col lg style={{ display: "flex", alignItems: "flex-end" }}>
             <span style={{ marginTop: "4rem" }}>
-              <p className="title-emoji">
-                <Emoji symbol="🍋" label="bittersweet" />
-              </p>
               <h1>Learning zone</h1>
-              <p
-                style={{
-                  fontSize: "1.4rem",
-                  marginBottom: "2rem",
-                }}
-              >
+              <p className="subtitle">
                 Change is a rollercoaster. Take a moment to pause and observe
                 the trend beneath your ups and downs.
               </p>
             </span>
           </Col>
-          <Col lg>
-            <ReturnOnLearning width="100%" height="300" />
-          </Col>
-        </Row>
-        <LZInfo />
+          <Col lg></Col>
+        </Row>{" "}
         <Row style={{ marginTop: "4rem" }}>
           <Col lg>
             <h2>Quick start</h2>
@@ -125,7 +109,7 @@ const LearningZone = ({ data }) => {
               }}
             >
               <strong>Access to your learning zone is free.</strong>
-              <br></br>We might switch to a freemium setup later.
+              <br></br>We might switch to a Freemium setup later.
             </p>
           </Col>
           <Col lg>

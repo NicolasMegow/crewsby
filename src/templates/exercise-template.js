@@ -13,7 +13,7 @@ import { Hint1, Hint2 } from "../components/teambuilding/hint"
 
 import SharingButtons from "../components/ctas/sharing-buttons"
 import MarkAsDone from "../components/teambuilding/mark-as-done"
-import FeedbackWidget from "../components/teambuilding/feedback-widget"
+import FeedbackWidget from "../components/shared/feedback-widget"
 
 export const query = graphql`
   query($slug: String!) {
@@ -44,7 +44,7 @@ const ExerciseTemplate = ({ data, location }) => {
       <SEO title={hack} description={job} pathname={`/teambuilding/${slug}`} />
       <Container
         style={{
-          maxWidth: "750px",
+          maxWidth: "800px",
           marginLeft: "auto",
           marginRight: "auto",
         }}
@@ -71,7 +71,7 @@ const ExerciseTemplate = ({ data, location }) => {
           </Col>
         </Row>
         <Row>
-          <Col style={{ maxWidth: "750px" }}>
+          <Col>
             <SharingButtons link={url} message={`${hack}`} />
             <MarkAsDone hackName={hack} hackType={type} />
             <FeedbackWidget resource={hack} />

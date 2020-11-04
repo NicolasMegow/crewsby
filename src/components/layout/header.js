@@ -35,8 +35,8 @@ const Header = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item>
-                <Link className={headerStyles.navItem} to="/teambuilding">
-                  Teambuilding
+                <Link className={headerStyles.navItem} to="/team-building">
+                  Team building
                 </Link>
               </Nav.Item>
               <Nav.Item>

@@ -35,13 +35,13 @@ module.exports.createPages = async function ({ actions, graphql }) {
       const { type } = edge.node.frontmatter
       if (type === "Exercise") {
         actions.createPage({
-          path: `/teambuilding/${slug}/`,
+          path: `/team-building/${slug}/`,
           component: require.resolve(`./src/templates/exercise-template.js`),
           context: { slug },
         })
       } else if (type === "Tutorial") {
         actions.createPage({
-          path: `/teambuilding/${slug}/`,
+          path: `/team-building/${slug}/`,
           component: require.resolve(`./src/templates/tutorial-template.js`),
           context: { slug },
         })

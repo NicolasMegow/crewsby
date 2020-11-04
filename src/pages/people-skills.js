@@ -74,13 +74,13 @@ const SupportPage = ({ data }) => {
             <UpgradeReminder variant="peopleskills" />
           </Col>
         </Row>
-        {/*<Row
+        <Row
           style={{ marginTop: "4rem", marginLeft: "auto", marginRight: "auto" }}
         >
           {data.allMdx.edges.map((hack, i) => {
             return <SkillTile key={i} edge={hack} />
           })}
-        </Row>*/}
+        </Row>
         <ComingSoon />
         <SignupCTA />
       </Container>
