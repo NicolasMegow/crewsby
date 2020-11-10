@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/shared/loading"

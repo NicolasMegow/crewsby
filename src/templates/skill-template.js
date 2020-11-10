@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
@@ -11,8 +11,11 @@ import { shortcodes } from "./shortcodes"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
+import JourneyNav from "../components/people-skills/journey-nav"
 import SharingButtons from "../components/ctas/sharing-buttons"
 import FeedbackWidget from "../components/shared/feedback-widget"
+
+import "katex/dist/katex.min.css"
 
 export const query = graphql`
   query($slug: String!) {
@@ -34,7 +37,8 @@ export const query = graphql`
 `
 
 const SkillTemplate = ({ data, location }) => {
-  const { loginWithPopup, isAuthenticated, loading, user } = useAuth0()
+  const [skillLog, setLog] = useState([])
+  const { user } = useAuth0()
   const { slug } = data.mdx.fields
   const { skill, category, method } = data.mdx.frontmatter
   const url = location.href ? location.href : ""
@@ -63,19 +67,7 @@ const SkillTemplate = ({ data, location }) => {
               Improve {category} with {method}.
             </p>
             <p>
-              Completed: 0/12{" "}
-              {!loading && !isAuthenticated ? (
-                <Link
-                  to="/"
-                  style={{ marginRight: "0" }}
-                  onClick={event => {
-                    event.preventDefault()
-                    loginWithPopup()
-                  }}
-                >
-                  → Log in to save your progress
-                </Link>
-              ) : null}
+              Completed: 0/12 <JourneyNav />
             </p>
           </Col>
         </Row>
@@ -85,7 +77,7 @@ const SkillTemplate = ({ data, location }) => {
               <MDXRenderer
                 frontmatter={data.mdx.frontmatter}
                 user={user}
-                skillLog={3}
+                skillLog={skillLog}
               >
                 {data.mdx.body}
               </MDXRenderer>

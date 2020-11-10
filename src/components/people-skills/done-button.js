@@ -25,7 +25,7 @@ const DoneButton = ({ skill, done, exNum }) => {
           mask={["fas", "circle"]}
           transform="shrink-8"
         />{" "}
-        I completed this exercise with 3 colleagues.
+        I completed this exercise.
       </Button>{" "}
       {!click ? null : "Saved!"}
     </p>
