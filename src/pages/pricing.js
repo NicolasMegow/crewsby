@@ -89,17 +89,20 @@ const PricingPage = () => {
         <Row style={{ marginTop: "6rem" }}>
           <Col lg={12} style={{ marginBottom: "2rem" }}>
             <h2>
-              Crewsby Teams: $49/month flat <small>coming soon!</small>
+              Crewsby Business: $99/month flat <small>coming soon!</small>
             </h2>
-            <p className="subtitle">Everything in Crewsby Free plus:</p>
-          </Col>
+            <p className="subtitle">
+              Unleash teamwork at scale for the whole company.<br></br>
+              Everything in Crewsby Free, plus:
+            </p>
+          </Col>{" "}
           <Col lg={6}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> Unlock the learning zone.
+                <FaCheck /> Unlock learning circles.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Get access to training programs w/ peer support to develop
+                Get access to learning circles w/ peer support to develop
                 lasting skills & new connections.
               </p>
             </div>
@@ -115,19 +118,6 @@ const PricingPage = () => {
               </p>
             </div>
           </Col>
-          <Col lg={12} style={{ marginTop: "2rem" }}>
-            <Waitlist />
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "6rem" }}>
-          <Col lg={12} style={{ marginBottom: "2rem" }}>
-            <h2>
-              Crewsby Business: $99/month flat <small>coming soon!</small>
-            </h2>
-            <p className="subtitle">
-              Everything in Crewsby Teams at scale for the whole company.
-            </p>
-          </Col>{" "}
           <Col lg={6}>
             <div className="area-blue">
               <h3>

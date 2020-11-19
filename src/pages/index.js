@@ -7,7 +7,8 @@ import SEO from "../components/shared/seo"
 
 import Emoji from "../components/shared/emoji"
 import { FaCheck, FaError, FaSuccess } from "../components/shared/fa-icons"
-import MakeChange from "../img/svg/MakeChange.svg"
+
+import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
 import Helix from "../img/svg/Helix.svg"
 import Leverage from "../img/svg/Leverage.svg"
 import TeamPlusWork from "../img/svg/Teampluswork.svg"
@@ -20,8 +21,8 @@ const IndexPage = () => {
       <Container>
         <Row id="intro">
           <Col lg={12}>
-            <MakeChange width="100%" />
-            <h1>Improve teamwork.</h1>
+            <Zusammenhalt width="100%" height="18rem" />
+            <h1>Improve your teamwork.</h1>
             <p className="subtitle">
               Crewsby offers actionable resources for self-service leadership &
               team development. <br></br>

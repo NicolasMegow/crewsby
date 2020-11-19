@@ -13,7 +13,7 @@ const SharingButton = ({ link, message }) => {
       }}
     >
       <p style={{ marginBottom: "0", fontSize: "1.4rem" }}>
-        Share {message} with the world →
+        Share <strong>{message}</strong> with the world →
       </p>
       <a
         href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(

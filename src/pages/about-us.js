@@ -8,18 +8,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
-import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
+import MakeChange from "../img/svg/MakeChange.svg"
 
 export const query = graphql`
   query {
-    imageLili: file(relativePath: { eq: "LI_square.jpg" }) {
+    imageLili: file(relativePath: { eq: "crew/LI_square.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, maxHeight: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    imageNici: file(relativePath: { eq: "NM_square.jpg" }) {
+    imageNici: file(relativePath: { eq: "crew/NM_square.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600, maxHeight: 600) {
           ...GatsbyImageSharpFluid
@@ -47,7 +47,7 @@ const AboutUsPage = ({ data }) => {
             </span>
           </Col>
           <Col lg={6}>
-            <Zusammenhalt width="100%" height="18rem" />
+            <MakeChange width="100%" />
           </Col>
         </Row>
         <Row style={{ marginTop: "4rem" }}>

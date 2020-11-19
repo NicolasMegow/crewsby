@@ -55,7 +55,9 @@ const FeedbackWidget = ({ resource }) => {
         marginTop: "2rem",
       }}
     >
-      <p style={{ fontSize: "1.4rem" }}>How do you like {resource}?</p>
+      <p style={{ fontSize: "1.4rem" }}>
+        How do you like <strong>{resource}</strong>?
+      </p>
       <div
         style={{
           display: "flex",
