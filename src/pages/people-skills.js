@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
-import { FaCheck } from "../components/shared/fa-icons"
+import { FaMask } from "../components/shared/fa-icons"
 
 import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
@@ -54,7 +54,7 @@ const SupportPage = ({ data }) => {
           <Col lg={6} style={{ marginTop: "2rem" }}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> Learn whenever you like.
+                <FaMask icon="mobile-alt" /> Learn whenever you like.
               </h3>
               <p style={{ marginBottom: "0" }}>
                 All you need is your smartphone, a pen & some paper.
@@ -64,7 +64,7 @@ const SupportPage = ({ data }) => {
           <Col lg={6} style={{ marginTop: "2rem" }}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> Make learning a habit.
+                <FaMask icon="calendar-star" /> Make learning a habit.
               </h3>
               <p style={{ marginBottom: "0" }}>
                 Set yourself weekly goals to constantly refine your skills.
@@ -72,7 +72,7 @@ const SupportPage = ({ data }) => {
             </div>
           </Col>
           <Col lg={12}>
-            <UpgradeReminder variant="peopleskills" />
+            <UpgradeReminder />
           </Col>
         </Row>
         <Row

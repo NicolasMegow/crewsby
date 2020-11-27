@@ -28,11 +28,18 @@ export const Hint1 = () => {
   return (
     <>
       <Hint
-        line1="Please read the exercise aloud."
-        icon1={["fas", "bullhorn"]}
-        line2="Clarify all questions before you start."
-        icon2={["fas", "question"]}
+        line1="Assign a facilitator & a timekeeper."
+        icon1={["fas", "stopwatch"]}
+        line2="Please read the exercise aloud."
+        icon2={["fas", "bullhorn"]}
       />
+      <a
+        href="../team-building/how-to-run-an-exercise"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        → more tricks & tips for great exercises.
+      </a>
     </>
   )
 }

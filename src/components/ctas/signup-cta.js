@@ -36,12 +36,12 @@ const SignupCTA = () => {
       <Row style={{ marginTop: "6rem" }}>
         <Col>
           <h2>
-            <Emoji symbol="👋" label="welcome" /> Stay up to date on new
-            resources!
+            <Emoji symbol="👋" label="welcome" /> Get the latest on great
+            teamwork!
           </h2>
           <p>
-            We'll send you the occasional heads-up when we've added new
-            tutorials or exercises to our collection.
+            We'll send you the occasional e-mail when we've added new tutorials
+            & exercises.
           </p>
         </Col>
       </Row>

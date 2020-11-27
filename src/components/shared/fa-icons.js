@@ -51,13 +51,13 @@ export const FaPlus = () => {
   )
 }
 
-export const FaMask = ({ icon, size }) => {
+export const FaMask = ({ icon }) => {
   return (
     <>
       <FontAwesomeIcon
         icon={["fas", icon]}
-        mask={["fas", "square"]}
-        size={size}
+        mask={["fas", "circle"]}
+        size="lg"
         transform="shrink-8"
         color="#4285F4"
       />

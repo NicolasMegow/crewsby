@@ -9,7 +9,6 @@ import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 import Loading from "../components/shared/loading"
 import faunadb, { query as q } from "faunadb"
 
-import LearningObjective from "../components/learning-zone/learning-objective"
 import SelfReview from "../components/learning-zone/self-review"
 import AddHack from "../components/learning-zone/add-hack"
 import TrackRecord from "../components/learning-zone/track-record"
@@ -112,12 +111,6 @@ const LearningZone = ({ data }) => {
             </p>
           </Col>
           <Col lg>
-            <LearningObjective
-              learnObj={profile.learnObj}
-              isAuth={isAuthenticated}
-              user={user}
-              update={setActions}
-            />
             <SelfReview
               behavior={["times", "shared your appreciation"]}
               isAuth={isAuthenticated}

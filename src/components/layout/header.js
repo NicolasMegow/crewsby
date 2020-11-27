@@ -4,8 +4,6 @@ import { Container, Navbar, Nav } from "react-bootstrap"
 
 import headerStyles from "../../styles/header.module.scss"
 
-import { useAuth0 } from "../../../plugins/gatsby-plugin-auth0"
-
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -16,7 +14,6 @@ const Header = () => {
       }
     }
   `)
-  const { isAuthenticated, logout, loginWithPopup } = useAuth0()
   return (
     <header>
       <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
@@ -28,7 +25,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-site" />
           <Navbar.Collapse id="basic-navbar-site">
-            <Nav>
+            <Nav className="ml-auto">
               <Nav.Item>
                 <Link className={headerStyles.navItem} to="/people-skills">
                   People skills
@@ -49,55 +46,6 @@ const Header = () => {
                   About us
                 </Link>
               </Nav.Item>
-            </Nav>
-            <hr style={{ marginTop: "1rem", marginBottom: "1rem" }}></hr>
-            <Nav className="ml-auto">
-              {isAuthenticated ? (
-                <>
-                  <Nav.Item>
-                    <Link
-                      to="/"
-                      className="btn btn-outline-primary"
-                      style={{ marginRight: "0" }}
-                      onClick={event => {
-                        event.preventDefault()
-                        logout()
-                      }}
-                    >
-                      Log out
-                    </Link>
-                  </Nav.Item>
-                </>
-              ) : (
-                <>
-                  <Nav.Item>
-                    <Link
-                      to="/"
-                      className="btn btn-outline-primary"
-                      style={{ marginRight: ".5rem" }}
-                      onClick={event => {
-                        event.preventDefault()
-                        loginWithPopup({ action: "signup" })
-                      }}
-                    >
-                      Sign up
-                    </Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Link
-                      to="/"
-                      className="btn btn-primary"
-                      style={{ marginRight: "0" }}
-                      onClick={event => {
-                        event.preventDefault()
-                        loginWithPopup()
-                      }}
-                    >
-                      Log in
-                    </Link>
-                  </Nav.Item>
-                </>
-              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -6,7 +6,12 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/shared/seo"
 
 import Emoji from "../components/shared/emoji"
-import { FaCheck, FaError, FaSuccess } from "../components/shared/fa-icons"
+import {
+  FaCheck,
+  FaMask,
+  FaError,
+  FaSuccess,
+} from "../components/shared/fa-icons"
 
 import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
 import Helix from "../img/svg/Helix.svg"
@@ -61,19 +66,23 @@ const IndexPage = () => {
               with Crewsby.
             </p>
           </Col>
-          <Col lg className="area-white">
-            <h3>People skills</h3>
-            <p>
-              Combos of 12 exercises for deliberate practice in improving
-              workflows & relationships.
-            </p>
-            <Link
-              className="btn btn-lg btn-primary"
-              to="/people-skills"
-              style={{ marginRight: "1rem", marginBottom: "1rem" }}
-            >
-              Discover your people skills
-            </Link>
+          <Col lg>
+            <div className="area-blue">
+              <h3>
+                <FaMask icon="user" /> People skills
+              </h3>
+              <p>
+                Combos of 12 exercises for deliberate practice in improving
+                workflows & relationships.
+              </p>
+              <Link
+                className="btn btn-lg btn-primary"
+                to="/people-skills"
+                style={{ marginRight: "1rem", marginBottom: "1rem" }}
+              >
+                Discover your people skills
+              </Link>
+            </div>
           </Col>
           <Col
             lg={2}
@@ -85,19 +94,23 @@ const IndexPage = () => {
           >
             <Helix width="8rem" height="8rem" />
           </Col>
-          <Col lg className="area-white">
-            <h3>Team building</h3>
-            <p>
-              Tutorials & exercises that provide new ways of working together as
-              a team.
-            </p>
-            <Link
-              className="btn btn-lg btn-primary"
-              to="/team-building"
-              style={{ marginBottom: "1rem" }}
-            >
-              Start team building
-            </Link>
+          <Col lg>
+            <div className="area-blue">
+              <h3>
+                <FaMask icon="users" /> Team building
+              </h3>
+              <p>
+                Tutorials & exercises that provide new ways of working together
+                as a team.
+              </p>
+              <Link
+                className="btn btn-lg btn-primary"
+                to="/team-building"
+                style={{ marginBottom: "1rem" }}
+              >
+                Start team building
+              </Link>
+            </div>
           </Col>
         </Row>
         <Row style={{ marginTop: "6rem" }} id="skills">
@@ -105,7 +118,7 @@ const IndexPage = () => {
             <h2>Improve on the job.</h2>
             <p className="subtitle">
               All our tutorials & exercises are free, remote-ready and work
-              without a trainer.
+              perfectly without a trainer.
             </p>
           </Col>
           <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>

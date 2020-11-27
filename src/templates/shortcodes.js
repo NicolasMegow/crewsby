@@ -2,14 +2,12 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 
 import Emoji from "../components/shared/emoji"
-import DoneButton from "../components/people-skills/done-button"
 import Video from "../components/shared/video"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const shortcodes = {
   Emoji,
   FontAwesomeIcon,
-  DoneButton,
   Video,
   a: Link,
   h2: props => <h2 {...props} style={{ marginTop: "4rem" }} />,

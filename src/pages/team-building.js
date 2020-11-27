@@ -7,7 +7,7 @@ import SEO from "../components/shared/seo"
 import Teamboat from "../img/svg/EinBoot.svg"
 
 import FilteredList from "../components/teambuilding/filtered-list"
-import { FaCheck } from "../components/shared/fa-icons"
+import { FaMask } from "../components/shared/fa-icons"
 import UpgradeReminder from "../components/ctas/upgrade-reminder"
 
 import TeamTile from "../components/teambuilding/team-tile"
@@ -56,7 +56,7 @@ const HacksPage = ({ data }) => {
           <Col lg={6} style={{ marginTop: "2rem" }}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> Spice up your team meeting.
+                <FaMask icon="pepper-hot" /> Spice up your team meetings.
               </h3>
               <p style={{ marginBottom: "0" }}>
                 Pick & choose what you like for your next meeting or
@@ -67,16 +67,16 @@ const HacksPage = ({ data }) => {
           <Col lg={6} style={{ marginTop: "2rem" }}>
             <div className="area-blue">
               <h3>
-                <FaCheck /> Make your own combos.
+                <FaMask icon="map-signs" /> Chart your own path.
               </h3>
               <p style={{ marginBottom: "0" }}>
-                Combine tutorials & exercises for a unique team building
-                workshop.
+                Combine tutorials & exercises for your unique team building
+                journey.
               </p>
             </div>
           </Col>
           <Col lg={12}>
-            <UpgradeReminder variant="teambuilding" />
+            <UpgradeReminder />
           </Col>
         </Row>
         {/*<FilteredList data={data} />*/}

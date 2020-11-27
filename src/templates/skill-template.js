@@ -11,7 +11,6 @@ import { shortcodes } from "./shortcodes"
 
 import { useAuth0 } from "../../plugins/gatsby-plugin-auth0"
 
-import JourneyNav from "../components/people-skills/journey-nav"
 import SharingButtons from "../components/ctas/sharing-buttons"
 import FeedbackWidget from "../components/shared/feedback-widget"
 
@@ -65,9 +64,6 @@ const SkillTemplate = ({ data, location }) => {
             <h1 style={{ marginTop: 0, lineHeight: 1 }}>{skill}</h1>
             <p className="subtitle">
               Improve {category} with {method}.
-            </p>
-            <p>
-              Completed: 0/12 <JourneyNav />
             </p>
           </Col>
         </Row>

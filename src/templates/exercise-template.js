@@ -12,7 +12,6 @@ import { shortcodes } from "./shortcodes"
 import { Hint1, Hint2 } from "../components/teambuilding/hint"
 
 import SharingButtons from "../components/ctas/sharing-buttons"
-import MarkAsDone from "../components/teambuilding/mark-as-done"
 import FeedbackWidget from "../components/shared/feedback-widget"
 
 export const query = graphql`
@@ -73,7 +72,6 @@ const ExerciseTemplate = ({ data, location }) => {
         <Row>
           <Col>
             <SharingButtons link={url} message={`${hack}`} />
-            <MarkAsDone hackName={hack} hackType={type} />
             <FeedbackWidget resource={hack} />
           </Col>
         </Row>
