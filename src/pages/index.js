@@ -24,7 +24,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Self-made team development" />
       <Container>
-        <Row id="intro">
+        <Row id="testing intro">
           <Col lg={12}>
             <Zusammenhalt width="100%" height="18rem" />
             <h1>Improve your teamwork.</h1>
