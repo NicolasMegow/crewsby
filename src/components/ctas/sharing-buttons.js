@@ -1,18 +1,19 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx, Flex } from "theme-ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SharingButton = ({ link, message }) => {
   return (
-    <div
-      style={{
-        display: "flex",
+    <Flex
+      sx={{
         alignItems: "center",
-        marginTop: "2rem",
-        marginBottom: "2rem",
-        padding: "1rem",
+        my: 1,
+        p: 3,
+        bg: "accent",
+        borderRadius: "6px",
       }}
     >
-      <p style={{ marginBottom: "0", fontSize: "1.4rem" }}>
+      <p sx={{ mb: 0, fontSize: 1 }}>
         Share <strong>{message}</strong> with the world →
       </p>
       <a
@@ -22,14 +23,8 @@ const SharingButton = ({ link, message }) => {
         target="_blank"
         rel="noreferrer noopener"
         aria-label="LinkedIn"
-        style={{ marginLeft: ".5rem" }}
       >
-        <FontAwesomeIcon
-          icon={["fab", "linkedin"]}
-          size="2x"
-          fixedWidth
-          color="#4285F4"
-        />
+        <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" fixedWidth />
       </a>
       <a
         href={`https://twitter.com/intent/tweet/?text=${encodeURIComponent(
@@ -38,16 +33,14 @@ const SharingButton = ({ link, message }) => {
         target="_blank"
         rel="noreferrer noopener"
         aria-label="Twitter"
-        style={{ marginLeft: ".5rem" }}
       >
         <FontAwesomeIcon
           icon={["fab", "twitter-square"]}
           size="2x"
           fixedWidth
-          color="#4285F4"
         />
       </a>
-    </div>
+    </Flex>
   )
 }
 

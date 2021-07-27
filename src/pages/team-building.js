@@ -1,33 +1,27 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx, Box, Text } from "theme-ui"
 import { graphql } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout/layout"
-import SEO from "../components/shared/seo"
-import Teamboat from "../img/svg/EinBoot.svg"
+import SeoComp from "../components/shared/seo"
 
-import FilteredList from "../components/teambuilding/filtered-list"
-import { FaMask } from "../components/shared/fa-icons"
-import UpgradeReminder from "../components/ctas/upgrade-reminder"
-
-import TeamTile from "../components/teambuilding/team-tile"
-import SignupCTA from "../components/ctas/signup-cta"
+import ExerciseItem from "../components/shared/exercise-item"
+import SubscribeForm from "../components/ctas/subscribe"
 
 export const query = graphql`
   query {
-    allMdx(filter: { fields: { contentType: { eq: "teambuilding" } } }) {
+    allMdx(filter: { fields: { contentType: { eq: "team-building" } } }) {
       edges {
         node {
           fields {
             slug
           }
           frontmatter {
-            hack
-            type
+            title
+            job
             category
             time
-            job
-            crewsize
+            level
           }
         }
       }
@@ -35,62 +29,37 @@ export const query = graphql`
   }
 `
 
-const HacksPage = ({ data }) => {
+function SortAlphabet(x, y) {
+  if (x.node.frontmatter.title < y.node.frontmatter.title) {
+    return -1
+  }
+  if (x.node.frontmatter.title > y.node.frontmatter.title) {
+    return 1
+  }
+  return 0
+}
+
+const TeambuildingPage = ({ data }) => {
+  const sorted = data.allMdx.edges.sort(SortAlphabet)
   return (
     <Layout>
-      <SEO title="Teambuilding" />
-      <Container>
-        <Row>
-          <Col lg={6} style={{ display: "flex", alignItems: "flex-end" }}>
-            <span style={{ marginTop: "4rem" }}>
-              <h1>Grow together.</h1>
-              <p className="subtitle">
-                You are on the job & in the same boat. Use our tutorials &
-                exercises to make the best out of yourselves.
-              </p>
-            </span>
-          </Col>
-          <Col lg={6}>
-            <Teamboat width="100%" />
-          </Col>
-          <Col lg={6} style={{ marginTop: "2rem" }}>
-            <div className="area-blue">
-              <h3>
-                <FaMask icon="pepper-hot" /> Spice up your team meetings.
-              </h3>
-              <p style={{ marginBottom: "0" }}>
-                Pick & choose what you like for your next meeting or
-                retrospective.
-              </p>
-            </div>
-          </Col>
-          <Col lg={6} style={{ marginTop: "2rem" }}>
-            <div className="area-blue">
-              <h3>
-                <FaMask icon="map-signs" /> Chart your own path.
-              </h3>
-              <p style={{ marginBottom: "0" }}>
-                Combine tutorials & exercises for your unique team building
-                journey.
-              </p>
-            </div>
-          </Col>
-          <Col lg={12}>
-            <UpgradeReminder />
-          </Col>
-        </Row>
-        {/*<FilteredList data={data} />*/}
-        <Row
-          style={{ marginTop: "4rem", marginLeft: "auto", marginRight: "auto" }}
-        >
-          {data.allMdx.edges.map((hack, i) => {
-            return <TeamTile key={i} edge={hack} />
+      <SeoComp title="Team building" />
+      <Box sx={{ maxWidth: "56rem" }}>
+        <h1>From strangers to dream team.</h1>
+        <Text variant="subtitle">
+          Team building is continuous work. Pick & choose what you need when you
+          need it. <br></br>All exercises are designed for crews of 4-8 people.
+        </Text>
+        <Box sx={{ mt: 3 }}>
+          <h2> {data.allMdx.edges.length} exercises:</h2>
+          {sorted.map((exercise, i) => {
+            return <ExerciseItem key={i} edge={exercise} />
           })}
-        </Row>
-        <SignupCTA />
-      </Container>
+        </Box>
+      </Box>
+      <SubscribeForm />
     </Layout>
   )
 }
 
-export default HacksPage
+export default TeambuildingPage

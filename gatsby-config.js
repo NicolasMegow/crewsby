@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const remarkSlug = require(`remark-slug`)
 
 module.exports = {
   /* Your site config here */
@@ -25,8 +26,19 @@ module.exports = {
     siteUrl: "htts://crewsby.com",
   },
   plugins: [
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-gdpr-cookies`,
@@ -46,15 +58,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "peopleskills",
-        path: `${__dirname}/src/content/people-skills`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "teambuilding",
-        path: `${__dirname}/src/content/teambuilding`,
+        name: "team-building",
+        path: `${__dirname}/src/content/team-building`,
       },
     },
     {
@@ -71,6 +76,7 @@ module.exports = {
         path: `${__dirname}/src/img`,
       },
     },
+    "gatsby-plugin-theme-ui",
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -78,6 +84,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        remarkPlugins: [remarkSlug],
         gatsbyRemarkPlugins: [
           `gatsby-remark-relative-images`,
           {
@@ -87,14 +94,14 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`,
-            },
-          },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://strategiepark.us12.list-manage.com/subscribe/post?u=6e95932404a064987d62d0666&amp;id=66c5d513d8",
       },
     },
     {
@@ -106,22 +113,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
-    {
-      resolve: "gatsby-plugin-auth0",
-      options: {
-        domain: "dev-82xnrm8r.eu.auth0.com",
-        clientId: "e3FeHnXfDQd1zyL3CCyL2BDlkZbYT8RQ",
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Crewsby`,
         short_name: `Crewsby`,
-        icon: `static/crewsby_logo-512x512.png`,
+        icon: `static/Crewsby_logo_512x512.png`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#4285F4`,

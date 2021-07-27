@@ -1,9 +1,11 @@
+/** @jsx jsx */
+
 import "@fortawesome/fontawesome-svg-core/styles.css"
-import React from "react"
+import { jsx } from "theme-ui"
+
 import Header from "./header"
 import Footer from "./footer"
-import "../../styles/index.scss"
-import layoutStyles from "../../styles/layout.module.scss"
+
 import CookieConsent from "react-cookie-consent"
 import Emoji from "../shared/emoji"
 
@@ -21,23 +23,42 @@ library.add(fab)
 
 const Layout = props => {
   return (
-    <div className={layoutStyles.container}>
+    <div
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        minHeight: "100vh",
+      }}
+    >
       <Header />
-      <CookieConsent
-        location="bottom"
-        buttonText="Ok"
-        enableDeclineButton
-        declineButtonText="Decline"
-        cookieName="gatsby-gdpr-google-analytics"
-        style={{ background: "#151515" }}
-        disableButtonStyles
-        buttonClasses="btn btn-primary m-3 pl-4 pr-4"
-        declineButtonClasses="btn btn-outline-secondary m-3"
+      <main
+        sx={{
+          maxWidth: "1260px",
+          mx: "auto",
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          mt: 4,
+          px: 3,
+        }}
       >
-        <Emoji symbol="🍪" label="cookie" /> We use cookies to improve your
-        experience on this site.
-      </CookieConsent>
-      <div className={layoutStyles.content}>{props.children}</div>
+        <CookieConsent
+          location="bottom"
+          buttonText="Ok"
+          enableDeclineButton
+          declineButtonText="Decline"
+          cookieName="gatsby-gdpr-google-analytics"
+          style={{ background: "#151515" }}
+          disableButtonStyles
+          buttonClasses="btn btn-primary m-3 pl-4 pr-4"
+          declineButtonClasses="btn btn-outline-secondary m-3"
+        >
+          <Emoji symbol="🍪" label="cookie" /> We use cookies to improve your
+          experience on this site.
+        </CookieConsent>
+        {props.children}
+      </main>
       <Footer />
     </div>
   )

@@ -1,209 +1,63 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Container, Row, Col } from "react-bootstrap"
+/** @jsx jsx */
+import { jsx, Box, Grid, Button, Text } from "theme-ui"
+import { Link as GatsbyLink } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import SEO from "../components/shared/seo"
+import SeoComp from "../components/shared/seo"
 
-import Emoji from "../components/shared/emoji"
-import {
-  FaCheck,
-  FaMask,
-  FaError,
-  FaSuccess,
-} from "../components/shared/fa-icons"
+import { FaCheck } from "../components/shared/fa-icons"
 
 import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
-import Helix from "../img/svg/Helix.svg"
-import Leverage from "../img/svg/Leverage.svg"
-import TeamPlusWork from "../img/svg/Teampluswork.svg"
-import SignupCTA from "../components/ctas/signup-cta"
+import SubscribeForm from "../components/ctas/subscribe"
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Self-made team development" />
-      <Container>
-        <Row id="testing intro">
-          <Col lg={12}>
-            <Zusammenhalt width="100%" height="18rem" />
-            <h1>Improve your teamwork.</h1>
-            <p className="subtitle">
-              Crewsby offers actionable resources for self-service leadership &
-              team development. <br></br>
-              Use our free tutorials & exercises to grow personally and upgrade
-              the way you work together.
-            </p>
-          </Col>
-          <Col lg={4}>
+      <SeoComp title="The culture gym" />
+      <Box sx={{ maxWidth: "56rem" }}>
+        <Zusammenhalt width="100%" height="18rem" />
+        <h1>Shape your culture.</h1>
+        <Text variant="subtitle">
+          Crewsby is your culture gym. Build a nurturing & innovative workplace
+          with our free exercises.
+        </Text>
+        <Grid gap={2} columns={[null, 1, 3]} sx={{ mt: 3 }}>
+          <Box>
             <p style={{ marginBottom: "0" }}>
-              <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
-                <FaCheck /> Optimize workflows
+              <span sx={{ fontWeight: "bold", fontSize: 1 }}>
+                <FaCheck /> Improve by doing
               </span>
             </p>
-          </Col>
-          <Col lg={4}>
+          </Box>
+          <Box>
             <p style={{ marginBottom: "0" }}>
-              <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
-                <FaCheck /> Boost team spirit
+              <span sx={{ fontWeight: "bold", fontSize: 1 }}>
+                <FaCheck /> On the job
               </span>
             </p>
-          </Col>
-          <Col lg={4}>
+          </Box>
+          <Box>
             <p style={{ marginBottom: "0" }}>
-              <span style={{ fontWeight: "700", fontSize: "1.4rem" }}>
-                <FaCheck /> Increase performance
+              <span sx={{ fontWeight: "bold", fontSize: 1 }}>
+                <FaCheck /> Remote & on site
               </span>
             </p>
-          </Col>
-          <Col lg={12} style={{ marginTop: "2rem" }}></Col>
-        </Row>
-        <Row style={{ marginTop: "6rem" }}>
-          <Col lg={12} style={{ marginBottom: "1rem" }}>
-            <h2>Grow personally & together.</h2>
-            <p className="subtitle">
-              Great teamwork rests on two pillars. Strengthen either or both
-              with Crewsby.
+          </Box>
+        </Grid>
+        <Grid gap={2} columns={[null, 1, 1]} sx={{ mt: 5 }}>
+          <Box>
+            <h3>Boost your team spirit.</h3>
+            <p>
+              Teams are the units where culture takes form. To shape your
+              culture start with team building.
             </p>
-          </Col>
-          <Col lg>
-            <div className="area-blue">
-              <h3>
-                <FaMask icon="user" /> People skills
-              </h3>
-              <p>
-                Combos of 12 exercises for deliberate practice in improving
-                workflows & relationships.
-              </p>
-              <Link
-                className="btn btn-lg btn-primary"
-                to="/people-skills"
-                style={{ marginRight: "1rem", marginBottom: "1rem" }}
-              >
-                Discover your people skills
-              </Link>
-            </div>
-          </Col>
-          <Col
-            lg={2}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Helix width="8rem" height="8rem" />
-          </Col>
-          <Col lg>
-            <div className="area-blue">
-              <h3>
-                <FaMask icon="users" /> Team building
-              </h3>
-              <p>
-                Tutorials & exercises that provide new ways of working together
-                as a team.
-              </p>
-              <Link
-                className="btn btn-lg btn-primary"
-                to="/team-building"
-                style={{ marginBottom: "1rem" }}
-              >
-                Start team building
-              </Link>
-            </div>
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "6rem" }} id="skills">
-          <Col lg={12} style={{ marginBottom: "2rem" }}>
-            <h2>Improve on the job.</h2>
-            <p className="subtitle">
-              All our tutorials & exercises are free, remote-ready and work
-              perfectly without a trainer.
-            </p>
-          </Col>
-          <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-            <span>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  height: "16rem",
-                }}
-              >
-                <span>
-                  <FaError />
-                  <FaSuccess />
-                  <FaError />
-                  <FaError />
-                  <br></br>
-                  <FaSuccess />
-                  <FaSuccess />
-                  <FaError />
-                  <FaSuccess />
-                  <br></br>
-                  <FaError />
-                  <FaSuccess />
-                  <FaSuccess />
-                  <FaSuccess />
-                </span>
-              </div>
-              <h3>Learn by doing.</h3>
-              <p>
-                Grow personally & together through deliberate practice and
-                reflection.
-              </p>
-            </span>
-          </Col>
-          <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-            <span>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  height: "16rem",
-                }}
-              >
-                <Leverage height="8rem" width="14rem" />
-              </div>
-              <h3>Focus on the essentials.</h3>
-              <p>
-                Leverage the essential 20% of behaviors & practices for 80%
-                improvement.
-              </p>
-            </span>
-          </Col>
-          <Col lg={4} style={{ display: "flex", alignItems: "flex-end" }}>
-            <span>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  height: "16rem",
-                }}
-              >
-                <span style={{ textAlign: "center" }}>
-                  <p style={{ marginBottom: "0" }}>
-                    <Emoji symbol="💪" label="muscle" /> Workflow
-                  </p>
-                  <TeamPlusWork height="8rem" width="14rem" />
-                  <p>
-                    <Emoji symbol="❤️" label="heart" /> Relationships
-                  </p>
-                </span>
-              </div>
-              <h3>Boost Team + Work.</h3>
-              <p>
-                Create unique workflows & build strong relationships under the
-                surface.
-              </p>
-            </span>
-          </Col>
-        </Row>
-        <SignupCTA />
-      </Container>
+            <Button variant="outline" as={GatsbyLink} to="../team-building">
+              ⟶ Team building
+            </Button>
+          </Box>
+        </Grid>
+      </Box>
+      <SubscribeForm />
     </Layout>
   )
 }

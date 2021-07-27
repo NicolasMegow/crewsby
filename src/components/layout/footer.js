@@ -1,43 +1,37 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Container, Row, Col, Nav } from "react-bootstrap"
+/** @jsx jsx */
+import { jsx, Flex, Box, Link, Divider } from "theme-ui"
+import { Link as GatsbyLink } from "gatsby"
 
-import footerStyles from "../../styles/footer.module.scss"
 import SocialIcons from "../shared/social-icons"
 
 const Footer = () => {
   return (
-    <footer className={footerStyles.footer}>
-      <Container>
-        <Row>
-          <Col>
-            <hr />
-          </Col>
-        </Row>
-        <Row style={{ display: "flex", alignItems: "center" }}>
-          <Col md={3}>
-            <strong>Crewsby © 2020 </strong>
-          </Col>
-          <Col
-            md={9}
-            style={{ display: "flex", justifyContent: "space-between" }}
-          >
-            <SocialIcons />
-            <Nav>
-              <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/imprint">
-                  Imprint
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link className={footerStyles.linkItem} to="/privacy">
-                  Privacy
-                </Link>
-              </Nav.Item>
-            </Nav>
-          </Col>
-        </Row>
-      </Container>
+    <footer
+      sx={{
+        width: "100%",
+        maxWidth: "1260px",
+        mt: 3,
+        pb: 2,
+        px: 2,
+      }}
+    >
+      <Divider />
+      <Flex style={{ alignItems: "center", justifyContent: "space-between" }}>
+        <Box>
+          <strong>Crewsby © 2020 </strong>
+        </Box>
+        <Box>
+          <SocialIcons />
+        </Box>
+        <Box>
+          <Link to="/imprint" variant="footer" as={GatsbyLink}>
+            Imprint
+          </Link>
+          <Link to="/privacy" variant="footer" as={GatsbyLink}>
+            Privacy
+          </Link>
+        </Box>
+      </Flex>
     </footer>
   )
 }

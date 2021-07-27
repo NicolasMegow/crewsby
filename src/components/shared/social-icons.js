@@ -1,18 +1,20 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx, Link } from "theme-ui"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const SocialIcons = () => {
   return (
     <span>
-      <a
+      <Link
         href={`https://www.linkedin.com/company/crewsby/`}
         target="_blank"
         rel="noreferrer noopener"
         aria-label="LinkedIn"
       >
         <FontAwesomeIcon icon={["fab", "linkedin"]} size="2x" fixedWidth />
-      </a>
-      <a
+      </Link>
+      <Link
         href={`https://twitter.com/crewsbyteams`}
         target="_blank"
         rel="noreferrer noopener"
@@ -23,7 +25,7 @@ const SocialIcons = () => {
           size="2x"
           fixedWidth
         />
-      </a>
+      </Link>
     </span>
   )
 }

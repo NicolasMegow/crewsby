@@ -10,10 +10,21 @@ export const shortcodes = {
   FontAwesomeIcon,
   Video,
   a: Link,
-  h2: props => <h2 {...props} style={{ marginTop: "4rem" }} />,
-  h3: props => <h3 {...props} style={{ marginTop: "4rem" }} />,
-  h4: props => <h4 {...props} style={{ color: "#4285f4" }} />,
-  li: props => <li {...props} style={{ fontSize: "1.2rem" }} />,
+  h2: props => (
+    <h2 {...props} style={{ marginTop: "4rem", scrollMarginTop: "8rem" }}>
+      {props.children}
+    </h2>
+  ),
+  h3: props => (
+    <h3 {...props} style={{ marginTop: "4rem" }}>
+      {props.children}
+    </h3>
+  ),
+  h4: props => (
+    <h4 {...props} style={{ color: "#4285f4" }}>
+      {props.children}
+    </h4>
+  ),
   td: props => (
     <td {...props} style={{ border: "1px solid #151515", padding: ".4rem" }} />
   ),
@@ -22,8 +33,6 @@ export const shortcodes = {
     <table {...props} style={{ marginTop: ".5rem", marginBottom: "2rem" }} />
   ),
 }
-
-// inhaltsverzeichnes
 
 function Link({ children, href }) {
   if (href.startsWith("../")) {

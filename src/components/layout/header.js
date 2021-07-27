@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { Container, Navbar, Nav } from "react-bootstrap"
+/** @jsx jsx */
+import { jsx, Flex, Box, Link, MenuButton } from "theme-ui"
+import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby"
 
-import headerStyles from "../../styles/header.module.scss"
+import CrewsbyLogo from "../../img/svg/Crewsby_Logo.svg"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -15,36 +15,50 @@ const Header = () => {
     }
   `)
   return (
-    <header>
-      <Navbar expand="lg" fixed="top" className={headerStyles.navbar}>
-        <Container className={headerStyles.container}>
-          <Navbar.Brand style={{ marginRight: "2rem", paddingLeft: "15px" }}>
-            <Link className={headerStyles.title} to="/">
-              {data.site.siteMetadata.title}
-            </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-site" />
-          <Navbar.Collapse id="basic-navbar-site">
-            <Nav className="ml-auto">
-              <Nav.Item>
-                <Link className={headerStyles.navItem} to="/people-skills">
-                  People skills
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link className={headerStyles.navItem} to="/team-building">
-                  Team building
-                </Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Link className={headerStyles.navItem} to="/about-us">
-                  About us
-                </Link>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+    <header
+      sx={{
+        width: "100%",
+        maxWidth: "1260px",
+        p: 2,
+        bg: "background",
+        position: "fixed",
+        zIndex: "1",
+        top: "0",
+      }}
+    >
+      <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
+        <Flex>
+          <Link
+            to="/"
+            as={GatsbyLink}
+            variant="logo"
+            sx={{ display: "flex", alignItems: "center" }}
+          >
+            <CrewsbyLogo width="100px" height="60px" />
+            {data.site.siteMetadata.title}
+          </Link>
+        </Flex>
+        <Box>
+          <Link variant="nav" to="/team-building" as={GatsbyLink}>
+            Team building
+          </Link>
+          <p
+            sx={{
+              lineHeight: "2.8",
+              fontWeight: "500",
+              pl: 2,
+              py: 0,
+              m: 0,
+              display: "inline",
+            }}
+          >
+            |
+          </p>
+          <Link variant="nav" to="/our-vision" as={GatsbyLink}>
+            Our vision
+          </Link>
+        </Box>
+      </Flex>
     </header>
   )
 }
