@@ -43,10 +43,17 @@ export const FaError = () => {
   )
 }
 
-export const FaPlus = () => {
+export const FaAR = () => {
   return (
     <>
-      <FontAwesomeIcon icon={["fas", "plus"]} fixedWidth color="#4285F4" />
+      <FontAwesomeIcon icon={["fas", "long-arrow-alt-right"]} fixedWidth />
+    </>
+  )
+}
+export const FaAL = () => {
+  return (
+    <>
+      <FontAwesomeIcon icon={["fas", "long-arrow-alt-left"]} fixedWidth />
     </>
   )
 }

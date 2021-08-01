@@ -39,8 +39,8 @@ export default class SubscribeForm extends React.Component {
         }}
       >
         <h3>
-          <Emoji symbol="👋" label="welcome" /> Get the latest on building &
-          changing culture!
+          <Emoji symbol="👋" label="welcome" />
+          <br></br>Get the latest on building & changing culture!
         </h3>
         <p>
           We'll send you the occasional e-mail whenever we've added new

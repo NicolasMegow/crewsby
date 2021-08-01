@@ -5,8 +5,8 @@ import { Link as GatsbyLink } from "gatsby"
 import Layout from "../components/layout/layout"
 import SeoComp from "../components/shared/seo"
 
-import { FaCheck } from "../components/shared/fa-icons"
-
+import { FaCheck, FaAR } from "../components/shared/fa-icons"
+import Emoji from "../components/shared/emoji"
 import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
 import SubscribeForm from "../components/ctas/subscribe"
 
@@ -46,13 +46,17 @@ const IndexPage = () => {
         </Grid>
         <Grid gap={2} columns={[null, 1, 1]} sx={{ mt: 5 }}>
           <Box>
-            <h3>Boost your team spirit.</h3>
+            <h3>
+              {" "}
+              <Emoji symbol="🔋" label="battery" />
+              <br></br>Boost your team spirit.
+            </h3>
             <p>
               Teams are the units where culture takes form. To shape your
               culture start with team building.
             </p>
             <Button variant="outline" as={GatsbyLink} to="../team-building">
-              ⟶ Team building
+              <FaAR /> Team building
             </Button>
           </Box>
         </Grid>

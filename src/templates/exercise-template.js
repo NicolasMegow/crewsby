@@ -9,7 +9,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import { shortcodes } from "./shortcodes"
-
+import { FaAL } from "../components/shared/fa-icons"
 import TableOfContents from "../components/shared/table-of-contents"
 import SharingButtons from "../components/ctas/sharing-buttons"
 
@@ -52,11 +52,12 @@ const ExerciseTemplate = ({ data, location }) => {
           as={GatsbyLink}
           variant="textButton"
         >
-          ⟵ Back
+          <FaAL /> Back
         </Link>
-        <p sx={{ my: 2 }}>
-          <Badge variant="outline">{category}</Badge>
-        </p>
+        <br></br>
+        <Badge variant="outline" sx={{ my: 2 }}>
+          {category}
+        </Badge>
 
         <h1 style={{ marginTop: 0, lineHeight: 1 }}>{title}</h1>
         <p className="subtitle">{job}</p>

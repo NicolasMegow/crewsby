@@ -6,9 +6,9 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout/layout"
 import SeoComp from "../components/shared/seo"
-
 import Emoji from "../components/shared/emoji"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FaAR } from "../components/shared/fa-icons"
 import Teamboat from "../img/svg/EinBoot.svg"
 
 export const query = graphql`
@@ -38,7 +38,12 @@ const OurVisionPage = ({ data }) => {
         <Box>
           <Flex style={{ alignItems: "flex-end" }}>
             <span>
-              <h1>Culture by the crew for the crew.</h1>
+              <h1>
+                <Emoji symbol="❤️" label="heart" /> &{" "}
+                <Emoji symbol="💡" label="idea" />
+                <br></br>
+                Nurturing & innovative workplaces.
+              </h1>
               <Text variant="subtitle">
                 You are sitting in the same boat as your colleagues. <br></br>
                 Crewsby helps you to make the most out of the ride.
@@ -71,9 +76,7 @@ const OurVisionPage = ({ data }) => {
           </p>
         </Box>
         <Box sx={{ mt: "4rem", maxWidth: "56rem" }}>
-          <h2>
-            We <Emoji symbol="❤️" label="love" /> culture.
-          </h2>
+          <h2>Culture by the crew for the crew.</h2>
           <p>
             Culture creates a place to belong. Everybody deserves this
             connection at work. We believe that change can only come from the
@@ -83,12 +86,10 @@ const OurVisionPage = ({ data }) => {
             practices from which we design tutorials & exercises.
           </p>
         </Box>
-        <Grid gap={2} columns={[1, null, 2]}>
+        <Grid gap={2} columns={[1, 2, 4]}>
           <Box
-            style={{
-              margin: "2rem 0",
-              display: "flex",
-              alignItems: "center",
+            sx={{
+              my: 2,
             }}
           >
             <Img
@@ -101,10 +102,12 @@ const OurVisionPage = ({ data }) => {
                 margin: "1rem",
               }}
             />
+          </Box>
+          <Box sx={{ my: "auto" }}>
             <p style={{ marginBottom: "0" }}>
               <strong>Lilian Izsak</strong>
-              <br></br>Lili is a happiness engineer <br></br>with a sixth sense
-              for details.
+              <br></br>Lili is a happiness engineer with a sixth sense for
+              details.
               <br></br>
               <a
                 href="https://www.linkedin.com/in/lilian-izsak/"
@@ -125,25 +128,25 @@ const OurVisionPage = ({ data }) => {
             </p>
           </Box>
           <Box
-            style={{
-              margin: "2rem 0",
-              display: "flex",
-              alignItems: "center",
+            sx={{
+              my: 2,
             }}
           >
             <Img
               fluid={data.imageNici.childImageSharp.fluid}
               alt="Nicolas Megow"
-              style={{
+              sx={{
                 width: "10rem",
                 height: "10rem",
                 borderRadius: "50%",
                 margin: "1rem",
               }}
             />
+          </Box>
+          <Box sx={{ my: "auto" }}>
             <p style={{ marginBottom: "0" }}>
               <strong>Nicolas Megow</strong>
-              <br></br>Nicolas is a team coach <br></br>& a bookworm.
+              <br></br>Nicolas is a team coach & a bookworm.
               <br></br>
               <a
                 href="https://www.linkedin.com/in/nicolas-megow/"
@@ -194,7 +197,7 @@ const OurVisionPage = ({ data }) => {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                → Join us on github
+                <FaAR /> Join us on github
               </a>
             </p>
           </Box>

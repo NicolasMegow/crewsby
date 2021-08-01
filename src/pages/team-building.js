@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import SeoComp from "../components/shared/seo"
 
+import Emoji from "../components/shared/emoji"
 import ExerciseItem from "../components/shared/exercise-item"
 import SubscribeForm from "../components/ctas/subscribe"
 
@@ -45,10 +46,15 @@ const TeambuildingPage = ({ data }) => {
     <Layout>
       <SeoComp title="Team building" />
       <Box sx={{ maxWidth: "56rem" }}>
-        <h1>From strangers to dream team.</h1>
+        <h1>
+          <Emoji symbol="🔋" label="battery" />
+          <br></br>
+          Team building fuels your daily labor.
+        </h1>
         <Text variant="subtitle">
-          Team building is continuous work. Pick & choose what you need when you
-          need it. <br></br>All exercises are designed for crews of 4-8 people.
+          Team building is continuous work. Pick & choose what you need, when
+          you need it. <br></br>All exercises are designed for crews of 4-8
+          people.
         </Text>
         <Box sx={{ mt: 3 }}>
           <h2> {data.allMdx.edges.length} exercises:</h2>

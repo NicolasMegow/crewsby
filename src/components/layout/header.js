@@ -1,8 +1,10 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Link, MenuButton } from "theme-ui"
+import { jsx, Flex, Box, Link } from "theme-ui"
+import { useState } from "react"
 import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby"
 
 import CrewsbyLogo from "../../img/svg/Crewsby_Logo.svg"
+import "../../styles/hamburger.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -14,6 +16,10 @@ const Header = () => {
       }
     }
   `)
+  const [toggleMenu, setToggleMenu] = useState(false)
+  const handleToggle = () => {
+    setToggleMenu(!toggleMenu)
+  }
   return (
     <header
       sx={{
@@ -34,29 +40,57 @@ const Header = () => {
             variant="logo"
             sx={{ display: "flex", alignItems: "center" }}
           >
-            <CrewsbyLogo width="100px" height="60px" />
+            <CrewsbyLogo width="6rem" height="4rem" />
             {data.site.siteMetadata.title}
           </Link>
         </Flex>
         <Box>
-          <Link variant="nav" to="/team-building" as={GatsbyLink}>
-            Team building
-          </Link>
-          <p
-            sx={{
-              lineHeight: "2.8",
-              fontWeight: "500",
-              pl: 2,
-              py: 0,
-              m: 0,
-              display: "inline",
-            }}
+          <ul className={toggleMenu ? "nav-menu active" : "nav-menu"}>
+            <li sx={{ listStyle: "none" }} className="nav-item">
+              <Link
+                variant="nav"
+                to="/team-building"
+                as={GatsbyLink}
+                onClick={handleToggle}
+              >
+                Team building
+              </Link>
+            </li>
+            <p
+              sx={{
+                lineHeight: "2.8",
+                fontWeight: "500",
+                pl: 2,
+                py: 0,
+                m: 0,
+                display: "inline",
+                "@media screen and (max-width: 52em)": {
+                  display: "none",
+                },
+              }}
+            >
+              |
+            </p>
+            <li sx={{ listStyle: "none" }} className="nav-item">
+              <Link
+                variant="nav"
+                to="/our-vision"
+                as={GatsbyLink}
+                onClick={handleToggle}
+              >
+                Our vision
+              </Link>
+            </li>
+          </ul>
+          <button
+            className={toggleMenu ? "hamburger active" : "hamburger"}
+            onClick={handleToggle}
+            label="menuToggle"
           >
-            |
-          </p>
-          <Link variant="nav" to="/our-vision" as={GatsbyLink}>
-            Our vision
-          </Link>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
         </Box>
       </Flex>
     </header>

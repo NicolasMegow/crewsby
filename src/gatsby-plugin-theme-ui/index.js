@@ -8,7 +8,7 @@ const myTheme = {
     accent: "#d9e6fc",
     muted: "#ebebeb",
   },
-  space: [0, ".8rem", "1rem", "2rem", "6rem", "8rem"],
+  space: [0, ".8rem", "1rem", "2rem", "6rem", "8rem", "12rem"],
   fonts: {
     body:
       'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
@@ -58,9 +58,6 @@ const myTheme = {
     },
     textButton: {
       fontWeight: "bold",
-    },
-    footer: {
-      ml: 2,
     },
   },
   buttons: {
@@ -152,6 +149,22 @@ const myTheme = {
         "&:hover": {
           color: "primary",
         },
+      },
+      table: {
+        width: "100%",
+        borderCollapse: "separate",
+        borderSpacing: 0,
+      },
+      th: {
+        textAlign: "left",
+        borderBottomStyle: "solid",
+      },
+      td: {
+        textAlign: "left",
+        borderBottomStyle: "solid",
+      },
+      img: {
+        maxWidth: "100%",
       },
     },
   },

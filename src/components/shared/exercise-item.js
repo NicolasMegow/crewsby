@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Link, Badge } from "theme-ui"
+import { jsx, Grid, Box, Link, Badge } from "theme-ui"
 import { Link as GatsbyLink } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
@@ -20,26 +20,27 @@ const ExerciseItem = ({ edge }) => {
         borderBottomColor: "muted",
       }}
     >
-      <Flex style={{ justifyContent: "space-between" }}>
+      <Grid gap={2} columns={[1, 2, null]} sx={{}}>
         <Box>
           <h3 sx={{ my: "0" }}>{title}</h3>
           <p sx={{ my: "0" }}>{job}</p>
         </Box>
-        <Box style={{ textAlign: "right" }}>
-          <p sx={{ my: "0" }}>
-            <Badge variant="outline">{category}</Badge>
-            <br></br>
-            <FontAwesomeIcon
-              icon={["fas", "hourglass-half"]}
-              fixedWidth
-              size="sm"
-            />
-            {time} •{" "}
-            <FontAwesomeIcon icon={["fas", "fire-alt"]} fixedWidth size="sm" />
-            {level}
-          </p>
+        <Box
+          sx={{
+            textAlign: "right",
+            "@media screen and (max-width: 40em)": {
+              textAlign: "left",
+            },
+          }}
+        >
+          <Badge variant="outline">{category}</Badge>
+          <br></br>
+          <FontAwesomeIcon icon={["fas", "stopwatch"]} fixedWidth size="sm" />
+          {time} •{" "}
+          <FontAwesomeIcon icon={["fas", "fire-alt"]} fixedWidth size="sm" />
+          {level}
         </Box>
-      </Flex>
+      </Grid>
     </Link>
   )
 }
