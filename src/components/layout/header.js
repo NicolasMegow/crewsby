@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Link } from "theme-ui"
-import { useState } from "react"
-import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby"
+import { jsx, Flex, Box, Link } from "theme-ui";
+import { useState } from "react";
+import { Link as GatsbyLink, graphql, useStaticQuery } from "gatsby";
 
-import CrewsbyLogo from "../../img/svg/Crewsby_Logo.svg"
-import "../../styles/hamburger.scss"
+import CrewsbyLogo from "../../images/svg/Crewsby_Logo.svg";
+import "./hamburger.scss";
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -15,11 +15,11 @@ const Header = () => {
         }
       }
     }
-  `)
-  const [toggleMenu, setToggleMenu] = useState(false)
+  `);
+  const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggle = () => {
-    setToggleMenu(!toggleMenu)
-  }
+    setToggleMenu(!toggleMenu);
+  };
   return (
     <header
       sx={{
@@ -60,7 +60,7 @@ const Header = () => {
               sx={{
                 lineHeight: "2.8",
                 fontWeight: "500",
-                pl: 2,
+                px: 2,
                 py: 0,
                 m: 0,
                 display: "inline",
@@ -69,7 +69,7 @@ const Header = () => {
                 },
               }}
             >
-              |
+              •
             </p>
             <li sx={{ listStyle: "none" }} className="nav-item">
               <Link
@@ -94,7 +94,7 @@ const Header = () => {
         </Box>
       </Flex>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,1 +1,1 @@
-# Crewsby curates & designs culture hacks.
+# Crewsby is a collection of team building activities.

@@ -2,16 +2,17 @@ const myTheme = {
   breakpoints: ["40em", "52em", "64em"],
   fontSizes: ["1rem", "1.4rem", "2rem", "2.4rem", "4rem"],
   colors: {
-    text: "#151515",
-    background: "#fff",
-    primary: "#4285f4",
-    accent: "#d9e6fc",
-    muted: "#ebebeb",
+    text: "#000000",
+    background: "#FFFFFF",
+    primary: "#4285F4",
+    primary_light: "#6DB5FF",
+    dark: "#3D62CD",
+    accent: "#F4B042",
+    muted: "#D6D6D6",
   },
   space: [0, ".8rem", "1rem", "2rem", "6rem", "8rem", "12rem"],
   fonts: {
-    body:
-      'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: "system-ui, sans-serif",
     monospace: "Menlo, monospace",
   },
@@ -36,7 +37,7 @@ const myTheme = {
       fontFamily: "body",
       maxWidth: "24em",
       "::placeholder": {
-        color: "primary",
+        color: "primary_light",
       },
     },
   },
@@ -46,18 +47,27 @@ const myTheme = {
       fontWeight: "bold",
       textDecoration: "none",
       color: "text",
+      "&:hover": {
+        color: "dark",
+      },
     },
     nav: {
       fontWeight: "bold",
       textDecoration: "none",
-      color: "text",
-      ml: 2,
-      '&[aria-current="page"]': {
+      "&:hover": {
+        color: "dark",
+      },
+      "&[aria-current='page']": {
         color: "primary",
       },
     },
     textButton: {
       fontWeight: "bold",
+      textTransform: "uppercase",
+      color: "primary",
+      "&:hover": {
+        color: "dark",
+      },
     },
   },
   buttons: {
@@ -68,35 +78,19 @@ const myTheme = {
       minWidth: "16em",
       maxWidth: "24em",
       px: 3,
+      border: "1px solid",
       fontFamily: "body",
       fontWeight: "bold",
       "&:hover": {
-        color: "primary",
-        bg: "#d9e6fc",
+        color: "white",
+        bg: "dark",
       },
     },
-    outline: {
-      color: "primary",
-      bg: "white",
-      width: "100%",
-      minWidth: "16em",
-      maxWidth: "24em",
-      px: 3,
-      fontFamily: "body",
-      fontWeight: "bold",
-      borderWidth: "1px",
-      borderStyle: "solid",
-      "&:hover": {
-        color: "primary",
-        bg: "#d9e6fc",
-      },
-    },
-    gray: {},
     menu: {
       display: "none",
       width: "100%",
       height: "100%",
-      ":hover": {
+      "&:hover": {
         color: "primary",
       },
       "@media screen and (max-width: 768px)": {
@@ -112,7 +106,7 @@ const myTheme = {
     },
     outline: {
       color: "primary",
-      bg: "transparent",
+      bg: "white",
       boxShadow: "inset 0 0 0 1px",
     },
   },
@@ -168,6 +162,5 @@ const myTheme = {
       },
     },
   },
-}
-
-export default myTheme
+};
+export default myTheme;

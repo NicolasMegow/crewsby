@@ -17,6 +17,19 @@
   align-items: center;
 }
 
+.small-button {
+  padding: 0.8rem 2rem;
+  margin: 0.8rem 0.8rem 0.8rem 0rem;
+  font-weight: 700;
+  background-color: #4285f4;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  :hover {
+    background-color: #3d62cd;
+  }
+}
+
 @media only screen and (max-width: 50em) {
   .nav-menu {
     position: fixed;

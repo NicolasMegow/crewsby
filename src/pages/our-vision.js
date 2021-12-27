@@ -1,36 +1,16 @@
 /** @jsx jsx */
-import { jsx, Flex, Box, Grid, Text } from "theme-ui"
+import { jsx, Flex, Box, Grid, Text, Link } from "theme-ui";
 
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../components/layout/layout"
-import SeoComp from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { FaAR } from "../components/shared/fa-icons"
-import Teamboat from "../img/svg/EinBoot.svg"
+import Layout from "../components/layout/layout";
+import SeoComp from "../components/shared/seo";
+import Emoji from "../components/shared/emoji";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaAR } from "../components/shared/fa-icons";
+import Teamboat from "../images/svg/EinBoot.svg";
 
-export const query = graphql`
-  query {
-    imageLili: file(relativePath: { eq: "crew/LI_square.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    imageNici: file(relativePath: { eq: "crew/NM_square.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-
-const OurVisionPage = ({ data }) => {
+const OurVisionPage = () => {
   return (
     <Layout>
       <SeoComp title="Our vision" />
@@ -92,15 +72,19 @@ const OurVisionPage = ({ data }) => {
               my: 2,
             }}
           >
-            <Img
-              fluid={data.imageLili.childImageSharp.fluid}
+            <StaticImage
+              src="../images/crew/LI_square.jpg"
               alt="Lilian Izsak"
-              style={{
+              sx={{
                 width: "10rem",
                 height: "10rem",
                 borderRadius: "50%",
                 margin: "1rem",
               }}
+              placeholder="blurred"
+              layout="fixed"
+              width={200}
+              height={200}
             />
           </Box>
           <Box sx={{ my: "auto" }}>
@@ -132,8 +116,8 @@ const OurVisionPage = ({ data }) => {
               my: 2,
             }}
           >
-            <Img
-              fluid={data.imageNici.childImageSharp.fluid}
+            <StaticImage
+              src="../images/crew/NM_square.jpg"
               alt="Nicolas Megow"
               sx={{
                 width: "10rem",
@@ -141,6 +125,10 @@ const OurVisionPage = ({ data }) => {
                 borderRadius: "50%",
                 margin: "1rem",
               }}
+              placeholder="blurred"
+              layout="fixed"
+              width={200}
+              height={200}
             />
           </Box>
           <Box sx={{ my: "auto" }}>
@@ -192,19 +180,20 @@ const OurVisionPage = ({ data }) => {
             <p>
               We'd love to include your ideas & practices.
               <br></br>
-              <a
+              <Link
                 href="https://github.com/NicolasMegow/crewsby"
                 target="_blank"
                 rel="noreferrer noopener"
+                variant="textButton"
               >
-                <FaAR /> Join us on github
-              </a>
+                <FaAR /> Join us
+              </Link>
             </p>
           </Box>
         </Grid>
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default OurVisionPage
+export default OurVisionPage;

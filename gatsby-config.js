@@ -1,20 +1,12 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-const remarkSlug = require(`remark-slug`)
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: "Crewsby",
     author: "Nicolas Megow",
     siteUrl: `https://crewsby.com`,
-    description: "Start hacking you culture and join a community of peers.",
+    description: "Activities for team building",
     keywords: [
       "culture",
-      "hacking",
+      "team building",
       "agile",
       "remote",
       "teamwork",
@@ -26,20 +18,7 @@ module.exports = {
     siteUrl: "htts://crewsby.com",
   },
   plugins: [
-    `gatsby-plugin-catch-links`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        cssLoaderOptions: {
-          esModule: false,
-          modules: {
-            namedExport: false,
-          },
-        },
-      },
-    },
-    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-theme-ui",
     {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
@@ -55,46 +34,31 @@ module.exports = {
         environments: ["production"],
       },
     },
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-sass`,
       options: {
-        name: "team-building",
-        path: `${__dirname}/src/content/team-building`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "pages",
-        path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/img`,
-      },
-    },
-    "gatsby-plugin-theme-ui",
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-remark-images`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        remarkPlugins: [remarkSlug],
-        gatsbyRemarkPlugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 750,
-              linkImagesToOriginal: false,
-            },
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
           },
-        ],
+        },
+      },
+    },
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `Crewsby`,
+        short_name: `Crewsby`,
+        icon: "src/images/Crewsby_logo_512x512.png",
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#4285F4`,
+        display: `standalone`,
+        crossOrigin: `use-credentials`,
       },
     },
     {
@@ -112,19 +76,32 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `Crewsby`,
-        short_name: `Crewsby`,
-        icon: `static/Crewsby_logo_512x512.png`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4285F4`,
-        display: `standalone`,
-        crossOrigin: `use-credentials`,
+        name: "images",
+        path: "./src/images/",
       },
+      __key: "images",
     },
-    `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "team-building",
+        path: "./src/content/team-building",
+      },
+      __key: "team-building",
+    },
   ],
-}
+};

@@ -1,27 +1,24 @@
 /** @jsx jsx */
 
-import "@fortawesome/fontawesome-svg-core/styles.css"
-import { jsx } from "theme-ui"
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { jsx } from "theme-ui";
+import "./hamburger.scss";
 
-import Header from "./header"
-import Footer from "./footer"
+import Header from "./header";
+import Footer from "./footer";
 
-import CookieConsent from "react-cookie-consent"
-import Emoji from "../shared/emoji"
+import CookieConsent from "react-cookie-consent";
+import Emoji from "../shared/emoji";
 
-import { library, config } from "@fortawesome/fontawesome-svg-core"
-import { fal } from "@fortawesome/pro-light-svg-icons"
-import { fas } from "@fortawesome/pro-solid-svg-icons"
-import { fad } from "@fortawesome/pro-duotone-svg-icons"
-import { fab } from "@fortawesome/free-brands-svg-icons"
+import { library, config } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/pro-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 
-config.autoAddCss = false
-library.add(fal)
-library.add(fas)
-library.add(fad)
-library.add(fab)
+config.autoAddCss = false;
+library.add(fas);
+library.add(fab);
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div
       sx={{
@@ -36,7 +33,7 @@ const Layout = props => {
         sx={{
           maxWidth: "1260px",
           mx: "auto",
-          minHeight: "100vh",
+          minHeight: "60vh",
           display: "flex",
           flexDirection: "column",
           mt: 5,
@@ -51,8 +48,8 @@ const Layout = props => {
           cookieName="gatsby-gdpr-google-analytics"
           style={{ background: "#151515" }}
           disableButtonStyles
-          buttonClasses="btn btn-primary m-3 pl-4 pr-4"
-          declineButtonClasses="btn btn-outline-secondary m-3"
+          buttonClasses="small-button"
+          declineButtonClasses="small-button"
         >
           <Emoji symbol="🍪" label="cookie" /> We use cookies to improve your
           experience on this site.
@@ -61,7 +58,7 @@ const Layout = props => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

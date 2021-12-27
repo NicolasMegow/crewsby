@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx, Box, Grid, Button, Text } from "theme-ui"
-import { Link as GatsbyLink } from "gatsby"
+import { jsx, Box, Grid, Link, Text } from "theme-ui";
+import { Link as GatsbyLink } from "gatsby";
 
-import Layout from "../components/layout/layout"
-import SeoComp from "../components/shared/seo"
+import Layout from "../components/layout/layout";
+import SeoComp from "../components/shared/seo";
 
-import { FaCheck, FaAR } from "../components/shared/fa-icons"
-import Emoji from "../components/shared/emoji"
-import Zusammenhalt from "../img/svg/Zusammenhalt.svg"
-import SubscribeForm from "../components/ctas/subscribe"
+import { FaCheck, FaAR } from "../components/shared/fa-icons";
+import Emoji from "../components/shared/emoji";
+import Zusammenhalt from "../images/svg/Zusammenhalt.svg";
+import SubscribeForm from "../components/ctas/subscribe";
 
 const IndexPage = () => {
   return (
@@ -55,15 +55,15 @@ const IndexPage = () => {
               Teams are the units where culture takes form. To shape your
               culture start with team building.
             </p>
-            <Button variant="outline" as={GatsbyLink} to="../team-building">
+            <Link to="../team-building" as={GatsbyLink} variant="textButton">
               <FaAR /> Team building
-            </Button>
+            </Link>
           </Box>
         </Grid>
       </Box>
       <SubscribeForm />
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
