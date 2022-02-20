@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import { jsx, Grid, Box, Flex, Link, Divider } from "theme-ui"
-import { Link as GatsbyLink } from "gatsby"
+import { jsx, Grid, Box, Flex, Link, Divider } from "theme-ui";
+import { Link as GatsbyLink } from "gatsby";
 
-import SocialIcons from "../shared/social-icons"
+import SocialIcons from "../shared/social-icons";
 
 const Footer = () => {
   return (
@@ -47,7 +47,7 @@ const Footer = () => {
         </Box>
       </Grid>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

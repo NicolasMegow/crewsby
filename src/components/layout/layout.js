@@ -36,7 +36,7 @@ const Layout = (props) => {
           minHeight: "60vh",
           display: "flex",
           flexDirection: "column",
-          mt: 5,
+          mt: 4,
           px: 3,
         }}
       >
@@ -46,7 +46,7 @@ const Layout = (props) => {
           enableDeclineButton
           declineButtonText="Decline"
           cookieName="gatsby-gdpr-google-analytics"
-          style={{ background: "#151515" }}
+          style={{ background: "#2A9D8F" }}
           disableButtonStyles
           buttonClasses="small-button"
           declineButtonClasses="small-button"

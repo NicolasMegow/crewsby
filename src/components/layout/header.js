@@ -25,7 +25,8 @@ const Header = () => {
       sx={{
         width: "100%",
         maxWidth: "1260px",
-        p: 2,
+        py: 2,
+        px: 2,
         bg: "background",
         position: "fixed",
         zIndex: "1",

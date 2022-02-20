@@ -45,7 +45,7 @@ const ActivityPage = ({ data, location }) => {
         description={job}
         pathname={`/team-building/${slug}`}
       />
-      <Box sx={{ maxWidth: "56rem", px: 3 }}>
+      <Box sx={{ maxWidth: "56rem", px: 3, mt: 3 }}>
         <Link
           to="../"
           style={{ marginLeft: ".3rem" }}

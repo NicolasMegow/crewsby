@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx, Link } from "theme-ui"
+import { jsx, Link } from "theme-ui";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialIcons = () => {
   return (
@@ -27,7 +27,7 @@ const SocialIcons = () => {
         />
       </Link>
     </span>
-  )
-}
+  );
+};
 
-export default SocialIcons
+export default SocialIcons;

@@ -45,7 +45,7 @@ const TeambuildingPage = ({ data }) => {
   return (
     <Layout>
       <SeoComp title="Team building" />
-      <Box sx={{ maxWidth: "56rem" }}>
+      <Box sx={{ maxWidth: "56rem", mt: 3 }}>
         <h1>
           <Emoji symbol="🔋" label="battery" />
           <br></br>

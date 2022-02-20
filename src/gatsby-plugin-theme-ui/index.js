@@ -2,13 +2,13 @@ const myTheme = {
   breakpoints: ["40em", "52em", "64em"],
   fontSizes: ["1rem", "1.4rem", "2rem", "2.4rem", "4rem"],
   colors: {
-    text: "#000000",
+    text: "#264653",
     background: "#FFFFFF",
-    primary: "#4285F4",
-    primary_light: "#6DB5FF",
-    dark: "#3D62CD",
-    accent: "#F4B042",
-    muted: "#D6D6D6",
+    primary: "#E76F51",
+    primary_light: "#E9C46A",
+    dark: "#264653",
+    accent: "#2A9D8F",
+    muted: "#F4A261",
   },
   space: [0, ".8rem", "1rem", "2rem", "6rem", "8rem", "12rem"],
   fonts: {
@@ -46,16 +46,17 @@ const myTheme = {
       fontSize: 3,
       fontWeight: "bold",
       textDecoration: "none",
-      color: "text",
+      color: "dark",
       "&:hover": {
-        color: "dark",
+        color: "primary",
       },
     },
     nav: {
+      color: "dark",
       fontWeight: "bold",
       textDecoration: "none",
       "&:hover": {
-        color: "dark",
+        color: "primary",
       },
       "&[aria-current='page']": {
         color: "primary",
@@ -64,26 +65,25 @@ const myTheme = {
     textButton: {
       fontWeight: "bold",
       textTransform: "uppercase",
-      color: "primary",
+      color: "accent",
       "&:hover": {
-        color: "dark",
+        color: "primary",
       },
     },
   },
   buttons: {
     primary: {
-      color: "white",
-      bg: "primary",
+      color: "text",
+      bg: "primary_light",
       width: "100%",
       minWidth: "16em",
       maxWidth: "24em",
       px: 3,
-      border: "1px solid",
+      border: "1px solid white",
       fontFamily: "body",
       fontWeight: "bold",
       "&:hover": {
-        color: "white",
-        bg: "dark",
+        bg: "primary",
       },
     },
     menu: {

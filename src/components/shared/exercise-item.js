@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Grid, Box, Link, Badge } from "theme-ui"
-import { Link as GatsbyLink } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { jsx, Grid, Box, Link, Badge } from "theme-ui";
+import { Link as GatsbyLink } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ExerciseItem = ({ edge }) => {
-  const { slug } = edge.node.fields
-  const { title, job, category, time, level } = edge.node.frontmatter
+  const { slug } = edge.node.fields;
+  const { title, job, category, time, level } = edge.node.frontmatter;
 
   return (
     <Link
@@ -17,7 +17,7 @@ const ExerciseItem = ({ edge }) => {
         display: "block",
         borderBottomWeight: "1px",
         borderBottomStyle: "solid",
-        borderBottomColor: "muted",
+        borderBottomColor: "text",
       }}
     >
       <Grid gap={2} columns={[1, 2, null]} sx={{}}>
@@ -42,7 +42,7 @@ const ExerciseItem = ({ edge }) => {
         </Box>
       </Grid>
     </Link>
-  )
-}
+  );
+};
 
-export default ExerciseItem
+export default ExerciseItem;

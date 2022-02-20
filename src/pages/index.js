@@ -15,7 +15,7 @@ const IndexPage = () => {
     <Layout>
       <SeoComp title="The culture gym" />
       <Box sx={{ maxWidth: "56rem" }}>
-        <Zusammenhalt width="100%" height="18rem" />
+        <Zusammenhalt width="100%" height="24rem" />
         <h1>Shape your culture.</h1>
         <Text variant="subtitle">
           Crewsby is your culture gym. Build a nurturing & innovative workplace

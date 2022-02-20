@@ -14,7 +14,7 @@ const OurVisionPage = () => {
   return (
     <Layout>
       <SeoComp title="Our vision" />
-      <Box sx={{ maxWidth: "56rem" }}>
+      <Box sx={{ maxWidth: "56rem", mt: 3 }}>
         <Box>
           <Flex style={{ alignItems: "flex-end" }}>
             <span>

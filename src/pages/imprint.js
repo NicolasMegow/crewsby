@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui"
+import { jsx, Box } from "theme-ui";
 
-import Layout from "../components/layout/layout"
-import SeoComp from "../components/shared/seo"
+import Layout from "../components/layout/layout";
+import SeoComp from "../components/shared/seo";
 
 const ImpressumPage = () => {
   return (
     <Layout>
       <SeoComp title="Imprint" />
-      <Box sx={{ maxWidth: "56rem" }}>
+      <Box sx={{ maxWidth: "56rem", mt: 3 }}>
         <h1>
           <strong>Imprint</strong>
         </h1>
@@ -41,7 +41,7 @@ const ImpressumPage = () => {
         </p>
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default ImpressumPage
+export default ImpressumPage;

@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui"
+import { jsx, Box } from "theme-ui";
 
-import Layout from "../components/layout/layout"
-import SeoComp from "../components/shared/seo"
+import Layout from "../components/layout/layout";
+import SeoComp from "../components/shared/seo";
 
 const DatenschutzPage = () => {
   return (
     <Layout>
       <SeoComp title="Privacy" />
-      <Box sx={{ maxWidth: "56rem" }}>
+      <Box sx={{ maxWidth: "56rem", mt: 3 }}>
         <h1>
           <strong>Hinweise zum Datenschutz</strong>
         </h1>
@@ -144,7 +144,7 @@ const DatenschutzPage = () => {
         </p>
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default DatenschutzPage
+export default DatenschutzPage;
