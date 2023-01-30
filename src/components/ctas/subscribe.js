@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Grid, Label, Input, Button } from "theme-ui"
-import React from "react"
-import addToMailchimp from "gatsby-plugin-mailchimp"
+import { jsx, Box, Grid, Label, Input, Button } from "theme-ui";
+import React from "react";
+import addToMailchimp from "gatsby-plugin-mailchimp";
 
-import Emoji from "../shared/emoji"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Emoji from "../shared/emoji";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class SubscribeForm extends React.Component {
   state = {
@@ -12,23 +12,23 @@ export default class SubscribeForm extends React.Component {
     email: "",
     message: "",
     display: "none",
-  }
+  };
 
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
+  handleInputChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
     this.setState({
       [name]: value,
-    })
-  }
+    });
+  };
 
-  handleSubmit = async e => {
-    e.preventDefault()
-    const result = await addToMailchimp(this.state.email)
-    this.setState({ message: result.msg })
-    this.setState({ display: "block" })
-  }
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    const result = await addToMailchimp(this.state.email);
+    this.setState({ message: result.msg });
+    this.setState({ display: "block" });
+  };
 
   render() {
     return (
@@ -40,11 +40,11 @@ export default class SubscribeForm extends React.Component {
       >
         <h3>
           <Emoji symbol="👋" label="welcome" />
-          <br></br>Get the latest on building & changing culture!
+          <br></br>Get the latest on team building!
         </h3>
         <p>
           We'll send you the occasional e-mail whenever we've added new
-          exercises.
+          activities.
         </p>
 
         <form
@@ -89,6 +89,6 @@ export default class SubscribeForm extends React.Component {
           />
         </form>
       </Box>
-    )
+    );
   }
 }

@@ -2,13 +2,12 @@ const myTheme = {
   breakpoints: ["40em", "52em", "64em"],
   fontSizes: ["1rem", "1.4rem", "2rem", "2.4rem", "4rem"],
   colors: {
-    text: "#264653",
+    text: "#000000",
     background: "#FFFFFF",
-    primary: "#E76F51",
-    primary_light: "#E9C46A",
-    dark: "#264653",
-    accent: "#2A9D8F",
-    muted: "#F4A261",
+    primary: "#16498A",
+    accent: "#113769",
+    highlight: "#FDE050",
+    muted: "#FAFBBD",
   },
   space: [0, ".8rem", "1rem", "2rem", "6rem", "8rem", "12rem"],
   fonts: {
@@ -37,7 +36,7 @@ const myTheme = {
       fontFamily: "body",
       maxWidth: "24em",
       "::placeholder": {
-        color: "primary_light",
+        color: "text",
       },
     },
   },
@@ -46,26 +45,20 @@ const myTheme = {
       fontSize: 3,
       fontWeight: "bold",
       textDecoration: "none",
-      color: "dark",
-      "&:hover": {
-        color: "primary",
-      },
+      color: "primary",
     },
     nav: {
-      color: "dark",
+      color: "text",
       fontWeight: "bold",
       textDecoration: "none",
       "&:hover": {
-        color: "primary",
-      },
-      "&[aria-current='page']": {
         color: "primary",
       },
     },
     textButton: {
       fontWeight: "bold",
       textTransform: "uppercase",
-      color: "accent",
+      color: "text",
       "&:hover": {
         color: "primary",
       },
@@ -73,8 +66,8 @@ const myTheme = {
   },
   buttons: {
     primary: {
-      color: "text",
-      bg: "primary_light",
+      color: "background",
+      bg: "primary",
       width: "100%",
       minWidth: "16em",
       maxWidth: "24em",
@@ -83,7 +76,8 @@ const myTheme = {
       fontFamily: "body",
       fontWeight: "bold",
       "&:hover": {
-        bg: "primary",
+        bg: "accent",
+        color: "background",
       },
     },
     menu: {
@@ -102,6 +96,7 @@ const myTheme = {
   badges: {
     primary: {
       color: "background",
+      py: "0.2rem",
       bg: "primary",
     },
     outline: {

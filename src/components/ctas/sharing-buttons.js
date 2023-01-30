@@ -9,9 +9,9 @@ const SharingButton = ({ link, message }) => {
         alignItems: "center",
         my: 1,
         p: 3,
-        bg: "accent",
+        bg: "highlight",
         borderRadius: "6px",
-        color: "white",
+        color: "black",
       }}
     >
       <p sx={{ mb: 0, fontSize: 1 }}>
@@ -29,7 +29,7 @@ const SharingButton = ({ link, message }) => {
           icon={["fab", "linkedin"]}
           size="2x"
           fixedWidth
-          color="#ffffff"
+          color="#000000"
         />
       </a>
       <a
@@ -44,7 +44,7 @@ const SharingButton = ({ link, message }) => {
           icon={["fab", "twitter-square"]}
           size="2x"
           fixedWidth
-          color="#ffffff"
+          color="#000000"
         />
       </a>
     </Flex>

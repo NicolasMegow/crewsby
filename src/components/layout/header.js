@@ -50,11 +50,11 @@ const Header = () => {
             <li sx={{ listStyle: "none" }} className="nav-item">
               <Link
                 variant="nav"
-                to="/team-building"
+                to="/activities"
                 as={GatsbyLink}
                 onClick={handleToggle}
               >
-                Team building
+                Activities
               </Link>
             </li>
             <p
@@ -75,11 +75,11 @@ const Header = () => {
             <li sx={{ listStyle: "none" }} className="nav-item">
               <Link
                 variant="nav"
-                to="/our-vision"
+                to="/about-crewsby"
                 as={GatsbyLink}
                 onClick={handleToggle}
               >
-                Our vision
+                About Crewsby
               </Link>
             </li>
           </ul>

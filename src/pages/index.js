@@ -1,27 +1,29 @@
 /** @jsx jsx */
-import { jsx, Box, Grid, Link, Text } from "theme-ui";
-import { Link as GatsbyLink } from "gatsby";
+import { jsx, Box, Flex, Grid, Text } from "theme-ui";
+// import { Link as GatsbyLink } from "gatsby";
 
 import Layout from "../components/layout/layout";
 import SeoComp from "../components/shared/seo";
 
-import { FaCheck, FaAR } from "../components/shared/fa-icons";
-import Emoji from "../components/shared/emoji";
-import Zusammenhalt from "../images/svg/Zusammenhalt.svg";
+import { FaCheck } from "../components/shared/fa-icons";
+import Teamboat from "../images/svg/EinBoot.svg";
+
 import SubscribeForm from "../components/ctas/subscribe";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SeoComp title="The culture gym" />
+      <SeoComp title="The team gym" />
       <Box sx={{ maxWidth: "56rem" }}>
-        <Zusammenhalt width="100%" height="24rem" />
-        <h1>Shape your culture.</h1>
+        <Flex style={{ alignItems: "center" }}>
+          <Teamboat width="100%" height="18rem" />
+        </Flex>
+        <h1>Nurture your teamwork.</h1>
         <Text variant="subtitle">
-          Crewsby is your culture gym. Build a nurturing & innovative workplace
-          with our free exercises.
+          You are sitting in the same boat, so make the most out of the ride.
+          Use Crewsby's free activities for DIY team building with your crew.
         </Text>
-        <Grid gap={2} columns={[null, 1, 3]} sx={{ mt: 3 }}>
+        <Grid gap={2} columns={[null, 1, 3]} sx={{ mt: 3, mb: 3 }}>
           <Box>
             <p style={{ marginBottom: "0" }}>
               <span sx={{ fontWeight: "bold", fontSize: 1 }}>
@@ -44,22 +46,23 @@ const IndexPage = () => {
             </p>
           </Box>
         </Grid>
-        <Grid gap={2} columns={[null, 1, 1]} sx={{ mt: 5 }}>
-          <Box>
-            <h3>
-              {" "}
-              <Emoji symbol="🔋" label="battery" />
-              <br></br>Boost your team spirit.
-            </h3>
-            <p>
-              Teams are the units where culture takes form. To shape your
-              culture start with team building.
-            </p>
-            <Link to="../team-building" as={GatsbyLink} variant="textButton">
-              <FaAR /> Team building
-            </Link>
-          </Box>
-        </Grid>
+        <Box style={{ marginTop: "4rem" }}>
+          <h2>Insights from experts.</h2>
+          <p className="subtitle">
+            Crewsby designs activities based on a curation of the best ideas &
+            findings. Here are the giants on whose shoulders you could stand:
+          </p>
+          <p>
+            <strong>
+              Ken Blanchard • Chip Conley • John Doerr • Amy Edmundson • Tasha
+              Eurich • Atul Gawande • Adam Grant • Jeremy Gutsche • Gary Hamel •
+              Ben Horrowitz • Tom Kelley • Fredic Laloux • Patrick Lencioni •
+              Vittorio Loreto • Fredrick G. Pferdt • Max De Pree • Edgar Schein
+              • F. Schulz von Thun • Kim Scott • Simon Sinek • J.J. Sutherland •
+              Karl Weick • Tom Wujec
+            </strong>
+          </p>
+        </Box>
       </Box>
       <SubscribeForm />
     </Layout>

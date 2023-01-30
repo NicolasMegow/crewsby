@@ -16,7 +16,7 @@ const ImpressumPage = () => {
         <p>Nicolas Megow</p>
         <h3>Adress</h3>
         <p>
-          Arndtstrasse 26<br></br>33100 Paderborn
+          Bartloffer Stieg 43<br></br>37359 Effelder
         </p>
         <h3>Contact</h3>
         <p>

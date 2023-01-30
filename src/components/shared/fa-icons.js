@@ -6,7 +6,7 @@ export const FaCheck = () => {
     <>
       <FontAwesomeIcon
         icon={["fas", "check"]}
-        color="#E76F51"
+        color="#FDE050"
         size="lg"
         mask={["fas", "circle"]}
         transform="shrink-8"
@@ -21,7 +21,7 @@ export const FaSuccess = () => {
       <FontAwesomeIcon
         icon={["fas", "check"]}
         fixedWidth
-        color="#E76F51"
+        color="#FDE050"
         size="2x"
         style={{ margin: ".5rem" }}
       />
@@ -35,7 +35,7 @@ export const FaError = () => {
       <FontAwesomeIcon
         icon={["fas", "times"]}
         fixedWidth
-        color="#E76F51"
+        color="#FDE050"
         size="2x"
         style={{ margin: ".5rem" }}
       />
@@ -66,7 +66,7 @@ export const FaMask = ({ icon }) => {
         mask={["fas", "circle"]}
         size="lg"
         transform="shrink-8"
-        color="#E76F51"
+        color="#FDE050"
       />
     </>
   );
@@ -76,7 +76,7 @@ export const FaLoading = () => {
   return (
     <FontAwesomeIcon
       icon={["fad", "spinner"]}
-      color="#E76F51"
+      color="#FDE050"
       size="3x"
       pulse
     />
@@ -90,7 +90,7 @@ export const FaChecked = () => {
         icon={["fas", "checkmark"]}
         mask={["fas", "circle"]}
         transform="shrink-8"
-        color="#E76F51"
+        color="#FDE050"
       />
     </>
   );
@@ -104,7 +104,7 @@ export const FaToDo = () => {
         mask={["fas", "circle"]}
         size="lg"
         transform="shrink-8"
-        color="#E76F51"
+        color="#FDE050"
       />
     </>
   );

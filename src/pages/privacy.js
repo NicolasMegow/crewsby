@@ -24,7 +24,7 @@ const DatenschutzPage = () => {
         </p>
         <h2>Verantwortliche Stelle</h2>
         <p>
-          Nicolas Megow<br></br>Arndtstrasse 26<br></br>33100 Paderborn
+          Nicolas Megow<br></br>Bartloffer Stieg 43<br></br>37359 Effelder
         </p>
         <p>
           <a href="mailto:info@crewsby.com">info@crewsby.com</a>

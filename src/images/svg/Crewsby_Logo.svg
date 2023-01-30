@@ -7,17 +7,6 @@
    viewBox="0 0 211.66666 119.0625"
    version="1.1"
    >
-  <defs
-     id="defs2" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     />
-  <metadata
-     id="metadata5">
-  </metadata>
   <g
      id="layer1"
      transform="translate(0,-177.93748)">
@@ -25,15 +14,15 @@
        cy="210.04555"
        cx="105.81726"
        id="circle863"
-       style="opacity:1;fill:#264653;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
+       style="opacity:1;fill:#16498A;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
        rx="8.7906466"
        ry="10" />
     <path
-       style="opacity:1;fill:#264653;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
+       style="opacity:1;fill:#16498A;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
        d="m 72.474646,223.74998 c -4.667224,0 -8.587126,5.89999 -9.689849,21.03334 H 35.833472 c 0,11.04569 31.339932,34.28782 69.999868,34.28782 38.6599,0 69.99986,-23.24213 69.99986,-34.28782 h -26.95133 c -1.10273,-15.13335 -5.02261,-21.03334 -9.68984,-21.03334 -4.66722,0 -8.58713,5.89999 -9.68986,21.03334 h -13.979 c -1.1027,-15.13335 -5.02261,-21.03334 -9.68983,-21.03334 -4.66722,0 -8.587132,5.89999 -9.689863,21.03334 H 82.164494 c -1.102725,-15.13335 -5.022633,-21.03334 -9.689848,-21.03334 z"
        id="ellipse869"/>
     <ellipse
-       style="opacity:1;fill:#264653;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
+       style="opacity:1;fill:#16498A;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
        id="circle817"
        cx="139.12048"
        cy="210.04555"
@@ -43,7 +32,7 @@
        cy="210.04555"
        cx="72.808243"
        id="circle819"
-       style="opacity:1;fill:#264653;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
+       style="opacity:1;fill:#16498A;fill-opacity:1;stroke:#2a9d8f;stroke-width:4;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:36.14061737;stroke-opacity:0"
        rx="8.7906466"
        ry="10" />
   </g>

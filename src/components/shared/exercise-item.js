@@ -4,12 +4,12 @@ import { Link as GatsbyLink } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ExerciseItem = ({ edge }) => {
-  const { slug } = edge.node.fields;
-  const { title, job, category, time, level } = edge.node.frontmatter;
+  const { slug } = edge.fields;
+  const { title, job, category, time, level } = edge.frontmatter;
 
   return (
     <Link
-      to={slug}
+      to={`.${slug}`}
       as={GatsbyLink}
       sx={{
         width: "100%",
@@ -33,7 +33,7 @@ const ExerciseItem = ({ edge }) => {
             },
           }}
         >
-          <Badge variant="outline">{category}</Badge>
+          <Badge variant="primary">{category}</Badge>
           <br></br>
           <FontAwesomeIcon icon={["fas", "stopwatch"]} fixedWidth size="sm" />
           {time} •{" "}

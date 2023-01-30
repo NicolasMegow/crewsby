@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, Box, Button } from "theme-ui"
-import { Link as GatsbyLink } from "gatsby"
+import { jsx, Box, Button } from "theme-ui";
+import { Link as GatsbyLink } from "gatsby";
 
-import Layout from "../components/layout/layout"
-import SeoComp from "../components/shared/seo"
-import Emoji from "../components/shared/emoji"
+import Layout from "../components/layout/layout";
+import SeoComp from "../components/shared/seo";
+import Emoji from "../components/shared/emoji";
 
 const NotFound = () => {
   return (
@@ -21,14 +21,15 @@ const NotFound = () => {
             marginBottom: "2rem",
           }}
         >
-          We're terribly sorry!
+          We're terribly sorry for this dead end! Please continue from our
+          homepage.
         </p>
         <Button to="/" as={GatsbyLink} variant="primary">
-          → Back to start
-        </Button>{" "}
+          → To the homepage
+        </Button>
       </Box>
     </Layout>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;
